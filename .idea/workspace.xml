@@ -4,7 +4,12 @@
     <bookmark url="file://$PROJECT_DIR$/src/everything/fileUtils/FileReadCharacters.java" line="32" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c72869d-7f20-4db6-85f1-9c16c59f0086" name="Default" comment="" />
+    <list default="true" id="9c72869d-7f20-4db6-85f1-9c16c59f0086" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/everything/Encoding.java" afterPath="$PROJECT_DIR$/src/everything/Encoding.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/everything/strings/StringTest.java" afterPath="$PROJECT_DIR$/src/everything/strings/StringTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Test.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,7 +64,7 @@
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/JDBC/JDBCBatch.java" line="74" class="com.test.everything.JDBC.JDBCBatch" package="com.test.everything.JDBC">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/JDBC/JDBCBatch.java" line="74" class="everything.JDBC.JDBCBatch" package="everything.JDBC">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -74,7 +79,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/JDBC/JDBCBatch.java" line="70" class="com.test.everything.JDBC.JDBCBatch" package="com.test.everything.JDBC">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/JDBC/JDBCBatch.java" line="70" class="everything.JDBC.JDBCBatch" package="everything.JDBC">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -89,7 +94,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/algorithms/byRobertSedgewick/ch1_1/test/p58_1_1_21_test.java" line="116" class="com.test.everything.algorithms.byRobertSedgewick.ch1_1.test.p58_1_1_21_test.testFail1NoSpace" package="com.test.everything.algorithms.byRobertSedgewick.ch1_1.test">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/algorithms/byRobertSedgewick/ch1_1/test/p58_1_1_21_test.java" line="116" class="everything.algorithms.byRobertSedgewick.ch1_1.test.p58_1_1_21_test.testFail1NoSpace" package="everything.algorithms.byRobertSedgewick.ch1_1.test">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -104,7 +109,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/algorithms/byRobertSedgewick/ch1_1/p58_1_1_22.java" line="44" class="com.test.everything.algorithms.byRobertSedgewick.ch1_1.p58_1_1_22" package="com.test.everything.algorithms.byRobertSedgewick.ch1_1">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/algorithms/byRobertSedgewick/ch1_1/p58_1_1_22.java" line="44" class="everything.algorithms.byRobertSedgewick.ch1_1.p58_1_1_22" package="everything.algorithms.byRobertSedgewick.ch1_1">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -119,7 +124,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/algorithms/byRobertSedgewick/ch1_1/p58_1_1_22.java" line="19" class="com.test.everything.algorithms.byRobertSedgewick.ch1_1.p58_1_1_22" package="com.test.everything.algorithms.byRobertSedgewick.ch1_1">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/algorithms/byRobertSedgewick/ch1_1/p58_1_1_22.java" line="19" class="everything.algorithms.byRobertSedgewick.ch1_1.p58_1_1_22" package="everything.algorithms.byRobertSedgewick.ch1_1">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -134,7 +139,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/utils/IOUtils.java" line="85" class="com.test.everything.utils.IOUtils" package="com.test.everything.utils">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/utils/IOUtils.java" line="85" class="everything.utils.IOUtils" package="everything.utils">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -149,7 +154,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/JDBC/JDBCBatch.java" line="65" class="com.test.everything.JDBC.JDBCBatch" package="com.test.everything.JDBC">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/JDBC/JDBCBatch.java" line="65" class="everything.JDBC.JDBCBatch" package="everything.JDBC">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -164,7 +169,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/RuntimeTest.java" line="43" class="com.test.everything.RuntimeTest" package="com.test.everything">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/RuntimeTest.java" line="43" class="everything.RuntimeTest" package="everything">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -179,7 +184,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/RuntimeTest.java" line="47" class="com.test.everything.RuntimeTest" package="com.test.everything">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/RuntimeTest.java" line="47" class="everything.RuntimeTest" package="everything">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -194,7 +199,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/RuntimeTest.java" line="51" class="com.test.everything.RuntimeTest" package="com.test.everything">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/RuntimeTest.java" line="51" class="everything.RuntimeTest" package="everything">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -209,7 +214,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/algorithms/byRobertLafore/ch04/StackDemo.java" line="19" class="com.test.everything.algorithms.byRobertLafore.ch04.StackDemo" package="com.test.everything.algorithms.byRobertLafore.ch04">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/algorithms/byRobertLafore/ch04/StackDemo.java" line="19" class="everything.algorithms.byRobertLafore.ch04.StackDemo" package="everything.algorithms.byRobertLafore.ch04">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -224,7 +229,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/utils/RandomNumbers.java" line="36" class="com.test.everything.utils.RandomNumbers" package="com.test.everything.utils">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/utils/RandomNumbers.java" line="36" class="everything.utils.RandomNumbers" package="everything.utils">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -254,7 +259,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/strings/StringUtil.java" line="41" class="com.test.everything.strings.StringUtil" package="com.test.everything.strings">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/strings/StringUtil.java" line="41" class="everything.strings.StringUtil" package="everything.strings">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -269,7 +274,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/utilsDB/DBUtils.java" line="68" class="com.test.everything.utilsDB.DBUtils" package="com.test.everything.utilsDB">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/utilsDB/DBUtils.java" line="68" class="everything.utilsDB.DBUtils" package="everything.utilsDB">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -284,7 +289,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/utilsDB/DBUtils.java" line="72" class="com.test.everything.utilsDB.DBUtils" package="com.test.everything.utilsDB">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/utilsDB/DBUtils.java" line="72" class="everything.utilsDB.DBUtils" package="everything.utilsDB">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -299,7 +304,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/algorithms/QuickSort.java" line="25" class="com.test.everything.algorithms.QuickSort" package="com.test.everything.algorithms">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/algorithms/QuickSort.java" line="25" class="everything.algorithms.QuickSort" package="everything.algorithms">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -314,7 +319,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/algorithms/QuickSort.java" line="57" class="com.test.everything.algorithms.QuickSort" package="com.test.everything.algorithms">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/algorithms/QuickSort.java" line="57" class="everything.algorithms.QuickSort" package="everything.algorithms">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -329,7 +334,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/algorithms/QuickSort.java" line="27" class="com.test.everything.algorithms.QuickSort" package="com.test.everything.algorithms">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/algorithms/QuickSort.java" line="27" class="everything.algorithms.QuickSort" package="everything.algorithms">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -344,7 +349,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/algorithms/SelectionSort.java" line="20" class="com.test.everything.algorithms.SelectionSort" package="com.test.everything.algorithms">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/algorithms/SelectionSort.java" line="20" class="everything.algorithms.SelectionSort" package="everything.algorithms">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -359,7 +364,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/utilsDB/DBUtils.java" line="25" class="com.test.everything.utilsDB.DBUtils" package="com.test.everything.utilsDB">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/utilsDB/DBUtils.java" line="25" class="everything.utilsDB.DBUtils" package="everything.utilsDB">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -374,7 +379,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/utilsDB/SQLStatements.java" line="73" class="com.test.everything.utilsDB.SQLStatements" package="com.test.everything.utilsDB">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/utilsDB/SQLStatements.java" line="73" class="everything.utilsDB.SQLStatements" package="everything.utilsDB">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -389,7 +394,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/interesting_problems/ProjectEuler002.java" line="47" class="com.test.everything.interesting_problems.ProjectEuler002" package="com.test.everything.interesting_problems">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/interesting_problems/ProjectEuler002.java" line="47" class="everything.interesting_problems.ProjectEuler002" package="everything.interesting_problems">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -404,7 +409,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/strings/StringTest.java" line="263" class="com.test.everything.strings.StringTest" package="com.test.everything.strings">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/strings/StringTest.java" line="281" class="everything.strings.StringTest" package="everything.strings">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -419,7 +424,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/fileUtils/FileListByPattern.java" line="63" class="com.test.everything.fileUtils.FileListByPattern.FileVisitor" package="com.test.everything.fileUtils">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/fileUtils/FileListByPattern.java" line="63" class="everything.fileUtils.FileListByPattern.FileVisitor" package="everything.fileUtils">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -434,7 +439,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/PassByValueDemo.java" line="17" class="com.test.everything.PassByValueDemo.Target" package="com.test.everything">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/PassByValueDemo.java" line="17" class="everything.PassByValueDemo.Target" package="everything">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -449,7 +454,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/PassByValueDemo.java" line="41" class="com.test.everything.PassByValueDemo.Client" package="com.test.everything">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/PassByValueDemo.java" line="41" class="everything.PassByValueDemo.Client" package="everything">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -464,7 +469,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/fileUtils/FileDeleteFromList.java" line="33" class="com.test.everything.fileUtils.FileDeleteFromList" package="com.test.everything.fileUtils">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/fileUtils/FileDeleteFromList.java" line="33" class="everything.fileUtils.FileDeleteFromList" package="everything.fileUtils">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -479,7 +484,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/fileUtils/FileAppender.java" line="52" class="com.test.everything.fileUtils.FileAppender" package="com.test.everything.fileUtils">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/fileUtils/FileAppender.java" line="52" class="everything.fileUtils.FileAppender" package="everything.fileUtils">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -494,7 +499,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/fileUtils/FileReadCharacters.java" line="50" class="com.test.everything.fileUtils.FileReadCharacters" package="com.test.everything.fileUtils">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/fileUtils/FileReadCharacters.java" line="50" class="everything.fileUtils.FileReadCharacters" package="everything.fileUtils">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -509,7 +514,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/parsers/gnydm/Session.java" line="72" class="com.test.everything.parsers.gnydm.Session" package="com.test.everything.parsers.gnydm">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/parsers/gnydm/Session.java" line="72" class="everything.parsers.gnydm.Session" package="everything.parsers.gnydm">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -524,7 +529,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/everything/parsers/gnydm/Exhibitor.java" line="45" class="com.test.everything.parsers.gnydm.Exhibitor" package="com.test.everything.parsers.gnydm">
+      <breakpoint url="file://$PROJECT_DIR$/src/everything/parsers/gnydm/Exhibitor.java" line="45" class="everything.parsers.gnydm.Exhibitor" package="everything.parsers.gnydm">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -562,10 +567,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Pi.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="Pi.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/everything/design_patterns/headfirst/proxy/test_from_rmi_docs/client/Pi.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="36" column="61" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.9704348" vertical-offset="54" max-vertical-offset="1156">
+                <state line="17" column="47" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1156">
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -580,6 +585,24 @@
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="StringTest.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/everything/strings/StringTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="201" column="61" selection-start="11540" selection-end="11540" vertical-scroll-proportion="0.0" vertical-offset="3272" max-vertical-offset="6137">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Encoding.java" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/everything/Encoding.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="17" column="0" selection-start="406" selection-end="406" vertical-scroll-proportion="0.33333334" vertical-offset="40" max-vertical-offset="884">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -727,7 +750,7 @@
           <file leaf-file-name="ComputeEngine.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/everything/design_patterns/headfirst/proxy/test_from_rmi_docs/server/engine/ComputeEngine.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="36" column="27" selection-start="1181" selection-end="1181" vertical-scroll-proportion="0.7095652" vertical-offset="204" max-vertical-offset="833">
+                <state line="36" column="27" selection-start="1181" selection-end="1181" vertical-scroll-proportion="1.1252302" vertical-offset="1" max-vertical-offset="833">
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -744,11 +767,12 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/test/everything/fileUtils/FileDeleteFromList.java" />
-        <option value="$PROJECT_DIR$/src/com/test/everything/fileUtils/FileList.java" />
         <option value="$PROJECT_DIR$/src/com/test/everything/fileUtils/FileAppender.java" />
         <option value="$PROJECT_DIR$/src/com/test/everything/fileUtils/FileReadCharacters.java" />
         <option value="$PROJECT_DIR$/src/com/test/everything/Encoding.java" />
@@ -798,16 +822,18 @@
         <option value="$PROJECT_DIR$/src/everything/design_patterns/headfirst/proxy/test_from_rmi_docs/client/compute/Task.java" />
         <option value="$PROJECT_DIR$/src/everything/design_patterns/headfirst/proxy/test_from_rmi_docs/client/ComputePi.java" />
         <option value="$PROJECT_DIR$/src/everything/design_patterns/headfirst/proxy/test_from_rmi_docs/client/Pi.java" />
+        <option value="$PROJECT_DIR$/src/everything/strings/StringTest.java" />
+        <option value="$PROJECT_DIR$/src/everything/Encoding.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="height" value="1034" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -1062,6 +1088,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="strings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="everything" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="headfirst" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1160,7 +1208,7 @@
       <recent name="D:\SRC\Java_work_dir\test\src\conf" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Encoding">
     <configuration default="false" name="GnydmSessions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="everything.parsers.targets.GnydmSessions" />
       <option name="VM_PARAMETERS" />
@@ -1180,22 +1228,6 @@
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="StringUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="everything.strings.StringUtil" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="test" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -1253,6 +1285,28 @@
       <module name="test" />
       <envs />
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="StringTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="everything.strings.StringTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="test" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -1432,18 +1486,18 @@
       <item index="0" class="java.lang.String" itemvalue="Application.QueryTool" />
       <item index="1" class="java.lang.String" itemvalue="Application.Encoding" />
       <item index="2" class="java.lang.String" itemvalue="Application.GnydmSessions" />
-      <item index="3" class="java.lang.String" itemvalue="Application.StringUtil" />
-      <item index="4" class="java.lang.String" itemvalue="Application.GnydmExhibitors" />
-      <item index="5" class="java.lang.String" itemvalue="Application.GumballDemo" />
-      <item index="6" class="java.lang.String" itemvalue="Application.MyRemoteClient" />
+      <item index="3" class="java.lang.String" itemvalue="Application.GnydmExhibitors" />
+      <item index="4" class="java.lang.String" itemvalue="Application.GumballDemo" />
+      <item index="5" class="java.lang.String" itemvalue="Application.MyRemoteClient" />
+      <item index="6" class="java.lang.String" itemvalue="Application.StringTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.MyRemoteClient" />
-        <item index="1" class="java.lang.String" itemvalue="Application.GumballDemo" />
-        <item index="2" class="java.lang.String" itemvalue="Application.GnydmExhibitors" />
-        <item index="3" class="java.lang.String" itemvalue="Application.GnydmSessions" />
-        <item index="4" class="java.lang.String" itemvalue="Application.StringUtil" />
+        <item index="0" class="java.lang.String" itemvalue="Application.StringTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.MyRemoteClient" />
+        <item index="2" class="java.lang.String" itemvalue="Application.GumballDemo" />
+        <item index="3" class="java.lang.String" itemvalue="Application.GnydmExhibitors" />
+        <item index="4" class="java.lang.String" itemvalue="Application.GnydmSessions" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1460,6 +1514,23 @@
   <component name="StructureViewFactory">
     <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
   </component>
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9c72869d-7f20-4db6-85f1-9c16c59f0086" name="Default" comment="" />
@@ -1469,7 +1540,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1034" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1485,13 +1556,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32491767" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21938232" sideWeight="0.5209003" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21938232" sideWeight="0.520339" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21938232" sideWeight="0.47749197" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3172338" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21938232" sideWeight="0.4779661" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3287827" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1596,18 +1667,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/everything/strings/StringTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="247" column="36" selection-start="14043" selection-end="14043" vertical-scroll-proportion="0.0" vertical-offset="3957" max-vertical-offset="5967">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/fileUtils/FileAppender.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="43" selection-start="3024" selection-end="3109" vertical-scroll-proportion="0.0" vertical-offset="422" max-vertical-offset="1241">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1616,15 +1680,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="58" selection-start="1579" selection-end="1579" vertical-scroll-proportion="0.0" vertical-offset="667" max-vertical-offset="1326">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/everything/Encoding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="25" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1632,7 +1689,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="31" selection-start="845" selection-end="845" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="901">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1893,10 +1950,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/design_patterns/headfirst/proxy/test_from_rmi_docs/client/Pi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="61" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.9704348" vertical-offset="54" max-vertical-offset="1156">
+        <state line="17" column="47" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1156">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/everything/strings/StringTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="201" column="61" selection-start="11540" selection-end="11540" vertical-scroll-proportion="0.0" vertical-offset="3272" max-vertical-offset="6137">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/everything/Encoding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="406" selection-end="406" vertical-scroll-proportion="0.33333334" vertical-offset="40" max-vertical-offset="884">
+          <folding />
         </state>
       </provider>
     </entry>

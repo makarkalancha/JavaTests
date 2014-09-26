@@ -1,6 +1,7 @@
 package everything.strings;
 
 import org.jsoup.Jsoup;
+import sun.net.www.content.audio.x_aiff;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -186,21 +187,21 @@ public class StringTest {
 //        System.out.println(first);
 //        System.out.println(second);
 
-        String html = "<html>\n" +
-                " <head></head>\n" +
-                " <body>\n" +
-                "  <p></p>\n" +
-                "  <p><strong>Customer Reviews</strong>:&nbsp; For anyone interested, recently added the Absen A7 to its inventory. This has proven to be an awesome product for us and will without a doubt become our flagship LED product. Clients have been blown away by the picture quality, the weight savings, and the speed of install. Thank you Absen for making such a great product!—From Absen Facebook main page.</p>\n" +
-                "  <p style=\"text-align: center;\"><a href=\"http://www.usabsen.com/wp-content/uploads/2013/12/A7usa-1.jpg\"><img class=\"alignnone size-full wp-image-617\" alt=\"A7usa-1\" src=\"http://www.usabsen.com/wp-content/uploads/2013/12/A7usa-1.jpg\" height=\"309\" width=\"464\" />&nbsp;</a></p>\n" +
-                "  <p style=\"text-align: center;\"><a href=\"http://www.usabsen.com/wp-content/uploads/2013/12/A7usa-1.jpg\"></a> <a href=\"http://www.usabsen.com/wp-content/uploads/2013/12/A7usa-2.jpg\"><img class=\"alignnone size-full wp-image-618\" alt=\"A7usa-2\" src=\"http://www.usabsen.com/wp-content/uploads/2013/12/A7usa-2.jpg\" height=\"302\" width=\"471\" />&nbsp;</a></p>\n" +
-                "  <p style=\"text-align: center;\">&nbsp;<a href=\"http://www.usabsen.com/wp-content/uploads/2013/12/A7usa-3.jpg\"> <br /></a></p>\n" +
-                "  <p style=\"text-align: center;\"><a href=\"http://www.usabsen.com/wp-content/uploads/2013/12/A7usa-3.jpg\"></a> <a href=\"http://www.usabsen.com/wp-content/uploads/2013/12/A7usa-4.jpg\"><img class=\"alignnone size-full wp-image-620\" alt=\"A7usa-4\" src=\"http://www.usabsen.com/wp-content/uploads/2013/12/A7usa-4.jpg\" height=\"319\" width=\"494\" /></a>&nbsp;</p>\n" +
-                "  <p></p>\n" +
-                " </body>\n" +
-                "</html>";
-
-        System.out.println(html);
-        System.out.println(">>>"+html2text(html)+"<<<");
+//        String html = "<html>\n" +
+//                " <head></head>\n" +
+//                " <body>\n" +
+//                "  <p></p>\n" +
+//                "  <p><strong>Customer Reviews</strong>:&nbsp; For anyone interested, recently added the Absen A7 to its inventory. This has proven to be an awesome product for us and will without a doubt become our flagship LED product. Clients have been blown away by the picture quality, the weight savings, and the speed of install. Thank you Absen for making such a great product!—From Absen Facebook main page.</p>\n" +
+//                "  <p style=\"text-align: center;\"><a href=\"http://www.usabsen.com/wp-content/uploads/2013/12/A7usa-1.jpg\"><img class=\"alignnone size-full wp-image-617\" alt=\"A7usa-1\" src=\"http://www.usabsen.com/wp-content/uploads/2013/12/A7usa-1.jpg\" height=\"309\" width=\"464\" />&nbsp;</a></p>\n" +
+//                "  <p style=\"text-align: center;\"><a href=\"http://www.usabsen.com/wp-content/uploads/2013/12/A7usa-1.jpg\"></a> <a href=\"http://www.usabsen.com/wp-content/uploads/2013/12/A7usa-2.jpg\"><img class=\"alignnone size-full wp-image-618\" alt=\"A7usa-2\" src=\"http://www.usabsen.com/wp-content/uploads/2013/12/A7usa-2.jpg\" height=\"302\" width=\"471\" />&nbsp;</a></p>\n" +
+//                "  <p style=\"text-align: center;\">&nbsp;<a href=\"http://www.usabsen.com/wp-content/uploads/2013/12/A7usa-3.jpg\"> <br /></a></p>\n" +
+//                "  <p style=\"text-align: center;\"><a href=\"http://www.usabsen.com/wp-content/uploads/2013/12/A7usa-3.jpg\"></a> <a href=\"http://www.usabsen.com/wp-content/uploads/2013/12/A7usa-4.jpg\"><img class=\"alignnone size-full wp-image-620\" alt=\"A7usa-4\" src=\"http://www.usabsen.com/wp-content/uploads/2013/12/A7usa-4.jpg\" height=\"319\" width=\"494\" /></a>&nbsp;</p>\n" +
+//                "  <p></p>\n" +
+//                " </body>\n" +
+//                "</html>";
+//
+//        System.out.println(html);
+//        System.out.println(">>>"+html2text(html)+"<<<");
 
 //        String first = "44B1_THE_CL_MEDICAL_MODEL_PRACTICE_CL_POSITIONING_AND_PRICING_STRATEGIES.pdf";
 //        String first = "33B1_HOW _TO_USE_SOCIAL_MEDIA_TOOLS_TO_RECRUIT_AND_HIRE_A_PLAYERS.pdf";
@@ -227,6 +228,29 @@ public class StringTest {
 //
 //        System.out.println(first);
 //        System.out.println(second);
+
+
+        String xml = "<ExhibitorName>TOPS&#xAE; &#xAE;Software Corporation&#xEC;</ExhibitorName>";
+        System.out.println(xml);
+        System.out.println(convertXmlHexToHtml(xml));
+    }
+
+    private static String convertXmlHexToHtml(String xml){
+        String result = "";
+        String patternString  = "(&#x\\w{2};)";
+        Pattern pattern = Pattern.compile(patternString,Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(xml);
+        int count = 0;
+        while(matcher.find()) {
+            count++;
+            String hexNumber = matcher.group();
+            System.out.println(count+":"+matcher.start()+"-"+matcher.end()+" "+matcher.group());
+            String hexNumberInHtml = Jsoup.parse(hexNumber).text();
+            System.out.println(hexNumberInHtml);
+            xml = xml.replace(hexNumber, hexNumberInHtml);
+        }
+
+        return xml;
     }
 
     public static String html2text (String html) {
