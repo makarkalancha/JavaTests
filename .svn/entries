@@ -1,0 +1,31 @@
+10
+
+dir
+71
+svn+ssh://ht@s.srdp.org/var/svn/backend-junit/trunk/test
+svn+ssh://ht@s.srdp.org/var/svn/backend-junit
+
+
+
+2013-11-18T16:49:11.058012Z
+71
+ht
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a1424bee-40eb-461f-97e7-24ee04c2b418
+
+com
+dir
+
