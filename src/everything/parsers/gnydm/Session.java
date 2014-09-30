@@ -50,7 +50,7 @@ public class Session {
                 CourseTitle +"\t"+
                 Room +"\t"+
                 cal.get(Calendar.YEAR) +"\t"+
-                cal.get(Calendar.MONTH) +"\t"+
+                (cal.get(Calendar.MONTH) +1)+"\t"+
                 cal.get(Calendar.DAY_OF_MONTH) +"\t"+
                 startEndTime[0].trim() +"\t"+
                 ((startEndTime.length==2) ? startEndTime[1].trim() : "") +"\t"+
