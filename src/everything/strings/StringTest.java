@@ -1,8 +1,11 @@
 package everything.strings;
 
+import everything.fileUtils.FileUtils;
 import org.jsoup.Jsoup;
 import sun.net.www.content.audio.x_aiff;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -230,9 +233,36 @@ public class StringTest {
 //        System.out.println(second);
 
 
-        String xml = "<ExhibitorName>TOPS&#xAE; &#xAE;Software Corporation&#xEC;</ExhibitorName>";
-        System.out.println(xml);
-        System.out.println(convertXmlHexToHtml(xml));
+//        String xml = "<ExhibitorName>TOPS&#xAE; &#xAE;Software Corporation&#xEC;</ExhibitorName>";
+//        System.out.println(xml);
+//        System.out.println(convertXmlHexToHtml(xml));
+
+        String fileToRead = "D:\\Tasks\\071_7244_aasld2014_mm\\2-data\\20141001\\vertical_tab.txt";
+        byte[] bytes = new byte[(int) new File(fileToRead).length()];
+        StringBuilder sb = new StringBuilder();
+        try{
+            FileUtils.readFileByBytes(fileToRead,bytes);
+            FileUtils.readFileIntoString(fileToRead,sb);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        for(byte b : bytes){
+            System.out.println(b+"->\""+((char)b)+"\"");
+        }
+        String badString = sb.toString();
+        System.out.println(badString);
+        String goodString = removeVerticalTab(badString);
+        System.out.println(goodString);
+        byte[] bytes1 = goodString.getBytes();
+        for(byte b : bytes1){
+            System.out.println(b+"->\""+((char)b)+"\"");
+        }
+
+
+    }
+
+    private static String removeVerticalTab(String string) {
+        return string.replaceAll("\\x0B", "");
     }
 
     private static String convertXmlHexToHtml(String xml){
