@@ -10,8 +10,9 @@ import java.io.*;
 public class FileList {
     public static void main(String[] args) {
 //        String pathDir = "D:\\Tasks\\070_7243_ivew2014_dt\\2-data\\handouts_session\\VEW 2014 handouts_20140911_1741\\VEW 2014 handouts";
-        String pathDir = "D:\\SRC\\PHP\\1.9.2\\migrations";
-        String filename = "list_of_handouts_v1.txt";
+//        String pathDir = "D:\\SRC\\PHP\\1.9.2\\migrations";
+        String pathDir = "D:\\SRC\\PHP\\1.9.2\\application\\Helpers\\Tasks";
+        String filename = "list.txt";
 
         File dir = new File(pathDir);
         File[] files = dir.listFiles();

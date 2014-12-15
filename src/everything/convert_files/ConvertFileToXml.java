@@ -35,8 +35,8 @@ public class ConvertFileToXml {
 //        String inSt = "C:\\Users\\makar\\datasink_data\\__work\\vita2014\\2014-03-18_09-49\\";
 //        String inSt = "C:\\Users\\makar\\datasink_data\\__work\\vita2014\\2014-05-08_09-29\\";
 //        String outSt = "D:\\Tasks\\038_6365_vita2014_sd\\2_data\\ASP\\20140508\\%s.xml";
-        String inSt = "D:\\opt\\sherpa\\datasink_data\\__work\\pke2014\\2014-10-03_11-13";
-        String outSt = "D:\\Tasks\\064_7176_pke2014_mm\\2-data\\20141003\\%s.xml";
+        String inSt = "D:\\opt\\sherpa\\datasink_data\\__work\\gnydm2014\\2014-10-23_15-07";
+        String outSt = "D:\\Tasks\\067__gnydm2014_sd\\2-data\\20141023\\%s.xml";
         ConvertFileToXml converter = new ConvertFileToXml(inSt,outSt);
         try{
             converter.process();
