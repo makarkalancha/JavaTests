@@ -10,13 +10,17 @@ import everything.algorithms.byRobertLafore.ch03.AbstractSorter;
 public class MergeSort extends AbstractSorter {
     private int mergeCount;
     private int recursiveMergeCount;
+    private int copyCount;
+    private int comparisonCount;
 
     public MergeSort(int[] arr) {
         super(arr);
     }
 
     public static void main(String[] args) {
-        int[] arr = {23, 3, 53, 21, 89, 1};
+//        int[] arr = {23, 3, 53, 21, 89, 1, 11, 49};
+        int[] arr = {3, 1, 11,21, 23,49,53, 89};  //min
+//        int[] arr = {89, 53, 49, 23, 21, 11, 3, 1}; //max
         MergeSort ms = new MergeSort(arr);
         ms.displayArray();
 
@@ -31,6 +35,9 @@ public class MergeSort extends AbstractSorter {
         recursiveSort(workSpace, 0, _array.length - 1);
         System.out.println("recursiveMergeCount: "+recursiveMergeCount);
         System.out.println("mergeCount: "+mergeCount);
+        System.out.println("copyCount: "+copyCount);
+        System.out.println("comparisonCount: "+comparisonCount);
+
     }
 
     private void recursiveSort(int[] workSpace, int lowerBound, int upperBound) {
@@ -58,19 +65,24 @@ public class MergeSort extends AbstractSorter {
         int n = upperBound - lowerBound + 1; //# of items
 
         while (lowPtr <= mid && highPtr <= upperBound) {
+            ++comparisonCount;
             if (_array[lowPtr] < _array[highPtr]) {
                 workSpace[j++] = _array[lowPtr++];
+                ++copyCount;
             } else {
                 workSpace[j++] = _array[highPtr++];
+                ++copyCount;
             }
         }
 
         while (lowPtr <= mid) {
             workSpace[j++] = _array[lowPtr++];
+            ++copyCount;
         }
 
         while (highPtr <= upperBound) {
             workSpace[j++] = _array[highPtr++];
+            ++copyCount;
         }
 
         for (j = 0; j < n; j++) {
