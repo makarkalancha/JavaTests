@@ -14,6 +14,7 @@ public abstract class AbstractSorter {
     }
 
     public void displayArray(){
+        System.out.println("length:"+_array.length);
         System.out.println("loopCount:"+loopCount);
         System.out.println("swapCount:"+swapCount);
         for(int i : _array){
