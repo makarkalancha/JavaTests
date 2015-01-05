@@ -22,8 +22,8 @@ public class MyShellsort extends AbstractSorter{
 //        int[] arr = {23, 3, 53, 21, 89, 1};
 //        int[] arr = {89, 53, 23, 21, 3, 1};
 //        int[] arr = {7, 10, 1, 9, 2, 5, 8, 6, 4, 3};
-//        int[] arr = {24, 38, 2, 14, 8, 23, 23, 12, 36, 12, 21, 8, 8, 10, 39, 11, 24, 19, 32, 29};
-        int[] arr = {32, 0, 33, 35, 4, 36, 37, 6, 7, 10, 12, 13, 14, 15, 17, 20, 22, 23, 28, 30};
+        int[] arr = {24, 38, 2, 14, 8, 23, 23, 12, 36, 12, 21, 8, 8, 10, 39, 11, 24, 19, 32, 29};
+//        int[] arr = {32, 0, 33, 35, 4, 36, 37, 6, 7, 10, 12, 13, 14, 15, 17, 20, 22, 23, 28, 30};
         MyShellsort is = new MyShellsort(arr);
         is.displayArray();
 
@@ -50,7 +50,7 @@ public class MyShellsort extends AbstractSorter{
 //////            }
 //            boolean result = step > 0;
 //            System.out.println(result);
-            System.out.println("--" + step);
+            System.out.println("-->" + step);
             for (initial = 0; initial < _array.length; initial++) {
                 System.out.println();
                 System.out.println(">" + initial);
