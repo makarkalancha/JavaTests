@@ -8,7 +8,7 @@ import everything.algorithms.byRobertLafore.ch03.AbstractSorter;
  * Time: 11:18
  */
 public class Partition  extends AbstractSorter{
-    private int pivot;
+    private int _pivot;
 
     public Partition(int[] arr) {
         super(arr);
@@ -29,28 +29,64 @@ public class Partition  extends AbstractSorter{
         partition.displayArray();
     }
 
-    private int getAverage(){
+    private int getAverage(int left, int right){
         int sum = 0;
-        for(int num : _array) {
-            sum += num;
+        for(int i = left ; i <= right ; i++) {
+            sum += _array[i];
         }
-        return sum / _array.length;
+        return sum / (right - left + 1);
     }
 
     public int partitionIt(int left, int right) {
-        pivot = getAverage();
+        _pivot = getAverage(left,right);
         int leftPtr = left - 1;
         int rightPtr = right + 1;
         while (true) {
             ++loopCount;
-            while (leftPtr < right && _array[++leftPtr] < pivot) ;
-            while (rightPtr > left && _array[--rightPtr] > pivot) ;
+            while (leftPtr < right && _array[++leftPtr] < _pivot) ;
+            while (rightPtr > left && _array[--rightPtr] > _pivot) ;
             if (leftPtr >= rightPtr) {
                 break;
             } else {
                 swap(leftPtr, rightPtr);
             }
         }
+        return leftPtr;
+    }
+
+    protected int partitionForQuickSort(int left, int right, int pivot) {
+        _pivot = pivot;
+        int leftPtr = left - 1;
+        int rightPtr = right;
+        while (true) {
+            ++loopCount;
+            while (_array[++leftPtr] < _pivot) ;
+            while (rightPtr > 0 && _array[--rightPtr] > _pivot) ;
+            if (leftPtr >= rightPtr) {
+                break;
+            } else {
+                swap(leftPtr, rightPtr);
+            }
+        }
+        swap(leftPtr, right);
+        return leftPtr;
+    }
+
+    protected int partitionForQuickSort2(int left, int right, int pivot) {
+        _pivot = pivot;
+        int leftPtr = left;
+        int rightPtr = right - 1;
+        while (true) {
+            ++loopCount;
+            while (_array[++leftPtr] < _pivot) ;
+            while (_array[--rightPtr] > _pivot) ;
+            if (leftPtr >= rightPtr) {
+                break;
+            } else {
+                swap(leftPtr, rightPtr);
+            }
+        }
+        swap(leftPtr, right - 1);
         return leftPtr;
     }
 
