@@ -6,7 +6,7 @@ package everything.algorithms.byRobertLafore.ch08;
  * Time: 14:55
  */
 public interface TreeInterface<T extends Comparable> {
-    public Node<T> find(T key);
+    public NodeCh08<T> find(T key);
     public void insert(T key);
     public void delete(T key);
 }

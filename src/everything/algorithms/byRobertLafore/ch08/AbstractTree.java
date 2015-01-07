@@ -6,9 +6,9 @@ package everything.algorithms.byRobertLafore.ch08;
  * Time: 14:57
  */
 public abstract class AbstractTree<T extends Comparable> implements TreeInterface<T>{
-    protected Node<T> _root;
+    protected NodeCh08<T> _root;
 
-    public AbstractTree(Node<T> root) {
+    public AbstractTree(NodeCh08<T> root) {
         _root = root;
     }
 

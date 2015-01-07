@@ -6,7 +6,7 @@ package everything.algorithms.byRobertLafore.ch08;
  * Time: 14:58
  */
 public class TreeBinary<T extends Comparable> extends AbstractTree<T> {
-    public TreeBinary(Node<T> root) {
+    public TreeBinary(NodeCh08<T> root) {
         super(root);
     }
 
@@ -16,8 +16,8 @@ public class TreeBinary<T extends Comparable> extends AbstractTree<T> {
     }
 
     @Override
-    public Node<T> find(T key) {
-        Node<T> current = _root;
+    public NodeCh08<T> find(T key) {
+        NodeCh08<T> current = _root;
         while (current.iData.equals(key)) {
             if (key.compareTo(current.iData) == -1) {
                 current = _root.leftChild;
@@ -35,10 +35,10 @@ public class TreeBinary<T extends Comparable> extends AbstractTree<T> {
 
     @Override
     public void insert(T key) {
-        Node<T> newNode = new Node(key);
+        NodeCh08<T> newNode = new NodeCh08(key);
 
-        Node<T> current = _root;
-        Node<T> previous = _root;
+        NodeCh08<T> current = _root;
+        NodeCh08<T> previous = _root;
         while (current != null) {
             previous = current;
             if (key.compareTo(current.iData) == -1) {
@@ -64,14 +64,14 @@ public class TreeBinary<T extends Comparable> extends AbstractTree<T> {
         inOrderTraversalBook(_root);
     }
 
-    private String inOrderTraversalMine(Node<T> current) {
+    private String inOrderTraversalMine(NodeCh08<T> current) {
         if (current == null) {
             return "";
         }
         return inOrderTraversalMine(current.leftChild) + " ; " + current.iData + " ; " + inOrderTraversalMine(current.rightChild);
     }
 
-    private void inOrderTraversalBook(Node<T> current) {
+    private void inOrderTraversalBook(NodeCh08<T> current) {
         if (current != null) {
             inOrderTraversalBook(current.leftChild);
             System.out.print(current.iData + " ; ");

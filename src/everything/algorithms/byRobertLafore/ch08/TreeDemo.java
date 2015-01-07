@@ -7,7 +7,7 @@ package everything.algorithms.byRobertLafore.ch08;
  */
 public class TreeDemo {
     public static void main(String[] args) {
-        Node<Integer> twenty = new Node<>(20);
+        NodeCh08<Integer> twenty = new NodeCh08<>(20);
 
         TreeBinary<Integer> integerTreeBinary = new TreeBinary<Integer>(twenty);
         integerTreeBinary.insert(new Integer(10));
