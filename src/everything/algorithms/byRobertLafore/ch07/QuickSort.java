@@ -19,7 +19,7 @@ public class QuickSort extends Partition{
 //        int[] arr = {7, 10, 1, 9, 2, 5, 8, 6, 4, 3};
 //        int[] arr = {24, 38, 2, 14, 8, 23, 23, 12, 36, 12, 21, 8, 8, 10, 39, 11, 24, 19, 32, 29};
 //        int[] arr = {32, 0, 33, 35, 4, 36, 37, 6, 7, 10, 12, 13, 14, 15, 17, 20, 22, 23, 28, 30};
-        int[] arr = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1,};
+        int[] arr = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
         QuickSort qs = new QuickSort(arr);
         qs.displayArray();
 
