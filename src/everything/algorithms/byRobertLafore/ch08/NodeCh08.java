@@ -5,12 +5,12 @@ package everything.algorithms.byRobertLafore.ch08;
  * Date: 06/01/2015
  * Time: 14:51
  */
-public class Node1<T> {
+public class NodeCh08<T> {
     public T iData;
-    public Node1 leftChild;
-    public Node1 rightChild;
+    public NodeCh08 leftChild;
+    public NodeCh08 rightChild;
 
-    public Node1(T data) {
+    public NodeCh08(T data) {
         iData = data;
     }
 
