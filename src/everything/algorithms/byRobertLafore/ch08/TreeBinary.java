@@ -1,5 +1,10 @@
 package everything.algorithms.byRobertLafore.ch08;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Stack;
+
 /**
  * User: Makar Kalancha
  * Date: 06/01/2015
@@ -164,5 +169,87 @@ public class TreeBinary<T extends Comparable> extends AbstractTree<T> {
             current = current.rightChild;
         }
         return previous.iData;
+    }
+
+    public void displayTree() {
+//        Deque<NodeCh08<T>> globalStack = new ArrayDeque<>();
+        LinkedList<NodeCh08<T>> globalStack = new LinkedList<>();
+        LinkedList<NodeCh08<T>> spacesStack = new LinkedList<>();
+        globalStack.push(_root);
+//        spacesStack.push(_root);
+        int nBlanks = 32;
+        boolean isRowEmpty = false;
+        System.out.println(".............................................................................................................................................................");
+        while(isRowEmpty == false){
+//            Deque<NodeCh08<T>> localStack = new ArrayDeque<>();
+            LinkedList<NodeCh08<T>> localStack = new LinkedList<>();
+            isRowEmpty = true;
+
+            for (int j = 0; j < nBlanks; j++) {
+                System.out.print("  ");
+            }
+
+            while (spacesStack.isEmpty() == false) {
+                NodeCh08<T> temp = spacesStack.pop();
+
+                if(temp != null) {
+                    for (int j = 0; j < nBlanks; j++) {
+                        System.out.print("__");
+                    }
+                    if (spacesStack.size() % 2 != 0) {
+                        System.out.print("|");
+                    }
+                } else {
+                    for (int j = 0; j < nBlanks; j++) {
+                        System.out.print("  ");
+                    }
+
+                    if (spacesStack.size() % 2 != 0 && spacesStack.peek() != null) {
+                        System.out.print("|");
+                    }
+                }
+
+                if (spacesStack.size() % 2 == 0) {
+                    for (int j = 0; j < nBlanks * 2; j++) {
+                        System.out.print("  ");
+                    }
+                }
+            }
+            System.out.println();
+
+            for (int j = 0; j < nBlanks; j++) {
+                System.out.print("  ");
+            }
+
+            while (globalStack.isEmpty() == false) {
+                NodeCh08<T> temp = globalStack.pop();
+                if(temp != null){
+                    System.out.print(temp.iData);
+                    localStack.push(temp.leftChild);
+                    localStack.push(temp.rightChild);
+
+                    if(temp.leftChild != null || temp.rightChild != null){
+                        isRowEmpty = false;
+                    }
+                } else {
+//                    System.out.print("--");
+                    System.out.print("  ");
+                    localStack.push(null);
+                    localStack.push(null);
+                }
+
+                for (int j = 0; j < nBlanks * 2 - 1; j++) {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+            nBlanks /= 2;
+            while (localStack.isEmpty() == false) {
+                NodeCh08<T> temp = localStack.pop();
+                globalStack.push(temp);
+                spacesStack.push(temp);
+            }
+        }
+        System.out.println(".............................................................................................................................................................");
     }
 }

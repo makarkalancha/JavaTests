@@ -43,6 +43,7 @@ public class TreeDemo {
 
 
         BTreePrinter.printNode(twenty);
+        integerTreeBinary.displayTree();
 
     }
 }
