@@ -19,6 +19,8 @@ public class TreeDemo {
         integerTreeBinary.insert(new Integer(80));
         integerTreeBinary.insert(new Integer(110));
 
+        integerTreeBinary.displayTree();
+
 //        System.out.println("find: " + integerTreeBinary.find(100));
 //
 ////        integerTreeBinary.displayTree();
@@ -29,21 +31,31 @@ public class TreeDemo {
 //        System.out.println("min: "+integerTreeBinary.getMinimum());
 //        System.out.println("max: "+integerTreeBinary.getMaximum());
 //
-////        System.out.println("find: " + integerTreeBinary.find(30));
-////        integerTreeBinary.delete(40);
-////        System.out.println("find: " + integerTreeBinary.find(30));
-//
-//
-//        System.out.println("find: " + integerTreeBinary.find(50));
-//        integerTreeBinary.delete(30);
-//        System.out.println("find: " + integerTreeBinary.find(50));
-//
 ////        integerTreeBinary.displayTree();
 //        integerTreeBinary.inOrderTraversal();
 
+//        integerTreeBinary.delete(10);
+//        integerTreeBinary.displayTree();
 
-        BTreePrinter.printNode(twenty);
-        integerTreeBinary.displayTree();
-
+//        integerTreeBinary.delete(20);
+//        integerTreeBinary.displayTree();
+//
+//        integerTreeBinary.delete(30);
+//        integerTreeBinary.displayTree();
+//
+//        integerTreeBinary.delete(40);
+//        integerTreeBinary.displayTree();
+//
+//        integerTreeBinary.delete(50);
+//        integerTreeBinary.displayTree();
+//
+//        integerTreeBinary.delete(80);
+//        integerTreeBinary.displayTree();
+//
+//        integerTreeBinary.delete(100);
+//        integerTreeBinary.displayTree();
+//
+//        integerTreeBinary.delete(110);
+//        integerTreeBinary.displayTree();
     }
 }

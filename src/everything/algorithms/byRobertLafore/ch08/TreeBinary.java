@@ -78,6 +78,7 @@ public class TreeBinary<T extends Comparable> extends AbstractTree<T> {
         if(successor != delNode.rightChild) {
             successorParent.leftChild = successor.rightChild;
             successor.rightChild = delNode.rightChild;
+            successor.leftChild = delNode.leftChild;
         }
 
         return successor;
