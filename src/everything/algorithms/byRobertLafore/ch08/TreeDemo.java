@@ -7,19 +7,19 @@ package everything.algorithms.byRobertLafore.ch08;
  */
 public class TreeDemo {
     public static void main(String[] args) {
-        NodeCh08<Integer> twenty = new NodeCh08<>(20);
-
-        TreeBinary<Integer> integerTreeBinary = new TreeBinary<Integer>(twenty);
-        integerTreeBinary.insert(new Integer(10));
-        integerTreeBinary.insert(new Integer(50));
-
-        integerTreeBinary.insert(new Integer(30));
-        integerTreeBinary.insert(new Integer(40));
-        integerTreeBinary.insert(new Integer(100));
-        integerTreeBinary.insert(new Integer(80));
-        integerTreeBinary.insert(new Integer(110));
-
-        integerTreeBinary.displayTree();
+//        NodeCh08<Integer> twenty = new NodeCh08<>(20);
+//
+//        TreeBinary<Integer> integerTreeBinary = new TreeBinary<Integer>(twenty);
+//        integerTreeBinary.insert(new Integer(10));
+//        integerTreeBinary.insert(new Integer(50));
+//
+//        integerTreeBinary.insert(new Integer(30));
+//        integerTreeBinary.insert(new Integer(40));
+//        integerTreeBinary.insert(new Integer(100));
+//        integerTreeBinary.insert(new Integer(80));
+//        integerTreeBinary.insert(new Integer(110));
+//
+//        integerTreeBinary.displayTree();
 
 //        System.out.println("find: " + integerTreeBinary.find(100));
 //
@@ -57,5 +57,19 @@ public class TreeDemo {
 //
 //        integerTreeBinary.delete(110);
 //        integerTreeBinary.displayTree();
+
+        NodeCh08<Integer> root1 = new NodeCh08<>(17);
+        TreeBinary<Integer> integerTreeBinary1 = new TreeBinary<Integer>(root1);
+        integerTreeBinary1.insert(new Integer(21));
+        integerTreeBinary1.insert(new Integer(28));
+        integerTreeBinary1.insert(new Integer(36));
+        integerTreeBinary1.displayTree();
+
+        NodeCh08<Integer> root2 = new NodeCh08<>(36);
+        TreeBinary<Integer> integerTreeBinary2 = new TreeBinary<Integer>(root2);
+        integerTreeBinary2.insert(new Integer(28));
+        integerTreeBinary2.insert(new Integer(21));
+        integerTreeBinary2.insert(new Integer(17));
+        integerTreeBinary2.displayTree();
     }
 }
