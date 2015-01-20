@@ -1,7 +1,5 @@
 package everything.algorithms.byRobertLafore.ch10;
 
-import java.util.Arrays;
-
 /**
  * User: Makar Kalancha
  * Date: 15/01/2015
@@ -12,7 +10,7 @@ public class NodeCh10<T extends Comparable> {
     private int numItems;
     private NodeCh10<T> parent;
     private NodeCh10<T>[] childArray = new NodeCh10[ORDER];
-    private DataItem<T>[] itemArray = new DataItem[ORDER - 1];
+    private DataItemCh10<T>[] itemArray = new DataItemCh10[ORDER - 1];
 
     public void connectChild(int childNum, NodeCh10<T> child) {
         childArray[childNum] = child;
@@ -43,7 +41,7 @@ public class NodeCh10<T extends Comparable> {
         return numItems;
     }
 
-    public DataItem<T> getItem(int index) {
+    public DataItemCh10<T> getItem(int index) {
         return itemArray[index];
     }
 
@@ -62,7 +60,7 @@ public class NodeCh10<T extends Comparable> {
         return -1;
     }
 
-    public int insertItem(DataItem<T> newItem){
+    public int insertItem(DataItemCh10<T> newItem){
         numItems++;
         T newKey = newItem.dData;
         for (int j = ORDER - 2; j >= 0; j--) {
@@ -82,8 +80,8 @@ public class NodeCh10<T extends Comparable> {
         return 0;
     }
 
-    public DataItem<T> removeItem() {
-        DataItem<T> temp = itemArray[numItems - 1];
+    public DataItemCh10<T> removeItem() {
+        DataItemCh10<T> temp = itemArray[numItems - 1];
         itemArray[numItems - 1] = null;
         numItems--;
         return temp;

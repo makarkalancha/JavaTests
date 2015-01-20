@@ -25,7 +25,7 @@ public class Tree234<T extends Comparable> {
 
     public void insert(T dValue){
         NodeCh10<T> curNode = root;
-        DataItem<T> tempItem = new DataItem<>(dValue);
+        DataItemCh10<T> tempItem = new DataItemCh10<>(dValue);
 
         while(true){
             if(curNode.isFull()){
@@ -43,8 +43,8 @@ public class Tree234<T extends Comparable> {
     }
 
     public void split(NodeCh10<T> thisNode){
-        DataItem<T> itemB;
-        DataItem<T> itemC;
+        DataItemCh10<T> itemB;
+        DataItemCh10<T> itemC;
 
         NodeCh10<T> parent;
         NodeCh10<T> child2;

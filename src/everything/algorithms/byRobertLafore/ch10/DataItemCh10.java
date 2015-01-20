@@ -5,10 +5,10 @@ package everything.algorithms.byRobertLafore.ch10;
  * Date: 15/01/2015
  * Time: 12:45
  */
-public class DataItem<T extends Comparable> {
+public class DataItemCh10<T extends Comparable> {
     public T dData;
 
-    public DataItem(T dd){
+    public DataItemCh10(T dd){
         this.dData = dd;
     }
 
