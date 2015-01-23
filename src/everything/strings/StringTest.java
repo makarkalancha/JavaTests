@@ -237,26 +237,34 @@ public class StringTest {
 //        System.out.println(xml);
 //        System.out.println(convertXmlHexToHtml(xml));
 
-        String fileToRead = "D:\\Tasks\\071_7244_aasld2014_mm\\2-data\\20141001\\vertical_tab.txt";
-        byte[] bytes = new byte[(int) new File(fileToRead).length()];
-        StringBuilder sb = new StringBuilder();
-        try{
-            FileUtils.readFileByBytes(fileToRead,bytes);
-            FileUtils.readFileIntoString(fileToRead,sb);
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-        for(byte b : bytes){
-            System.out.println(b+"->\""+((char)b)+"\"");
-        }
-        String badString = sb.toString();
-        System.out.println(badString);
-        String goodString = removeVerticalTab(badString);
-        System.out.println(goodString);
-        byte[] bytes1 = goodString.getBytes();
-        for(byte b : bytes1){
-            System.out.println(b+"->\""+((char)b)+"\"");
-        }
+//        String fileToRead = "D:\\Tasks\\071_7244_aasld2014_mm\\2-data\\20141001\\vertical_tab.txt";
+//        byte[] bytes = new byte[(int) new File(fileToRead).length()];
+//        StringBuilder sb = new StringBuilder();
+//        try{
+//            FileUtils.readFileByBytes(fileToRead,bytes);
+//            FileUtils.readFileIntoString(fileToRead,sb);
+//        }catch (IOException e){
+//            e.printStackTrace();
+//        }
+//        for(byte b : bytes){
+//            System.out.println(b+"->\""+((char)b)+"\"");
+//        }
+//        String badString = sb.toString();
+//        System.out.println(badString);
+//        String goodString = removeVerticalTab(badString);
+//        System.out.println(goodString);
+//        byte[] bytes1 = goodString.getBytes();
+//        for(byte b : bytes1){
+//            System.out.println(b+"->\""+((char)b)+"\"");
+//        }
+
+        String test = "103625/1";
+//        String test = "103625/";
+//        String test = "103625";
+//        String test = "";
+        String regex = "^(\\w+)(/\\w*)";
+        test = test.replaceAll(regex,"$1");
+        System.out.println(test);
 
 
     }
