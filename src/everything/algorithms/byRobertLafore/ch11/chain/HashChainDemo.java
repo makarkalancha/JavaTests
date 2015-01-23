@@ -1,36 +1,35 @@
-package everything.algorithms.byRobertLafore.ch11;
+package everything.algorithms.byRobertLafore.ch11.chain;
+
+import everything.algorithms.byRobertLafore.ch11.DataItemCh11;
+import everything.algorithms.byRobertLafore.ch11.HashOpenAddressing;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
 
 /**
  * User: Makar Kalancha
- * Date: 22/01/2015
- * Time: 10:26
+ * Date: 23/01/2015
+ * Time: 16:57
  */
-public class HashDemo {
+public class HashChainDemo {
     public static void main(String[] args) throws IOException{
-        DataItemCh11<Integer> aDataItem;
         int aKey;
+        Link<Integer> aDataItem;
         int size;
         int n;
-        int keysPerCell;
+        int keysPerCell = 100;
 
         System.out.print("Enter size of hash table:");
         size = getInt();
         System.out.print("Enter initial number of items: ");
         n = getInt();
-        keysPerCell = 10;
-        HashOpenAddressing<Integer> hashTable = new HashOpenAddressing<>(size);
+        HashTable<Integer> hashTable = new HashTable<>(size);
 //        HashDoubleHashing<Integer> hashTable = new HashDoubleHashing<>(size);
 
         for (int j = 0; j < n; j++) {
             aKey = (int) (Math.random() * keysPerCell * size);
-            aDataItem = new DataItemCh11<>(aKey);
+            aDataItem = new Link<>(aKey);
             hashTable.insert(aDataItem);
         }
 
@@ -47,7 +46,7 @@ public class HashDemo {
                 case 'i':
                     System.out.print("Enter key value to insert: ");
                     aKey = getInt();
-                    aDataItem = new DataItemCh11<>(aKey);
+                    aDataItem = new Link<>(aKey);
                     hashTable.insert(aDataItem);
                     hashTable.displayTable();
                     break;

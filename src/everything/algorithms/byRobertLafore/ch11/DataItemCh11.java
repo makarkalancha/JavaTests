@@ -21,4 +21,11 @@ public class DataItemCh11<T extends Comparable> {
     public boolean isNull(){
         return false;
     }
+
+    @Override
+    public String toString() {
+        return "DataItemCh11{" +
+                "iData=" + iData +
+                '}';
+    }
 }
