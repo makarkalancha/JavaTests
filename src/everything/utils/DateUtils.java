@@ -16,12 +16,12 @@ public class DateUtils {
 //        String str = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(ts.getTime())).toString();
 //        System.out.println(str);
 //        String dateSt = "2014-04-11 1:30 PM";
-//        String dateSt = "2014-01-15 3:00 pm";
-        String dateSt = "2014-february-20 11:30 am";
+        String dateSt = "2014-01-15 3:00 pm";
+//        String dateSt = "2014-february-20 11:30 am";
 
         try{
 ////            System.out.println(new SimpleDateFormat("MM/dd/yyyy hh:mm a").parse(dateSt).toString());
-////            System.out.println(new SimpleDateFormat("yyyy-MM-dd hh:mm a").parse(dateSt).toString());
+            System.out.println(new SimpleDateFormat("yyyy-MM-dd hh:mm a").parse(dateSt).toString());
 //            System.out.println(new SimpleDateFormat("yyyy-MMMM-dd hh:mm a").parse(dateSt).toString());
 //
 ////            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
@@ -40,12 +40,12 @@ public class DateUtils {
 //            SimpleDateFormat sdfElapsed = new SimpleDateFormat("dd 'days' HH:mm:ss.SSS");
 
 
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd't'HH:mm:ssz");
-//            String dateSt1 = "Fri, 08 Aug 2014 18:00:18 +0000";
-            String dateSt1 = "2014-11-03t00:00:00-0500";
-
-            Date date1 = sdf.parse(dateSt1);
-            System.out.println("date1 millis:\n"+date1+"\n"+date1.getTime());
+//            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd't'HH:mm:ssz");
+////            String dateSt1 = "Fri, 08 Aug 2014 18:00:18 +0000";
+//            String dateSt1 = "2014-11-03t00:00:00-0500";
+//
+//            Date date1 = sdf.parse(dateSt1);
+//            System.out.println("date1 millis:\n"+date1+"\n"+date1.getTime());
         }catch (ParseException e){
             e.printStackTrace();
         }
