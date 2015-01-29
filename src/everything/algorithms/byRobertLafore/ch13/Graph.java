@@ -9,7 +9,7 @@ import java.util.LinkedList;
  */
 public class Graph {
     private final int MAX_VERTS = 20;
-    private Vertex[] vertexList;
+    private VertexCh13[] vertexCh13List;
     private int[][] adjMat;
     private int nVerts;
 
@@ -17,7 +17,7 @@ public class Graph {
     private LinkedList<Integer> theQueue = new LinkedList<>();
 
     public Graph() {
-        vertexList = new Vertex[MAX_VERTS];
+        vertexCh13List = new VertexCh13[MAX_VERTS];
         adjMat = new int[MAX_VERTS][MAX_VERTS];
         nVerts = 0;
         for (int j = 0; j < MAX_VERTS; j++) {
@@ -28,7 +28,7 @@ public class Graph {
     }
 
     public void addVertex(char lab) {
-        vertexList[nVerts++] = new Vertex(lab);
+        vertexCh13List[nVerts++] = new VertexCh13(lab);
     }
 
     public void addEdge(int start, int end) {
@@ -37,12 +37,12 @@ public class Graph {
     }
 
     public void displayVertex(int v) {
-        System.out.print(vertexList[v].label);
+        System.out.print(vertexCh13List[v].label);
     }
 
     public int getAdjUnvisitedVertex(int v) {
         for (int j = 0; j < nVerts; j++) {
-            if(adjMat[v][j] == 1 && vertexList[j].wasVisited == false){
+            if(adjMat[v][j] == 1 && vertexCh13List[j].wasVisited == false){
                 return j;
             }
         }
@@ -50,7 +50,7 @@ public class Graph {
     }
 
     public void dfs() {
-        vertexList[0].wasVisited = true;
+        vertexCh13List[0].wasVisited = true;
         displayVertex(0);
         theStack.push(0);
 
@@ -60,7 +60,7 @@ public class Graph {
             if (v == -1) {
                 theStack.poll(); //or theStack.pollFirst()
             } else {
-                vertexList[v].wasVisited = true;
+                vertexCh13List[v].wasVisited = true;
                 displayVertex(v);
                 theStack.push(v);
             }
@@ -68,12 +68,12 @@ public class Graph {
 
         //stack is empty, so we're done
         for (int j = 0; j < nVerts; j++) {
-            vertexList[j].wasVisited = false;
+            vertexCh13List[j].wasVisited = false;
         }
     }
 
     public void bfs() {
-        vertexList[0].wasVisited = true;
+        vertexCh13List[0].wasVisited = true;
         displayVertex(0);
         theQueue.add(0);
 
@@ -83,7 +83,7 @@ public class Graph {
             if (current == -1) {
                 theQueue.remove(); //or theStack.poll()
             } else {
-                vertexList[current].wasVisited = true;
+                vertexCh13List[current].wasVisited = true;
                 displayVertex(current);
                 theQueue.add(current);
             }
@@ -91,13 +91,13 @@ public class Graph {
 
         //stack is empty, so we're done
         for (int j = 0; j < nVerts; j++) {
-            vertexList[j].wasVisited = false;
+            vertexCh13List[j].wasVisited = false;
         }
     }
 
     //minimum spanning tree
     public void mst(){
-        vertexList[0].wasVisited = true;
+        vertexCh13List[0].wasVisited = true;
         theStack.push(0);
 
         while(!theStack.isEmpty()) {
@@ -107,7 +107,7 @@ public class Graph {
             if (v == -1) {
                 theStack.pop();
             } else {
-                vertexList[v].wasVisited = true;
+                vertexCh13List[v].wasVisited = true;
                 theStack.push(v);
 
                 displayVertex(currentVertex);
@@ -117,7 +117,7 @@ public class Graph {
         }
 
         for (int j = 0; j < nVerts; j++) {
-            vertexList[j].wasVisited = false;
+            vertexCh13List[j].wasVisited = false;
         }
     }
 }

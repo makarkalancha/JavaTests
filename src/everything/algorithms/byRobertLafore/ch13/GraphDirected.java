@@ -9,7 +9,7 @@ import java.util.LinkedList;
  */
 public class GraphDirected {
     private final int MAX_VERTS = 20;
-    private Vertex[] vertexList;
+    private VertexCh13[] vertexCh13List;
     private int[][] adjMat;
     private int nVerts;
     private char[] sortedArray;
@@ -18,7 +18,7 @@ public class GraphDirected {
     private LinkedList<Integer> theQueue = new LinkedList<>();
 
     public GraphDirected() {
-        vertexList = new Vertex[MAX_VERTS];
+        vertexCh13List = new VertexCh13[MAX_VERTS];
         adjMat = new int[MAX_VERTS][MAX_VERTS];
         nVerts = 0;
         for (int j = 0; j < MAX_VERTS; j++) {
@@ -30,7 +30,7 @@ public class GraphDirected {
     }
 
     public void addVertex(char lab) {
-        vertexList[nVerts++] = new Vertex(lab);
+        vertexCh13List[nVerts++] = new VertexCh13(lab);
     }
 
     public void addEdge(int start, int end) {
@@ -38,12 +38,12 @@ public class GraphDirected {
     }
 
     public void displayVertex(int v) {
-        System.out.print(vertexList[v].label);
+        System.out.print(vertexCh13List[v].label);
     }
 
     public int getAdjUnvisitedVertex(int v) {
         for (int j = 0; j < nVerts; j++) {
-            if(adjMat[v][j] == 1 && vertexList[j].wasVisited == false){
+            if(adjMat[v][j] == 1 && vertexCh13List[j].wasVisited == false){
                 return j;
             }
         }
@@ -84,7 +84,7 @@ public class GraphDirected {
     public void deleteVertex(int delVert) {
         if (delVert != nVerts - 1) {
             for (int j = delVert; j < nVerts - 1; j++) {
-                vertexList[j] = vertexList[j + 1];
+                vertexCh13List[j] = vertexCh13List[j + 1];
             }
 
             //delete row from adjMat
@@ -111,7 +111,7 @@ public class GraphDirected {
                 return;
             }
 
-            sortedArray[nVerts - 1] = vertexList[currentVertex].label;
+            sortedArray[nVerts - 1] = vertexCh13List[currentVertex].label;
             deleteVertex(currentVertex);
         }
 
@@ -125,7 +125,7 @@ public class GraphDirected {
 
     public void connectivityTable() {
         for(int vertexId = 0 ; vertexId < nVerts;vertexId++) {
-            vertexList[vertexId].wasVisited = true;
+            vertexCh13List[vertexId].wasVisited = true;
             displayVertex(vertexId);
             theStack.push(vertexId);
 
@@ -135,7 +135,7 @@ public class GraphDirected {
                 if (v == -1) {
                     theStack.poll(); //or theStack.pollFirst()
                 } else {
-                    vertexList[v].wasVisited = true;
+                    vertexCh13List[v].wasVisited = true;
                     displayVertex(v);
                     theStack.push(v);
                 }
@@ -143,7 +143,7 @@ public class GraphDirected {
 
             //stack is empty, so we're done
             for (int j = 0; j < nVerts; j++) {
-                vertexList[j].wasVisited = false;
+                vertexCh13List[j].wasVisited = false;
             }
             System.out.println();
         }

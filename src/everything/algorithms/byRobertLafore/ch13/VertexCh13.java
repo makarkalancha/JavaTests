@@ -5,11 +5,11 @@ package everything.algorithms.byRobertLafore.ch13;
  * Date: 27/01/2015
  * Time: 11:27
  */
-public class Vertex {
+public class VertexCh13 {
     public char label;
     public boolean wasVisited;
 
-    public Vertex(char lab) {
+    public VertexCh13(char lab) {
         this.label = lab;
         wasVisited = false;
     }
