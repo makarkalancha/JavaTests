@@ -141,4 +141,61 @@ public class GraphWeightedDirectional{
     public int getSize() {
         return nVerts;
     }
+
+    public void algFloyd(){
+        for (int row = 0; row < nVerts; row++) {
+            for (int col = 0; col < nVerts; col++) {
+                int num = adjMat[row][col];
+                if (num == INFINITY) {
+//                    System.out.println("**\t");
+                    continue;
+                }
+
+//                System.out.print(num + "\t");
+                for (int innerRow = 0; innerRow < nVerts; innerRow++) {
+                    if (innerRow == col) {
+                        continue;
+                    }
+
+                    int innerNum = adjMat[innerRow][row];
+                    if (innerNum == INFINITY) {
+//                        System.out.println("inner**\t");
+                        continue;
+                    }
+//                    System.out.print(num + "\t");
+                    int sum = num + innerNum;
+                    if (sum < adjMat[innerRow][col]) {
+                        adjMat[innerRow][col] = sum;
+                    }
+                }
+//                System.out.println("end col for");
+            }
+//            System.out.println("end row for");
+        }
+    }
+
+    public void displayAdjMat() {
+        for (int i = 0; i < nVerts; i++) {
+            if (i == 0) {
+                System.out.print("\t");
+            }
+            System.out.print(vertexList[i].label + "\t");
+        }
+        System.out.println();
+        for (int row = 0; row < nVerts; row++) {
+            for (int col = 0; col < nVerts; col++) {
+                if (col == 0) {
+                    System.out.print(vertexList[row].label + "\t");
+                }
+
+                int num = adjMat[row][col];
+                if (num == INFINITY) {
+                    System.out.print("**\t");
+                } else {
+                    System.out.print(num + "\t");
+                }
+            }
+            System.out.println();
+        }
+    }
 }

@@ -20,6 +20,7 @@ public class WGraphApp {
 //        WGraphApp.executeWeightedNonDirectionalGraph();
 
         WGraphApp.executeWeightedDirectionalGraph();
+//        WGraphApp.executeWeightedDirectionalGraphFloyd();
 
 
     }
@@ -119,5 +120,34 @@ public class WGraphApp {
         for (int i = 0; i < theGraph.getSize(); i++) {
             theGraph.path(i);
         }
+
+        theGraph.displayAdjMat();
+        theGraph.algFloyd();
+        System.out.println();
+        theGraph.displayAdjMat();
+    }
+
+    public static void executeWeightedDirectionalGraphFloyd() {
+        GraphWeightedDirectional theGraph = new GraphWeightedDirectional();
+
+        theGraph.addVertex('A'); //0
+        theGraph.addVertex('B'); //1
+        theGraph.addVertex('C'); //2
+        theGraph.addVertex('D'); //3
+
+        theGraph.addEdge(1, 0, 70); //BA 70
+        theGraph.addEdge(1, 3, 10); //BD 10
+        theGraph.addEdge(2, 0, 30); //CA 30
+        theGraph.addEdge(3, 2, 20); //DC 20
+
+//        System.out.println("Shortest Path: ");
+//        for (int i = 0; i < theGraph.getSize(); i++) {
+//            theGraph.path(i);
+//        }
+
+        theGraph.displayAdjMat();
+        theGraph.algFloyd();
+        System.out.println();
+        theGraph.displayAdjMat();
     }
 }
