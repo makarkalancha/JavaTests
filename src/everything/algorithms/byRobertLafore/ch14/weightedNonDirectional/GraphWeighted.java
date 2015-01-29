@@ -1,4 +1,8 @@
-package everything.algorithms.byRobertLafore.ch14;
+package everything.algorithms.byRobertLafore.ch14.weightedNonDirectional;
+
+import everything.algorithms.byRobertLafore.ch14.EdgeCh14;
+import everything.algorithms.byRobertLafore.ch14.PriorityQueueEdge;
+import everything.algorithms.byRobertLafore.ch14.VertexCh14;
 
 import java.util.PriorityQueue;
 

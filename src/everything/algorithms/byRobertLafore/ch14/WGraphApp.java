@@ -1,9 +1,9 @@
 package everything.algorithms.byRobertLafore.ch14;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+import everything.algorithms.byRobertLafore.ch14.weightedDirectional.GraphWeightedDirectional;
+import everything.algorithms.byRobertLafore.ch14.weightedNonDirectional.GraphWeighted;
 
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.PriorityQueue;
 
 /**
@@ -17,7 +17,9 @@ public class WGraphApp {
 
 //        WGraphApp.priorityQueueGraphWTest();
 
-        WGraphApp.executeGraph();
+//        WGraphApp.executeWeightedNonDirectionalGraph();
+
+        WGraphApp.executeWeightedDirectionalGraph();
 
 
     }
@@ -69,7 +71,7 @@ public class WGraphApp {
 //        }
     }
 
-    public static void executeGraph() {
+    public static void executeWeightedNonDirectionalGraph() {
         GraphWeighted theGraph = new GraphWeighted();
 
         theGraph.addVertex('A'); //0
@@ -90,8 +92,31 @@ public class WGraphApp {
         theGraph.addEdge(3, 4, 12); //DE 12
         theGraph.addEdge(4, 5, 7); //EF 7
 
-        System.out.println("minimum spanning tree: ");
+        System.out.println("Minimum Spanning Tree: ");
         theGraph.mstw();
+        System.out.println();
+    }
+
+    public static void executeWeightedDirectionalGraph() {
+        GraphWeightedDirectional theGraph = new GraphWeightedDirectional();
+
+        theGraph.addVertex('A'); //0
+        theGraph.addVertex('B'); //1
+        theGraph.addVertex('C'); //2
+        theGraph.addVertex('D'); //3
+        theGraph.addVertex('E'); //4
+
+        theGraph.addEdge(0, 1, 50); //AB 50
+        theGraph.addEdge(0, 3, 80); //AD 80
+        theGraph.addEdge(1, 2, 60); //BC 60
+        theGraph.addEdge(1, 3, 90); //BD 90
+        theGraph.addEdge(2, 4, 40); //CE 40
+        theGraph.addEdge(3, 2, 20); //DC 20
+        theGraph.addEdge(3, 4, 70); //DE 70
+        theGraph.addEdge(4, 1, 50); //EB 50
+
+        System.out.println("Shortest Path: ");
+        theGraph.path();
         System.out.println();
     }
 }
