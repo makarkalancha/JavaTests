@@ -12,17 +12,19 @@ import java.util.LinkedList;
  */
 public class GraphApp {
     public static void main(String[] args) {
-        GraphApp.linkedLists();
+//        GraphApp.linkedLists();
 
-        GraphApp.graphDFS();
+//        GraphApp.graphDFS();
 
-        GraphApp.graphBFS();
+//        GraphApp.graphBFS();
 
-        GraphApp.graphMST();
+//        GraphApp.graphMST();
 
-        GraphApp.graphDirectedTopologSort();
+        GraphApp.graphMSTHelpWGraph();
 
-        GraphApp.graphDirectedConnTable();
+//        GraphApp.graphDirectedTopologSort();
+
+//        GraphApp.graphDirectedConnTable();
     }
 
     public static void linkedLists() {
@@ -98,6 +100,31 @@ public class GraphApp {
         theGraph.addEdge(2, 3); //CD
         theGraph.addEdge(2, 4); //CE
         theGraph.addEdge(3, 4); //DE
+
+        System.out.print("Minimum Spanning Tree: ");
+        theGraph.mst();
+        System.out.println();
+    }
+
+    public static void graphMSTHelpWGraph() {
+        Graph theGraph = new Graph();
+        theGraph.addVertex('A'); //0 (starts for dfs)
+        theGraph.addVertex('B'); //1
+        theGraph.addVertex('C'); //2
+        theGraph.addVertex('D'); //3
+        theGraph.addVertex('E'); //4
+        theGraph.addVertex('F'); //5
+
+        theGraph.addEdge(0, 1); //AB
+        theGraph.addEdge(0, 3); //AD
+        theGraph.addEdge(1, 2); //BC
+        theGraph.addEdge(1, 3); //BD
+        theGraph.addEdge(1, 4); //BE
+        theGraph.addEdge(2, 3); //CD
+        theGraph.addEdge(2, 4); //CE
+        theGraph.addEdge(2, 5); //CF
+        theGraph.addEdge(3, 4); //DE
+        theGraph.addEdge(4, 5); //EF
 
         System.out.print("Minimum Spanning Tree: ");
         theGraph.mst();
