@@ -116,7 +116,8 @@ public class WGraphApp {
         theGraph.addEdge(4, 1, 50); //EB 50
 
         System.out.println("Shortest Path: ");
-        theGraph.path();
-        System.out.println();
+        for (int i = 0; i < theGraph.getSize(); i++) {
+            theGraph.path(i);
+        }
     }
 }

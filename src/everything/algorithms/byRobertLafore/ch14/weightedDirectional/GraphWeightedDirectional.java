@@ -4,12 +4,14 @@ import everything.algorithms.byRobertLafore.ch14.EdgeCh14;
 import everything.algorithms.byRobertLafore.ch14.PriorityQueueEdge;
 import everything.algorithms.byRobertLafore.ch14.VertexCh14;
 
+import javax.sound.midi.Soundbank;
+
 /**
  * User: Makar Kalancha
  * Date: 29/01/2015
  * Time: 09:37
  */
-public class GraphWeightedDirectional {
+public class GraphWeightedDirectional{
     private final int MAX_VERTS = 20;
     private final int INFINITY = 1_000_000;
     private VertexCh14[] vertexList;
@@ -92,13 +94,15 @@ public class GraphWeightedDirectional {
             }
 
             char parent = vertexList[sPath[j].parentVertex].label;
-            System.out.print("(" + parent + ")");
+            System.out.print("(" + parent + ")  ");
         }
         System.out.println();
     }
 
-    public void path() {
-        int startTree = 0;
+    public void path(int startingVertexIndex) {
+//        int startTree = 0;
+        System.out.println("Starting vertex: "+vertexList[startingVertexIndex].label);
+        int startTree = startingVertexIndex;
         vertexList[startTree].isInTree = true;
         nTree = 1;
 
@@ -114,7 +118,7 @@ public class GraphWeightedDirectional {
             int minDist = sPath[indexMin].distance;
 
             if (minDist == INFINITY) {
-                System.out.println("There are unreachable vertices");
+                System.out.println("There are unreachable vertices: "+vertexList[indexMin].label);
                 break;
             } else {
                 currentVert = indexMin;
@@ -131,6 +135,10 @@ public class GraphWeightedDirectional {
         for (int j = 0; j < nVerts; j++) {
             vertexList[j].isInTree = false;
         }
+        System.out.println("---------------------------------------------------");
     }
 
+    public int getSize() {
+        return nVerts;
+    }
 }
