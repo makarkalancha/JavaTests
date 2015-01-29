@@ -142,7 +142,7 @@ public class GraphWeightedDirectional{
         return nVerts;
     }
 
-    public void algFloyd(){
+    public void algorithmFloyd(){
         for (int row = 0; row < nVerts; row++) {
             for (int col = 0; col < nVerts; col++) {
                 int num = adjMat[row][col];
