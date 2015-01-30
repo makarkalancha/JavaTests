@@ -122,7 +122,7 @@ public class WGraphApp {
         }
 
         theGraph.displayAdjMat();
-        theGraph.algFloyd();
+        theGraph.algorithmFloyd();
         System.out.println();
         theGraph.displayAdjMat();
     }
@@ -146,7 +146,7 @@ public class WGraphApp {
 //        }
 
         theGraph.displayAdjMat();
-        theGraph.algFloyd();
+        theGraph.algorithmFloyd();
         System.out.println();
         theGraph.displayAdjMat();
     }
