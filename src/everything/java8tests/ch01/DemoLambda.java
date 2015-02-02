@@ -11,41 +11,41 @@ import java.util.function.*;
  */
 public class DemoLambda {
     public static void main(String[] args) {
-//        System.out.println("func001");
-//        Lambda.func001();
+        System.out.println("func001");
+        DemoLambda.func001();
 //
 //        System.out.println("\nfunc002");
-//        Lambda.func002();
+//        DemoLambda.func002();
 //
 //        System.out.println("\nfunc003");
-//        Lambda.func003();
+//        DemoLambda.func003();
 
 //        System.out.println("\nfunc004: exception in lambda");
-//        Lambda.func004();
+//        DemoLambda.func004();
 
 //        System.out.println("\nfunc005: reference method ::");
-//        Lambda.func005();
+//        DemoLambda.func005();
 
 //        System.out.println("\nfunc006: concurrent greeter");
-//        Lambda.func006();
+//        DemoLambda.func006();
 
 //        System.out.println("\nfunc007: variable scope");
-//        Lambda.func007();
+//        DemoLambda.func007();
 
 //        System.out.println("\nfunc008: list print");
-//        DemoLambda.func008();
+//        DemoDemoLambda.func008();
 
 //        System.out.println("\nfunc009: person interface");
-//        DemoLambda.func009();
+//        DemoDemoLambda.func009();
 
 //        System.out.println("\nfunc010: named person interface");
-//        DemoLambda.func010();
+//        DemoDemoLambda.func010();
 
 //        System.out.println("\nfunc011: named another person interface");
-//        DemoLambda.func011();
+//        DemoDemoLambda.func011();
 
-        System.out.println("\nfunc012: static method in interface");
-        DemoLambda.func012();
+//        System.out.println("\nfunc012: static method in interface");
+//        DemoDemoLambda.func012();
     }
 
     public static void func012() {
@@ -182,5 +182,8 @@ public class DemoLambda {
         System.out.println(Arrays.toString(arrayOfWords));
         Arrays.sort(arrayOfWords, (f, s) -> Integer.compare(f.length(), s.length()));
         System.out.println(Arrays.toString(arrayOfWords));
+
+        System.out.println("Print array");
+        Arrays.stream(arrayOfWords).forEach(System.out::println);
     }
 }
