@@ -1,5 +1,6 @@
 package everything;
 
+import com.sun.media.sound.SoftTuning;
 import com.sun.org.apache.xpath.internal.SourceTree;
 
 import javax.sound.midi.Soundbank;
@@ -199,17 +200,36 @@ public class RegexTest {
 //        sb.insert(charNumber, " - Copy "+prefixNumber);
 //        System.out.println(sb.toString());
 
-        String query = "select * from _schema_version order by id desc limit 1";
-        String upperCaseQuery = query.toUpperCase();
-        System.out.println(upperCaseQuery);
-        String[] queryWordArray = upperCaseQuery.split("[^A-Z_]+");
-//        String[] queryWordArray = upperCaseQuery.split("[^\\w]");
-//        System.out.println(Arrays.toString(queryWordArray));
-        for(String oneWord : queryWordArray){
-            System.out.println(">"+oneWord+"<");
-        }
+//        String query = "select * from _schema_version order by id desc limit 1";
+//        String upperCaseQuery = query.toUpperCase();
+//        System.out.println(upperCaseQuery);
+//        String[] queryWordArray = upperCaseQuery.split("[^A-Z_]+");
+////        String[] queryWordArray = upperCaseQuery.split("[^\\w]");
+////        System.out.println(Arrays.toString(queryWordArray));
+//        for(String oneWord : queryWordArray){
+//            System.out.println(">"+oneWord+"<");
+//        }
 
+//        String txt = "Doctors,Hygienists,Assistants,Lab Technicians,Staff,General Attendees";
+//        String regex = "(\\w[,.:;])(\\w)";
+////        String newTxt = txt.replaceAll(regex, "$1 $2");
+//        String newTxt = txt.replaceAll(regex, "$1\r\n$2");
+//        System.out.println(txt);
+//        System.out.println(newTxt);
 
+//        String price = "340.0000";
+//        System.out.println(roundOf(price));
+
+        System.out.println(getDatabaseUrl("jck"));
+    }
+
+    public static String getDatabaseUrl(String edition){
+        return String.format("jdbc:postgresql://localhost:5432/%s", edition);
+    }
+
+    protected static String roundOf(String str){
+        Double price = Double.parseDouble(str);
+        return String.valueOf(price.intValue());
     }
 
     private static boolean isCategoryNameDisctount(String categoryName){
