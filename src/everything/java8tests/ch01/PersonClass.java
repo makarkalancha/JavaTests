@@ -8,6 +8,7 @@ package everything.java8tests.ch01;
 public class PersonClass {
     private long id;
     private String name;
+    protected int age;
 
     public PersonClass(long id) {
         this.id = id;
@@ -24,5 +25,13 @@ public class PersonClass {
 
     public String getName() {
         return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }

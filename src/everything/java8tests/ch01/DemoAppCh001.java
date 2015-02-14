@@ -9,43 +9,43 @@ import java.util.function.*;
  * Date: 30/01/2015
  * Time: 14:14
  */
-public class DemoLambda {
+public class DemoAppCh001 {
     public static void main(String[] args) {
         System.out.println("func001");
-        DemoLambda.func001();
+        DemoAppCh001.func001();
 //
 //        System.out.println("\nfunc002");
-//        DemoLambda.func002();
+//        DemoAppCh001.func002();
 //
 //        System.out.println("\nfunc003");
-//        DemoLambda.func003();
+//        DemoAppCh001.func003();
 
 //        System.out.println("\nfunc004: exception in lambda");
-//        DemoLambda.func004();
+//        DemoAppCh001.func004();
 
 //        System.out.println("\nfunc005: reference method ::");
-//        DemoLambda.func005();
+//        DemoAppCh001.func005();
 
 //        System.out.println("\nfunc006: concurrent greeter");
-//        DemoLambda.func006();
+//        DemoAppCh001.func006();
 
 //        System.out.println("\nfunc007: variable scope");
-//        DemoLambda.func007();
+//        DemoAppCh001.func007();
 
 //        System.out.println("\nfunc008: list print");
-//        DemoDemoLambda.func008();
+//        DemoDemoAppCh001.func008();
 
 //        System.out.println("\nfunc009: person interface");
-//        DemoDemoLambda.func009();
+//        DemoDemoAppCh001.func009();
 
 //        System.out.println("\nfunc010: named person interface");
-//        DemoDemoLambda.func010();
+//        DemoDemoAppCh001.func010();
 
 //        System.out.println("\nfunc011: named another person interface");
-//        DemoDemoLambda.func011();
+//        DemoDemoAppCh001.func011();
 
 //        System.out.println("\nfunc012: static method in interface");
-//        DemoDemoLambda.func012();
+//        DemoDemoAppCh001.func012();
     }
 
     public static void func012() {

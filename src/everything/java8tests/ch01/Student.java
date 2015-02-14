@@ -16,4 +16,13 @@ public class Student extends PersonClass implements Named {
     public Student(long id, String name) {
         super(id, name);
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id:"+this.getId()+";"+
+                "name:"+this.getName()+";"+
+                "age:"+this.getAge()+";"+
+                "}";
+    }
 }
