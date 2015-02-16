@@ -1,16 +1,23 @@
 package everything.java8tests.ch02;
 
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import everything.java8tests.ch01.Student;
+import org.jsoup.select.Collector;
 
+import javax.sound.midi.Soundbank;
 import java.io.IOException;
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicIntegerArray;
 import java.util.function.Function;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
@@ -20,8 +27,8 @@ import java.util.stream.Stream;
  */
 public class DemoAppCh02 {
     public static void main(String[] args)  throws IOException {
-//        System.out.println("func#001 2.1");
-//        DemoAppCh02.func001();
+        System.out.println("func#001 2.1");
+        DemoAppCh02.func001();
 //
 //        System.out.println("func#002 2.2");
 //        DemoAppCh02.func002();
@@ -161,9 +168,184 @@ public class DemoAppCh02 {
 //        System.out.println("func#046 2.11: count");
 //        DemoAppCh02.func046();
 
-        System.out.println("func#047 2.11: sum, min, max province population");
-        DemoAppCh02.func047();
+//        System.out.println("func#047 2.11: sum, min, max province population");
+//        DemoAppCh02.func047();
 
+//        System.out.println("func#048 2.11: country to language");
+//        DemoAppCh02.func048();
+
+//        System.out.println("func#049 2.11: city population stats");
+//        DemoAppCh02.func049();
+
+//        System.out.println("func#050 2.11: province to city names");
+//        DemoAppCh02.func050();
+
+//        System.out.println("func#051 2.12: streams of primitives");
+//        DemoAppCh02.func051();
+
+//        System.out.println("func#052 2.12: chars");
+//        DemoAppCh02.func052();
+
+//        System.out.println("func#053 2.12: string length");
+//        DemoAppCh02.func053();
+
+//        System.out.println("func#054 2.12: boxind primites");
+//        DemoAppCh02.func054();
+
+//        System.out.println("func#055 2.12: random");
+//        DemoAppCh02.func055();
+
+//        System.out.println("func#056 2.13: parallel");
+//        DemoAppCh02.func056();
+
+//        System.out.println("func#057 2.13: parallel cities");
+//        DemoAppCh02.func057();
+
+    }
+
+    public static void func057() {
+        Map<String, List<String>> result = getCityList().
+                stream().
+//                parallel().
+                collect(
+                        Collectors.groupingByConcurrent(City::getProvince,
+                                Collectors.mapping(City::getCityName,Collectors.toList())
+                                )
+                );
+        result.forEach((k, v) -> System.out.println(k + " = " + v));
+    }
+
+    public static void func056() throws IOException{
+        func001();
+
+        String content = new String(Files.readAllBytes(Paths.get("D:\\SRC\\Java_work_dir\\test\\src\\everything\\java8tests\\Demo.java")), StandardCharsets.UTF_8);
+//        http://www.regular-expressions.info/unicode.html
+//        In addition to complications, Unicode also brings new possibilities.
+// One is that each Unicode character belongs to a certain category.
+// You can match a single character belonging to the "letter" category with \p{L}.
+// You can match a single character not belonging to that category with \P{L}.
+        List<String> words = Arrays.asList(content.split("[\\P{L}]+"));
+
+        //Error—race condition!
+        //sometimes: elemnt[2]=18; [0, 4, 18, 13, 22, 10, 5, 11, 4, 4, 4, 0]
+        System.out.println("\nless 12 (Error—race condition!)");
+        int[] shortWords = new int[12];
+        words.stream().
+                parallel().
+                forEach(s->{
+                    if(s.length() < 12 ) {
+                        shortWords[s.length()]++;
+                    }
+                });
+        System.out.println(Arrays.toString(shortWords));
+        //elemnt[2]=19; [0, 4, 19, 13, 22, 10, 5, 11, 4, 4, 4, 0]
+        System.out.println("less 12 (NO—race condition!)");
+        AtomicIntegerArray shortWordsInAtomicInt = new AtomicIntegerArray(12);
+        words.stream().
+                parallel().
+                forEach(s->{
+                    if(s.length() < 12 ) {
+                        shortWordsInAtomicInt.getAndAdd(s.length(),1);
+                    }
+                });
+        System.out.println(shortWordsInAtomicInt);
+    }
+
+    public static void func055() {
+        Random random = new Random();
+        IntStream randomIntStream = random.ints(5, 1, 25);
+        String string = randomIntStream.
+                mapToObj(Integer::toString).
+                collect(Collectors.joining(", "));
+        System.out.println(string);
+    }
+
+    public static void func054() {
+        Stream<Integer> integerStream = IntStream.range(0, 5).boxed();
+        integerStream.forEach(str -> System.out.println(str + "\t->\t" + Integer.toBinaryString(str)));
+
+    }
+
+    public static void func053() {
+        Stream<String> stringStream = Stream.of("put", "me", "in", "A", "LIST");
+        IntStream intStream = stringStream.mapToInt(String::length);
+        intStream.forEach(System.out::println);
+    }
+
+    public static void func052() {
+        String sentence = "\uD835\uDD46 is the set of octonions.";
+        IntStream intStream = sentence.codePoints();
+        String string = intStream.
+                mapToObj(Integer::toHexString).
+                collect(Collectors.joining(", "));
+        System.out.println(string);
+    }
+
+    public static void func051() {
+        System.out.println("--stream");
+        IntStream intStream = IntStream.of(1, 1, 2, 3, 5);
+//        intStream.forEach(System.out::println);
+//        System.out.println("sum:"+intStream.sum());
+//        System.out.println("min:"+intStream.min());
+//        System.out.println("max:"+intStream.max());
+        System.out.println(intStream.summaryStatistics());
+
+        System.out.println("--stream upper bound is excluded");
+        IntStream intStreamExcluded = IntStream.range(0,5);
+        intStreamExcluded.forEach(System.out::println);
+
+        System.out.println("--stream upper bound is included");
+        IntStream intStreamIncluded = IntStream.rangeClosed(0,5);
+        intStreamIncluded.forEach(System.out::println);
+    }
+
+    public static void func050() {
+        Map<String, String> provinceToCityNames1 = getCityList().stream().
+                collect(
+                        Collectors.groupingBy(City::getProvince,
+                                Collectors.reducing("",
+                                        City::getCityName,
+                                        (s,t) -> s.length() == 0 ? t : s+", "+t
+                                )
+                        )
+                );
+        System.out.println("--version 1");
+        provinceToCityNames1.forEach((k, v) -> System.out.println(k + " = " + v));
+
+
+        Map<String, String> provinceToCityNames2 = getCityList().stream().
+                collect(
+                        Collectors.groupingBy(City::getProvince,
+                                Collectors.mapping(City::getCityName,
+                                        Collectors.joining(", ")
+                                )
+                        )
+                );
+        System.out.println("--version 2");
+        provinceToCityNames2.forEach((k, v) -> System.out.println(k + " = " + v));
+    }
+
+    public static void func049() {
+        Map<String, IntSummaryStatistics> provinceToCityPopulationSummary = getCityList().stream().
+                collect(
+                        Collectors.groupingBy(City::getProvince,
+                                Collectors.summarizingInt(City::getPopulation)
+                        )
+                );
+        System.out.println("STATISTICS:");
+        provinceToCityPopulationSummary.forEach((k, v) -> System.out.println(k + " = " + v));
+    }
+
+    public static void func048() {
+        Stream<Locale> localeStream = Stream.of(Locale.getAvailableLocales());
+        Map<String, Set<String>> countryToLanguage = localeStream.collect(
+                Collectors.groupingBy(l->l.getDisplayCountry(Locale.ENGLISH),
+                        Collectors.mapping(l->l.getDisplayLanguage(Locale.ENGLISH),
+                                Collectors.toSet()
+                            )
+                        )
+        );
+        countryToLanguage.forEach((k,v)->System.out.println(k+"-->"+v));
     }
 
     public static void func047() {
