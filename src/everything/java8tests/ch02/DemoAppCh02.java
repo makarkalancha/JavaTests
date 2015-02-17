@@ -27,8 +27,8 @@ import java.util.stream.Stream;
  */
 public class DemoAppCh02 {
     public static void main(String[] args)  throws IOException {
-        System.out.println("func#001 2.1");
-        DemoAppCh02.func001();
+//        System.out.println("func#001 2.1");
+//        DemoAppCh02.func001();
 //
 //        System.out.println("func#002 2.2");
 //        DemoAppCh02.func002();
@@ -117,8 +117,8 @@ public class DemoAppCh02 {
 //        System.out.println("func#029 2.8: Reduce");
 //        DemoAppCh02.func029();
 
-//        System.out.println("func#030 2.8: Reduce with identity");
-//        DemoAppCh02.func030();
+        System.out.println("func#030 2.8: Reduce with identity");
+        DemoAppCh02.func030();
 
 //        System.out.println("func#031 2.8: Reduce accumulator function");
 //        DemoAppCh02.func031();
@@ -208,10 +208,10 @@ public class DemoAppCh02 {
                 stream().
 //                parallel().
                 collect(
-                        Collectors.groupingByConcurrent(City::getProvince,
-                                Collectors.mapping(City::getCityName,Collectors.toList())
-                                )
-                );
+        Collectors.groupingByConcurrent(City::getProvince,
+                Collectors.mapping(City::getCityName, Collectors.toList())
+        )
+);
         result.forEach((k, v) -> System.out.println(k + " = " + v));
     }
 
@@ -241,13 +241,15 @@ public class DemoAppCh02 {
         //elemnt[2]=19; [0, 4, 19, 13, 22, 10, 5, 11, 4, 4, 4, 0]
         System.out.println("less 12 (NO—race condition!)");
         AtomicIntegerArray shortWordsInAtomicInt = new AtomicIntegerArray(12);
-        words.stream().
-                parallel().
-                forEach(s->{
-                    if(s.length() < 12 ) {
-                        shortWordsInAtomicInt.getAndAdd(s.length(),1);
-                    }
-                });
+        words.
+            stream().
+            parallel().
+//                parallelStream().
+            forEach(s->{
+                if(s.length() < 12 ) {
+                    shortWordsInAtomicInt.getAndAdd(s.length(),1);
+                }
+            });
         System.out.println(shortWordsInAtomicInt);
     }
 
@@ -633,8 +635,8 @@ public class DemoAppCh02 {
     }
 
     public static void func030() {
-//        Stream<Integer> stream = Stream.of(3, 5, 6, 10);
-        Stream<Integer> stream = Stream.empty();
+        Stream<Integer> stream = Stream.of(3, 5, 6, 10);
+//        Stream<Integer> stream = Stream.empty();
         ////v0 op v1 op v2 op . . .
         ////(x op y) op z = x op (y op z).
         ////(6 + 3) + 2 = 6 + (3 + 2).
@@ -644,8 +646,8 @@ public class DemoAppCh02 {
     }
 
     public static void func029() {
-//        Stream<Integer> stream = Stream.of(3, 5, 6, 10);
-        Stream<Integer> stream = Stream.empty();
+        Stream<Integer> stream = Stream.of(3, 5, 6, 10);
+//        Stream<Integer> stream = Stream.empty();
         ////v0 op v1 op v2 op . . .
         ////(x op y) op z = x op (y op z).
         ////(6 + 3) + 2 = 6 + (3 + 2).
