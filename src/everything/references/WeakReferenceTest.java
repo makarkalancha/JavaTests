@@ -7,6 +7,7 @@ import java.util.Map;
 /**
  * Created by mcalancea on 2015-04-14.
  */
+//-Xms1024k -Xmx2048k
 public class WeakReferenceTest {
     private WeakReference<Map<Integer,String>> myMap;
 
@@ -27,6 +28,7 @@ public class WeakReferenceTest {
                 System.out.println(i+") I'm still working!!!");
             } else{
                 System.out.println(i+") ******I'm free******");
+                System.out.println("myMap != null:"+(myMap != null)+ "; myMap.get() != null:"+(myMap.get() != null));
                 System.exit(0);
             }
         }
