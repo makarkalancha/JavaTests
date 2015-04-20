@@ -12,7 +12,7 @@ public class StringNameToNumber {
 //        String[] stringArray = {"A", "a", "b", "c", "d"};
         String[] stringArray = {"Baidu","Clone-Sync Emails", "Bulk Import", "Bugs", "Invalid atrkid", "My Jiras",
                 "!Favorite", "Team 6", "JBoss", "Jenkins", "Log", "Management", "Oracle", "Oracle DB", "Setup",
-                "Ticket","Java Guilde","Personal"};
+                "Ticket","Java Guilde","Personal","DB Scripts"};
         for (String st : stringArray) {
             System.out.println(st + ":" + getNumber(st));
         }
