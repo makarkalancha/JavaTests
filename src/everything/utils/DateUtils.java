@@ -2,6 +2,7 @@ package everything.utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -46,6 +47,23 @@ public class DateUtils {
 //
 //            Date date1 = sdf.parse(dateSt1);
 //            System.out.println("date1 millis:\n"+date1+"\n"+date1.getTime());
+
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+//            String dateEndString = "2014-01-15";
+            String dateEndString = null;
+
+            Calendar dateEnd = Calendar.getInstance();
+            dateEnd.setTime(sdf.parse(dateEndString));
+
+            Calendar dateCurrent = Calendar.getInstance();
+
+            System.out.println("end date:" + sdf.format(dateEnd.getTime()));
+            System.out.println("current date:" + sdf.format(dateCurrent.getTime()));
+            System.out.println("is end date > current date: " + (dateEnd.compareTo(dateCurrent)));
+
+//        System.out.println(str);
+//        String dateSt = "2014-04-11 1:30 PM";
+
         }catch (ParseException e){
             e.printStackTrace();
         }
