@@ -262,9 +262,21 @@ public class StringTest {
 //        String test = "103625/";
 //        String test = "103625";
 //        String test = "";
-        String regex = "^(\\w+)(/\\w*)";
-        test = test.replaceAll(regex,"$1");
-        System.out.println(test);
+//        String regex = "^(\\w+)(/\\w*)";
+//        test = test.replaceAll(regex,"$1");
+//        System.out.println(test);
+
+
+        String typeSimpleName = "TO";
+//        String oldString = "toObject";
+//        String oldString = "to";
+//        String oldString = "Objectto";
+//        String oldString = "ObjecttoObject";
+        String oldString = "tototototototototo";
+
+        String regex = "^(\\w*)("+typeSimpleName.toLowerCase()+")(\\w*)$";
+        String newString = oldString.replaceAll(regex, "$1"+typeSimpleName+"$3");
+        System.out.println(newString);
 
 
     }
