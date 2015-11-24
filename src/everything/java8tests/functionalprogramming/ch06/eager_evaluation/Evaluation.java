@@ -1,8 +1,7 @@
 package everything.java8tests.functionalprogramming.ch06.eager_evaluation;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.function.Supplier;
+import everything.java8tests.functionalprogramming.utils.Wrapper;
 
 /**
  * Created by mcalancea on 2015-09-25.
@@ -57,30 +56,12 @@ public class Evaluation {
 //        System.out.println("end: " + sdf.format(endDate));
 //        System.out.println("lasted: " + (end - start));
 
-        wrap(()->eagerEvaluator(evaluate(1), evaluate(2)));
+        Wrapper.wrap(() -> eagerEvaluator(evaluate(1), evaluate(2)));
         System.out.println("=========================================================");
-        wrap(() -> lazyEvaluator(() -> evaluate(1), () -> evaluate(2)));
+        Wrapper.wrap(() -> lazyEvaluator(() -> evaluate(1), () -> evaluate(2)));
     }
 
-    public static void wrap(RunFunction runFunction){
-        long start = 0L;
-        long end = 0L;
-        Date startDate = new Date();
-        Date endDate = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat();
 
-        start = System.currentTimeMillis();
-        runFunction.runIt();
-        end = System.currentTimeMillis();
-        startDate.setTime(start);
-        endDate.setTime(end);
-        System.out.println("start: " + sdf.format(startDate));
-        System.out.println("end: " + sdf.format(endDate));
-        System.out.println("lasted: " + (end - start));
-    }
 
-    @FunctionalInterface
-    interface RunFunction{
-        void runIt();
-    }
+
 }
