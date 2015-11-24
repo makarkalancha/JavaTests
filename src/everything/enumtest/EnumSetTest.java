@@ -1,6 +1,5 @@
 package everything.enumtest;
 
-import java.util.EnumSet;
 import java.util.Set;
 
 /**
@@ -39,13 +38,15 @@ public class EnumSetTest {
     }
 
     public static void main(String[] args) {
-        EnumSet<Color> yellow = EnumSet.of(Color.RED, Color.GREEN);
-        drawLine(yellow);
+//        EnumSet<Color> yellow = EnumSet.of(Color.RED, Color.GREEN);
+//        drawLine(yellow);
+//
+//        EnumSet<Color> white = EnumSet.of(Color.RED, Color.GREEN, Color.BLUE);
+//        drawLine(white);
+//
+//        EnumSet<Color> pink = EnumSet.of(Color.RED, Color.BLUE);
+//        drawLine(pink);
 
-        EnumSet<Color> white = EnumSet.of(Color.RED, Color.GREEN, Color.BLUE);
-        drawLine(white);
-
-        EnumSet<Color> pink = EnumSet.of(Color.RED, Color.BLUE);
-        drawLine(pink);
+        System.out.println("red:"+Color.valueOf("red".toUpperCase()));
     }
 }
