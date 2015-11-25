@@ -7,12 +7,14 @@ import java.util.Date;
  * Created by mcalancea on 2015-11-24.
  */
 public class Wrapper {
+
+    private static final String format = "dd/MMM/YYYY HH:mm:ss.S";
     public static void wrap(RunFunction runFunction){
         long start = 0L;
         long end = 0L;
         Date startDate = new Date();
         Date endDate = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat();
+        SimpleDateFormat sdf = new SimpleDateFormat(format);
 
         start = System.currentTimeMillis();
         runFunction.runIt();
