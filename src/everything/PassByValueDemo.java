@@ -18,6 +18,7 @@ public class PassByValueDemo {
             if(value == null) {
                 value = "default value";
             }
+            System.out.println("Target.changeValue->value = "+value);
             return value;
         }
 
@@ -32,8 +33,13 @@ public class PassByValueDemo {
         }
 
         public void process(){
+            System.out.println("first Target.process->value = "+value);
             doSomething1();
+            System.out.println("after doSomething1 Target.process->value = " + value);
             doSomething2();
+            System.out.println("after doSomething2 Target.process->value = " + value);
+            changeValue();
+            System.out.println("after changeValue Target.process->value = " + value);
         }
     }
 
@@ -42,6 +48,7 @@ public class PassByValueDemo {
             if(value == null) {
                 value = "default value";
             }
+            System.out.println("Client.changeValue->value = "+value);
             return value;
         }
     }
