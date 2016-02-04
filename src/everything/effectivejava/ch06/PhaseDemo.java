@@ -7,8 +7,11 @@ package everything.effectivejava.ch06;
 public class PhaseDemo {
 
     public static void main(String[] args) {
-        System.out.println(Phase.Transition.FREEZE);
-        System.out.println(Phase.Transition.from(Phase.GAS,Phase.SOLID));
+        Phase.Transition.fromWithMessage(Phase.GAS, Phase.SOLID);
+        Phase.Transition.toWithMessage(Phase.LIQUID, Phase.GAS);
+
+        Phase.Transition.fromWithMessage(Phase.IONIZED_GAS, Phase.PLASMA);
+        Phase.Transition.toWithMessage(Phase.PLASMA, Phase.IONIZED_GAS);
     }
 
 }
