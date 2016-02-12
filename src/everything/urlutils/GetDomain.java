@@ -1,7 +1,7 @@
 package everything.urlutils;
 
-import java.util.ArrayList;
 import com.google.common.net.InternetDomainName;
+import java.util.ArrayList;
 
 /**
  * Created by mcalancea on 2015-09-21.
@@ -22,6 +22,7 @@ public class GetDomain {
         cases.add("https://www.google.ca/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=nhl");
         cases.add("https://google.ca/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=nhl/kj;lkj/");
 //        cases.add("https://comp.infosystems.www.servers.unix");
+
 
 
 
