@@ -1,6 +1,6 @@
 package everything.parsers.targets;
 
-import everything.fileUtils.FileUtils;
+import everything.utils.fileUtils.FileUtils;
 import everything.parsers.gnydm.Session;
 import everything.parsers.gnydm.Speaker;
 import everything.parsers.gnydm.Track;
