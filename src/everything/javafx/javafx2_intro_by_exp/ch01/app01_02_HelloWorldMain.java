@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 /**
  * Created by mcalancea on 2016-02-12.
  */
-public class HelloWorldMain  extends Application{
+public class app01_02_HelloWorldMain extends Application{
     private static final String HELLO_WORLD = "Hello World";
     public static void main(String[] args) {
         Application.launch(args);
