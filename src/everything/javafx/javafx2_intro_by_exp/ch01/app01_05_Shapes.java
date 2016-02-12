@@ -55,9 +55,6 @@ public class app01_05_Shapes extends Application {
         Line line3 = new Line(160, 225, 190, 125);
         line3.setStroke(Color.RED);
         root.getChildren().add(line3);
-//                .controlX1(80).controlY1(-25)
-//                .controlX2(110).controlY2(175)
-//                .endX(140).endY(75);
 
         //ice cream
         Path path = new Path();
@@ -98,14 +95,25 @@ public class app01_05_Shapes extends Application {
         //smile
         QuadCurve quad = QuadCurveBuilder.create()
                 .startX(50).startY(50)
-                .endX(150).endY(50)
                 .controlX(125).controlY(150)
+                .endX(150).endY(50)
                 .translateY(path.getBoundsInParent().getMaxY())
                 .strokeWidth(3)
                 .stroke(Color.BLACK)
                 .fill(Color.WHITE)
                 .build();
         root.getChildren().add(quad);
+
+        Line line4 = new Line(50, 50, 125, 150);
+        line4.setTranslateY(path.getBoundsInParent().getMaxY());
+        line4.setStroke(Color.RED);
+        root.getChildren().add(line4);
+
+        Line line5 = new Line(125, 150, 150, 50);
+        line5.setTranslateY(path.getBoundsInParent().getMaxY());
+        line5.setStroke(Color.RED);
+        root.getChildren().add(line5);
+
 
         //outer donut
         Ellipse bigCircle = new Ellipse();
