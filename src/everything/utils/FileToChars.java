@@ -1,6 +1,9 @@
 package everything.utils;
 
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import everything.utils.fileUtils.FileUtils;
 
 /**
  * User: Makar Kalancha
@@ -12,7 +15,7 @@ public class FileToChars {
         String filePath = "D:\\\\Tasks\\\\066_analytics\\\\20140613\\\\interbike2013\\\\reports\\\\##DeviceAggregate1.txt";
         File file = new File(filePath);
         try {
-            String fileContent = readFile(file);
+            String fileContent = FileUtils.readFile(file);
             System.out.println(fileContent);
             String[][] string2DArray = convertStringToBytes(fileContent, "UTF8");
 //            for(int i =0;i<string2DArray.length;i++) {
@@ -43,21 +46,6 @@ public class FileToChars {
     protected static String escapeBackSlash(String string) {
         return string.replace("\\", "\\\\");
     }
-
-    private static String readFile(File file) throws IOException{
-        String result = "";
-        BufferedReader br = new BufferedReader(new FileReader(file));
-        String line = "";
-        try{
-            while((line = br.readLine()) != null) {
-                result += line;
-            }
-        } finally {
-            br.close();
-        }
-        return result;
-    }
-
     private static String[][] convertStringToBytes(String stringToConvert, String encoding) throws UnsupportedEncodingException {
         String[][] stringArray = new String[stringToConvert.length()][];
         for(int i = 0; i < stringToConvert.length();i++) {
