@@ -1,0 +1,138 @@
+{
+  "neg_kw_header": {
+    "en": "Negative Keywords",
+    "ja": "除外キーワード"
+  },
+  "neg_kw_description": {
+    "en": "Manage your negative keywords",
+    "ja": "除外キーワードの設定"
+  },
+  "neg_website_header": {
+    "en": "Website Exclusions",
+    "ja": "除外ウェブサイト"
+  },
+  "neg_website_description": {
+    "en": "Manage your website exclusions",
+    "ja": "除外ウェブサイトの設定"
+  },
+  "negative_keywords": {
+    "en": "negative keywords",
+    "ja": "除外キーワード"
+  },
+  "manageNegativesButton": {
+    "en": "Negatives",
+    "ja": "除外"
+  },
+  "neg_formTip1": {
+    "en": "Search Terms",
+    "ja": "検索条件"
+  },
+  "neg_formTip2": {
+    "en": "Negative keywords accept BROAD, +MODIFIED BROAD, \"PHRASE\" or [EXACT]",
+    "ja": "除外キーワードを設定してください。使用可能な値：BROAD、+MODIFIED +BROAD、 PHRASE  、[EXACT]"
+  },
+  "neg_formTip3": {
+    "en": "Single negative keyword per line",
+    "ja": "行毎に1除外キーワードを設定してください。"
+  },
+  "neg_formTip4": {
+    "en": "Negative keywords are added to the Changes Queue",
+    "ja": "除外キーワードが変更キューに追加されました。"
+  },
+  "neg_formTip_adcenter1": {
+    "en": "Adding Negatives is Excel-centric. Simply COPY/PASTE. Max. 1000 lines",
+    "ja": "Adding Negatives is Excel-centric. Simply COPY/PASTE. Max. 1000 lines"
+  },
+  "neg_formTip_adcenter2": {
+    "en": "Negative keywords accept \"PHRASE\" or [EXACT] (default is \"PHRASE\")",
+    "ja": "Negative keywords accept  PHRASE  or [EXACT] (default is  PHRASE )"
+  },
+  "neg_formTip_adcenter3": {
+    "en": "Single negative keyword per line",
+    "ja": "Single negative keyword per line"
+  },
+  "neg_formTip_adcenter4": {
+    "en": "Negative keywords are added to the Changes Queue",
+    "ja": "Negative keywords are added to the Changes Queue"
+  },
+  "neg_website_formTip1": {
+    "en": "Adding Negatives is Excel-centric. Simply COPY/PASTE. Max. 1000 lines",
+    "ja": "除外追加の場合、Excel-centricをご利用ください。最大1,000行までのコピー&ペーストが可能です。"
+  },
+  "neg_website_formTip2": {
+    "en": "Single website exclusion per line",
+    "ja": "行毎に1除外ウェブサイトを設定してください。"
+  },
+  "neg_website_formTip3": {
+    "en": "Website exclusions are added to the Changes Queue",
+    "ja": "除外ウェブサイトが変更キューに追加されました。"
+  },
+  "addNegativesButton": {
+    "en": "negatives",
+    "ja": "除外"
+  },
+  "neg_negativeCreationTitle": {
+    "en": "Create new negative keywords",
+    "ja": "除外キーワードを作成"
+  },
+  "neg_searchQueriesnegativeCreationDescription": {
+    "en": "Add negative keywords from Search Queries",
+    "ja": "検索クエリから除外キーワードを追加"
+  },
+  "neg_allCampaignLevel": {
+    "en": "All (Campaign level)",
+    "ja": "すべて（キャンペーンレベル）"
+  },
+  "neg_keywordConfirmRemove": {
+    "en": "Do you wish to remove this negative keyword?",
+    "ja": "除外キーワードを移動します。よろしいですか？"
+  },
+  "neg_genericError": {
+    "en": "Negative have errors",
+    "ja": "除外エラー"
+  },
+  "neg_duplicateError": {
+    "en": "This keyword already exists",
+    "ja": "このキーワードはすでに存在します。"
+  },
+  "neg_gridEmpty": {
+    "en": "There are no keywords.",
+    "ja": "キーワードが存在しません。"
+  },
+  "neg_website_gridEmpty": {
+    "en": "There are no websites.",
+    "ja": "ウェブサイトが存在しません。"
+  },
+  "neg_formSuccessMessage": {
+    "en": "{count} items were added to queue under {type} {name}",
+    "ja": " {type} {name} がキューに追加されました。対象：{count} "
+  },
+  "neg_downloadButtonTitle": {
+    "en": "List all keywords",
+    "ja": "全てのキーワードリスト"
+  },
+  "neg_adGroupLevelHeader": {
+    "en": "AdGroup Level Keywords",
+    "ja": "広告グループレベルのキーワード"
+  },
+  "neg_campaignLevelHeader": {
+    "en": "Campaign Level Keywords",
+    "ja": "キャンペーンレベルのキーワード"
+  },
+  "neg_kw_removeWarningSingleMsg": {
+    "en": "Are you sure you want to delete this keyword?",
+    "ja": "キーワードを削除します。よろしいですか？"
+  },
+  "neg_kw_removeWarningMultiMsg": {
+    "en": "Are you sure you want to delete these {size} keywords?",
+    "ja": "キーワードを削除します。よろしいですか？　対象： {size}  "
+  },
+  "neg_website_removeWarningSingleMsg": {
+    "en": "Are you sure you want to delete this website exclusion?",
+    "ja": "ウェブサイト除外を削除します。よろしいですか？"
+  },
+  "neg_website_removeWarningMultiMsg": {
+    "en": "Are you sure you want to delete these {size} website exclusions?",
+    "ja": "ウェブサイト除外を削除します。よろしいですか？　対象： {size}  "
+  }
+}

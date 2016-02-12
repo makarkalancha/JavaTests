@@ -1,0 +1,162 @@
+{
+  "filtersOpenButton": {
+    "en": "filters",
+    "ja": "フィルタ"
+  },
+  "addCondition": {
+    "en": "add condition",
+    "ja": "条件を追加"
+  },
+  "adwordsFirstPageBid": {
+    "en": "first page bid",
+    "ja": "FirstPageBid"
+  },
+  "adwordsMatchType": {
+    "en": "match type",
+    "ja": "マッチタイプ"
+  },
+  "adwordsKeywordQualityScore": {
+    "en": "quality score",
+    "ja": "媒体種別"
+  },
+  "providerAccountChannel": {
+    "en": "channel",
+    "ja": "チャネル"
+  },
+  "selectAColumn": {
+    "en": "select a column",
+    "ja": "カラムを設定してください。"
+  },
+  "selectAnOperator": {
+    "en": "select an operator",
+    "ja": "オペレータを設定してください。"
+  },
+  "selectAValue": {
+    "en": "select a value",
+    "ja": "バリューを設定してください。"
+  },
+  "selectSomeValues": {
+    "en": "select some values",
+    "ja": "バリューを選択してください。"
+  },
+  "operator": {
+    "en": "operator",
+    "ja": "オペレータ"
+  },
+  "overSelectedDateRangesTrendNote": {
+    "en": "over my selected date ranges",
+    "ja": "選択した期間を超えています。"
+  },
+  "statusAll": {
+    "en": "all",
+    "ja": "全て"
+  },
+  "statusAllButDeleted": {
+    "en": "all but deleted",
+    "ja": "削除済み以外全て"
+  },
+  "statusActiveOnly": {
+    "en": "active only",
+    "ja": "アクティブのみ"
+  },
+  "statusWarningAndErrors": {
+    "en": "errors and warnings",
+    "ja": "エラーおよび警告"
+  },
+  "statusHasChanges": {
+    "en": "unposted changes",
+    "ja": "未送信の変更"
+  },
+  "statusValidChanges": {
+    "en": "valid changes",
+    "ja": "有効な変更"
+  },
+  "statusHasImpressions": {
+    "en": "active accounts",
+    "ja": "アクティブアカウント"
+  },
+  "statusNoImpressions": {
+    "en": "inactive accounts",
+    "ja": "非アクティブアカウント"
+  },
+  "integerRequired": {
+    "en": "An integer is required.",
+    "ja": "整数を設定してください。"
+  },
+  "positiveValueRequired": {
+    "en": "A positive value is required.",
+    "ja": "正値を設定してください。"
+  },
+  "filterGreaterThanZero": {
+    "en": "Value must be greater than 0",
+    "ja": "0より大きな値を設定してください。"
+  },
+  "decreaseInvalid": {
+    "en": "A decrease can't be above 100%.",
+    "ja": "100%を超えて減らすことはできません。"
+  },
+  "decimalRequired": {
+    "en": "A decimal is required.",
+    "ja": "小数点を設定してください。"
+  },
+  "valueRequired": {
+    "en": "A value is required.",
+    "ja": "値を設定してください。"
+  },
+  "savedFilters": {
+    "en": "Save Filters",
+    "ja": "フィルタを保存"
+  },
+  "editFilters": {
+    "en": "Edit Filters",
+    "ja": "フィルタを編集"
+  },
+  "createFilters": {
+    "en": "Create Filters",
+    "ja": "フィルタを作成"
+  },
+  "filtersOverwriteName": {
+    "en": "This will overwrite the name of an existing saved filter. Do you want to proceed?",
+    "ja": "既存のフィルタ名を上書きします。よろしいですか？"
+  },
+  "filtersOverwrite": {
+    "en": "The filter {name} already exists. Do you want to overwrite it?",
+    "ja": "フィルタ名 {name} は既に存在します。上書きしてよろしいですか？"
+  },
+  "deleteFilter": {
+    "en": "Delete this filter",
+    "ja": "フィルタを削除"
+  },
+  "filterNew": {
+    "en": "NEW",
+    "ja": "新規"
+  },
+  "doDeleteFilter": {
+    "en": "Do you want to delete this filter?",
+    "ja": "フィルタを削除します。よろしいですか？"
+  },
+  "filterSaved": {
+    "en": "Your filter is saved.",
+    "ja": "フィルターが保存されました。"
+  },
+  "noRecentFilters": {
+    "en": "No recent filters",
+    "ja": "最近使用したフィルタはありません。"
+  },
+  "filterApplied": {
+    "en": "This filter is already applied.",
+    "ja": "このフィルタは既に設定されています。"
+  },
+  "deleteFilterTitle": {
+    "en": "Delete Filters",
+    "ja": "フィルタを削除"
+  },
+  "searchFor": {
+    "en": "Search for",
+    "ja": "検索対象"
+  },
+  "invalidFilter": {
+    "en": "Invalid filter",
+    "ja": "フィルタが無効です。"
+  }
+}

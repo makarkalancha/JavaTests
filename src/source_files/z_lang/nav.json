@@ -1,0 +1,70 @@
+{
+  "DASHBOARD_MENU_LABEL": {
+    "en": "Dashboard",
+    "ja": "ダッシュボード"
+  },
+  "BBM_MENU_LABEL": {
+    "en": "Bid Budget Management",
+    "ja": "ダッシュボード"
+  },
+  "ACCOUNT_LABEL": {
+    "en": "YOUR ORGANIZATION",
+    "ja": "アクイジオアカウント"
+  },
+  "CLIENT_CENTER_MENU_LABEL": {
+    "en": "Client Center",
+    "ja": "クライアントセンター"
+  },
+  "WORKBENCH_MENU_LABEL": {
+    "en": "Workbench",
+    "ja": "ワークベンチメニュー"
+  },
+  "REPORT_CENTER_MENU_LABEL": {
+    "en": "Report Center",
+    "ja": "レポートセンター"
+  },
+  "BULKSHEET_MANAGEMENT_MENU_LABEL": {
+    "en": "Bulksheet Management",
+    "ja": "バルクシート管理"
+  },
+  "CAMPAIGN_AUTOMATION_MENU_LABEL": {
+    "ja": "キャンペーンオートメーション",
+    "en": "Campaign Automation"
+  },
+  "MARKETPLACE_MENU_LABEL": {
+    "en": "Marketplace",
+    "ja":"マーケットプレイス"
+  },
+  "ALERTS_MENU_LABEL": {
+    "en": "Alerts",
+    "ja": "アラート"
+  },
+  "SETTINGS_MENU_LABEL": {
+    "en": "Settings",
+    "ja": "設定"
+  },
+  "ADMIN_SETTINGS_MENU_LABEL": {
+    "en": "Admin Settings",
+    "ja":"管理者設定"
+  },
+  "ACQUISIO_V1_MENU_LABEL": {
+    "en": "Acquisio V1",
+    "ja": "Acquisio V1"
+  },
+  "REPORT_CENTER_V1_MENU_LABEL": {
+    "en": "Report Center (legacy)",
+    "ja": "レポートセンター（旧）"
+  },
+  "CAMPAIGN_BROWSER_MENU_LABEL": {
+    "en": "Campaign Browser",
+    "ja": "キャンペーンブラウザ"
+  },
+  "MASS_EDITOR_MENU_LABEL": {
+    "en": "Mass Editor",
+    "ja":"マスエディタ"
+  },
+  "KPI_MENU_LABEL": {
+    "en": "KPIs (legacy)",
+    "ja":"フィードバック"
+  }
+}

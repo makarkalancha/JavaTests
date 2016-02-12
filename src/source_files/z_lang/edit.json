@@ -1,0 +1,575 @@
+{
+  "adText": {
+    "en": "Ad Text",
+    "ja": "広告テキスト"
+  },
+  "yahooJapanTextAd": {
+    "en": "Yahoo Japan Text Ad",
+    "ja": "Yahoo! Japanの広告テキスト"
+  },
+  "bingTextAd": {
+    "en": "Bing Ads Text Ad",
+    "ja": "Bing Ads Text Ad"
+  },
+  "bingWapTextAd": {
+    "en": "Bing Ads WAP Text Ad",
+    "ja": "Bing Ads WAP Text Ad"
+  },
+  "selectInformationToLinkYourAd": {
+    "en": "Select the information to link to your ad",
+    "ja": "広告のリンク方法を接続してください。"
+  },
+  "linkAdWithMobileWebpage": {
+    "en": "Link my ad with my mobile webpage",
+    "ja": "モバイルウェブページに広告をリンク"
+  },
+  "bingConnectToCustomersUsingPhoneNumber": {
+    "en": "Connect to customers using my phone number",
+    "ja": "Connect to customers using my phone number"
+  },
+  "businessName": {
+    "en": "Business Name",
+    "ja": "会社名"
+  },
+  "phoneNumber": {
+    "en": "Phone Number",
+    "ja": "電話番号"
+  },
+  "adwordsTextAd": {
+    "en": "AdWords Text Ad",
+    "ja": "テキスト広告"
+  },
+  "adwordsWapTextAd": {
+    "en": "AdWords WAP Text Ad",
+    "ja": "AdWordsのWAPテキスト広告"
+  },
+  "descriptionLine1": {
+    "en": "Description Line 1",
+    "ja": "説明文1"
+  },
+  "descriptionLine2": {
+    "en": "Description Line 2",
+    "ja": "説明文2"
+  },
+  "advancedTargeting": {
+    "en": "Advanced Targeting",
+    "ja": "アドバンスのターゲッティング"
+  },
+  "showAdToUsersOnAllMobileCarriers": {
+    "en": "Show this ad to users on all mobile carriers",
+    "ja": "この広告を全てのモバイルキャリアユーザに配信する"
+  },
+  "showAdToUsersOnSpecificCarriers": {
+    "en": "Show my ad only on specific mobile carriers networks",
+    "ja": "この広告を特定のモバイルキャリアユーザに配信する"
+  },
+  "specifyMarkupLanguage": {
+    "en": "Specify the markup language in which your mobile website is written",
+    "ja": "モバイルのウェブサイトのマークアップ言語を特定してください。"
+  },
+  "adwordsConnectToCustomersUsingPhoneNumber": {
+    "en": "Connect customers to my business telephone number so that people can click to call",
+    "ja": "click to callを可能とするため、ビジネス電話番号を接続してください。"
+  },
+  "noPreviewAvailable": {
+    "en": "No preview available",
+    "ja": "プレビュ対象がありません"
+  },
+  "nameImage": {
+    "en": "Name Image",
+    "ja": "イメージ名"
+  },
+  "viewFullSizeImageAd": {
+    "en": "View full size image ad",
+    "ja": "イメージ広告のフルサイズ参照"
+  },
+  "changeImage": {
+    "en": "Change Image",
+    "ja": "イメージを更新"
+  },
+  "mobileAdMarkupLanguageAsListErrorMsg": {
+    "en": "At least one markup language is required if a URL is specified",
+    "ja": "URLを特定する場合は、一つ以上のマークアップ言語を設定してください。"
+  },
+  "mobileUrlBusinessInformationsErrorMsg": {
+    "en": "Business Name and Phone Number or Display URL and Destination URL are required",
+    "ja": "ビジネス名と電話番号、または表示URLとリンク先URLを設定してください。"
+  },
+  "adDestinationUrlErrorMsg": {
+    "en": "The Destination URL must be a valid url",
+    "ja": "リンク先URL（Destination URL）は有効なURLを設定してください。"
+  },
+  "adDisplayUrlErrorMsg": {
+    "en": "The Display URL must be a valid url",
+    "ja": "表示URL（Display URL）は有効なURLを設定してください。"
+  },
+  "mobileAdBusinessNameErrorMsg": {
+    "en": "The Business name cannot be empty",
+    "ja": "ビジネス名を設定してください。"
+  },
+  "mobileAdPhoneNumberErrorMsg": {
+    "en": "The Phone number cannot be empty",
+    "ja": "電話番号を設定してください。"
+  },
+  "mobileAdCountryCodeFirstChoice": {
+    "en": "Select a country",
+    "ja": "国を選択してください。"
+  },
+  "mobileAdCountryCodeErrorMsg": {
+    "en": "Country code cannot be empty",
+    "ja": "国コードを設定してください。"
+  },
+  "dynamicallyGeneratedHeadline": {
+    "en": "Dynamically generated headline",
+    "ja": "動的に生成されたタイトル"
+  },
+  "dynamicallySelectedLandingPage": {
+    "en": "Dynamically selected landing page",
+    "ja": "動的に選択されたランディングページ"
+  },
+  "editTrackingLink": {
+    "en": "Edit to add tracking",
+    "ja": "トラッキング追加の編集"
+  },
+  "adwordsDynamicSearchAd": {
+    "en": "Adwords Dynamic Search Ad",
+    "ja": "AdWordsの動的検索広告"
+  },
+  "confirmDeleteEntityTitle": {
+    "en": "Delete {entity}?",
+    "ja": " {entity} を削除します。よろしいですか？"
+  },
+  "confirmDeleteEntityMessage": {
+    "en": "This {entity} will be permanently deleted.",
+    "ja": " {entity} を一旦削除すると、元に戻すことはできません。"
+  },
+  "revertSelectedChanges": {
+    "en": "Revert",
+    "ja": "元に戻す"
+  },
+  "deleteEntitiesButton": {
+    "en": "Delete",
+    "ja": "削除"
+  },
+  "changeStatus": {
+    "en": "Status",
+    "ja": "ステータス"
+  },
+  "newItem": {
+    "en": "New Item",
+    "ja": "新規アイテム"
+  },
+  "confirmDeleteAllSelectedItems": {
+    "en": "You're about to delete {count} {type} selected across {pages} pages. Are you sure?",
+    "ja": "選択のページ {pages} から、 {count} {type} を削除します。よろしいですか？"
+  },
+  "confirmDeleteSelectedItems": {
+    "en": "You're about to delete {count} {type}. Are you sure?",
+    "ja": " {count} {type} を削除します。よろしいですか？"
+  },
+  "confirmDeleteFilteredItems": {
+    "en": "You're about to delete {count} {type} selected by your filter. Are you sure?",
+    "ja": "選択のフィルタから、 {count} {type} を削除します。よろしいですか？"
+  },
+  "bulkEditDisabledTooltipBecauseLevel": {
+    "en": "Apply a filter (with one or more results) or select objects in the grid on a non-consolidated level to enable bulk edition",
+    "ja": "一括編集を可能にするには、フィルタを設定するか、グリッドでオブジェクトを選択してください。"
+  },
+  "bulkEditDisabledTooltipBecauseFilter": {
+    "en": "Bulk edit is not available when a trend filter (increase/decrease by more than %) is applied.",
+    "ja": "トレンドフィルタ（％指定の増減指定）を使用している場合、バルクエディットは使用できません。"
+  },
+  "bulkEdit": {
+    "en": "Bulk Edit",
+    "ja": "一括編集"
+  },
+  "bulkEditFiltered": {
+    "en": "Bulk Edit",
+    "ja": "一括編集"
+  },
+  "bulkEditSelected": {
+    "en": "Bulk Edit",
+    "ja": "一括編集"
+  },
+  "minValue": {
+    "en": "Min. Value",
+    "ja": "最小値"
+  },
+  "maxValue": {
+    "en": "Max. Value",
+    "ja": "最大値"
+  },
+  "increaseMaxBidBy": {
+    "en": "Increase Max. CPC by {what}",
+    "ja": "最大入札単価（MaxCPC）を {what} 増やす"
+  },
+  "setNullBidTo": {
+    "en": "Set No Value (default bid)",
+    "ja": "設定値なし（デフォルトを適用）"
+  },
+  "decreaseMaxBidBy": {
+    "en": "Decrease Max. CPC by {what}",
+    "ja": "最大入札単価（MaxCPC）を {what} 減らす"
+  },
+  "setMaxBidTo": {
+    "en": "Set Max. CPC to Fixed Value",
+    "ja": "最大入札単価（MaxCPC）を設定する"
+  },
+  "increaseSearchBidByBroadMatch": {
+    "en": "Increase Search Bid by {what} (Broad Match)",
+    "ja": "検索の入札を増やす： {what} （部分一致）"
+  },
+  "decreaseSearchBidByBroadMatch": {
+    "en": "Decrease Search Bid by {what} (Broad Match)",
+    "ja": "検索の入札を減らす： {what} （部分一致）"
+  },
+  "setSearchBidToBroadMatch": {
+    "en": "Set Search Bid (Broad Match) to",
+    "ja": "検索の入札（部分一致）を設定する"
+  },
+  "increaseMaxCpcSearchBidBy": {
+    "en": "Increase Max. CPC Search Bid by {what}",
+    "ja": "検索の最大入札単価（MaxCPC）を {what} 増やす"
+  },
+  "decreaseMaxCpcSearchBidBy": {
+    "en": "Decrease Max. CPC Search Bid by {what}",
+    "ja": "検索の最大入札単価（MaxCPC）を {what} 減らす"
+  },
+  "setMaxCpcSearchBidTo": {
+    "en": "Set Max. CPC Search Bid to Fixed Value",
+    "ja": "検索の最大入札単価（MaxCPC）を設定する"
+  },
+  "increaseMaxContentBidBy": {
+    "en": "Increase Max. Content Bid by {what}",
+    "ja": "コンテンツの上限入札単価を {what} 増やす"
+  },
+  "decreaseMaxContentBidBy": {
+    "en": "Decrease Max. Content Bid by {what}",
+    "ja": "コンテンツの上限入札単価を {what} 減らす"
+  },
+  "setMaxContentBidTo": {
+    "en": "Set Max. Content Bid to",
+    "ja": "コンテンツの上限入札単価を設定する"
+  },
+  "increaseMaxCpmBidBy": {
+    "en": "Increase Max. CPM Bid by {what}",
+    "ja": "上限インプレッション単価（CPM）を {what} 増やす"
+  },
+  "decreaseMaxCpmBidBy": {
+    "en": "Decrease Max. CPM Bid by {what}",
+    "ja": "上限インプレッション単価（CPM）を {what} 減らす"
+  },
+  "setMaxCpmBidTo": {
+    "en": "Set Max. CPM Bid to",
+    "ja": "上限インプレッション単価（MaxCPM）を設定"
+  },
+  "increaseDailyBudgetBy": {
+    "en": "Increase Daily Budget by {what}",
+    "ja": "日予算を {what} 増やす"
+  },
+  "decreaseDailyBudgetBy": {
+    "en": "Decrease Daily Budget by {what}",
+    "ja": "日予算を {what} 減らす"
+  },
+  "setDailyBudgetTo": {
+    "en": "Set Daily Budget to Fixed Value",
+    "ja": "日予算の固定値設定"
+  },
+  "increaseMonthlyBudgetBy": {
+    "en": "Increase Monthly Budget by {what}",
+    "ja": "月額予算を {what} 増やす"
+  },
+  "decreaseMonthlyBudgetBy": {
+    "en": "Decrease Monthly Budget by {what}",
+    "ja": "月額予算を {what} 減らす"
+  },
+  "setMonthlyBudgetTo": {
+    "en": "Set Monthly Budget to Fixed Value",
+    "ja": "月額予算の固定値設定"
+  },
+  "setDestinationUrlTo": {
+    "en": "Set Destination URL to",
+    "ja": "リンク先URL（Destination URL）を設定する"
+  },
+  "maxCpc": {
+    "en": "Max. CPC",
+    "ja": "最大入札単価（MaxCPC）"
+  },
+  "maxCpcSearchBid": {
+    "en": "Max. CPC Search Bid",
+    "ja": "検索の最大入札単価（MaxCPC）"
+  },
+  "maxCpmBid": {
+    "en": "Max. CPM Bid",
+    "ja": "上限インプレッション単価（MaxCPM）入札"
+  },
+  "maxBroadMatchSearchBid": {
+    "en": "Max. Broad Match Search Bid",
+    "ja": "検索の部分一致の入札単価"
+  },
+  "maxContentBid": {
+    "en": "Max. Content Bid",
+    "ja": "コンテンツの上限入札単価"
+  },
+  "dailyBudget": {
+    "en": "Daily Budget",
+    "ja": "日予算"
+  },
+  "monthlyBudget": {
+    "en": "Monthly Budget",
+    "ja": "月額予算"
+  },
+  "bulkEditHelpPopupTitle": {
+    "en": "Tip on Bulk Edits",
+    "ja": "一括編集のTip"
+  },
+  "bulkEditHelpPopupContent": {
+    "en": "Bulk changes are always applied on the current value. Pending values are ignored.",
+    "ja": "バルクは、現在の設定値の更新であり、送信待の設定値は考慮しません。"
+  },
+  "bulkEditFinalUrlMobileAppInstallsNotice": {
+    "en": "Bulk edit Final URL for Mobile App Install Ads are not supported and will be ignored.",
+    "ja": "Bulk edit Final URL for Mobile App Install Ads are not supported and will be ignored."
+  },
+  "mobileBidModifier": {
+    "en": "Mobile Bid Adjustment (MBA)",
+    "ja": "モバイル入札調整率（MBA）"
+  },
+  "setMobileBidModifier": {
+    "en": "Set Mobile Bid Adjustment to…",
+    "ja": "モバイル入札調整率（MBA）を設定する…"
+  },
+  "incrementMobileBidModifier": {
+    "en": "Change Mobile Bid Adjustment by adding...",
+    "ja": "モバイル入札調整率（MBA）を増やす..."
+  },
+  "factorMobileBidModifier": {
+    "en": "Change MBA so that effective bids change by a factor of...",
+    "ja": "効果的な入札に変わるようにモバイル入札調整率（MBA）を変更してください。倍率..."
+  },
+  "setHeadline": {
+    "en": "Headline",
+    "ja": "広告タイトル"
+  },
+  "setLine1": {
+    "en": "Desc. Line 1",
+    "ja": "ライン1"
+  },
+  "setLine2": {
+    "en": "Desc. Line 2",
+    "ja": "ライン2"
+  },
+  "headline": {
+    "en": "Headline",
+    "ja": "広告タイトル"
+  },
+  "line1": {
+    "en": "Desc. Line 1",
+    "ja": "ライン1"
+  },
+  "line2": {
+    "en": "Desc. Line 2",
+    "ja": "ライン２"
+  },
+  "desktopLaptopBidModifier": {
+    "en": "Desktop & laptop bid adjustment",
+    "ja": "コンピュータの入札調整"
+  },
+  "setDesktopLaptopBidModifier": {
+    "en": "Desktop & laptop bid adjustment",
+    "ja": "コンピュータの入札調整"
+  },
+  "tabletBidModifier": {
+    "en": "Tablet Bid Adjustment",
+    "ja": "タブレットの入札調整"
+  },
+  "setTabletBidModifier": {
+    "en": "Tablet Bid Adjustment",
+    "ja": "タブレットの入札調整"
+  },
+  "setDisplayURLTo": {
+    "en": "Display URL",
+    "ja": "表示URL"
+  },
+  "displayURL": {
+    "en": "Display URL",
+    "ja": "表示URL"
+  },
+  "setAdName": {
+    "en": "Name",
+    "ja": "名称"
+  },
+  "adName": {
+    "en": "Name",
+    "ja": "名称"
+  },
+  "mobileDevice": {
+    "en": "Mobile Device Preference",
+    "ja": "モバイルデバイス優先"
+  },
+  "setMobileDevice": {
+    "en": "Mobile",
+    "ja": "モバイル"
+  },
+  "setMobileExcludeTablets": {
+    "en": "Exclude Tablets",
+    "ja": "タブレット除外"
+  },
+  "adWordsCreativeExcludeTabletsMobile": {
+    "en": "Exclude tablets (Mobile App only)",
+    "ja": "タブレット除外 (モバイルAppのみ)"
+  },
+  "bulkEditBidModifierErrorMsg": {
+    "en": "Acceptable range is {min} to {max}.",
+    "ja": "設定可能な範囲は、最小 {min} 、最大 {max} です。"
+  },
+  "bulkEditBidModifierErrorMsgInclude100": {
+    "en": "Acceptable range is {min} to {max} (100 is also acceptable).",
+    "ja": "設定可能な範囲は、最小 {min}、最大 {max} です。（100を設定することも可能です。）"
+  },
+  "bulkEditIncrementMBAhelpText": {
+    "en": "To increase the MBA, enter a positive value. To decrease the MBA, enter a negative value.",
+    "ja": "モバイル入札調整率（MBA）を増やすには正の値、減らすには負の値を設定してください。"
+  },
+  "bulkEditIncrementBAhelpText": {
+    "en": "To increase the bid, enter a positive value. To decrease the bid, enter a negative value.",
+    "ja": "To increase the bid, enter a positive value. To decrease the bid, enter a negative value."
+  },
+  "bulkEditFactorMBAhelpText": {
+    "en": "To change the MBA to a value that will double effective bids, enter 2. <br>To change the MBA to a value that will lower effective bids by half, enter 0.5 <br>Entering 1 will leave the MBA value unchanged.",
+    "ja": "モバイル入札調整率（MBA）を2倍にするには2を設定してください。<br>モバイル入札調整率（MBA）を半分にするには、0.5を設定してください。<br>モバイル入札調整率（MBA）が1の場合は、同値設定となります。"
+  },
+  "increaseMaxCpcBidBy": {
+    "en": "Increase Max. CPC Bid by {what}",
+    "ja": "最大入札単価（MaxCPC）を {what} 増やす"
+  },
+  "decreaseMaxCpcBidBy": {
+    "en": "Decrease Max. CPC Bid by {what}",
+    "ja": "最大入札単価（MaxCPC）を {what} 減らす"
+  },
+  "setMaxCpcBidTo": {
+    "en": "Set Max. CPC Bid to Fixed Value",
+    "ja": "最大入札単価（MaxCPC）を設定する"
+  },
+  "postChanges": {
+    "en": "Post Changes",
+    "ja": "変更を送信"
+  },
+  "postChangesInfo": {
+    "en": "Please review your changes before posting. Only valid changes will be posted.",
+    "ja": "送信前に変更を確認してください。有効な変更のみが送信されます。"
+  },
+  "validChanges": {
+    "en": "Valid Changes",
+    "ja": "有効な変更"
+  },
+  "changesForAccount": {
+    "en": "Changes for Account",
+    "ja": "アカウントへの変更"
+  },
+  "revertAllChanges": {
+    "en": "Revert All",
+    "ja": "全てを元に戻す"
+  },
+  "postingChangesSuccess": {
+    "en": "Your changes have been posted.",
+    "ja": "変更が送信されました。"
+  },
+  "postingChangesCancelled": {
+    "en": "Your changes have been cancelled.",
+    "ja": "変更がキャンセルされました。"
+  },
+  "postingChanges": {
+    "en": "Posting changes",
+    "ja": "送信中の変更"
+  },
+  "noPendingChanges": {
+    "en": "No pending changes",
+    "ja": "送信待の変更は有りません。"
+  },
+  "numPendingChanges": {
+    "en": "{num} pending change{s}",
+    "ja": "送信待の変更数：{num} "
+  },
+  "postingChangesSubmitMessage": {
+    "en": "Your changes are being posted&#8230;",
+    "ja": "変更を送信しています&#8230;"
+  },
+  "postingChangesDiscardMessage": {
+    "en": "Your changes are being discarded&#8230;",
+    "ja": "変更を取消しています&#8230;"
+  },
+  "postingChangesRevertMessage": {
+    "en": "Your change{s} will be reverted soon. Please wait&#8230;",
+    "ja": "変更を元に戻します。少々お待ちください&#8230;"
+  },
+  "postingChangesOnAgencyNotAllowed": {
+    "en": "Post changes on this agency is not allowed.",
+    "ja": "このAgencyに対し、変更内容の送信はできません。"
+  },
+  "postingChangesRevertConfirmationTitle": {
+    "en": "Revert changes",
+    "ja": "変更を元に戻す"
+  },
+  "postingChangesRevertConfirmationMessage": {
+    "en": "All pending changes will be deleted.",
+    "ja": "送信待の変更は削除されます。"
+  },
+  "searchQueryKeywords": {
+    "en": "Search Queries",
+    "ja": "検索クエリ"
+  },
+  "adwordsMobileAppInstallAd": {
+    "en": "AdWords Mobile App Install Ad",
+    "ja": "AdWords Mobile App Install Ad"
+  },
+  "bidModifier": {
+    "en": "Bid Adjustment",
+    "ja": "Bid Adjustment"
+  },
+  "excludeAdGroup": {
+    "en": "Exclude (Ad Group)",
+    "ja": "Exclude (Ad Group)"
+  },
+  "excludeCampaign": {
+    "en": "Exclude (Campaign)",
+    "ja": "Exclude (Campaign)"
+  },
+  "setBidModifier": {
+    "en": "Set Bid Adjustment to…",
+    "ja": "Set Bid Adjustment to…"
+  },
+  "incrementBidModifier": {
+    "en": "Change Bid Adjustment by adding...",
+    "ja": "Change Bid Adjustment by adding..."
+  },
+  "audienceSuccessDeletionMessage": {
+    "en": "The Audience(s) was successfully marked for deletion",
+    "ja": "The Audience(s) was successfully marked for deletion"
+  },
+  "audienceErrorDeletionMessage": {
+    "en": "There was an error while deleting the Audience(s)",
+    "ja": "There was an error while deleting the Audience(s)"
+  },
+  "bidModifier": {
+    "en": "Bid Adjustment"
+  },
+  "excludeAdGroup": {
+    "en": "Exclude (Ad Group)"
+  },
+  "excludeCampaign": {
+    "en": "Exclude (Campaign)"
+  },
+  "setBidModifier": {
+    "en": "Set Bid Adjustment to…"
+  },
+  "incrementBidModifier": {
+    "en": "Change Bid Adjustment by adding..."
+  },
+  "audienceSuccessDeletionMessage": {
+    "en": "The Audience(s) was successfully marked for deletion"
+  },
+  "audienceErrorDeletionMessage": {
+    "en": "There was an error while deleting the Audience(s)"
+  }
+}

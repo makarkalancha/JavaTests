@@ -1,0 +1,835 @@
+{
+  "exportMenu": {
+    "en": "export",
+    "ja": "エクスポート"
+  },
+  "exportToExcel": {
+    "en": "Export to Excel",
+    "ja": "Excelにエクスポート"
+  },
+  "exportForBulkImport": {
+    "en": "Export for Bulk Import",
+    "ja": "バルクインポート用エクスポート"
+  },
+  "exportForBulkImportNotAvailable": {
+    "en": "Not available at this level",
+    "ja": "このレベルでは使用できません。"
+  },
+  "exportForBulkImportSegmentNotAvailable": {
+    "en": "When Segment breakdown is activated \"Export for Bulk Import\" is not possible.",
+    "ja": "セグメントブレイクダウンが有効の場合、 バルクインポート用エクスポート  は実行できません。"
+  },
+  "exportAutoTargetsSearchTermsFilename": {
+    "en": "Search Terms",
+    "ja": "検索条件"
+  },
+  "exportAutoTargetsCategoriesFilename": {
+    "en": "Categories",
+    "ja": "カテゴリ"
+  },
+  "exportAutoTargetsSearchTerms": {
+    "en": "Export Search Terms for selected targets",
+    "ja": "選択したターゲットの検索条件をエクスポート"
+  },
+  "exportAutoTargetsCategories": {
+    "en": "Export Categories for selected targets",
+    "ja": "選択したターゲットのカテゴリーをエクスポート"
+  },
+  "exportAdWordsBidGoalPerformanceReport": {
+    "en": "Export AdWords Bid Goal Performance Report",
+    "ja": "AdWordsの入札パフォーマンスレポートのエクスポート"
+  },
+  "exportAdWordsPaidAndOrganicReports": {
+    "en": "Export AdWords Paid and Organic Query Report",
+    "ja": "AdWordsの検索クエリレポートのエクスポート"
+  },
+  "exportBingAdExtensionsKeywordReports": {
+    "en": "Export AdExtensions Stats by Keyword",
+    "ja": "Export AdExtensions Stats by Keyword"
+  },
+  "exportBingAdExtensionsDetailReports": {
+    "en": "Export AdExtensions Detail Report",
+    "ja": "Export AdExtensions Detail Report"
+  },
+  "exportBingAdExtensionsReportTooltip": {
+    "en": "This report provides statistics for Bing Ads sitelink, call and location extensions for the selected period of time.",
+    "ja": "This report provides statistics for Bing Ads sitelink, call and location extensions for the selected period of time."
+  },
+  "exportNotAvailableFilter": {
+    "en": "Not available with the applied filter",
+    "ja": "設定されたフィルタは使用できません。"
+  },
+  "exportProductPartitionReport": {
+    "en": "Export Product Partition Report",
+    "ja": "プロダクトパーティションレポートのエクスポート"
+  },
+  "exportUnderReview": {
+    "en": "Your export job is under review.",
+    "ja": "エクスポートジョブを確認しています。"
+  },
+  "exportStarted": {
+    "en": "export started {when}.",
+    "ja": "エクスポート開始： {when}"
+  },
+  "exportFailed": {
+    "en": "Your export job failed. Please contact technical support.",
+    "ja": "エクスポートに失敗しました。アクイジオジャパンに連絡してください。"
+  },
+  "exportOptInEmailNotification": {
+    "en": "Opt-in to get notified by email when this export job is completed",
+    "ja": "ジョブ完了時にメール通知を受信するには、オプトインを設定してください。"
+  },
+  "exportTooManyRows": {
+    "en": "Export is limited to 1,048,576 rows. Please filter your results.",
+    "ja": "エクスポートは、1,048,576行まで出力可能です。対象のフィルタ設定を確認してください。"
+  },
+  "exportDisabledForLevel": {
+    "en": "Export is not enabled for this level.",
+    "ja": "ここからのエクスポートはできません。"
+  },
+  "exportNoRecords": {
+    "en": "There are no items to export.",
+    "ja": "エクスポート対象が存在しません。"
+  },
+  "exportShoppingPerformanceReport": {
+    "en": "Shopping Performance Report",
+    "ja": "ショッピングパフォーマンスレポート"
+  },
+  "exportBingAdExtensionsWarning": {
+    "en": "This process might take multiple minutes depending on the volume of data.",
+    "ja": "This process might take multiple minutes depending on the volume of data."
+  },
+  "bulksheetManagement": {
+    "en": "bulksheet management",
+    "ja": "バルクシート管理"
+  },
+  "bulksheetManagementJobsFetchFail": {
+    "en": "An error has occurred while fetching your bulksheet history.",
+    "ja": "バルクシート履歴の読み込みにエラーが発生しました。"
+  },
+
+  "bulksheetManagementInclusions": {
+    "en": "Inclusions"
+  },
+  "bulksheetManagementUserDefinedLabels": {
+    "en": "User Defined Labels"
+  },
+
+  "bulksheetManagementExportName": {
+    "en": "Name your export job",
+    "ja": "エクスポートジョブの名称を設定してください。"
+  },
+  "bulksheetManagementExportSave": {
+    "en": "Save the named export job",
+    "ja": "名称を付与したエクスポートジョブを保存します。"
+  },
+  "bulksheetManagementExportFile": {
+    "en": "File extension",
+    "ja": "拡張子"
+  },
+  "bulksheetManagementExportEmails": {
+    "en": "Email Notifications",
+    "ja": "メール通知"
+  },
+  "bulksheetManagementExportIncludeIds": {
+    "en": "Include Publisher IDs",
+    "ja": "パブリッシャーIDを含める"
+  },
+  "bulksheetManagementExportIncludeCustom": {
+    "en": "Include Custom Fields",
+    "ja": "カスタムフィールドを含める"
+  },
+  "bulksheetManagementExportIncludeCampaign": {
+    "en": "Include Advanced Campaign Targeting Settings",
+    "ja": "アドバンスのキャンペーンターゲット設定を含める"
+  },
+  "bulksheetManagementExportIncludeAdGroup": {
+    "en": "Include Advanced Ad Group Targeting Settings",
+    "ja": "アドバンスのキャンペーンターゲット設定を含める"
+  },
+  "bulksheetManagementExportIncludeAccountFields": {
+    "en": "Include Account Additional Fields",
+    "ja": "アカウントの追加フィールドを含める"
+  },
+  "bulksheetManagementExportIncludeAccountNote": {
+    "en": "Include Account Note",
+    "ja": "アカウント詳細を含める"
+  },
+  "bulksheetManagementExportIncludeStats": {
+    "en": "Include Statistics",
+    "ja": "統計情報を含める"
+  },
+  "bulksheetManagementExportNameValidation": {
+    "en": "A specification of the same name already exists.",
+    "ja": "同名の定義が既に存在します。"
+  },
+  "bulksheetManagementExportEmptyJobs": {
+    "en": "You do not have any bulksheet history.",
+    "ja": "バルクシート履歴が存在しません。"
+  },
+  "bulksheetManagementExportAccounts": {
+    "en": "Accounts",
+    "ja": "アカウント"
+  },
+  "bulksheetManagementExportAgency": {
+    "en": "Agency",
+    "ja": "Agency"
+  },
+  "bulksheetManagementExportCampaignGroups": {
+    "en": "Campaign Groups",
+    "ja": "キャンペーングループ"
+  },
+  "bulksheetManagementExportCampaigns": {
+    "en": "Campaigns",
+    "ja": "キャンペーン"
+  },
+  "bulksheetManagementExportAdGroups": {
+    "en": "Ad Groups",
+    "ja": "広告グループ"
+  },
+  "bulksheetManagementExportCreatives": {
+    "en": "Creatives",
+    "ja": "広告"
+  },
+  "bulksheetManagementExportKeywords": {
+    "en": "Keywords",
+    "ja": "キーワード"
+  },
+  "bulksheetManagementExportPlacements": {
+    "en": "Placements",
+    "ja": "プレースメント"
+  },
+  "bulksheetManagementExportNegativeKeywords": {
+    "en": "Negative Keywords",
+    "ja": "除外キーワード"
+  },
+  "bulksheetManagementExportNegativePlacements": {
+    "en": "Negative Placements",
+    "ja": "除外プレースメント"
+  },
+  "bulksheetManagementExportAdExtensions": {
+    "en": "Ad Extensions",
+    "ja": "広告表示オプション"
+  },
+  "bulksheetManagementExportReportComponents": {
+    "en": "Report Components",
+    "ja": "レポートコンポーネント"
+  },
+  "bulksheetManagementExportLoadError": {
+    "en": "An error occurred while loading the export.",
+    "ja": "エクスポートの読み込み中にエラーが発生しました。"
+  },
+  "bulksheetManagementExportDeleteConfirm": {
+    "en": "Delete Bulk Export Specification?",
+    "ja": "バルクエクスポートの定義を削除しますか？"
+  },
+  "bulksheetManagementExportDeleteWarning": {
+    "en": "Removing this bulk export specification cannot be undone.",
+    "ja": "バルクエクスポートの定義の削除が完了できませんでした。"
+  },
+  "bulksheetManagementExportDeleteSuccess": {
+    "en": "The specification was successfully deleted.",
+    "ja": "定義の削除が完了しました。"
+  },
+  "bulksheetManagementExportDeleteError": {
+    "en": "Sorry! Cannot delete the specification at this moment.",
+    "ja": "この時点では定義を削除できません。"
+  },
+  "bulksheetManagementExportSuccess": {
+    "en": "The export job is now processing.",
+    "ja": "エクスポートジョブを実行しています。"
+  },
+  "bulksheetManagementExportError": {
+    "en": "An error occurred while processing the export.",
+    "ja": "エクスポートの実行中にエラーが発生しました。"
+  },
+  "bulksheetManagementExportCampaignValidation": {
+    "en": "At least one item must be selected.",
+    "ja": "アイテムを選択してください。"
+  },
+  "bulksheetManagementExportComponentValidation": {
+    "en": "At least one component must be selected.",
+    "ja": "コンポーネントを選択してください。"
+  },
+  "bulksheetManagementExportStatsValidation": {
+    "en": "Statistics export was enabled but none were selected.",
+    "ja": "統計情報のエクスポートは可能ですが、何も選択されていません。"
+  },
+  "bulksheetManagementImportSuccess": {
+    "en": "The import is now processing...",
+    "ja": "インポートを実行しています..."
+  },
+  "bulksheetManagementJobUnderReview": {
+    "en": "Under Review",
+    "ja": "確認中"
+  },
+  "bulksheetManagementJobError": {
+    "en": "Error",
+    "ja": "エラー"
+  },
+  "bulksheetManagementImported": {
+    "en": "Imported",
+    "ja": "インポート完了"
+  },
+  "bulksheetManagementReviewErrors": {
+    "en": "Review Errors",
+    "ja": "エラー確認"
+  },
+  "bulksheetManagementDownload": {
+    "en": "Download",
+    "ja": "ダウンロード"
+  },
+  "bulksheetManagementRunning": {
+    "en": "Running -",
+    "ja": "実行中 -"
+  },
+  "bulksheetManagementExportImport": {
+    "en": "Export or import bulksheets",
+    "ja": "バルクシートによる、エクスポートまたはインポート"
+  },
+  "bulksheetManagementExportEditing": {
+    "en": "Bulksheet Export &amp; Editing",
+    "ja": "バルクシートのエクスポートとインポート"
+  },
+  "bulksheetManagementExportConf": {
+    "en": "Choose &amp; Configure",
+    "ja": "選択と設定"
+  },
+  "bulksheetManagementExportTip": {
+    "en": "<strong>Tip!</strong> Use the Bulksheet Export tool to create large-scale reports that span multiple clients, publishers or campaigns. Processing of the report is done offline and you will be notified when it is ready for download.",
+    "ja": "<strong>Tip!</strong> 複数のクライアントやパブリッシャー、キャンペーンを跨ぐ、容量の大きなレポートの作成には、バルクシートエクスポートを使用してください。レポートの作成はオフラインで実行され、ダウンロード可能になった段階で通知を受けることができます。"
+  },
+  "bulksheetManagementExportTipUpload": {
+    "en": "<strong>Tip!</strong> You can use the report as is, or you can edit its contents and upload the changes to Acquisio Bulksheet Import.",
+    "ja": "<strong>Tip!</strong> レポートをそのまま使用するか、または内容を編集し、変更をAcquisioのバルクシートインポートからアップロードすることができます。"
+  },
+  "bulksheetManagementExportLoadSpec": {
+    "en": "Load a previously saved report",
+    "ja": "保存済みレポート読込"
+  },
+  "bulksheetManagementExportCreateEdit": {
+    "en": "Create or edit a report",
+    "ja": "レポートの作成または編集"
+  },
+  "bulksheetManagementExportStep1": {
+    "en": "Step 1: Select Accounts, Publishers &amp; Campaigns",
+    "ja": "ステップ１：アカウント、パブリッシャー、およびキャンペーンを選択してください。"
+  },
+  "bulksheetManagementExportAll": {
+    "en": "All",
+    "ja": "全て"
+  },
+  "bulksheetManagementExportActiveOnly": {
+    "en": "Active only",
+    "ja": "アクティブのみ"
+  },
+  "bulksheetManagementExportAllButDeleted": {
+    "en": "All but deleted",
+    "ja": "削除以外全て"
+  },
+  "bulksheetManagementExportStep2": {
+    "en": "Step 2: Select Report Components",
+    "ja": "ステップ２：レポートコンポーネントの選択"
+  },
+  "bulksheetManagementExportStep3": {
+    "en": "Step 3: Final Settings",
+    "ja": "ステップ３：ファイナル設定"
+  },
+  "bulksheetManagementExportBulkSheet": {
+    "en": "Export Bulksheet",
+    "ja": "バルクシートエクスポート"
+  },
+  "bulksheetManagementImportSummary": {
+    "en": "Summary",
+    "ja": "サマリ"
+  },
+  "bulksheetManagementImportDaily": {
+    "en": "Daily"
+  },
+  "bulksheetManagementImportName": {
+    "en": "Your import job name:",
+    "ja": "インポート名："
+  },
+  "bulksheetManagementImportFileNameProcess": {
+    "en": "Your file named {filename} will be processed.",
+    "ja": "ファイル {filename} を実行します。"
+  },
+  "bulksheetManagementImportEmails": {
+    "en": "The following recipients will be notified:",
+    "ja": "通知の受信者："
+  },
+  "bulksheetManagementImportErrorWarning": {
+    "en": "<strong>Important: </strong> Your bulksheet import contains errors. You can do one the following:",
+    "ja": "<strong>重要： </strong> バルクシートインポートがエラーになりました。以下の指示に従ってください。"
+  },
+  "bulksheetManagementImportReview": {
+    "en": "Review the complete file and correct the errors.",
+    "ja": "ファイルを確認し、エラーを修正してください。"
+  },
+  "bulksheetManagementImportProcessFile": {
+    "en": "Process the file anyway and receive the errors by email, you can correct them later.",
+    "ja": "ファイルを実行し、エラー内容をメールで受信後、修正することが可能です。"
+  },
+  "bulksheetManagementImportRowType": {
+    "en": "Row Type",
+    "ja": "行のタイプ"
+  },
+  "bulksheetManagementImportCreate": {
+    "en": "Create",
+    "ja": "作成"
+  },
+  "bulksheetManagementImportUpdate": {
+    "en": "Update",
+    "ja": "更新"
+  },
+  "bulksheetManagementImportDelete": {
+    "en": "Delete",
+    "ja": "削除"
+  },
+  "bulksheetManagementImportErrors": {
+    "en": "Errors",
+    "ja": "エラー"
+  },
+  "bulksheetManagementImportBulksheet": {
+    "en": "Bulksheet Import",
+    "ja": "バルクシートインポート"
+  },
+  "bulksheetManagementImportAcquisio": {
+    "en": "Import changes to Acquisio",
+    "ja": "Acquisioへのインポート変更"
+  },
+  "bulksheetManagementImportJobName": {
+    "en": "Name of your job:",
+    "ja": "ジョブ数："
+  },
+  "bulksheetManagementImportNameValidation": {
+    "en": "Job name is required.",
+    "ja": "ジョブ名を設定してください。"
+  },
+  "bulksheetManagementImportFileName": {
+    "en": "File name:",
+    "ja": "ファイル名："
+  },
+  "bulksheetManagementImportFiletype": {
+    "en": "Only .XLSX, .CSV or .ZIP are allowed.",
+    "ja": ".XLSX、 .CSV、.ZIP 形式のファイルを使用可能です。"
+  },
+  "bulksheetManagementImportFileValidation": {
+    "en": "File is required.",
+    "ja": "ファイルを設定してください。"
+  },
+  "bulksheetManagementImportFiletypeValidation": {
+    "en": "File has wrong extension.",
+    "ja": "ファイルの拡張子が不正です。"
+  },
+  "bulksheetManagementImportDownloadError": {
+    "en": "Download error file",
+    "ja": "エラーファイルをダウンロード"
+  },
+  "bulksheetManagementImportQuickValidation": {
+    "en": "Quick validation found some errors, click next or ",
+    "ja": "形式チェックにおいてエラーが発生しました。次をクリックしてください。"
+  },
+  "bulksheetManagementImportDownloadValidation": {
+    "en": "download validation file",
+    "ja": "詳細ファイルのダウンロード"
+  },
+  "bulksheetManagementImportEmail": {
+    "en": "Email:",
+    "ja": "Eメール："
+  },
+  "bulksheetManagementImportEmailValidation1": {
+    "en": "One email at least is required.",
+    "ja": "メールを設定してください。"
+  },
+  "bulksheetManagementImportEmailValidation2": {
+    "en": "Email format is incorrect.",
+    "ja": "メールフォーマットに誤りがあります。"
+  },
+  "bulksheetManagementImportEmailsTip": {
+    "en": "Separate multiple recipients with a comma \",\"",
+    "ja": "複数の受信者を設定する場合、セパレータには、コンマ（,）を使用してください。"
+  },
+  "bulksheetManagementImportNext": {
+    "en": "Next",
+    "ja": "次へ"
+  },
+  "bulksheetManagementImportProcess": {
+    "en": "Process",
+    "ja": "実行"
+  },
+  "bulksheetManagementImportReviewFix": {
+    "en": "Review and Fix Errors",
+    "ja": "エラーの確認および修正"
+  },
+  "bulksheetManagementImportIgnoreProcess": {
+    "en": "Ignore Errors and Process",
+    "ja": "エラーを無視して実行"
+  },
+  "bulksheetManagementImportCancelImport": {
+    "en": "Cancel Import",
+    "ja": "キャンセル"
+  },
+  "bulksheetManagementLatestActions": {
+    "en": "Latest Actions",
+    "ja": "実行結果"
+  },
+  "bulksheetManagementExport": {
+    "en": "Export",
+    "ja": "エクスポート"
+  },
+  "bulksheetManagementImport": {
+    "en": "Import",
+    "ja": "インポート"
+  },
+  "bulksheetManagementExportRecipients": {
+    "en": "I want the following recipients to receive my export:",
+    "ja": "エクスポートファイル受信者の設定："
+  },
+  "bulksheetManagementExportAddRemoveStats": {
+    "en": "Add/Remove Metrics",
+    "ja": "メトリクスの追加または削除"
+  },
+  "bulksheetManagementExportSelected": {
+    "en": "Selected",
+    "ja": "選択中"
+  },
+  "bulksheetManagementExportColumns": {
+    "en": "columns",
+    "ja": "カラム"
+  },
+  "bulksheetManagementExportFrom": {
+    "en": "From",
+    "ja": "From"
+  },
+  "bulksheetManagementExportTo": {
+    "en": "To",
+    "ja": "To"
+  },
+  "bulksheetManagementExportMetrics": {
+    "en": "Metrics",
+    "ja": "メトリクス"
+  },
+  "bulksheetManagementExportExclude0": {
+    "en": "Exclude 0 impressions",
+    "ja": "0インプレッションを除外"
+  },
+  "bulksheetManagementExportAdvancedPopup": {
+    "en": "Select to include all device, gender and location targeting, as well as ad scheduling for the selected object. Leave the box unchecked to display only performance metrics and basic settings, such as Status, Bids, Budgets, etc.",
+    "ja": "対象のデバイス、性別、地域ターゲティング、広告配信スケジュールを設定してください。成果数値を確認する為、パフォーマンスや基本設定（ステータス、入札、予算他）を確認するためには、チェックボックスを未選択のままにしてください。"
+  },
+  "bulksheetManagementExportAdvancedCampaignPopupTitle": {
+    "en": "Include Advanced Campaign Targeting Settings",
+    "ja": "アドバンスのキャンペーンターゲット設定を含む"
+  },
+  "bulksheetManagementExportAdvancedAdGroupPopupTitle": {
+    "en": "Include Advanced Ad Group Targeting Settings",
+    "ja": "アドバンスの広告グループターゲット設定を含む"
+  },
+  "bulksheetManagementExportAdvancedAccountFieldPopupTitle": {
+    "en": "Include Account Additional Fields",
+    "ja": "アカウントの追加フィールドを含む"
+  },
+  "bulksheetManagementExportAdvancedAccountFieldPopup": {
+    "en": "Select this option to export any fields that have been set or defined on the Account profile screen. These customized fields may contain information at the Account level and reside only in Acquisio.",
+    "ja": "アカウントプロファイルに設定したフィールドをエクスポートするにはこのオプションを選択してください。カスタマイズフィールドには、アカウントの情報を含んでおり、Acquisioのみに存在している場合があります。"
+  },
+  "bulksheetManagementExportUserLabels": {
+    "en": "Apply User Defined Labels Headers",
+    "ja": "ユーザ定義のラベルをヘッダに適用する"
+  },
+  "bulksheetManagementExportUserLabelsHelp": {
+    "en": "Selecting this option will export all column headers with the user defined names instead of the default system column headers. <strong> Important:</strong> Applying your user define labels will prevent you from importing changes to the renamed columns.",
+    "ja": "このオプションを選択すると、エクスポートファイルのカラムヘッダをシステムカラム名からユーザ定義名に変更します。<strong> 重要：</strong> ユーザ定義名のカラムヘッダは、インポートには適用できません。"
+  },
+  "bulksheetManagementExportLevelHelpTitle": {
+    "en": "Select accounts, publishers and campaigns",
+    "ja": "アカウント、パブリッシャー、キャンペーンを選択してください。"
+  },
+  "bulksheetManagementExportLevelHelpContent": {
+    "en": "Select a level to determine the granularity of your export’s scope. Selecting either the publisher or campaign level allows you to drill-down to specific publisher accounts or campaigns. You can repeat these steps on multiple accounts.",
+    "ja": "エクスポートの範囲を特定するため、レベルを選択してください。パブリッシャー、またはキャンペーンの選択することで、更にドリルダウンが可能です。複数アカウントの場合もこの操作は可能です。"
+  },
+  "jobEmailNotificationDialogTitle": {
+    "en": "Job email notification",
+    "ja": "ジョブに関するEmail通知"
+  },
+  "jobEmailNotificationDialogText": {
+    "en": "Opt-in to receive an email notification once a job has been completed. In the event that a job fails, you will receive a failed notification email.",
+    "ja": "ジョブ完了時にメール通知を受信するには、オプトインを設定してください。ジョブが失敗した場合には、失敗をメールで通知します。"
+  },
+  "jobEmailNotificationDialogNote": {
+    "en": "Separate each recipient email address with a comma",
+    "ja": "メールアドレスのセパレータには、コンマ（,）を使用してください。"
+  },
+  "jobEmailNotificationDialogInvalidEmails": {
+    "en": "Please provide a valid list of emails, separated by commas.",
+    "ja": "セパレータをコンマ（,）設定し、有効なメールアドレスを設定してください。"
+  },
+  "bulksheetManagementRowAccounts": {
+    "en": "Account",
+    "ja": "アカウント"
+  },
+  "bulksheetManagementRowCampaignGroups": {
+    "en": "Campaign Group",
+    "ja": "キャンペーングループ"
+  },
+  "bulksheetManagementRowPublishers": {
+    "en": "Publisher",
+    "ja": "パブリッシャー"
+  },
+  "bulksheetManagementRowCampaigns": {
+    "en": "Campaign",
+    "ja": "キャンペーン"
+  },
+  "bulksheetManagementRowAdGroups": {
+    "en": "AdGroup",
+    "ja": "広告グループ"
+  },
+  "bulksheetManagementRowAds": {
+    "en": "Creatives",
+    "ja": "広告"
+  },
+  "bulksheetManagementRowKeywords": {
+    "en": "Keyword",
+    "ja": "キーワード"
+  },
+  "bulksheetManagementRowLocations": {
+    "en": "Campaign Location Target",
+    "ja": "キャンペーン地域ターゲット"
+  },
+  "bulksheetManagementRowLocationNegatives": {
+    "en": "Campaign Negative Location Target",
+    "ja": "キャンペーンの除外地域ターゲット"
+  },
+  "bulksheetManagementRowCampaignAdExtensions": {
+    "en": "Campaign Ad Extensions",
+    "ja": "キャンペーンの広告表示オプション"
+  },
+  "bulksheetManagementRowPlacements": {
+    "en": "Placement",
+    "ja": "プレースメント"
+  },
+  "bulksheetManagementRowAccountAdExtensions": {
+    "en": "Account Extension",
+    "ja": "アカウント設定"
+  },
+  "bulksheetManagementRowCampaignNegativeKeywords": {
+    "en": "Campaign Negative Keyword",
+    "ja": "キャンペーンの除外キーワード"
+  },
+  "bulksheetManagementRowCampaignNegativePlacements": {
+    "en": "Campaign Negative Placement",
+    "ja": "キャンペーンの除外プレースメント"
+  },
+  "bulksheetManagementRowAdGroupNegativePlacements": {
+    "en": "AdGroup Negative Placement",
+    "ja": "広告グループの除外プレースメント"
+  },
+  "bulksheetManagementRowAdGroupNegativeKeywords": {
+    "en": "AdGroup Negative Keyword",
+    "ja": "広告グループの除外キーワード"
+  },
+  "bulksheetManagementRowCampaignAdScheduleTargets": {
+    "en": "Campaign Ad Scheduling",
+    "ja": "キャンペーンの広告配信スケジュール"
+  },
+  "bulksheetManagementRowCampaignDeviceTargets": {
+    "en": "Campaign Device Target",
+    "ja": "キャンペーンのデバイスターゲット"
+  },
+  "bulksheetManagementRowAdGroupDeviceTargets": {
+    "en": "AdGroup Device Target",
+    "ja": "広告グループのデバイスターゲット"
+  },
+  "bulksheetManagementRowAdGroupCustomTargets": {
+    "en": "AdGroup Custom Target"
+  },
+  "bulksheetManagementRowCampaignGenderTargets": {
+    "en": "Campaign Gender Target",
+    "ja": "キャンペーンの性別ターゲット"
+  },
+  "bulksheetManagementRowCampaignAgeRangeTargets": {
+    "en": "Campaign Age Target",
+    "ja": "キャンペーンの年齢ターゲット"
+  },
+  "bulksheetManagementRowAdExtensionAdSchedule": {
+    "en": "Ad Extension Ad Schedule",
+    "ja": "広告表示オプションの広告のスケジュール"
+  },
+  "bulksheetManagementRowAdExtensionLib": {
+    "en": "Ad Extension Library",
+    "ja": "広告表示オプションのライブラリ"
+  },
+  "bulksheetManagementRowMissingRowType": {
+    "en": "Missing Row Type",
+    "ja": "行のタイプを設定してください。"
+  },
+  "bulksheetManagementRowAdGroupAdExtensions": {
+    "en": "AdGroup Ad Extensions",
+    "ja": "広告グループの広告表示オプション"
+  },
+  "bulksheetManagementRowAdGroupAdScheduleTargets": {
+    "en": "AdGroup Ad Schedule Target",
+    "ja": "広告グループの広告のスケジュール"
+  },
+  "bulksheetManagementRowAdGroupAgeRangeTargets": {
+    "en": "AdGroup Age Range Target",
+    "ja": "広告グループの年齢ターゲット"
+  },
+  "bulksheetManagementRowAdGroupGenderTargets": {
+    "en": "AdGroup Gender Target",
+    "ja": "広告グループの性別ターゲット"
+  },
+  "bulksheetManagementRowAdGroupLocationTargets": {
+    "en": "AdGroup Location Target",
+    "ja": "広告グループの地域ターゲット"
+  },
+  "bulksheetManagementRowAdGroupNegativeLocationTargets": {
+    "en": "AdGroup Negative Location Target",
+    "ja": "広告グループの除外地域ターゲット"
+  },
+  "bulksheetManagementRowFlexibleBiddingLib": {
+    "en": "Flexible Bidding Strategies",
+    "ja": "柔軟な入札戦略（Flexible bidding strategy）"
+  },
+  "bulksheetManagementExportBudgetConfiguration": {
+    "en": "Budget Configuration",
+    "ja": "予算配分設定"
+  },
+  "bulksheetImportWarning": {
+    "en": "Warning: Excel automatically adds phonetic symbols to .xlsx files in the Japanese version of Excel.<BR/>Acquisio has a temporary issue which may result in unintended results when importing .xlsx files with phonetics. Please use .csv for Bulk Import files with Japanese texts.",
+    "ja": "警告：Excelファイルの場合、日本語の.xlsx ファイルに対して自動的にフォネティクスを付与します。<BR/>Acquisioには、現在.xlsx ファイルにフォネティクスを自動付与するという一時的な問題があります。日本語テキストを含むバルクインポートは、.csvファイルをご使用ください。 "
+  },
+  "bulksheetManagementCreated": {
+    "en": "created",
+    "ja": "created"
+  },
+  "created": {
+    "en": "created"
+  },
+  "selectAnExportToLoad": {
+    "en": "Select an export to load"
+  },
+  "bulkStepSelectExportType": {
+    "en": "Step {stepIndex}: Select Export type"
+  },
+  "bulkStepSelectAccountsPublishersCampaigns": {
+    "en": "Step {stepIndex}: Select Accounts, Publishers and Campaigns"
+  },
+  "bulkStepSelectReportComponents": {
+    "en": "Step {stepIndex}: Select Report Components"
+  },
+  "bulkStepFinalSettings": {
+    "en": "Step {stepIndex}: Final Settings"
+  },
+  "campaignManagement": {
+    "en": "Campaign Management"
+  },
+  "dataAnalysis": {
+    "en": "Data Analysis"
+  },
+  "adWordsGdnDemographics": {
+    "en": "AdWords GDN Demographics"
+  },
+  "budgetConfiguration": {
+    "en": "Budget Configuration"
+  },
+  "selectLevel": {
+    "en": " Select Level"
+  },
+  "fullAgency": {
+    "en": "Full Agency"
+  },
+  "XLSX": {
+    "en": "XLSX"
+  },
+  "CSV": {
+    "en": "CSV"
+  },
+  "exportFollowingRecipients": {
+    "en": "I want the following recipients to receive my export:"
+  },
+  "dataAggregation": {
+    "en": "Data Aggregation"
+  },
+  "currencyConversion": {
+    "en": "Currency Conversion"
+  },
+  "usePublisherAccountCurrency": {
+    "en": "Use Publisher Account Currency"
+  },
+  "noteLinesWithZeroData": {
+    "en": "Please note that lines with zero data will not be exported."
+  },
+  "infoDataAggregationLine1": {
+    "en": "The maximum number of days for daily aggregation is:"
+  },
+  "infoDataAggregationLine2": {
+    "en": "<strong>90</strong> (for Report Components: Agency, Accounts, Publisher Accounts, Campaign Groups)"
+  },
+  "infoDataAggregationLine3": {
+    "en": "<strong>31</strong> (otherwise)."
+  },
+  "includeAcquisioIds": {
+    "en": "Include Acquisio IDs"
+  },
+  "detailsByDevice": {
+    "en": "Details by device"
+  },
+  "infoExportFileColumnOrder": {
+    "en": "Please note that export file column order is set by the system; it will not reflect custom reordering."
+  },
+  "breakdownBy": {
+    "en": "Breakdown by..."
+  },
+  "andAlsoBy": {
+    "en": "...and also by..."
+  },
+  "ageRange":{
+    "en": "Age Range"
+  },
+  "ageRange18-24": {
+    "en": "18-24"
+  },
+  "ageRange25-34": {
+    "en": "25-34"
+  },
+  "ageRange35-44": {
+    "en": "35-44"
+  },
+  "ageRange45-54": {
+    "en": "45-54"
+  },
+  "ageRange55-64": {
+    "en": "55-64"
+  },
+  "ageRange65More": {
+    "en": "65 or more"
+  },
+  "ageRangeUndetermined": {
+    "en": "undetermined"
+  },
+  "genderMale": {
+    "en": "Male"
+  },
+  "genderFemale": {
+    "en": "Female"
+  },
+  "genderUndetermined": {
+    "en": "undetermined"
+  },
+  "exportAddRemoveStatsSelectedColumns": {
+    "en": "Selected {selectedLength}/{listLength} columns"
+  },
+  "selectAnAccount": {
+    "en": "Select an Account",
+    "ja": "アカウントを選択してください。"
+  },
+  "selectAPublisher": {
+    "en": "Select a Publisher"
+  },
+  "noCampaignsInSelectedPublisher": {
+    "en": "No campaigns in selected publisher"
+  }
+}

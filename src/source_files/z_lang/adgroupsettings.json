@@ -1,0 +1,102 @@
+{
+  "bingSearch": {
+    "en": "Bing Search",
+    "ja": "Bing Search"
+  },
+  "allSearchNetworks": {
+    "en": "All search networks (Bing and Yahoo! Search and syndicated search partners)",
+    "ja": "All search networks (Bing and Yahoo! Search and syndicated search partners)"
+  },
+  "bingAndYahooSearch": {
+    "en": "Bing and Yahoo! Search owned and operated only",
+    "ja": "Bing and Yahoo! Search owned and operated only"
+  },
+  "bingAndYahooSyndicated": {
+    "en": "Bing and Yahoo! Syndicated partners only",
+    "ja": "Bing and Yahoo! Syndicated partners only"
+  },
+  "content": {
+    "en": "Content",
+    "ja": "コンテンツ"
+  },
+  "contentNetwork": {
+    "en": "Content Network",
+    "ja": "コンテンツネットワーク"
+  },
+  "useCampaignSettings": {
+    "en": "Use my campaign settings",
+    "ja": "キャンペーン設定を使用してください。"
+  },
+  "defaultSearchBid": {
+    "en": "Default Search Bid",
+    "ja": "デフォルトのサーチ入札単価（Search Bid）"
+  },
+  "defaultContentBid": {
+    "en": "Default Content Bid",
+    "ja": "デフォルトのコンテント入札単価（Content Bid）"
+  },
+  "adGroupName": {
+    "en": "Ad Group name",
+    "ja": "広告グループ"
+  },
+  "adRotation": {
+    "en": "Ad Rotation",
+    "ja": "広告のローテーション"
+  },
+  "adRotationOptimizeForClicks": {
+    "en": "Optimize for clicks – include ads with the most clicks",
+    "ja": "クリックの最適化 - クリック最大の広告を含む"
+  },
+  "adRotationRotateAdsEvenly": {
+    "en": "Rotate ads more evenly – include all ads, even those with a lower CTR",
+    "ja": "広告の均等配信 - CTRの低い広告を含めた全ての広告を含む"
+  },
+  "adLanguageDanish": {
+    "en": "Danish",
+    "ja": "デンマーク語"
+  },
+  "adLanguageDutch": {
+    "en": "Dutch",
+    "ja": "オランダ語"
+  },
+  "adLanguageEnglish": {
+    "en": "English",
+    "ja": "英語"
+  },
+  "adLanguageFinnish": {
+    "en": "Finnish",
+    "ja": "フィンランド語"
+  },
+  "adLanguageFrench": {
+    "en": "French",
+    "ja": "フランス語"
+  },
+  "adLanguageGerman": {
+    "en": "German",
+    "ja": "ドイツ語"
+  },
+  "adLanguageItalian": {
+    "en": "Italian",
+    "ja": "イタリア語"
+  },
+  "adLanguageNorwegian": {
+    "en": "Norwegian",
+    "ja": "ノルウェー語"
+  },
+  "adLanguagePortugese": {
+    "en": "Portugese",
+    "ja": "ポルトガル語"
+  },
+  "adLanguageSpanish": {
+    "en": "Spanish",
+    "ja": "スペイン語"
+  },
+  "adLanguageSwedish": {
+    "en": "Swedish",
+    "ja": "スウェーデン語"
+  },
+  "adLanguageTraditionalChinese": {
+    "en": "Traditional Chinese",
+    "ja": "中国語（繁体字）"
+  }
+}

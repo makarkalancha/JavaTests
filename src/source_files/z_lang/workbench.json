@@ -1,0 +1,1092 @@
+{
+  "workbench": {
+    "en": "workbench",
+    "ja": "ワークベンチ"
+  },
+  "viewTitle": {
+    "en": "view",
+    "ja": "表示"
+  },
+  "viewAll": {
+    "en": "all",
+    "ja": "全て"
+  },
+  "viewAllEnabled": {
+    "en": "all enabled",
+    "ja": "全て有効"
+  },
+  "viewAllButDeleted": {
+    "en": "all but deleted",
+    "ja": "削除済み以外全て"
+  },
+  "viewOnlyDeleted": {
+    "en": "only deleted",
+    "ja": "削除済みのみ"
+  },
+  "metric": {
+    "en": "metric",
+    "ja": "メトリクス"
+  },
+  "graphBy": {
+    "en": "graph by",
+    "ja": "グラフ表示"
+  },
+  "chartType": {
+    "en": "chart type",
+    "ja": "グラフタイプ"
+  },
+  "lineChart": {
+    "en": "line chart",
+    "ja": "折れ線グラフ"
+  },
+  "pieChart": {
+    "en": "pie chart",
+    "ja": "円グラフ"
+  },
+  "areaChart": {
+    "en": "area chart",
+    "ja": "面グラフ"
+  },
+  "columnChart": {
+    "en": "column chart",
+    "ja": "縦棒グラフ"
+  },
+  "primaryMetric": {
+    "en": "primary metric",
+    "ja": "主要メトリクス"
+  },
+  "compareTo": {
+    "en": "compare to",
+    "ja": "比較対象："
+  },
+  "searchVsContent": {
+    "en": "search vs content",
+    "ja": "検索vsコンテンツ"
+  },
+  "oneMetric": {
+    "en": "one metric",
+    "ja": "メトリクス"
+  },
+  "twoMetrics": {
+    "en": "two metrics",
+    "ja": "2つのメトリクス"
+  },
+  "secondaryMetric": {
+    "en": "secondary metric",
+    "ja": "サブメトリクス"
+  },
+  "dateRange": {
+    "en": "date range",
+    "ja": "期間"
+  },
+  "daily": {
+    "en": "daily",
+    "ja": "日別"
+  },
+  "weekly": {
+    "en": "weekly",
+    "ja": "週別"
+  },
+  "monthly": {
+    "en": "monthly",
+    "ja": "月別"
+  },
+  "day": {
+    "en": "day",
+    "ja": "曜日"
+  },
+  "days": {
+    "en": "days",
+    "ja": "日"
+  },
+  "week": {
+    "en": "week",
+    "ja": "週"
+  },
+  "month": {
+    "en": "month",
+    "ja": "月"
+  },
+  "year": {
+    "en": "year",
+    "ja": "年"
+  },
+  "atThisDate": {
+    "en": "at this date",
+    "ja": "当日"
+  },
+  "kpis": {
+    "en": "KPIs",
+    "ja": "KPI"
+  },
+  "numberOf": {
+    "en": "number of",
+    "ja": "数："
+  },
+  "costOf": {
+    "en": "cost of",
+    "ja": "コスト："
+  },
+  "costThisMonth": {
+    "en": "cost this month",
+    "ja": "当月のコスト"
+  },
+  "revenuesThisMonth": {
+    "en": "revenue this month",
+    "ja": "当月の売上"
+  },
+  "targetRevenues": {
+    "en": "target revenue",
+    "ja": "売上ターゲット"
+  },
+  "target": {
+    "en": "target",
+    "ja": "ターゲット"
+  },
+  "noTarget": {
+    "en": "no target",
+    "ja": "ターゲットなし"
+  },
+  "runStatus": {
+    "en": "Enabled",
+    "ja": "有効"
+  },
+  "percentServed": {
+    "en": "% Served",
+    "ja": "進捗率（%）："
+  },
+  "auto-target": {
+    "en": "auto-target",
+    "ja": "オートターゲット"
+  },
+  "underMininumBudget": {
+    "en": "under mininum budget",
+    "ja": "最小予算以下"
+  },
+  "notSpendingEnough": {
+    "en": "not spending enough",
+    "ja": "予算未達"
+  },
+  "budgetBusted": {
+    "en": "budget busted",
+    "ja": "バジェット破壊"
+  },
+  "tooLow": {
+    "en": "too low",
+    "ja": "非常に低い"
+  },
+  "tooHigh": {
+    "en": "too high",
+    "ja": "非常に高い"
+  },
+  "high": {
+    "en": "high",
+    "ja": "高い"
+  },
+  "aBitLow": {
+    "en": "a bit low",
+    "ja": "少々低い"
+  },
+  "aBitHigh": {
+    "en": "a bit high",
+    "ja": "少々高い"
+  },
+  "doingGood": {
+    "en": "doing good!",
+    "ja": "好調！"
+  },
+  "targetReached": {
+    "en": "target reached!",
+    "ja": "目標達成！"
+  },
+  "toReachTarget": {
+    "en": "to reach target",
+    "ja": "目標達成まで"
+  },
+  "endOfMonthTarget": {
+    "en": "end of month target",
+    "ja": "月末ターゲット"
+  },
+  "percentOfEndOfMonthTarget": {
+    "en": "% of end of month target",
+    "ja": "月末ターゲット比（%）："
+  },
+  "endOfMonthForecast": {
+    "en": "end of month forecast",
+    "ja": "月末見込"
+  },
+  "remainingDays": {
+    "en": "remaining days",
+    "ja": "残日数"
+  },
+  "spent": {
+    "en": "spent",
+    "ja": "使用済"
+  },
+  "spend": {
+    "en": "spend",
+    "ja": "予算進捗"
+  },
+  "percentOfTheTarget": {
+    "en": "% of the target",
+    "ja": "ターゲット比（%）"
+  },
+  "campaignsNoTarget": {
+    "en": "campaigns without target",
+    "ja": "ターゲットなしのキャンペーん"
+  },
+  "campaignIs": {
+    "en": "campaign is",
+    "ja": "キャンペーン："
+  },
+  "campaignsAre": {
+    "en": "campaigns are",
+    "ja": "キャンペーン："
+  },
+  "editKpiTargets": {
+    "en": "Edit KPI targets for this campaign",
+    "ja": "このキャンペーンのKPiターゲットを編集"
+  },
+  "sensitivity": {
+    "en": "sensitivity",
+    "ja": "センシビリティ"
+  },
+  "dynamicAdTargetAdWordsOnly": {
+    "en": "Dynamic Ad Target (Adwords only)"
+  },
+  "adWordsDynamicAdTarget": {
+    "en": "Adwords Dynamic Ad Target"
+  },
+  "adWordsDynamicAdTargetExclusion": {
+    "en": "Adwords Dynamic Ad Target Exclusion"
+  },
+  "dynamicAdTargetExclusionAdWordsOnly": {
+    "en": "Dynamic Ad Target (Adwords only)"
+  },
+  "dynamicAdTargetExlusionMessage": {
+    "en": "You can set up to three webpage attributes.<br> Webpages that match all of the specified attributes will not trigger your ads."
+  },
+  "dynamicAdTargetExlusionDeletePromptMessage": {
+    "en": "Are you sure you want to mark the selected Dynamic Ad Target Exclusion for deletion?"
+  },
+  "addAllWebPages": {
+    "en": "Add all web pages"
+  },
+  "addAGroupOfWebpages": {
+    "en": "Add a group of webpages. You can set up to three webpage attributes.<br> Webpages that match all of the specified attributes will trigger your ads."
+  },
+  "pageContent": {
+    "en": "PAGE_CONTENT"
+  },
+  "pageTitle": {
+    "en": "PAGE_TITLE"
+  },
+  "contains": {
+    "en": "contains"
+  },
+  "addAnother" : {
+    "en": "+ Add another"
+  },
+  "sensitivityHelpPopupTitle": {
+    "en": "KPI Sensitivity",
+    "ja": "KPIのセンシビリティ"
+  },
+  "sensitivityHelpPopupContent": {
+    "en": "<p>Controls the deviation threshold of your min/max KPI limits.</p><p><strong>Chicken</strong> consider deviation from target more severely whereas an <strong>Aggresive</strong> setting won't be as strict and will consider that a campaign is doing good even with greater deviation from the target.</p>",
+    "ja": "<p>KPI限界値の調整度を設定してください。</p><p><strong>消極的</strong>は、ターゲット設定をより優先します。<strong>積極的</strong>は、キャンペーンの成果を優先します。キャンペーンが好調の場合には、ターゲットの設定値をそれほど厳しく制御されません。</p>"
+  },
+  "campaignCycleHelpPopupTitle": {
+    "en": "Campaign Cycles",
+    "ja": "キャンペーンのサイクル"
+  },
+  "campaignCycleHelpPopupContent": {
+    "en": "<p>The KPI are limited to monthly campaign cycles during the beta. Meaning the targets are for monthly goals and span from the 1rst of the month to the last day of the month.</p>",
+    "ja": "<p>β版において、KPIは、月々のキャンペーンサイクルにより制限されます。ターゲットは、月別目標と、月初からその月の月末までの残日数から算出されます。"
+  },
+  "chicken": {
+    "en": "chicken",
+    "ja": "消極的"
+  },
+  "semiChicken": {
+    "en": "semi-chicken",
+    "ja": "少々消極的"
+  },
+  "moderate": {
+    "en": "moderate",
+    "ja": "中くらい"
+  },
+  "semiAggressive": {
+    "en": "semi-aggressive",
+    "ja": "少々積極的"
+  },
+  "aggressive": {
+    "en": "aggressive",
+    "ja": "積極的"
+  },
+  "keyword_tools_add_keywords": {
+    "en": "Add keywords from Keywords Tools",
+    "ja": "キーワードツールからキーワードを追加"
+  },
+  "keyword_tools_subheader": {
+    "en": "Generate keyword ideas for adgroups in AdWords accounts.",
+    "ja": "AdWordsアカウントの広告グループにキーワード案を生成"
+  },
+  "suggestionMode": {
+    "en": "suggestion",
+    "ja": "推奨"
+  },
+  "campaignCycle": {
+    "en": "campaign cycle",
+    "ja": "キャンペーンのサイクル"
+  },
+  "excludeAccountLevel": {
+    "en": "exclude this campaign from Account-level KPI",
+    "ja": "アカウントレベルのKPIからこのキャンペーンを除外"
+  },
+  "keepingTheSameConversionRate": {
+    "en": "keeping the same conversion rate",
+    "ja": "同コンバージョン率のペースを継続"
+  },
+  "keepingTheSameSpendingRate": {
+    "en": "keeping the same spending rate",
+    "ja": "同予算進捗率のペースを継続"
+  },
+  "keepingTheSameClickRate": {
+    "en": "keeping the same click rate",
+    "ja": "同クリック率のペースを継続"
+  },
+  "convertCurrency": {
+    "en": "Convert to [{currency}]",
+    "ja": "[{currency}]に統合"
+  },
+  "applyMarkup": {
+    "en": "Apply markup",
+    "ja": "マークアップを適用"
+  },
+  "syncStatus": {
+    "en": "sync status",
+    "ja": "ステータスを同期"
+  },
+  "syncSyncing": {
+    "en": "syncing",
+    "ja": "同期しています。"
+  },
+  "syncSynced": {
+    "en": "synced",
+    "ja": "同期済み"
+  },
+  "syncFailed": {
+    "en": "last sync failed",
+    "ja": "同期できませんでした。"
+  },
+  "syncPartial": {
+    "en": "partial sync",
+    "ja": "部分的に同期"
+  },
+  "syncOutOfSync": {
+    "en": "out of sync",
+    "ja": "同期対象外"
+  },
+  "lastSyncTimestamp": {
+    "en": "last sync timestamp",
+    "ja": "前回の同期時刻"
+  },
+  "autoImportCampaigns": {
+    "en": "auto-import campaigns",
+    "ja": "キャンペーンの自動インポート"
+  },
+  "autoImport": {
+    "en": "auto-import",
+    "ja": "自動インポート"
+  },
+  "autoImportHelp": {
+    "en": "Acquisio syncs your stats and all the campaigns created at the Publishers by default.<br/>Turn this off if you don't want to automatically import new campaigns.",
+    "ja": "Acquisioは、デフォルトで、スタッツとパブリッシャーで作成された全てのキャンペーンを同期します。<br/>新規作成のキャンペーンを自動でインポートしない場合は、設定をOFFにしてください。"
+  },
+  "publisherSynced": {
+    "en": "Campaigns updates from <strong>{publisher}</strong> is completed",
+    "ja": "パブリッシャーからのキャンペーンの更新が完了しました。対象：<strong>{publisher}</strong>"
+  },
+  "publisherFaillSync": {
+    "en": "Error while updating campaigns from <strong>{publisher}</strong>",
+    "ja": "<strong>{publisher}</strong>からのキャンペーン更新中にエラーが発生しました。"
+  },
+  "syncRequestSuccess": {
+    "en": "Updating Campaigns from publisher, you will be notified when completed",
+    "ja": "パブリッシャーからキャンペーンを更新しています。完了時に通知します。"
+  },
+  "syncRequestFailure": {
+    "en": "An error occurred while updating campaigns from publisher",
+    "ja": "パブリッシャーからのキャンペーン更新中にエラーが発生しました。"
+  },
+  "syncRequestComplete": {
+    "en": "Your ({numCampaigns}) campaigns have been updated from publisher",
+    "ja": "パブリッシャーのキャンペーン情報を更新しました。対象数：({numCampaigns})"
+  },
+  "columnsOpenButton": {
+    "en": "Columns",
+    "ja": "カラム"
+  },
+  "customizeColumns": {
+    "en": "Customize columns",
+    "ja": "カスタマイズカラム"
+  },
+  "searchColumns": {
+    "en": "Search Columns",
+    "ja": "検索カラム"
+  },
+  "dragDropToReorder": {
+    "en": "Drag and drop to reorder",
+    "ja": "ドラッグ&ドロップにより並べ替えが可能です。"
+  },
+  "resetDefault": {
+    "en": "reset to default",
+    "ja": "デフォルトにリセット"
+  },
+  "resetDefaultTooltip": {
+    "en": "Reset to default columns",
+    "ja": "デフォルトカラムにリセット"
+  },
+  "clearColumns": {
+    "en": "clear all columns",
+    "ja": "全てのカラムをクリア"
+  },
+  "selected": {
+    "en": "selected",
+    "ja": "選択中"
+  },
+  "lockedColumnTooltip": {
+    "en": "Locked columns cannot be removed or moved",
+    "ja": "ロックされたカラムを削除または移動することはできません。"
+  },
+  "dragDropTooltip": {
+    "en": "Drag and Drop column into a different order",
+    "ja": "ドラッグ&ドロップにより並べ替えが可能です。"
+  },
+  "noPriorPeriod": {
+    "en": "Please choose a prior period.",
+    "ja": "前期間を選択してください。"
+  },
+  "graphInvalidDateInterval": {
+    "en": "Date intervals become enabled as the date range increases.",
+    "ja": "データインターバルを有効にするには、期間を広く設定してください。"
+  },
+  "conversionPathButton": {
+    "en": "conv. paths",
+    "ja": "コンバージョンパス"
+  },
+  "conversionPathButtonTooltip": {
+    "en": "Download conversion path report to Excel for {entity} {name}",
+    "ja": "{entity}{name}に対するコンバージョンパスレポートをExcelにダウンロードします。"
+  },
+  "conversionPathButtonAccountTooltip": {
+    "en": "Download conversion path report to Excel for the entire account",
+    "ja": "全てのアカウントに対するコンバージョンパスレポートをExcelにダウンロードします。"
+  },
+  "conversionPathButtonDisabledTooltip": {
+    "en": "Select an entity in the tree view. Then you can download to Excel its converstion path report.",
+    "ja": "コンバージョンパスレポートのExcelダウンロードするには、エンティティを選択してください。"
+  },
+  "budgetPathButton": {
+    "en": "budget paths",
+    "ja": "バジェットパス"
+  },
+  "budgetPathButtonTooltip": {
+    "en": "Go to the budget configuration for the account",
+    "ja": "アカウントの予算配分設定に遷移"
+  },
+  "bulkEditButton": {
+    "en": "bulk edit",
+    "ja": "一括編集"
+  },
+  "addKeywordsButton": {
+    "en": "keywords",
+    "ja": "キーワード"
+  },
+  "createAdsButton": {
+    "en": "ads",
+    "ja": "広告"
+  },
+  "selectAllMessage": {
+    "en": "All {itemCount} items on all {pageCount} pages are selected.",
+    "ja": "選択された全アイテムは、{pageCount}ページです。アイテム数：{itemCount}"
+  },
+  "selectMessage": {
+    "en": "{itemCount} items are selected on this page.",
+    "ja": "このメージにアイテムが選択されました。アイテム数：{itemCount}"
+  },
+  "selectSingleMessage": {
+    "en": "1 item is selected on this page.",
+    "ja": "このページからアイテムが1つ選択されました。"
+  },
+  "syncMaxReached": {
+    "en": "Can't update more than {max} Campaigns from publisher using update from publisher button",
+    "ja": "パブリッシャーホタンのアップデートを使用して更新可能なキャンペー数を超えています。最大数：{max}"
+  },
+  "syncSelectAll": {
+    "en": "The update from publisher function is not available when using the Select All checkbox.",
+    "ja": "全てのチェックボックスを選択している場合、パブリッシャー機能による更新は使用できません。"
+  },
+  "syncUpdateFromPublisher": {
+    "en": "<p>Update selected campaigns in Acquisio to match current settings at the publisher. This will also update related sub-entities, e.g adgroups, keywords, ads, excluding stats.</p>Formely called &quot;Sync&quot;.",
+    "ja": "<p>選択したキャンペーンについて、Acquisioに最新のパブリッシャー設定を取り込みます。付随するエンティティ情報（広告グループ、キーワード、広告、統計情報以外）も更新します。</p>アクション名：&quot;同期&quot;."
+  },
+  "adMobilePrefHelpP1": {
+    "en": "Select 'Mobile' to optimize your ad or extension for mobile devices.",
+    "ja": "モバイルデバイスに対する広告や表示オプションを最適化するには、'Mobile'を選択してください。"
+  },
+  "adMobilePrefHelpP2Header": {
+    "en": "How it works:",
+    "ja": "設定による動作："
+  },
+  "adMobilePrefHelpP2": {
+    "en": "Mobile-optimized text ads and extensions will be given preference on mobile devices. Standard text ads and extensions will be given preference on desktop and laptop computers or tablets.",
+    "ja": "モバイル優先のテキスト広告と表示オプションは、モバイルデバイスを対象とします。標準のテキスト広告と表示オプションは、コンピュータおよびタブレットが対象です。"
+  },
+  "adMobilePrefHelpP3Header": {
+    "en": "Good to know:",
+    "ja": "便利機能："
+  },
+  "adMobilePrefHelpP3": {
+    "en": "If your ad group contains mobile-optimized text ads only, those ads may appear on desktops and laptop computers and tablets.",
+    "ja": "広告グループにモバイル優先のテキスト広告のみを設定した場合は、コンピュータやタブレットに広告が表示されることがあります。"
+  },
+  "adMobilePrefHelpP4Header": {
+    "en": "Ad tips:",
+    "ja": "広告のTips："
+  },
+  "adMobilePrefHelpP4": {
+    "en": "Write ad text that highlights mobile-specific specials or discounts. Or, use a mobile-optimized display URL.",
+    "ja": "モバイル向けのスペシャルやディスカウントを広告テキストに記載するか、モバイル向けの表示URLを使用してください。"
+  },
+  "adMobilePrefHelpP5Header": {
+    "en": "Extension tips:",
+    "ja": "表示オプションのタイプ"
+  },
+  "adMobilePrefHelpP5": {
+    "en": "Highlight your store locator or in-store deals for mobile-customized sitelinks. Show a link to download or open your mobile app with an app extension.",
+    "ja": "モバイル用にカスタマイズされたサイトリンクに、ストア検索やストア内のお得な情報をハイライト表示しましょう。Appの拡張機能として、モバイルAppをダウンロード、または開くためのリンクを表示することもできます。"
+  },
+  "adMobileAppStoreHelp": {
+    "en": "Choose &quot;Google&quot; for your Android app or &quot;Apple&quot; for your iOS app.",
+    "ja": "Android用Appには&quot;Google&quot;を、iOS用のAppには&quot;Apple&quot;を選択してください。"
+  },
+  "adMobileAppIdHelpP1": {
+    "en": "To enter an app when editing an App Install Ad, please enter your own App ID.",
+    "ja": "Appインストール広告を編集するには、AppIDを設定してください。"
+  },
+  "adMobileFinalUrlHelp": {
+    "en": "The final URL is the webpage of the mobile app store where users can download your app.",
+    "ja": "ユーザがAppをダウンロードできるよう、リンク先URL（FinalURL）には、Appストアのモバイル向けウェブページを設定してください。"
+  },
+  "adMobileDevicePrefHelpP1": {
+    "en": "Select &quot;Exclude tablets&quot; if you'd like your ads to show on smartphones only (not on tablets).",
+    "ja": "選択&quot;タブレット除外&quot;広告をスマートフォンのみに表示する場合（タブレットを含まない）"
+  },
+  "adMobileDevicePrefHelpP2Header": {
+    "en": "Good to know:",
+    "ja": "便利機能："
+  },
+  "adMobileDevicePrefHelpP2": {
+    "en": "Choose this option if your app is optimized for smaller screens.",
+    "ja": "ご使用のAppのスクリーンが小さい場合にはこちらのオプショんを選択"
+  },
+  "adMobileTrackingTemplateHelpP1": {
+    "en": "The URL you want people to go through before reaching your landing page.",
+    "ja": "ランディングページに到達する前に経由するURL"
+  },
+  "adMobileTrackingTemplateHelpP2": {
+    "en": "Use this to set up third-party tracking for your ads.",
+    "ja": "広告に対して3rdPartyトラッキングを設定するにはこちらを選択"
+  },
+  "adMobileTrackingTemplateHelpP3Header": {
+    "en": "What to do:",
+    "ja": "設定方法："
+  },
+  "adMobileTrackingTemplateHelpP3": {
+    "en": "Enter the tracking URL, or URL with redirects used when someone clicks your ad.",
+    "ja": "トラッキングURL、または、広告をクリックした際に適用されるリダイレクトURLを設定してください。"
+  },
+  "jobQueue": {
+    "en": "Job Queue",
+    "ja": "ジョブキュー"
+  },
+  "jobQueueTip": {
+    "en": "<strong>Tip!</strong> Please note that the Job Queue in the Client Center shows jobs for all accounts only. To view jobs for a specific account, view the Job Queue from the Workbench",
+    "ja": "<strong>Tip!</strong>クライアントセンターのジョブキュー参照は、全てのアカウントが表示対象です。特定アカウントのみのジョブを確認するには、ワークベンチからジョブキューにアクセスしてください。"
+  },
+  "jobId": {
+    "en": "Job Id",
+    "ja": "ジョブID"
+  },
+  "jobType": {
+    "en": "Job Type",
+    "ja": "ジョブタイプ"
+  },
+  "jobTypes": {
+    "en": "Job Types",
+    "ja": "ジョブタイプ"
+  },
+  "jobDescription": {
+    "en": "Job Description",
+    "ja": "ジョブ詳細"
+  },
+  "jobUser": {
+    "en": "user",
+    "ja": "ユーザ"
+  },
+  "jobPublisherAccount": {
+    "en": "Publisher Account",
+    "ja": "媒体アカウント"
+  },
+  "jobPublisher": {
+    "en": "Publisher",
+    "ja": "パブリッシャー"
+  },
+  "jobProgress": {
+    "en": "Progress",
+    "ja": "進捗"
+  },
+  "jobCreated": {
+    "en": "Created",
+    "ja": "作成済み"
+  },
+  "jobFinished": {
+    "en": "Finished",
+    "ja": "終了済み"
+  },
+  "jobNotification": {
+    "en": "Notification",
+    "ja": "通知"
+  },
+  "files": {
+    "en": "Files",
+    "ja": "ファイル"
+  },
+  "jobQueueView": {
+    "en": "View",
+    "ja": "表示"
+  },
+  "optIn": {
+    "en": "Opt-in",
+    "ja": "オプトイン"
+  },
+  "downloadFiles": {
+    "en": "Download files",
+    "ja": "ファイルをダウンロード"
+  },
+  "jobQueueNotificationDialogText": {
+    "en": "This service allows you to opt-in to receive an email notification once a job has been completed.<br>In the event that a job fails, all recipient will receive a failed notification email.",
+    "ja": "このサービスでは、ジョブ完了時にメール通知を受信するために、オプトインを設定することが可能です。<br>ジョブが失敗した場合には、失敗をメールで通知します。"
+  },
+  "jobQueueDialogCreated": {
+    "en": "Created",
+    "ja": "作成済み"
+  },
+  "jobQueueDialogCreatedBy": {
+    "en": "Created by",
+    "ja": "作成者："
+  },
+  "jobQueueDialogRemoveNotification": {
+    "en": "Remove Notifications",
+    "ja": "通知の削除"
+  },
+  "JQstatusCompleted": {
+    "en": "Completed",
+    "ja": "完了"
+  },
+  "JQstatusRunning": {
+    "en": "Running",
+    "ja": "実行中"
+  },
+  "JQstatusUnderReview": {
+    "en": "Under Review",
+    "ja": "確認中"
+  },
+  "JQstatusIncomplete": {
+    "en": "Incomplete",
+    "ja": "未完了"
+  },
+  "JQstatusAborted": {
+    "en": "Aborted",
+    "ja": "中断"
+  },
+  "JQtypeWBedit": {
+    "en": "Workbench Edit",
+    "ja": "ワークベンチの編集"
+  },
+  "JQtypeClientReport": {
+    "en": "Client Report",
+    "ja": "クライアントレポート"
+  },
+  "JQtypeCampSync": {
+    "en": "Campaign Sync",
+    "ja": "キャンペーンの同期"
+  },
+  "JQtypeBulkExport": {
+    "en": "Bulksheet Export",
+    "ja": "バルクシートエクスポート"
+  },
+  "JQtypeBulkImport": {
+    "en": "Bulksheet Import",
+    "ja": "バルクシートインポート"
+  },
+  "JQtypePosting": {
+    "en": "Posting",
+    "ja": "送信"
+  },
+  "JQtypeCampImport": {
+    "en": "Campaign Import",
+    "ja": "キャンペーンインポート"
+  },
+  "JQtypeFacebookImport": {
+    "en": "Facebook Import",
+    "ja": "FacebookImport"
+  },
+  "JQtypeBudgetConfig": {
+    "en": "Budget Configuration",
+    "ja": "予算配分設定"
+  },
+  "JQtypeBudgetManagement": {
+    "en": "Budget Management",
+    "ja": "予算管理"
+  },
+  "JQtypeProvAccountSync": {
+    "en": "Provider Account Sync",
+    "ja": "プロバイダアカウント同期"
+  },
+  "JQtypeAcqTrackingReport": {
+    "en": "Acquisio Tracking Report",
+    "ja": "アクイジオトラッキングレポート"
+  },
+  "JQToday": {
+    "en": "Today",
+    "ja": "当日"
+  },
+  "JQCompleted": {
+    "en": "Completed",
+    "ja": "完了"
+  },
+  "JQIssues": {
+    "en": "Issues",
+    "ja": "課題"
+  },
+  "JQSummary": {
+    "en": "Summary",
+    "ja": "サマリ"
+  },
+  "JQtypeCampaignCloning": {
+    "en": "Campaign Cloning",
+    "ja": "Campaign Cloning"
+  },
+  "adExtensionManagementAccount": {
+    "en": "Account extension",
+    "ja": "Account extension"
+  },
+  "adExtensionManagementCampaign": {
+    "en": "Campaign extension",
+    "ja": "Campaign extension"
+  },
+  "adExtensionManagementAdGroup": {
+    "en": "Ad group extension",
+    "ja": "Ad group extension"
+  },
+  "filtersOpenButton": {
+    "en": "Filters",
+    "ja": "フィルタ"
+  },
+  "createNewFilters": {
+    "en": "Create new filters",
+    "ja": "Create new filters"
+  },
+  "recentAppliedFilters": {
+    "en": "Recently applied filters",
+    "ja": "Recently applied filters"
+  },
+  "device": {
+    "en": "Device",
+    "ja": "Device"
+  },
+  "pc": {
+    "en": "PC",
+    "ja": "PC"
+  },
+  "smartphone": {
+    "en": "Smartphone",
+    "ja": "Smartphone"
+  },
+  "tablet": {
+    "en": "tablet",
+    "ja": "tablet"
+  },
+  "other": {
+    "en": "Unknown/Other",
+    "ja": "Unknown/Other"
+  },
+  "breakdown": {
+    "en": "Breakdown",
+    "ja": "Breakdown"
+  },
+  "adjustedMaxCPC": {
+    "en": "Adjusted MAX CPC",
+    "ja": "Adjusted MAX CPC"
+  },
+  "mba": {
+    "en": "MBA:",
+    "ja": "MBA:"
+  },
+  "mbaPending": {
+    "en": "Pending ({pending}%)",
+    "ja": "Pending ({pending}%)"
+  },
+  "mbaReal": {
+    "en": "Real ({real}%)",
+    "ja": "Real ({real}%)"
+  },
+  "adExtensionSiteLinkEmpty": {
+    "en": "Your sitelink extensions don't have statistics for the selected date range.",
+    "ja": "Your sitelink extensions don't have statistics for the selected date range."
+  },
+  "adExtensionCallEmpty": {
+    "en": "Your call extensions don't have statistics for the selected date range.",
+    "ja": "Your call extensions don't have statistics for the selected date range."
+  },
+  "adExtensionLocationEmpty": {
+    "en": "Your location extensions don't have statistics for the selected date range.",
+    "ja": "Your location extensions don't have statistics for the selected date range."
+  },
+  "showExclusions": {
+    "en": "Show exclusions"
+  },
+  "hideExclusions": {
+    "en": "Hide exclusions"
+  },
+  "noAdExtensionsWereFound": {
+    "en": "No Ad extensions were found."
+  },
+  "updateFromPublisher": {
+    "en": "Update from Publisher"
+  },
+  "addDynamicAdTargetExclusions": {
+    "en": "Add Dynamic Ad Target exclusions"
+  },
+  "goToFirstPage": {
+    "en": "Go to first page"
+  },
+  "goToPreviousPage": {
+    "en": "Go to previous page"
+  },
+  "goToNextPage": {
+    "en": "Go to next page"
+  },
+  "goToLastPage": {
+    "en": "Go to last page"
+  },
+  "page": {
+    "en": "Page"
+  },
+  "ofPageCount": {
+    "en": "of {pageCount}"
+  },
+  "itemsPerPage": {
+    "en": "{itemsName} per page"
+  },
+  "pageXofY": {
+    "en": "{fromIndex} - {toIndex} of {formattedItemCount} {itemsName}"
+  },
+  "selectAPublisherAccount": {
+    "en": "Select a publisher account"
+  },
+  "deleteEntitiesManuallyCreatedInBingAdsCampaigns": {
+    "en": "Delete entities manually created in Bing Ads campaigns"
+  },
+  "bidAndBudgetAdjustments": {
+    "en": "Bid and budget adjustments"
+  },
+  "adjustBidAndBudgetAdjustmentsTooltipTitle": {
+    "en": "Adjust bid and budget adjustments"
+  },
+  "decreaseBidsByPercent": {
+    "en": "Decrease Bids by %"
+  },
+  "increaseBidsByPercent": {
+    "en": "Increase Bids by %"
+  },
+  "decreaseBudgetByPercent": {
+    "en": "Decrease Budget by %"
+  },
+  "increaseBudgetByPercent": {
+    "en": "Increase Budget by %"
+  },
+  "qualifiedCampaigns": {
+    "en": "Qualified Campaigns"
+  },
+  "unqualifiedCampaigns": {
+    "en": "Unqualified Campaigns"
+  },
+  "remarketingLists": {
+    "en": "Remarketing Lists"
+  },
+  "itemHasChanges": {
+    "en": "Item has changes"
+  },
+  "itemValidationStatus": {
+    "en": "Item validation status"
+  },
+  "markThisExclusionForDeletion": {
+    "en": "Mark this exclusion for deletion"
+  },
+  "navigateTo": {
+    "en": "Navigate to"
+  },
+  "drillDownToACampaignOrAdGroupToManageNegatives": {
+    "en": "Drill down to a campaign or ad group to manage negatives"
+  },
+  "googleAdWords": {
+    "en": "Google AdWords"
+  },
+  "yahoo": {
+    "en": "Yahoo"
+  },
+  "yahooJapan": {
+    "en": "Yahoo! Japan"
+  },
+  "yahooJAPANDisplayAdNetwork": {
+    "en": "Yahoo! JAPAN Display Ad Network"
+  },
+  "bingAds": {
+    "en": "Bing Ads"
+  },
+  "baidu": {
+    "en": "Baidu"
+  },
+  "facebook": {
+    "en": "Facebook"
+  },
+  "theTradeDesk": {
+    "en": "The Trade Desk"
+  },
+  "doubleClickCampaignManager": {
+    "en": "DoubleClick Campaign Manager"
+  },
+  "linkedIn": {
+    "en": "LinkedIn"
+  },
+  "virtualSearch": {
+    "en": "Virtual Search"
+  },
+  "virtualDisplay": {
+    "en": "Virtual Display"
+  },
+  "yandexDirect": {
+    "en": "Yandex Direct"
+  },
+  "ypSearchMarketplace": {
+    "en": "ypSearch Marketplace"
+  },
+  "yahooGemini": {
+    "en": "Yahoo Gemini"
+  },
+  "sensisSearchNetwork": {
+    "en": "Sensis Search Network"
+  },
+  "unknown": {
+    "en": "Unknown"
+  },
+  "msg_youCanSeeProgressInJobQueue": {
+    "en": "You can see the progress in the job queue."
+  },
+  "selectYahooGeminiAccountTooltipTitle": {
+    "en": "Select Yahoo Gemini Account"
+  },
+  "importChangesToExistingYahooGeminiCampaignsTooltipTitle": {
+    "en": "Import changes to existing Yahoo Gemini campaigns"
+  },
+  "manualEntitiesCreatedAtBingAdsTooltipTitle": {
+    "en": "Manual entities created at Bing Ads"
+  },
+  "manualEntitiesCreatedAtYahooGeminiTooltipTitle": {
+    "en": "Manual entities created at Yahoo Gemini"
+  },
+  "selectYpSearchMarketplaceAccountTooltipTitle": {
+    "en": "Select ypSearch Marketplace Account"
+  },
+  "importChangesToExistingYpSearchMarketplaceCampaignsTooltipTitle": {
+    "en": "Import changes to existing ypSearch Marketplace campaigns"
+  },
+  "selectYpSearchMarketplacePublisherAccount": {
+    "en": "Select ypSearch Marketplace publisher account"
+  },
+  "manualEntitiesCreatedAtYpSearchMarketplaceTooltipTitle": {
+    "en": "Manual entities created at ypSearch Marketplace"
+  },
+  "remarketingLists": {
+    "en": "Remarketing Lists"
+  },
+  "itemHasChanges": {
+    "en": "Item has changes"
+  },
+  "itemValidationStatus": {
+    "en": "Item validation status"
+  },
+  "markThisExclusionForDeletion": {
+    "en": "Mark this exclusion for deletion"
+  },
+  "navigateTo": {
+    "en": "Navigate to"
+  },
+  "drillDownToACampaignOrAdGroupToManageNegatives": {
+    "en": "Drill down to a campaign or ad group to manage negatives"
+  },
+  "googleAdWords": {
+    "en": "Google AdWords"
+  },
+  "yahoo": {
+    "en": "Yahoo"
+  },
+  "yahooJapan": {
+    "en": "Yahoo! Japan"
+  },
+  "yahooJAPANDisplayAdNetwork": {
+    "en": "Yahoo! JAPAN Display Ad Network"
+  },
+  "bingAds": {
+    "en": "Bing Ads"
+  },
+  "baidu": {
+    "en": "Baidu"
+  },
+  "facebook": {
+    "en": "Facebook"
+  },
+  "theTradeDesk": {
+    "en": "The Trade Desk"
+  },
+  "doubleClickCampaignManager": {
+    "en": "DoubleClick Campaign Manager"
+  },
+  "linkedIn": {
+    "en": "LinkedIn"
+  },
+  "virtualSearch": {
+    "en": "Virtual Search"
+  },
+  "virtualDisplay": {
+    "en": "Virtual Display"
+  },
+  "yandexDirect": {
+    "en": "Yandex Direct"
+  },
+  "ypSearchMarketplace": {
+    "en": "ypSearch Marketplace"
+  },
+  "yahooGemini": {
+    "en": "Yahoo Gemini"
+  },
+  "sensisSearchNetwork": {
+    "en": "Sensis Search Network"
+  },
+  "unknown": {
+    "en": "Unknown"
+  }
+}

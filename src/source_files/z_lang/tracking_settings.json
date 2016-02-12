@@ -1,0 +1,483 @@
+{
+  "tracking": {
+    "en": "tracking",
+    "ja": "トラッキング"
+  },
+  "tracker": {
+    "en": "tracker",
+    "ja": "トラッカー"
+  },
+  "trackers": {
+    "en": "trackers",
+    "ja": "トラッカー"
+  },
+  "analytics": {
+    "en": "configuration",
+    "ja": "設定"
+  },
+  "basics": {
+    "en": "basics",
+    "ja": "基本"
+  },
+  "conversionTracking": {
+    "en": "conversion events",
+    "ja": "コンバージョンイベント"
+  },
+  "attributionModel": {
+    "en": "attribution model",
+    "ja": "アトリビューションモデル"
+  },
+  "trackerConfiguration": {
+    "en": "tracker configuration",
+    "ja": "トラッカー設定"
+  },
+  "trackerInfo": {
+    "en": "Choose tracking options and enable tracking.",
+    "ja": "トラッキングオプションを選択し、トラッキングを有効にしてください。"
+  },
+  "trackerEncoding": {
+    "en": "encoding",
+    "ja": "エンコーディング"
+  },
+  "adwords-conversion-actions": {
+    "en": "AdWords Conversion Actions",
+    "ja": "AdWords Conversion Actions"
+  },
+  "tracker_unavailable": {
+    "en": "This tracker is unavailable for activation.",
+    "ja": "このトラッカーを有効にすることはできません。"
+  },
+  "reason": {
+    "en": "reason",
+    "ja": "理由"
+  },
+  "contact_account_manager": {
+    "en": "Please contact your Account Manager for more information.",
+    "ja": "詳細は、アクイジオジャパンに連絡してください。"
+  },
+  "trackerInstructionReason": {
+    "en": "A previously installed tracker is using configuration settings that conflict with the Acquisio Tracker.",
+    "ja": "適用されたトラッカーは、Acquisioトラッカーの設定と競合しています。"
+  },
+  "trackerInstructionIncompatible": {
+    "en": "If your account uses the Dart Doubleclick tracker, this tracker uses a proprietary URL encoding method which is incompatible with any other tracker.",
+    "ja": "If your account uses the Dart Doubleclick tracker, this tracker uses a proprietary URL encoding method which is incompatible with any other tracker."
+  },
+  "trackerInstructionCompatible": {
+    "en": "If your account is using Google Analytics, Unique ID, or Acquisio Tracking Retargeting and Attribution, you can reconfigure these trackers to make them compatible with the Acquisio Tracker.",
+    "ja": "Google Analytics、Unique ID、Acquisioトラッキングリターゲティング、およびそのアトリビューションを使用している場合、Acquisioトラッカーの再設定により、その互換性を登録することが可能です。"
+  },
+  "trackerInstruction1": {
+    "en": "Return to Version 1 of Acquisio, select External Data Sources in the Admin section.",
+    "ja": "Acquisio V1に戻り、AdminセクションのExternal Data Sourcesを選択してください。"
+  },
+  "trackerInstruction2": {
+    "en": "For Google Analytics and Unique ID, select Manage Associations",
+    "ja": "GoogleAnalyticsおよびUniqueIDの設定には、アソシエーション管理（ManageAssociations）を選択してください。"
+  },
+  "trackerInstruction3": {
+    "en": "For Acquisio Tracking Retargeting and Attribution, Select Edit and then Campaign Scope",
+    "ja": "Acquisioトラッキングのリターゲティングやアトリビューションの設定は、編集（Edit）を指定し、キャンペーンスコープを設定してください。"
+  },
+  "trackerInstruction4": {
+    "en": "Accept the Important Notice",
+    "ja": "重要なお知らせの確認"
+  },
+  "trackerInstruction5": {
+    "en": "Click on Convert to All-Campaign and All-URL encoding",
+    "ja": "全てのキャンペーンとURLエンコードに統合　をクリックしてください。"
+  },
+  "trackerInstructionReturn": {
+    "en": "You may then return to this screen in Acquisio Version 2 and activate Acquisio Tracking.",
+    "ja": "AcquisioVersion2の画面に戻り、Acquisioトラッキングを有効にすることができます。"
+  },
+  "tracker_select": {
+    "en": "Please select one of the following trackers for configuration.",
+    "ja": "設定には、トラッカーを選択してください。"
+  },
+  "NOT_ACCOUNT_LEVEL": {
+    "en": "An existing tracker configuration is set to the campaign group level.",
+    "ja": "キャンペーングループレベルで、トラッカーの設定が既に存在します。"
+  },
+  "DATASOURCE_TYPE_ALREADY_ACTIVE": {
+    "en": "A tracker configuration of this type already exists.",
+    "ja": "このトラッカー設定は、既に存在します。"
+  },
+  "CONFLICTING_DATASOURCE_ALREADY_ACTIVE": {
+    "en": "You have an incompatible tracker already activated.",
+    "ja": "互換性のないトラッカーが既に有効になっています。"
+  },
+  "NOT_ALL_LEVEL": {
+    "en": "An existing tracker configuration encodes the keyword level only.",
+    "ja": "既存のトラッカー設定は、キーワードレベルのみがエンコード対象です。"
+  },
+  "REQUIRED_MODULE_ACCESS_NOT_ENABLED": {
+    "en": "This tracker module has not been activated.",
+    "ja": "このトラッカーモジュールは、有効になっていません。"
+  },
+  "TRACKER_UNKOWN_ERROR": {
+    "en": "An unknown error occurred.",
+    "ja": "予期しないエラーが発生しました。"
+  },
+  "tracker_encode_modal": {
+    "en": "Turning URL encoding 'ON' will activate the tracking and encode all your URLs. This process could take several hours and will result in the deletion and re-creation of all your text Ads.",
+    "ja": "URLエンコードを'ON'にすると、トラッキングをアクティブ化し、全てのURLをエンコードします。実行には数時間かかる場合があり、テキスト広告は、一度削除し、再作成します。"
+  },
+  "tracker_deencode_modal": {
+    "en": "Turning URL encoding 'OFF' will unencode all your URLs and stop the tracking. This process could take several hours and will result in the deletion and re-creation of all your text Ads.",
+    "ja": "URLエンコードを'OFF'にすると、全てのURLのエンコードを解除します。実行には数時間かかる場合があり、テキスト広告は、一度削除し、再作成します。"
+  },
+  "tracker_modal_proceed": {
+    "en": "Do you want to proceed?",
+    "ja": "実行します。よろしいですか？"
+  },
+  "tracker_encode_status": {
+    "en": "Encoding is active",
+    "ja": "エンコーディングは、有効です。"
+  },
+  "tracker_deencode_status": {
+    "en": "Encoding is not active",
+    "ja": "エンコーディングは、有効ではありません。"
+  },
+  "turn_switch_on": {
+    "en": "<strong>How does this data connector work with Final URLs and Final Mobile URLs?</strong><br><p>Acquisio creates campaign-level tracking templates for Final URLs and Final Mobile URLs.When you turn on this data connector, Acquisio will:<p><ol> <li>Remove any pre-existing tracking templates from...</li><ol type='a'> <li>campaigns, ad groups, ads, keywords and auto targets that have been imported to Acquisio</li><li>sitelinks associated with these campaigns and ad groups</li></ol> <li>Make tracking templates read-only in Acquisio.</li><li>Add a question mark (?) to the end of any ad or keyword Final URL & Final Mobile URL that does not already include a question mark somewhere in the URL.</li><li>During syncs and imports, detect and remove any tracking templates that were not added by Acquisio.</li></ol><strong>WARNING!</strong> Modifying tracking templates outside Acquisio can result in tracking data discrepancies.<p><strong>What about my campaigns with Destination URLs?</strong><br>All Destination URLs will be encoded. In the Workbench, you can select Destination URL and Published URL from the Column Picker. The Published URL column displays the encoded URL that Acquisio posted to your publisher account.</p><p><strong>Encoding and Editorial Review</strong><br>When AdWords Final URL or Final Mobile URL are modified, the ad is always subject to editorial review. During the review process, the ads will not serve until they are re-approved. The review process may be anywhere from a few minutes to a few days, depending on the content of the creative and the URLs. Other Publishers will allow the URL of a creative to be modified, but may review the ad at a later date.</p>",
+    "ja": "<strong>データコネクタが、リンク先URLおよびリンク先モバイルURLと紐付けする方法</strong><br><p>Acquisioは、リンク先URLおよびリンク先モバイルURLのトラッキングテンプレートをキャンペーンレベルで作成します。データコネクタをONにすると、次の更新を行います。<p><ol><li>Acquisioは、既存のトラッキングテンプレートを解除します。...</li><oltype='a'><li>対象：Acquisioにインポートされているキャンペーン、広告グループ、広告、キーワード、オートターゲット</li><li>キャンペーンや広告グループに関連づけされたサイトリンク</li></ol><li>Acquisioのトラッキングテンプレートを読み取り専用にします。</li><li>URLに疑問符（?）が存在しない場合、広告またキーワードのリンク先URLおよびリンク先モバイルURLの末尾に疑問符（?）を付与します。</li><li>同期およびインポートの間に、Acquisioにより追加されていないトラッキングテンプレートを解除します。</li></ol><strong>警告！</strong>Acquisio以外でトラッキングテンプレートを設定した場合、データ不一致を引き起こす場合があります。<p><strong>リンク先URL（DestinationURL）の存在するキャンペーンについて</strong><br>全てのリンク先URL（DestinationURL）はエンコード対象となります。ワークベンチにおいて、カラムピッカーからリンク先URL（DestinationURL）とリダイレクトURL（PublishedURL）を選択してください。リダイレクトURL（PublishedURL）は、Acquisioがパブリッシャーアカウントに送信したエンコード後のURLを表示します。</p><p><strong>エンコードおよび媒体審査</strong><br>AdWordsのリンク先URL（FinalURL）、またはリンク先モバイルURL（FinalMobileURL）が設定されている場合は、常に媒体審査対象となります。審査中、広告は承認されるまで配信されません。審査期間は、数分分から数日、広告やURLの設定内容によって異なります。その他のパブリッシャーでは、広告のURL編集は可能ですが、後日、審査の対象となる場合があります。</p>"
+  },
+  "turn_switch_off": {
+    "en": "Switching Encoding OFF will stop data import and remove encoding at the publisher.",
+    "ja": "エンコードにOFFにすると、データのインポートを停止し、パブリッシャーのエンコードを解除します。"
+  },
+  "tracking_ut_msg": {
+    "en": "Install the \"Universal Tag\" on all your pages. It is unique to the <strong>{account}</strong> account.",
+    "ja": "  UniversalTag に全てのページを設定してください。このタグは、アカウントユニークです。対象アカウント：<strong>{account}</strong>"
+  },
+  "tracking_ut": {
+    "en": "Universal tag",
+    "ja": "ユニバーサルタグ"
+  },
+  "tracking_configuration": {
+    "en": "Tracking configuration",
+    "ja": "トラッキング設定"
+  },
+  "attribution_period": {
+    "en": "Attribution Period",
+    "ja": "アトリビューション期間"
+  },
+  "de-duplication_window": {
+    "en": "De-duplication window",
+    "ja": "重複排除の範囲"
+  },
+  "client_timezone": {
+    "en": "Client's Time Zone",
+    "ja": "クライアントのタイムゾーン"
+  },
+  "conversion_window_validation": {
+    "en": "Attribution period must be between {min} and {max}.",
+    "ja": "アトリビューション期間を設定してください。最小：{min}、最大：{max}"
+  },
+  "deduplication_window_validation": {
+    "en": "De-duplication window must be between {min} and {max}.",
+    "ja": "重複排除の範囲は、最小{min}、最大{max}です。"
+  },
+  "conversion_window_popoper_def": {
+    "en": "This time window is the number of days during which events leading to a conversion will be considered in the attribution path.",
+    "ja": "この欄は、アトリビューションパスにおいて、コンバージョンに繋がるイベントとして考慮すべき日数を示します。"
+  },
+  "conversion_window_popoper_what": {
+    "en": "<strong>What it is:</strong> The attribution period should be slightly longer than your sales cycle. A conversion window of 30 days is widely used by default. You may increase or decrease the time window to get a more accurate attribution.",
+    "ja": "<strong>補足：</strong>アトリビューション期間は、売上のサイクルより少し長めに設定してください。コンバージョンまでのデフォルトは30日です。より正確なアトリビューションを測定できるよう、日数増減を調節してください。"
+  },
+  "conversion_window_popoper_ex": {
+    "en": "<strong>Example:</strong> If you select a period of 30 days, all events within 30 days prior to the conversion will be linked to the conversion.",
+    "ja": "<strong>例：</strong>30日間を選択すると、30日以内のコンバージョン前のイベント全てが、対象のコンバージョンにリンクされます。"
+  },
+  "deduplication_window_popoper_def": {
+    "en": "The de-duplication time window is the period of time during which duplicated conversions are not counted.",
+    "ja": "重複排除期間を設定すると、その間に重複するコンバージョンはカウントされません。"
+  },
+  "deduplication_window_popoper_why": {
+    "en": "<strong>Why it matters:</strong> Remove unwanted duplicated conversions from the campaign statistics.",
+    "ja": "<strong>エラー理由：</strong>キャンペーンの統計情報から重複コンバージョンを排除してください。"
+  },
+  "deduplication_window_popoper_ex": {
+    "en": "<strong>Example:</strong> If you select a two minute de-duplication window and we received the same newsletter conversion twice in that time frame, it will be counted as a single conversion.",
+    "ja": "<strong>例：</strong>重複排除に2を設定し、対象期間内に2通のニュースレターコンバージョンを受領した場合、実コンバージョンは、1回とカウントされます。"
+  },
+  "tracker_save_basics_success": {
+    "en": "The tracker settings were successfully saved.",
+    "ja": "トラッッカー設定の保存が完了しました。"
+  },
+  "tracker_save_basics_error": {
+    "en": "There was an error while saving tracker settings. Please try again later.",
+    "ja": "トラッカー設定の保存中にエラーが発生しました。後ほど再度お試しください。"
+  },
+  "tracker_save_filters_success": {
+    "en": "The tracker filters were successfully saved.",
+    "ja": "トラッッカーフィルタの保存が完了しました。"
+  },
+  "tracker_save_filters_error": {
+    "en": "There was an error while saving tracker filters. Please try again later.",
+    "ja": "トラッカーフィルタの保存中にエラーが発生しました。後ほど再度お試しください。"
+  },
+  "tracker_encoding_on_success": {
+    "en": "Encoding is now active.",
+    "ja": "エンコーディングが有効になりました。"
+  },
+  "tracker_encoding_on_error": {
+    "en": "There was an error while activating encoding. Please try again later.",
+    "ja": "エンコードの実行中にエラーが発生しました。後ほど再度お試しください。"
+  },
+  "tracker_encoding_off_success": {
+    "en": "Encoding is now deactivated.",
+    "ja": "エンコーディングを無効化しています。"
+  },
+  "tracker_encoding_off_error": {
+    "en": "There was an error while deactivating encoding. Please try again later.",
+    "ja": "エンコードの解除中にエラーが発生しました。後ほど再度お試しください。"
+  },
+  "tracker_filter": {
+    "en": "Exclude tracking data from the following IP addresses",
+    "ja": "トラッキングデータを除外するIDアドレス："
+  },
+  "tracker_filter_help": {
+    "en": "Enter one IP address per line.  Use of the wildcard \"*\" is accepted. <br/><strong>For example</strong>, 10.30.163.* would exclude IPs addresses from 10.30.163.1 to 10.30.163.255.",
+    "ja": "行毎にIPアドレスを設定してください。ワイルドカード * を使用可能です。<br/><strong>例：</strong>10.30.163.*　の場合、10.30.163.1から10.30.163.255のIDアドレスを除外します。"
+  },
+  "tracker_filter_validation": {
+    "en": "is not a valid IPv4 address.",
+    "ja": "IPv4のアドレスが無効です。"
+  },
+  "tracker_status_configure": {
+    "en": "configure",
+    "ja": "設定"
+  },
+  "tracker_status_delete": {
+    "en": "delete",
+    "ja": "削除"
+  },
+  "tracker_status_add": {
+    "en": "add",
+    "ja": "追加"
+  },
+  "tracker_status_unavailable": {
+    "en": "unavailable",
+    "ja": "実行でいません。"
+  },
+  "adwords_conversion_tracker_status_unavailable": {
+    "en": "No AdWords publisher linked to the client account",
+    "ja": "No AdWords publisher linked to the client account"
+  },
+  "tracker_status_coming": {
+    "en": "coming soon",
+    "ja": "少々お待ちください。"
+  },
+  "new_conversion_wizard_title": {
+    "en": "create conversion event",
+    "ja": "コンバージョンイベントを作成"
+  },
+  "edit_conversion_wizard_title": {
+    "en": "edit conversion",
+    "ja": "コンバージョンを編集"
+  },
+  "conversion_name": {
+    "en": "conversion name",
+    "ja": "コンバージョン名"
+  },
+  "conversion_type": {
+    "en": "conversion code",
+    "ja": "コンバージョンコード"
+  },
+  "conversion_name_header": {},
+  "conversion_name_help": {
+    "en": "Give your conversion a name that is easy to understand. This is only for admin purpose.",
+    "ja": "管理しやすいようコンバージョン名を設定してください。"
+  },
+  "conversion_type_help": {
+    "en": "The conversion code string will be used to track the conversion. Format is single character string, alphanumerical including '_' and '-', no spaces, 50 char. max. It is recommended to use a descriptive string, e.g.: product_sales, eletter, site-registration, lead_form, etc...",
+    "ja": "コンバージョンコードは、コンバージョンのトラックに使用されます。フォーマットは、最大50byte、空白なしで、使用可能文字は半角英数字、および'_'や'-'を含む文字列です。推奨する設定の例：product_sales、eletter、site-registration、lead_form、..."
+  },
+  "conversion_name_error_empty": {
+    "en": "you must enter a name",
+    "ja": "名称を設定してください。"
+  },
+  "conversion_type_error_empty": {
+    "en": "you must enter a type",
+    "ja": "タイプを設定してください。"
+  },
+  "conversion_type_error_invalid": {
+    "en": "you entered an invalid conversion type",
+    "ja": "コンバージョンタイプの設定が無効です。"
+  },
+  "name_type": {
+    "en": "name and type",
+    "ja": "名称とタイプ"
+  },
+  "column_mapping": {
+    "en": "column mapping",
+    "ja": "カラムマッピング"
+  },
+  "tracker_column_mapping_help_1": {
+    "en": "This is optional. All conversion event counts and revenues are aggregated in the standard Conversion and Attribution columns.",
+    "ja": "オプション設定です。全コンバージョンイベントと売上の値を通常のコンバージョンとアトリビューションに統合することができます。"
+  },
+  "tracker_column_mapping_help_2": {
+    "en": "Column mapping allows you to track individual conversion events in selected dynamic columns. You can choose up to 4 different tracking metrics.",
+    "ja": "カラムマッピングにより、動的カラム別に各コンバージョンイベントをトラックすることができます。トラッキングメトリクスは4つまで設定可能です。"
+  },
+  "first_click_count": {
+    "en": "first click count",
+    "ja": "ファーストクリックの数"
+  },
+  "first_click_revenue": {
+    "en": "first click revenue",
+    "ja": "ファーストクリックの売上"
+  },
+  "last_click_count": {
+    "en": "last click count",
+    "ja": "ラストクリックの数"
+  },
+  "last_click_revenue": {
+    "en": "last click revenue",
+    "ja": "ラストクリックの売上"
+  },
+  "no_mapping": {
+    "en": "no mapping",
+    "ja": "マッピングなし"
+  },
+  "generate_tag": {
+    "en": "generate tag",
+    "ja": "タグを生成"
+  },
+  "tracker_column_name": {
+    "en": "name",
+    "ja": "名称"
+  },
+  "tracker_column_conv_code": {
+    "en": "conv. Code",
+    "ja": "コンバージョンコード"
+  },
+  "tracker_column_conv_tag": {
+    "en": "conversion tag",
+    "ja": "コンバージョンタグ"
+  },
+  "column_mapping_alert": {
+    "en": "Column mappings changes will only affect future conversion, it will not change mapping of past conversions.",
+    "ja": "カラムマッピングは、未来のコンバージョンにのみ影響するものであり、過去のコンバージョンのマッピングを変更するものではありません。"
+  },
+  "delete_conversion_popup_title": {
+    "en": "Delete Conversion Event?",
+    "ja": "コンバージョンイベントを削除します。よろしいですか？"
+  },
+  "delete_conversion_popup_content": {
+    "en": "Removing this event is permanent and any tracking from this conversion code will not be counted once the event is deleted.  You can recreate the event if you re-use the same conversion code.",
+    "ja": "このイベントイベントを移動するとプラットフォームから完全に削除となります。一旦削除すると、当該コンバージョンコードによるトラッキング情報はカウントされなくなります。同コンバージョンコードを使用する場合は、再作成となりますのでご注意ください。"
+  },
+  "new_conversion_event": {
+    "en": "new conversion event",
+    "ja": "コンバージョンイベントを作成"
+  },
+  "error_creating_conversion": {
+    "en": "An error occurred while creating your conversion",
+    "ja": "コンバージョンの作成にエラーが発生しました。"
+  },
+  "error_updating_conversion": {
+    "en": "An error occurred while updating your conversion",
+    "ja": "コンバージョンの更新にエラーが発生しました。"
+  },
+  "columns_not_loaded": {
+    "en": "Columns not loaded",
+    "ja": "カラムを読み込みできませんでした。"
+  },
+  "alwaysOn_model": {
+    "en": "Always-On Models",
+    "ja": "常時適用のモデル"
+  },
+  "last_click_model": {
+    "en": "last click model",
+    "ja": "ラストクリックモデル"
+  },
+  "first_click_model": {
+    "en": "first click model",
+    "ja": "ファーストクリックモデル"
+  },
+  "linear_model": {
+    "en": "linear model",
+    "ja": "リニアモデル"
+  },
+  "ushaped_model": {
+    "en": "U-Shaped model",
+    "ja": "U字型モデル"
+  },
+  "custom_model": {
+    "en": "custom model",
+    "ja": "カスタムモデル"
+  },
+  "choose_extra_model": {
+    "en": "Choose an Extra Model",
+    "ja": "その他のモデルを選択"
+  },
+  "last_click_model_description": {
+    "en": "The Last Click model attributes 100% of the conversion value to the last paid click before buying or converting. This is the model used by the publishers. It doesn't put any value on any previous events that lead to the conversion.",
+    "ja": "ラストクリックモデルは、購入やコンバージョン直前のラストクリックに対し、コンバージョン値を100%配分します。これは、パブリッシャーで使用されているモデルであり、その他、コンバージョンを引き出しているイベントには価値を配分しません。"
+  },
+  "first_click_model_description": {
+    "en": "The First Click model attributes 100% of the conversion value to the first paid click or event leading to a conversion. This model can help you understand which campaigns create initial awareness. For example, if your brand is not well known, you may value keywords or channels that first exposed customers to the brand.",
+    "ja": "ファーストクリックモデルは、購入やコンバージョン直前のラストクリックに対し、コンバージョン値を100%配分します。このモデルにより、どのキャンペーンが初めに購入やコンバージョンのきっかけになったのかを確認することができます。例えば、ブランドの知名度が低い場合には、初めにカスタマーをそのブランドに導いたキーワードを見出すことができるかもしれません。"
+  },
+  "linear_model_description": {
+    "en": "The linear model gives equal value to each event leading to a conversion. This model provides a more holistic view of how your campaign is behaving throughout the entire sales cycle. In this case, each touch point gets the same value throughout the sales cycle. This model might be used if your campaign objectives are to maintain contact and awareness with the customer throughout the entire sales cycle.",
+    "ja": "リニアモデルは、コンバージョンに導いた各イベントに等しく重み付けを配置するモデルです。このモデルでは、販売サイクル全体を通してどのようにキャンペーンが動作しているかをより全体的に理解することができます。各タッチポイントは等価です。全体の販売サイクルを通して、キャンペーンが、カスタマーにとってどのようなきっかけになったのかを把握することができるかもしれません。"
+  },
+  "ushaped_model_description": {
+    "en": "The U-Shaped model gives equal weight to the first and last events in the conversion path. All the intermediary events (i.e. influencers) share a value equal to a percentage of the first and last click value.",
+    "ja": "U字型モデルは、コンバージョンパスのファーストとラストのイベントに等しい重み付けを配置するモデルです。その他全ての仲介イベント（インフルエンサー）には、ファーストクリックとラストクリックの重みと同等の比率を等しく分配します。"
+  },
+  "custom_model_description": {
+    "en": "A custom model gives the opportunity to design how the conversion value is divided between each event in the conversion path. It provides the same holistic view as the linear model but allows you to fine tune the value of each event. Attribution weight can be customized based on position and recency. Channels can also be given different weights.",
+    "ja": "カスタムのモデルの設定により、コンバージョンパスの各イベントに対するコンバージョン値の配分を調整することができます。リニアモデルと同様、全体像を把握することができますが、加えて、各イベントの貢献価値を微調整することが可能です。アトリビューションは、掲載位置と直近度合いにより重み付けをカスタマイズすることが可能です。また、チャネル毎に重み付けを設定することも可能です。"
+  },
+  "urls_encoding": {
+    "en": "URLs encoding",
+    "ja": "URLエンコーディング"
+  },
+  "encoding_status": {
+    "en": "encoding status",
+    "ja": "エンコーディングステータス"
+  },
+  "destination_urls_what_title": {
+    "en": "What happens when Destination URLs are encoded? ",
+    "ja": "リンク先URL（DestinationURL）のエンコードによる影響とは？"
+  },
+  "destination_urls_what_body": {
+    "en": "We'll replace the destination URLs for all keywords and ads with encoded destination URLs that resolve to the same address, but include the required click-tracking data. We will then push the changed URLs to your ad publishers. The potential impact on your ads varies depending on the publisher, but many URL-changes to existing ads are treated as editorial changes, which may make your ads subject to editorial review. During the review process, your ads may stop being served temporarily. At Adwords only, editing an ad results in the loss of performance statistics for your old ad when it is replaced with a new edited version.",
+    "ja": "全てのキーワードと広告のリンク先URL（destinationURL）に対し、同じアドレスにクリックトラッキングデータを付与したエンコード済みURLに置換し、広告パブリッシャーに変更したURLを送信します。パブリッシャーにより、URL更新の影響は異なりますが、既存広告に対するURLの変更の多くは、広告編集扱いとなり、媒体審査に入る場合があります。審査中は、一時的に配信されなくなります。AdWordsの場合、編集により古い広告のパフォーマンスを下げることになる場合があります。"
+  },
+  "destination_urls_who_title": {
+    "en": "What publishers and accounts may be subject to editorial review? ",
+    "ja": "媒体審査の可能性があるパブリッシャーやアカウント"
+  },
+  "destination_urls_who_body": {
+    "en": "Currently, Adwords and Facebook require editorial review of an ad when its URL is modified in any way. Bing Ads and Yahoo allow URLs to be modified without pausing the ads, but the ads may be flagged for review at some point in the future.",
+    "ja": "Currently AdwordsandFacebookrequireeditorialreviewofanadwhenitsURLismodifiedinanyway.BingAdsandYahooallowURLstobemodifiedwithoutpausingthea buttheadsmaybeflaggedforreviewatsomepointinthefuture."
+  },
+  "analytics_exclusive_param": {
+    "en": "Exclusive Parameter",
+    "ja": "除外パートナー"
+  },
+  "analytics_shared_param": {
+    "en": "Shared Parameter",
+    "ja": "共有パラメータ"
+  },
+  "analytics_parameter_name": {
+    "en": "Parameter Name",
+    "ja": "パラメータ名"
+  },
+  "analytics_delimiter_underscore": {
+    "en": "_ (Underscore)",
+    "ja": "_（アンダースコア）"
+  },
+  "analytics_delimiter_tilde": {
+    "en": "~ (Tilde)",
+    "ja": "~（チルド）"
+  }
+}

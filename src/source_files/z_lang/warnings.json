@@ -1,0 +1,23 @@
+{
+  "wrn_PendingChangesAdWordsCampaignsIgnored": {
+    "en": "Pending changes in your AdWords campaigns will be ignored."
+  },
+  "wrn_NoSyncingAdWordsExecutedPriorToActivatingCloneProcess": {
+    "en": "No syncing with AdWords will be executed prior to activating the clone process."
+  },
+  "wrn_WillAffectBingAdsDirectly": {
+    "en": "Will affect Bing Ads directly."
+  },
+  "wrn_NotAllEntitiesClonedSomeTypesExtensionsTargets": {
+    "en": "Not all entities are cloned, such as (but not limited to) some types of extensions and targets."
+  },
+  "wrn_StatusClonedCampaignsDefaultPaused": {
+    "en": "Status of cloned campaigns will default to Paused."
+  },
+  "wrn_WillAffectYPSearchMarketplaceDirectly": {
+    "en": "Will affect ypSearch Marketplace directly."
+  },
+  "wrn_WillAffectYahooGeminiDirectly": {
+    "en": "Will affect Yahoo Gemini directly."
+  }
+}

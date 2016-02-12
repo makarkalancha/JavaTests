@@ -1,0 +1,206 @@
+{
+  "accountProfile": {
+    "en": "Account Profile",
+    "ja": "アカウントプロファイル"
+  },
+  "clientAccountSettings": {
+    "en": "Your client account settings",
+    "ja": "クライアントアカウント設定"
+  },
+  "basicFieldName": {
+    "en": "Name",
+    "ja": "名称"
+  },
+  "basicFieldLanguage": {
+    "en": "Language",
+    "ja": "言語"
+  },
+  "basicFieldCountry": {
+    "en": "Country",
+    "ja": "国"
+  },
+  "basicFieldCurrency": {
+    "en": "Target Currency",
+    "ja": "ターゲット通貨"
+  },
+  "basicFielldNotes": {
+    "en": "Account Notes",
+    "ja": "アカウント詳細"
+  },
+  "menuAccountSettings": {
+    "en": "Account Settings",
+    "ja": "設定"
+  },
+  "menuProfile": {
+    "en": "Profile",
+    "ja": "プロファイル"
+  },
+  "menuBudgetConfig": {
+    "en": "Budget Config",
+    "ja": "予算配分設定（Budget Config）"
+  },
+  "menuPublishers": {
+    "en": "Publishers",
+    "ja": "パブリッシャー"
+  },
+  "menuTotalConversions": {
+    "en": "Total Conversions",
+    "ja": "総コンバージョン"
+  },
+  "bbmManageThisAutomatically": {
+    "en": "Budget Bid Management is managing this field automatically.",
+    "ja": "予算＆入札管理（BBM）が、当該フィールドを自動調整しています。"
+  },
+  "unlinkCampaignWarningDialogTitle": {
+    "en": "Unlink Campaign?",
+    "ja": "キャンペーンのリンクを解除しますか？"
+  },
+  "unlinkCampaignWarningDialogText": {
+    "en": "This campaign is already imported in this campaign group. If unlinked, all historical data for this campaign will be removed from the system in the client center, workbench and report templates. Reports that have been already published will be unnafected.",
+    "ja": "このキャンペーンは、キャンペーングループに既にインポートされています。リンクを解除する場合は、クライアントセンター、ワークベンチ、レポートテンプレートを含む全ての過去データがシステムから削除されます。公開済のレポートへの影響は有りません。"
+  },
+  "importCampaignSuccessDialogTitle": {
+    "en": "Campaigns are importing",
+    "ja": "キャンペーンをインポートしています。"
+  },
+  "importCampaignSuccessDialogText": {
+    "en": "The campaigns are importing to the campaign groups. You can see the progress in the job queue.",
+    "ja": "キャンペーンをキャンペーングループにインポートしています。状況をジョブキューにてご確認いただけます。"
+  },
+  "accountPropertiesSaveSuccessNotification": {
+    "en": "Account properties were saved successfully.",
+    "ja": "アカウントプロパティの保存が完了しました。"
+  },
+  "unlinkPublisherDialogPart1": {
+    "en": "By unlinking the publisher account <strong>{name}</strong>, you are removing the current credentials. This will prevent Acquisio from accessing that account's data in the future, but will maintain the account's current history in the platform for reporting purposes.",
+    "ja": "パブリッシャーアカウント<strong>{name}</strong>のリンク解除により、現在のクレデンシャル情報は削除されます。解除により、Acquisioは、以降当該アカウントのデータにアクセスできなくなりますが、レポート目的のために過去データを保持します。"
+  },
+  "unlinkPublisherDialogPart2": {
+    "en": "If this account is currently associated to a Master Account, they will be disassociated from one another to avoid confusion between statuses.",
+    "ja": "このアカウントがマスターアカウントに紐づいている場合、互いに関連解除となります "
+  },
+  "unlinkPublisherDialogPart3": {
+    "en": "You may reactivate the account in Acquisio in the future by clicking on the \"LINK\" button, or \"ASSOCIATE\" if it is part of a Master Authentication/MCC at the Publisher.",
+    "ja": "Acquisioのアカウントは アカウントの リンク ボタン押下、または、パブリッシャーがMCCに属する場合は、連携 ボタン押下により、有効にすることができます。"
+  },
+  "unlinkPublisherDialogTitle": {
+    "en": "Unlink Publisher",
+    "ja": "パブリッシャーのリンク解除"
+  },
+  "publisherSubTitle": {
+    "en": "List of Linked Publishers for {accountName}",
+    "ja": " {accountName} にリンク付けされているパブリッシャーの一覧"
+  },
+  "importCampaigns": {
+    "en": "Import Campaigns",
+    "ja": "キャンペーンインポート"
+  },
+  "newPublisherAccountButton": {
+    "en": "Publisher Account",
+    "ja": "媒体アカウント"
+  },
+  "facebookPublisherAccountTip": {
+    "en": "<strong>Tip! </strong>For Facebook Publisher Accounts, please go under \"Admin Settings\" > \"Manage Accounts\".",
+    "ja": "<strong>Tip! </strong>For Facebook Publisher Accounts, please go under &quoteAdmin Settings&quote > &quote;Manage Accounts.&quote;"
+  },
+  "masterAuth_MCC": {
+    "en": "Master Authentication/MCC",
+    "ja": "MCC"
+  },
+  "associateBtn": {
+    "en": "Associate",
+    "ja": "関連づけ"
+  },
+  "unlinkBtn": {
+    "en": "Unlink",
+    "ja": "リンク解除"
+  },
+  "publisherAccountNotAssociated": {
+    "en": "Not associated",
+    "ja": "関連づけなし"
+  },
+  "publisherAccountNotSupported": {
+    "en": "Not supported",
+    "ja": "サポート対象外"
+  },
+  "deletePublisherDialogText": {
+    "en": "Are you sure you want to delete the publisher account <strong>{name}</strong> and all its historical data from the platform?",
+    "ja": "パブリッシャーアカウント <strong>{name}</strong> 、および、アカウントの過去データ全てをプラットフォームから削除してよろしいですか？"
+  },
+  "deletePublisherDialogHeader": {
+    "en": "Delete Publisher",
+    "ja": "パブリッシャーの削除"
+  },
+  "publisherDeleteSuccess": {
+    "en": "The Publisher was successfully deleted",
+    "ja": "パブリッシャーの削除が完了しました。"
+  },
+  "publisherDeleteError": {
+    "en": "There was an error while deleting the Publisher",
+    "ja": "パブリッシャーの削除にエラーが発生しました。"
+  },
+  "newPublisherAccountDialogTitle": {
+    "en": "New Publisher Account",
+    "ja": "新規パブリッシャーアカウント"
+  },
+  "newPublisherAccountDialogConfirmButton": {
+    "en": "Add Publisher Account",
+    "ja": "パブリッシャーアカウントを追加"
+  },
+  "linkPublisherToMccDialogTitle": {
+    "en": "Please select the Master Authentication/MCC",
+    "ja": "MCCを選択してください。"
+  },
+  "newPublisherAccPublisherAccNameField": {
+    "en": "Publisher Account Name",
+    "ja": "パブリッシャーアカウント名"
+  },
+  "newAdwAccCustomerIdField": {
+    "en": "Customer ID",
+    "ja": "カスタマーID"
+  },
+  "newAdwAccCustomerIdBadFormatError": {
+    "en": "Badly formed Customer ID",
+    "ja": "不正なのカスタマーID"
+  },
+  "newBingAccAccountField": {
+    "en": "Account",
+    "ja": "Account"
+  },
+  "newBingAccAccountFieldPlaceholder": {
+    "en": "Account ID or Account number",
+    "ja": "Account ID or Account number"
+  },
+  "newBingAccAccountIdBadFormatError": {
+    "en": "Badly formed Account ID or Account number",
+    "ja": "Badly formed Account ID or Account number"
+  },
+  "newYahooJpnAccAccountIdField": {
+    "en": "Account ID",
+    "ja": "アカウントID"
+  },
+  "newYahooJpnAccOnBehalfOfAccountId": {
+    "en": "Application Account ID",
+    "ja": "アプリケーションアカウントID"
+  },
+  "newYahooJpnAccOnBehalfOfPassword": {
+    "en": "Application Account Password",
+    "ja": "アプリケーションアカウントパスワード"
+  },
+  "newYahooJpnAccAccountIdBadFormatError": {
+    "en": "Please enter only numbers in this field",
+    "ja": "このフィールドには数値を設定してください。"
+  },
+  "newDartUserProfileIdField": {
+    "en": "User Profile ID",
+    "ja": "ユーザプロファイルID"
+  },
+  "newDartProfileIdBadFormatError": {
+    "en": "Badly formed User Profile ID",
+    "ja": "不正なユーザプロファイルID"
+  },
+  "newDartUserProfileIdTooltip": {
+    "en": "Linking a DoubleClick Campaign Manager (DCM) account to Acquisio is done via a DCM user profile.<br>To find the DMC user profile ID for the DCM account you wish to link to Acquisio:<br>- Log in to the DCM web interface with credentials that allow you access the user profile associated with the account you wish to link.<br>- At the top of the page, find and click your username to display a list of account names and, under each account name, the associated user profiles.<br>- The six-digit ID of the user profile appears in small gray text to the right.<br><br>Please be aware that DCM user profiles can be configured to limit access to only certain campaigns in the associated DCM account.  When linking to Acquisio, be sure to choose a DCM user profile that has access to all the campaigns that you need to see in Acquisio.",
+    "ja": "Linking a DoubleClick Campaign Manager (DCM) account to Acquisio is done via a DCM user profile.<br>To find the DMC user profile ID for the DCM account you wish to link to Acquisio:<br>- Log in to the DCM web interface with credentials that allow you access the user profile associated with the account you wish to link.<br>- At the top of the page, find and click your username to display a list of account names and, under each account name, the associated user profiles.<br>- The six-digit ID of the user profile appears in small gray text to the right.<br><br>Please be aware that DCM user profiles can be configured to limit access to only certain campaigns in the associated DCM account. When linking to Acquisio, be sure to choose a DCM user profile that has access to all the campaigns that you need to see in Acquisio."
+  }
+}

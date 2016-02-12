@@ -1,0 +1,125 @@
+{
+  "error": {
+    "en": "error",
+    "ja": "エラー"
+  },
+  "errors": {
+    "en": "errors",
+    "ja": "エラー"
+  },
+  "warning": {
+    "en": "warning",
+    "ja": "警告"
+  },
+  "accessDenied": {
+    "en": "access denied",
+    "ja": "アクセス失敗"
+  },
+  "filterMissingColumn": {
+    "en": "a filter has no column",
+    "ja": "フィルタにカラムを設定してください。"
+  },
+  "filterMissingMetric": {
+    "en": "a filter has no metric",
+    "ja": "フィルタにメトリクスを設定してください。"
+  },
+  "filterMissingOperator": {
+    "en": "a filter has no operator",
+    "ja": "フィルタにオペレータを設定してください。"
+  },
+  "filterEmptyValue": {
+    "en": "a filter has an empty value",
+    "ja": "フィルタに値を設定してください。"
+  },
+  "unexpectedError": {
+    "en": "unexpected error",
+    "ja": "予期しないエラー"
+  },
+  "errorLoadingGridMessage": {
+    "en": "Unexpected error trying to load the grid data.",
+    "ja": "グリッドデータを読み込み中にエラーが発生しました。"
+  },
+  "errorLoadingGridButton": {
+    "en": "Submit by email",
+    "ja": "メール送信"
+  },
+  "noJavascriptTitle": {
+    "en": "Enable javascript to use Acquisio",
+    "ja": "Acquisioを使用するにはJavaScriptを有効にしてください。"
+  },
+  "noJavascriptMessage": {
+    "en": "Javascript is required to experience the application to it's fullest. Please look <a href=\"http://www.enable-javascript.com/\">here</a> to learn how to enable javascript in your browser.",
+    "ja": "アプリケーションを最大限に活用するためには、Javascriptが必要です。ご使用のブラウザでJavascriptを有効にするには、<a href= http://www.enable-javascript.com/ >こちら</a> を参照ください。"
+  },
+  "noAccountToSelectDialogTitle": {
+    "en": "No Accounts selected",
+    "ja": "アカウントを選択してください。"
+  },
+  "noAccountToSelectDialogMessage": {
+    "en": "The agency you selected does not have any account.",
+    "ja": "選択されたAgencyには、アカウントは存在しません。"
+  },
+  "noAccountToSelectDialogSignOutButton": {
+    "en": "Sign out",
+    "ja": "サインアウト"
+  },
+  "noAccountToSelectDialogBackToDashboardButton": {
+    "en": "Back to the Client Center",
+    "ja": "クライアントセンターに戻る"
+  },
+  "noAccountToSelectDialogLoginMessage": {
+    "en": "The agency you selected does not have any account.",
+    "ja": "選択されたAgencyには、アカウントは存在しません。"
+  },
+  "bugPageTitle": {
+    "en": "Sorry for the inconvenience!",
+    "ja": "ご不便をおかけしています。"
+  },
+  "bugPageSubtitle": {
+    "en": "Looks like you found a",
+    "ja": "確認してください。："
+  },
+  "bug": {
+    "en": "bug",
+    "ja": "バグ"
+  },
+  "bugPageInstruction": {
+    "en": "This error has been logged.<br>Help us by sharing the following information with our developers:",
+    "ja": "エラーが記録されました。<br>アクイジオジャパンに以下の情報を共有してください。："
+  },
+  "bugPageThankYou": {
+    "en": "Thank you for your contribution to making Acquisio better.",
+    "ja": "Acquisioの改善にご協力ありがとうございます。"
+  },
+  "yourEmail": {
+    "en": "Your email",
+    "ja": "メール"
+  },
+  "feedbackMessagePlaceholder": {
+    "en": "Your feedback",
+    "ja": "フィードバック"
+  },
+  "bugMessagePlaceholder": {
+    "en": "Please describe the issue you encountered. Be as detailed as possible.",
+    "ja": "事象の詳細を説明してください。"
+  },
+  "includeScreenshot": {
+    "en": "Include screenshot",
+    "ja": "スクリーンショットを含む"
+  },
+  "systemMsg": {
+    "en": "System Message",
+    "ja": "システムメッセージ"
+  },
+  "fieldIsRequiredError": {
+    "en": "Please enter a value for this field.",
+    "ja": "値を設定してください。"
+  },
+  "invalidEmailError": {
+    "en": "This is an invalid email address.",
+    "ja": "メールアドレスが不正です。"
+  },
+  "isInvalidEmailError": {
+    "en": "is an invalid email address."
+  }
+}

@@ -1,0 +1,854 @@
+{
+  "adScheduling": {
+    "en": "Ad Scheduling",
+    "ja": "広告配信スケジュール"
+  },
+  "addSchedule": {
+    "en": "Add Schedule",
+    "ja": "スケジュールを追加"
+  },
+  "deliveryMethod": {
+    "en": "Delivery Method",
+    "ja": "配信方法"
+  },
+  "deliveryMethodStandard": {
+    "en": "Standard: Show ads evenly overtime",
+    "ja": "標準：配信を最適化"
+  },
+  "deliveryMethodAccelerated": {
+    "en": "Accelerated: Show ads as quickly as possible",
+    "ja": "集中化：できるだけ早く配信"
+  },
+  "displayMethod": {
+    "en": "Display Method",
+    "ja": "表示方法"
+  },
+  "displayMethodStandard": {
+    "en": "Standard: Show ads evenly overtime",
+    "ja": "標準：配信を最適化"
+  },
+  "displayMethodAccelerated": {
+    "en": "Accelerated: Show ads as quickly as possible",
+    "ja": "集中化：できるだけ早く配信"
+  },
+  "adDelivery": {
+    "en": "Ad Rotation",
+    "ja": "広告のローテーション"
+  },
+  "adDeliveryOptimizeForClicks": {
+    "en": "Optimize for clicks",
+    "ja": "クリック最適化"
+  },
+  "adDeliveryOptimizeForConversions": {
+    "en": "Optimize for conversions",
+    "ja": "コンバージョン最適化"
+  },
+  "adDeliveryRotateEvenly": {
+    "en": "Rotate evenly - For at least 90 days",
+    "ja": "ローテーションタイプ：90日間均等配信"
+  },
+  "adDeliveryRotateEvenlyForever": {
+    "en": "Rotate evenly - Forever",
+    "ja": "ローテーションタイプ：無期限に均等配信"
+  },
+  "frequencyCapping": {
+    "en": "Frequency Capping (Applicable Only To Display Network)",
+    "ja": "フリークエンシーキャップ（ディスプレイネットワークのみ）"
+  },
+  "frequencyCappingNoCapping": {
+    "en": "No Capping",
+    "ja": "上限なし"
+  },
+  "frequencyCappingMax": {
+    "en": "Max",
+    "ja": "最大"
+  },
+  "frequencyCappingImpressions": {
+    "en": "Impressions",
+    "ja": "表示回数"
+  },
+  "frequencyCappingPerDay": {
+    "en": "Per day",
+    "ja": "日別"
+  },
+  "frequencyCappingPerWeek": {
+    "en": "Per week",
+    "ja": "曜日別"
+  },
+  "frequencyCappingPerMonth": {
+    "en": "Per month",
+    "ja": "月別"
+  },
+  "frequencyCappingPerAdGroup": {
+    "en": "Per adgroup",
+    "ja": "アドグループ別"
+  },
+  "frequencyCappingPerAdCreative": {
+    "en": "Per creative",
+    "ja": "広告別"
+  },
+  "frequencyCappingPerCampaign": {
+    "en": "Per campaign",
+    "ja": "キャンペーン別"
+  },
+  "biddingOptions": {
+    "en": "Bid Strategy",
+    "ja": "入札戦略"
+  },
+  "biddingOptionsFlexible": {
+    "en": "Flexible Bid Strategy",
+    "ja": "柔軟な入札戦略（Flexible bidding strategy）"
+  },
+  "biddingOptionsFlexibleStrategyName": {
+    "en": "Strategy",
+    "ja": "戦略"
+  },
+  "biddingOptionsFlexibleStrategyType": {
+    "en": "Strategy Type",
+    "ja": "戦略のタイプ"
+  },
+  "biddingOptionsFlexibleWarning": {
+    "en": "Flexible bidding strategies cannot currently be modified in Acquisio. If you wish to configure these strategies, please use Bulksheet Management or, do it in AdWords, then synchronize your campaign(s) in Acquisio.",
+    "ja": "柔軟な入札戦略（Flexible bidding strategy）がAcquisioに設定されていません。戦略を設定する場合は、バルクシート管理を使用するか、またはAdWordsパブリッシャで設定し、Acquisioにキャンペーン同期してください。"
+  },
+  "biddingOptionsFocusOnClicks": {
+    "en": "Focus on clicks",
+    "ja": "クリックフォーカス"
+  },
+  "biddingOptionsManualCpc": {
+    "en": "Manually set bids for clicks",
+    "ja": "手動入札設定"
+  },
+  "biddingOptionsBudgetOptimizer": {
+    "en": "Maximize clicks within target budget",
+    "ja": "予算内のクリック最大化"
+  },
+  "biddingOptionsBidLimitAuth": {
+    "en": "CPC Bid Limit",
+    "ja": "クリック単価（CPC）の限界値"
+  },
+  "biddingOptionsUseGoogleEnhancedCpc": {
+    "en": "Use Google Enhanced CPC",
+    "ja": "Googleのエンハンスト単価（CPC）を使用"
+  },
+  "biddingOptionsFocusOnConversions": {
+    "en": "Focus on conversions - Use CPA bids",
+    "ja": "コンバージョンフォーカス - CPA入札を適用"
+  },
+  "biddingOptionsFocusOnImpressions": {
+    "en": "Focus on impressions - Use Max CPM bids",
+    "ja": "インプレッションフォーカス - 上限インプレッション単価（MaxCPM）入札を適用"
+  },
+  "biddingOptionsUseActiveViewCpm": {
+    "en": "Enable viewable CPM",
+    "ja": "上限インプレッション単価（MaxCPM）を適用"
+  },
+  "startAndEndDate": {
+    "en": "Start & End Date",
+    "ja": "開始日および終了日"
+  },
+  "startDate": {
+    "en": "Start Date",
+    "ja": "開始日"
+  },
+  "endDate": {
+    "en": "End Date",
+    "ja": "終了日"
+  },
+  "networks": {
+    "en": "Networks",
+    "ja": "配信ネットワーク"
+  },
+  "network": {
+    "en": "Network",
+    "ja": "配信ネットワーク"
+  },
+  "googleSearchNetwork": {
+    "en": "Google Search Network",
+    "ja": "Google検索ネットワーク"
+  },
+  "includeSearchPartners": {
+    "en": "Include Search Partners",
+    "ja": "検索パートナーを含む"
+  },
+  "googleDisplayNetwork": {
+    "en": "Google Display Network",
+    "ja": "Googleディスプレイネットワーク"
+  },
+  "devices": {
+    "en": "Devices",
+    "ja": "デバイス"
+  },
+  "generals": {
+    "en": "Generals",
+    "ja": "全般"
+  },
+  "campaignName": {
+    "en": "Campaign Name",
+    "ja": "キャンペーン"
+  },
+  "statusActive": {
+    "en": "Active",
+    "ja": "アクティブ"
+  },
+  "statusPaused": {
+    "en": "Paused",
+    "ja": "配信停止"
+  },
+  "statusDeleted": {
+    "en": "Deleted",
+    "ja": "削除済み"
+  },
+  "searchLocations": {
+    "en": "Search Locations",
+    "ja": "検索地域"
+  },
+  "searchLocationsPlaceholder": {
+    "en": "Search",
+    "ja": "検索"
+  },
+  "targetedAndExcludedLocations": {
+    "en": "Targeted & Excluded Locations",
+    "ja": "ターゲット地域と除外地域の設定"
+  },
+  "languages": {
+    "en": "Languages",
+    "ja": "言語"
+  },
+  "searchLanguagesPlaceholder": {
+    "en": "Search",
+    "ja": "検索"
+  },
+  "adSchedulingDay": {
+    "en": "Day",
+    "ja": "日付"
+  },
+  "adSchedulingFrom": {
+    "en": "From",
+    "ja": "From"
+  },
+  "adSchedulingTo": {
+    "en": "To",
+    "ja": "To"
+  },
+  "bidModifier": {
+    "en": "Bid Adjustment",
+    "ja": "入札調整"
+  },
+  "bidModifierHelp": {
+    "en": "A valid bid adjustment value is between -90% and 900%.",
+    "ja": "有効な入札調整率（bid Adjustment）は、-90%から900%です。"
+  },
+  "adSchedulingMonday": {
+    "en": "Monday",
+    "ja": "月曜日"
+  },
+  "adSchedulingTuesday": {
+    "en": "Tuesday",
+    "ja": "火曜日"
+  },
+  "adSchedulingWednesday": {
+    "en": "Wednesday",
+    "ja": "水曜日"
+  },
+  "adSchedulingThursday": {
+    "en": "Thursday",
+    "ja": "木曜日"
+  },
+  "adSchedulingFriday": {
+    "en": "Friday",
+    "ja": "金曜日"
+  },
+  "adSchedulingSaturday": {
+    "en": "Saturday",
+    "ja": "土曜日"
+  },
+  "adSchedulingSunday": {
+    "en": "Sunday",
+    "ja": "日曜日"
+  },
+  "targetingDevices": {
+    "en": "Targeting Devices",
+    "ja": "ターゲットデバイス"
+  },
+  "targetedLocations": {
+    "en": "Targeted Locations",
+    "ja": "ターゲット地域"
+  },
+  "displayType": {
+    "en": "Type",
+    "ja": "タイプ"
+  },
+  "location": {
+    "en": "Location",
+    "ja": "地域"
+  },
+  "excludedLocations": {
+    "en": "Excluded Locations",
+    "ja": "除外地域"
+  },
+  "includedLocations": {
+    "en": "Included Locations",
+    "ja": "設定地域"
+  },
+  "targetedLanguages": {
+    "en": "Targeted Languages",
+    "ja": "ターゲット言語"
+  },
+  "adsTargetingAllLanguages": {
+    "en": "Ads are targeting all languages.",
+    "ja": "広告は全ての言語をターゲットにしています。"
+  },
+  "adsTargetingAllTimes": {
+    "en": "Ads are appearing all days of the week, at all times of the day.",
+    "ja": "広告を常時配信しています。"
+  },
+  "adsTargetingAllLocations": {
+    "en": "Ads are targeting all countries and territories.",
+    "ja": "広告を全ての国と地域に配信しています。"
+  },
+  "searchNoMatches": {
+    "en": "Sorry, no matches found for",
+    "ja": "対象が見つかりません。"
+  },
+  "devicesComputer": {
+    "en": "Computers and Tablets",
+    "ja": "コンピュータとタブレット"
+  },
+  "devicesMobile": {
+    "en": "Mobile devices with full browsers",
+    "ja": "フルブラウザ対応のモバイルデバイス"
+  },
+  "devicesTablet": {
+    "en": "Tablets with full browsers",
+    "ja": "フルブラウザ対応のタプレット"
+  },
+  "computers": {
+    "en": "Computers",
+    "ja": "コンピュータ"
+  },
+  "tablets": {
+    "en": "Tablets",
+    "ja": "タブレット"
+  },
+  "smartphones": {
+    "en": "Smartphones",
+    "ja": "スマートフォン"
+  },
+  "advanced": {
+    "en": "Advanced",
+    "ja": "アドバンス"
+  },
+  "basic": {
+    "en": "Basic",
+    "ja": "基本"
+  },
+  "geoTargeting": {
+    "en": "Geo Targeting",
+    "ja": "地域ターゲティング"
+  },
+  "language": {
+    "en": "Language",
+    "ja": "言語"
+  },
+  "shopping": {
+    "en": "Shopping",
+    "ja": "ショッピング"
+  },
+  "increaseBidBy": {
+    "en": "Increase Bid By",
+    "ja": "入札単価を増加"
+  },
+  "decreaseBidBy": {
+    "en": "Decrease Bid By",
+    "ja": "入札単価を減少"
+  },
+  "3am-7am": {
+    "en": "3AM - 7AM",
+    "ja": "3AM - 7AM"
+  },
+  "7am-11am": {
+    "en": "7AM - 11AM",
+    "ja": "7AM - 11AM"
+  },
+  "11am-2pm": {
+    "en": "11AM - 2PM",
+    "ja": "11AM - 2PM"
+  },
+  "2pm-6pm": {
+    "en": "2PM - 6PM",
+    "ja": "2PM - 6PM"
+  },
+  "6pm-11pm": {
+    "en": "6PM - 11PM",
+    "ja": "6PM - 11PM"
+  },
+  "11pm-3am": {
+    "en": "11PM - 3AM",
+    "ja": "11PM - 3AM"
+  },
+  "deliveryMethodStandardBing": {
+    "en": "Standard: Spend budget evenly over time",
+    "ja": "Standard: Spend budget evenly over time"
+  },
+  "deliveryMethodOptimizeBing": {
+    "en": "Accelerated: Spend budget as quickly as possible",
+    "ja": "Accelerated: Spend budget as quickly as possible"
+  },
+  "eighteenToTwentyFive": {
+    "en": "18-24",
+    "ja": "18-24"
+  },
+  "twentyFiveToThirtyFive": {
+    "en": "25-34",
+    "ja": "25-34"
+  },
+  "thirtyFiveToFifty": {
+    "en": "35-49",
+    "ja": "35-49"
+  },
+  "fiftyToSixtyFive": {
+    "en": "50-64",
+    "ja": "50-64"
+  },
+  "sixtyFiveAndAbove": {
+    "en": "65+",
+    "ja": "65以上"
+  },
+  "devicesMobileBing": {
+    "en": "Smartphones",
+    "ja": "Smartphones"
+  },
+  "OSAndroid": {
+    "en": "Android",
+    "ja": "Android"
+  },
+  "OSBlackBerry": {
+    "en": "BlackBerry",
+    "ja": "BlackBerry"
+  },
+  "OSiOS": {
+    "en": "iOS",
+    "ja": "iOS"
+  },
+  "OSWindows": {
+    "en": "Windows",
+    "ja": "Windows"
+  },
+  "OSOther": {
+    "en": "Other",
+    "ja": "その他"
+  },
+  "devicesTabletBing": {
+    "en": "All Tablets",
+    "ja": "All Tablets"
+  },
+  "timeZone": {
+    "en": "Time Zone",
+    "ja": "タイムゾーン"
+  },
+  "noHoursSelection": {
+    "en": "Ads are appearing at <strong>all times of the day.</strong>",
+    "ja": "広告は、 <strong> 全ての時間帯 </strong> に配信されます。"
+  },
+  "noDaysSelection": {
+    "en": "Ads are appearing <strong>all days of the week.</strong>",
+    "ja": "広告は、 <strong> 全ての曜日 </strong> に配信されます。"
+  },
+  "adSchedulingDisabled": {
+    "en": "Bing Ads is making improvement to ad scheduling. During the transition, Acquisio has temporarily suspended support for modifying ad scheduling for existing campaigns; however, it can still be set during creation of new Bing Ads campaigns.  We advise you to make changes directly at Bing Ads.",
+    "ja": "Bing Ads is making improvement to ad scheduling. During the transition, Acquisio has temporarily suspended support for modifying ad scheduling for existing campaigns; however, it can still be set during creation of new Bing Ads campaigns. We advise you to make changes directly at Bing Ads."
+  },
+  "timeOfDay": {
+    "en": "Time Of Day",
+    "ja": "時間帯"
+  },
+  "bidModifierHelpBing": {
+    "en": "<b>TABLETS</b><br />\nAllowed bid adjustment range is 300 to -20.<br /><br />\n<b>SMARTPHONES</b><br />\nAllowed bid adjustment range is 300 to -90.\n-100 is also permitted",
+    "ja": "<b>TABLETS</b><br />\nAllowed bid adjustment range is 300 to -20.<br /><br />\n<b>SMARTPHONES</b><br />\nAllowed bid adjustment range is 300 to -90.\n-100 is also permitted"
+  },
+  "locationCity": {
+    "en": "City",
+    "ja": "都市"
+  },
+  "locationStateProvince": {
+    "en": "State/Province",
+    "ja": "都道府県"
+  },
+  "locationCountry": {
+    "en": "Country",
+    "ja": "国"
+  },
+  "locationPostalCode": {
+    "en": "Postal Code",
+    "ja": "郵便番号"
+  },
+  "locationMetroArea": {
+    "en": "Metro Area",
+    "ja": "メトロエリア"
+  },
+  "bidModifierDevicesHelpBing": {
+    "en": "A valid bid adjustment value is between -90% and 900%.",
+    "ja": "A valid bid adjustment value is between -90% and 900%."
+  },
+  "adgroupSaved": {
+    "en": "Your adgroup has been saved.",
+    "ja": "広告グープの保存が完了しました。"
+  },
+  "campaignSaved": {
+    "en": "Your campaign has been saved.",
+    "ja": "キャンペーンの保存が完了しました。"
+  },
+  "bidModifierBingNull": {
+    "en": "Please enter a positive integer. Use the \"Decrease Bid By\" selector for a negative bid.",
+    "ja": "Please enter a positive integer. Use the  Decrease Bid By  selector for a negative bid."
+  },
+  "bidModifierBingRange": {
+    "en": "The accepted bid range is from -90% to 900%.",
+    "ja": "The accepted bid range is from -90% to 900%."
+  },
+  "radiusUnitKm": {
+    "en": "kilometers",
+    "ja": "km"
+  },
+  "radiusUnitMiles": {
+    "en": "miles",
+    "ja": "マイル"
+  },
+  "bidLimitMissing": {
+    "en": "Bid Limit is required and must be greater than 0.",
+    "ja": "限界値入札には、0より大きな値を設定してください。"
+  },
+  "errorSavingCampaign": {
+    "en": "Errors occurred while saving your campaign.",
+    "ja": "キャンペーンの保存にエラーが発生しました。"
+  },
+  "errorSavingAdGroup": {
+    "en": "Errors occurred while saving your ad group.",
+    "ja": "広告グループの保存にエラーが発生しました。"
+  },
+  "languagesNoTargeted": {
+    "en": "No languages are targeted.",
+    "ja": "ターゲットの言語が設定されていません。"
+  },
+  "accountSuspended": {
+    "en": "<strong>Warning! </strong>Your campaign has been suspended and no ads are eligible for delivery because of potentially fraudulent activity. Please contact Bing Ads Support.",
+    "ja": "<strong>Warning! </strong>Your campaign has been suspended and no ads are eligible for delivery because of potentially fraudulent activity. Please contact Bing Ads Support."
+  },
+  "campaignError": {
+    "en": "An error occurred while fetching your campaign settings.",
+    "ja": "キャンペーン設定の取得にエラーが発生しました。"
+  },
+  "publisherError": {
+    "en": "An error occurred while fetching your publishers.",
+    "ja": "パブリッシャーの取得にエラーが発生しました。"
+  },
+  "defaultContentBid": {
+    "en": "Default Content Bid",
+    "ja": "デフォルトのコンテント入札単価（Content Bid）"
+  },
+  "basicAccountFieldsTab": {
+    "en": "Basic Fields",
+    "ja": "基本フィールド"
+  },
+  "additionalAccountFieldsTab": {
+    "en": "Additional Fields",
+    "ja": "追加フィールド"
+  },
+  "basicAccountFields": {
+    "en": "Basic Fields",
+    "ja": "基本フィールド"
+  },
+  "additionalAccountFields": {
+    "en": "Additional Account Fields",
+    "ja": "追加のアカウントフィールド"
+  },
+  "client_accounts": {
+    "en": "Accounts",
+    "ja": "アカウント"
+  },
+  "invalidRadiusFormat": {
+    "en": "invalid radius",
+    "ja": "半径が無効です。"
+  },
+  "invalidRadiusValue": {
+    "en": "Radius must be between {min} and {max} {unitName}",
+    "ja": "設定可能な範囲は、最小 {min} 、最大 {max} です。対象： {unitName}"
+  },
+  "errorMerchantIdMustBeNumeric": {
+    "en": "Merchant Id value must be numeric and greater than zero.",
+    "ja": "マーチャントIDには、0より大きな値を設定してください。"
+  },
+  "errorMerchantIdLength": {
+    "en": "Merchant Id value must not have more than 64 digits",
+    "ja": "マーチャントIDは、64桁以内を設定してください。"
+  },
+  "bingDeviceTabletComputerTooltip": {
+    "en": "The \"Computer & Tablets\" bid adjustment applies to tablets only.",
+    "ja": "The  Computer & Tablets  bid adjustment applies to tablets only."
+  },
+  "adwCampaignDSALabel": {
+    "en": "Dynamic Search ads",
+    "ja": "動的検索広告"
+  },
+  "adwCampaignDSACheckboxLabel": {
+    "en": "Use website contents",
+    "ja": "ウェブサイトのコンテンツを使用してください。"
+  },
+  "adwCampaignDSACheckboxTooltip": {
+    "en": "If you select the checkbox, AdWords will use the website domain you specify below to target your ads. If you deselect the checkbox, you'll need to create dynamic ad targets, which either target all of your website pages or a subset of them, on the <i>Auto Targets</i> tab to show your ads.",
+    "ja": "チェックボックスを選択した場合、AdWordsは、指定されたウェブサイトのドメインから広告を配信します。チェックボックスを未選択の場合に広告を配信するには、 <i>Auto Targets</i> タブから動的広告のターゲットを作成し、ウェブサイトのページかサブセットを設定してください。"
+  },
+  "adwCampaignDSADomainLabel": {
+    "en": "Website domain",
+    "ja": "ウェブサイトドメイン"
+  },
+  "adwCampaignDSADomainTooltip": {
+    "en": "<p>Enter your website domain to let AdWords match searches with your ads based on content from this website. The domain is the root part of your website address and typically ends with a dot and 2-3 letters, like .com or .org.</p><p>This is a valid website domain: <i>example.com</i></p><p>This is not a valid a website domain: <i>example.com/index.html</i></p>",
+    "ja": "<p>AdWordsがウェブサイトのコンテンツに基づいて広告ををマッチングできるよう、ウェブサイトのドメインを設定してください。ドメインは、ウェブサイトのルート、つまり、通常は末尾がドットと2から3の文字となります。例：.com、.org</p><p>有効なドメインの例：<i>example.com</i></p><p>無効なドメインの例：<i>example.com/index.html</i></p>"
+  },
+  "adwCampaignDSALanguageLabel": {
+    "en": "Language",
+    "ja": "言語"
+  },
+  "adwCampaignDSALanguageTooltip": {
+    "en": "Choose the language of the pages in your website domain. If your website domain contains pages in multiple languages and you want to target searches for your ads based on all of these pages, create a new campaign for each language.",
+    "ja": "ウェブサイトドメインにおける言語を選択してください。ウェブサイトドメインが複数言語に対応しており、全ページで広告を検索できるようにするためには、言語別にキャンペーンを作成してください。"
+  },
+  "adwCampaignDSALanguageCode_ar": {
+    "en": "Arabic",
+    "ja": "アラビア語"
+  },
+  "adwCampaignDSALanguageCode_bg": {
+    "en": "Bulgarian",
+    "ja": "ブルガリア語"
+  },
+  "adwCampaignDSALanguageCode_ca": {
+    "en": "Catalan",
+    "ja": "カタロニア語"
+  },
+  "adwCampaignDSALanguageCode_zh_cn": {
+    "en": "Chinese (simplified)",
+    "ja": "中国語（簡体字）"
+  },
+  "adwCampaignDSALanguageCode_zh_tw": {
+    "en": "Chinese (traditional)",
+    "ja": "中国語（繁体字）"
+  },
+  "adwCampaignDSALanguageCode_hr": {
+    "en": "Croatian",
+    "ja": "クロアチア語"
+  },
+  "adwCampaignDSALanguageCode_cs": {
+    "en": "Czech",
+    "ja": "チェコ語"
+  },
+  "adwCampaignDSALanguageCode_da": {
+    "en": "Danish",
+    "ja": "デンマーク語"
+  },
+  "adwCampaignDSALanguageCode_nl": {
+    "en": "Dutch",
+    "ja": "オランダ語"
+  },
+  "adwCampaignDSALanguageCode_en": {
+    "en": "English",
+    "ja": "英語"
+  },
+  "adwCampaignDSALanguageCode_et": {
+    "en": "Estonian",
+    "ja": "エストニア語"
+  },
+  "adwCampaignDSALanguageCode_tl": {
+    "en": "Filipino",
+    "ja": "フィリピン人"
+  },
+  "adwCampaignDSALanguageCode_fi": {
+    "en": "Finnish",
+    "ja": "フィンランド語"
+  },
+  "adwCampaignDSALanguageCode_fr": {
+    "en": "French",
+    "ja": "フランス語"
+  },
+  "adwCampaignDSALanguageCode_de": {
+    "en": "German",
+    "ja": "ドイツ語"
+  },
+  "adwCampaignDSALanguageCode_el": {
+    "en": "Greek",
+    "ja": "ギリシャ語"
+  },
+  "adwCampaignDSALanguageCode_iw": {
+    "en": "Hebrew",
+    "ja": "ヘブライ語"
+  },
+  "adwCampaignDSALanguageCode_hi": {
+    "en": "Hindi",
+    "ja": "ヒンディー語"
+  },
+  "adwCampaignDSALanguageCode_hu": {
+    "en": "Hungarian",
+    "ja": "ハンガリー語"
+  },
+  "adwCampaignDSALanguageCode_is": {
+    "en": "Icelandic",
+    "ja": "アイスランド語"
+  },
+  "adwCampaignDSALanguageCode_id": {
+    "en": "Indonesian",
+    "ja": "インドネシア語"
+  },
+  "adwCampaignDSALanguageCode_it": {
+    "en": "Italian",
+    "ja": "イタリア語"
+  },
+  "adwCampaignDSALanguageCode_ja": {
+    "en": "Japanese",
+    "ja": "日本語"
+  },
+  "adwCampaignDSALanguageCode_ko": {
+    "en": "Korean",
+    "ja": "韓国語"
+  },
+  "adwCampaignDSALanguageCode_lv": {
+    "en": "Latvian",
+    "ja": "ラトビアの"
+  },
+  "adwCampaignDSALanguageCode_lt": {
+    "en": "Lithuanian",
+    "ja": "リトアニア語"
+  },
+  "adwCampaignDSALanguageCode_no": {
+    "en": "Norwegian",
+    "ja": "ノルウェー語"
+  },
+  "adwCampaignDSALanguageCode_pl": {
+    "en": "Polish",
+    "ja": "ポーランド語"
+  },
+  "adwCampaignDSALanguageCode_pt": {
+    "en": "Portuguese",
+    "ja": "ポルトガル語"
+  },
+  "adwCampaignDSALanguageCode_ro": {
+    "en": "Romanian",
+    "ja": "ルーマニア語"
+  },
+  "adwCampaignDSALanguageCode_ru": {
+    "en": "Russian",
+    "ja": "ロシア語"
+  },
+  "adwCampaignDSALanguageCode_sr": {
+    "en": "Serbian",
+    "ja": "セルビア語"
+  },
+  "adwCampaignDSALanguageCode_sk": {
+    "en": "Slovak",
+    "ja": "スロバキア語"
+  },
+  "adwCampaignDSALanguageCode_sl": {
+    "en": "Slovenian",
+    "ja": "スロベニア語"
+  },
+  "adwCampaignDSALanguageCode_es": {
+    "en": "Spanish",
+    "ja": "スペイン語"
+  },
+  "adwCampaignDSALanguageCode_sv": {
+    "en": "Swedish",
+    "ja": "スウェーデン語"
+  },
+  "adwCampaignDSALanguageCode_th": {
+    "en": "Thai",
+    "ja": "タイ語"
+  },
+  "adwCampaignDSALanguageCode_tr": {
+    "en": "Turkish",
+    "ja": "トルコ語"
+  },
+  "adwCampaignDSALanguageCode_uk": {
+    "en": "Ukrainian",
+    "ja": "ウクライナ語"
+  },
+  "adwCampaignDSALanguageCode_ur": {
+    "en": "Urdu",
+    "ja": "ウルドゥー語"
+  },
+  "adwCampaignDSALanguageCode_vi": {
+    "en": "Vietnamese",
+    "ja": "ベトナム語"
+  },
+  "adwCampaignDSALanguageCode_fa": {
+    "en": "Persian",
+    "ja": "ペルシア語"
+  },
+  "adwCampaignDSALanguageCode_ms": {
+    "en": "Malay",
+    "ja": "マレー語"
+  },
+  "adwCampaignUrlOptionsLabel": {
+    "en": "Campaign URL options (advanced)",
+    "ja": "キャンペーンURLオプション（アドバンス）"
+  },
+  "adwCampaignUrlTooltip": {
+    "en": "The URL you want people to go through before reaching your landing page.<BR /><BR />Use this to set up third-party tracking for your ads.<BR /><BR />What to do: Enter the tracking URL, or URL with redirects used when someone clicks your ad.",
+    "ja": "ランディングページに到達する前に経由するURL<BR /><BR />広告に3rdPartyのトラッキングを設定するのにご使用ください。<BR /><BR />設定方法：トラッキングURL、または広告をクリックした時のリダイレクトURLを設定してください。"
+  },
+  "adwCampaignLocal": {
+    "en": "Local",
+    "ja": "ローカル"
+  },
+  "adwCampaignEnableLocalInventoryAds": {
+    "en": "Enable local inventory ads",
+    "ja": "ローカル在庫広告を有効にする"
+  },
+  "adwCampaignEnableLocalInventoryAdsTooltip": {
+    "en": "Check this box if you want your campaign to include products sold in local stores. Local products are sold in physical stores and submitted to Google Merchant Center using the Local Products feed. Google may verify the accuracy of in-store inventory before showing local products.",
+    "ja": "キャンペーンに、ローカルストア（小売店）の販売を含める場合、このボックスをチェックしてください。商品は、小売店で販売され、ローカルプロダクトフィードを経由してGoogle Merchant Centerに送信されます。Googleは、ローカルプロダクト表示前に、店内の在庫の正しさを確認することができます。"
+  },
+  "myLocationsWithin": {
+    "en": "My locations within",
+    "ja": "My locations within"
+  },
+  "enterLocationOptional": {
+    "en": "Enter a location (optional)",
+    "ja": "Enter a location (optional)"
+  },
+  "radiusAroundEachLocation": {
+    "en": "Radius around each location",
+    "ja": "Radius around each location"
+  },
+  "mi": {
+    "en": "mi",
+    "ja": "mi"
+  },
+  "km": {
+    "en": "km",
+    "ja": "km"
+  },
+  "noLocationSelected": {
+    "en": "No location selected",
+    "ja": "No location selected"
+  },
+  "aroundMainLocationFeed": {
+    "en": "around \"My Business locations\"",
+    "ja": "around \"My Business locations\""
+  },
+  "around": {
+    "en": "around",
+    "ja": "around"
+  },
+  "noLocationExtensionWarning": {
+    "en": "To use distance targeting around a location extension you must first add your location extensions.",
+    "ja": "To use distance targeting around a location extension you must first add your location extensions."
+  },
+  "advancedSearch": {
+    "en": "Advanced Search",
+    "ja": "Advanced Search"
+  },
+  "adwCampaignHasSharedBudget": {
+    "en": "This campaign is on a shared budget.",
+    "ja": "This campaign is on a shared budget."
+  }
+}
