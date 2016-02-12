@@ -8,6 +8,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.CubicCurve;
 import javafx.scene.shape.CubicCurveBuilder;
 import javafx.scene.shape.Ellipse;
+import javafx.scene.shape.Line;
 import javafx.scene.shape.LineTo;
 import javafx.scene.shape.MoveTo;
 import javafx.scene.shape.Path;
@@ -31,19 +32,32 @@ public class app01_05_Shapes extends Application {
     public void start(Stage primaryStage) throws Exception {
         primaryStage.setTitle("Chapter 1-5 Shapes");
         Group root = new Group();
-        Scene scene = new Scene(root, 600, 1600, Color.WHITE);
+        Scene scene = new Scene(root, 300, 700, Color.WHITE);
 
         CubicCurve cubicCurve = CubicCurveBuilder.create()
-                .startX(50).startY(75)
-                .controlX1(80).controlY1(-25)
-                .controlX2(110).controlY2(175)
-                .endX(140).endY(75)
+                .startX(100).startY(125)
+                .controlX1(130).controlY1(25)
+                .controlX2(160).controlY2(225)
+                .endX(190).endY(125)
                 .strokeType(StrokeType.CENTERED).strokeWidth(1)
                 .stroke(Color.BLACK)
                 .strokeWidth(3)
                 .fill(Color.WHITE)
                 .build();
         root.getChildren().add(cubicCurve);
+
+        Line line1 = new Line(100, 125, 130, 25);
+        line1.setStroke(Color.RED);
+        root.getChildren().add(line1);
+        Line line2 = new Line(130, 25, 160, 225);
+        line2.setStroke(Color.RED);
+        root.getChildren().add(line2);
+        Line line3 = new Line(160, 225, 190, 125);
+        line3.setStroke(Color.RED);
+        root.getChildren().add(line3);
+//                .controlX1(80).controlY1(-25)
+//                .controlX2(110).controlY2(175)
+//                .endX(140).endY(75);
 
         //ice cream
         Path path = new Path();
@@ -99,7 +113,7 @@ public class app01_05_Shapes extends Application {
         bigCircle.setCenterY(100);
         bigCircle.setRadiusX(50);
         bigCircle.setRadiusY(75 / 2);
-        bigCircle.setTranslateY(quad.getBoundsInParent().getMaxY());
+        bigCircle.setTranslateY(quad.getBoundsInParent().getMaxX());
         bigCircle.setStrokeWidth(3);
         bigCircle.setStroke(Color.BLACK);
         bigCircle.setFill(Color.WHITE);
@@ -109,7 +123,7 @@ public class app01_05_Shapes extends Application {
         smallCircle.setCenterY(100);
         smallCircle.setRadiusX(35 / 2);
         smallCircle.setRadiusY(25 / 2);
-        smallCircle.setTranslateY(quad.getBoundsInParent().getMaxY());
+        smallCircle.setTranslateY(quad.getBoundsInParent().getMaxX());
 
         //make a donut
         Shape donut = Path.subtract(bigCircle, smallCircle);
