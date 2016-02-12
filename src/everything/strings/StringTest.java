@@ -1,11 +1,7 @@
 package everything.strings;
 
-import everything.fileUtils.FileUtils;
 import org.jsoup.Jsoup;
-import sun.net.www.content.audio.x_aiff;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
