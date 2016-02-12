@@ -1,18 +1,17 @@
 package everything.parsers.targets;
 
-import everything.fileUtils.FileUtils;
-import everything.parsers.gnydm.Exhibitor;
-import everything.strings.StringUtil;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+import everything.parsers.gnydm.Exhibitor;
+import everything.strings.StringUtil;
+import everything.utils.fileUtils.FileUtils;
 
 /**
  * User: Makar Kalancha
