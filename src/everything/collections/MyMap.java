@@ -1,4 +1,4 @@
-package com.test.everything.collections;
+package everything.collections;
 
 import java.util.*;
 
@@ -23,14 +23,14 @@ public class MyMap {
         mSet.add(ab1);
         mSet.add(b1);
 
-//        Map<String, ? extends com.test.everything.collections.MyMapClass> map = new HashMap<>();
-////        for(Map.Entry<String, com.test.everything.collections.MyMapClass> mmc : m.entrySet()) {
-//////            com.test.everything.collections.MyMapClass a1 = new com.test.everything.collections.MyMapClass();
+//        Map<String, ? extends everything.collections.MyMapClass> map = new HashMap<>();
+////        for(Map.Entry<String, everything.collections.MyMapClass> mmc : m.entrySet()) {
+//////            everything.collections.MyMapClass a1 = new everything.collections.MyMapClass();
 //////            map.put("100", a1);
 ////            map.put(mmc.getKey(), mmc.getValue());
 ////        }
-//        Iterator<? extends com.test.everything.collections.MyMapClass> iterMyClass = mSet.iterator();
-////        Iterator<? extends com.test.everything.collections.MyMapClass> iterMyClass = m.iterator();
+//        Iterator<? extends everything.collections.MyMapClass> iterMyClass = mSet.iterator();
+////        Iterator<? extends everything.collections.MyMapClass> iterMyClass = m.iterator();
 //        while(iterMyClass.hasNext()) {
 //            map.put("some",iterMyClass);
 //        }

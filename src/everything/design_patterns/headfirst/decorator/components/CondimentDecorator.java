@@ -1,4 +1,4 @@
-package com.test.everything.design_patterns.headfirst.decorator.components;
+package everything.design_patterns.headfirst.decorator.components;
 
 /**
  * User: Makar Kalancha

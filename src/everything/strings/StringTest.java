@@ -24,7 +24,7 @@ public class StringTest {
 ////        System.out.println(s1+"->"+ Jsoup.parse(s1).text());
 ////        System.out.println(s2+"->"+ Jsoup.parse(s2).text());
 //
-////        String s = "&lt;p&gt;Your chance to put questions to our speakers - interactive discussion and Q&amp;com.test.everything.A, led by the Chair&lt;/p&gt;";
+////        String s = "&lt;p&gt;Your chance to put questions to our speakers - interactive discussion and Q&amp;everything.A, led by the Chair&lt;/p&gt;";
 ////        String s = "Men&rsquo;s health";
 ////        String s = "Protein p&#226;t&eacute;s";
 ////        String s = "<img border=\"0\" src=\"http://www2.iscwest.com/images/180/2014_Conference/identiv.gif\" width=\"200\" height=\"29\">";

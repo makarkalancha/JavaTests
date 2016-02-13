@@ -1,8 +1,8 @@
-package com.test.everything.design_patterns.headfirst.observer.java_native;
+package everything.design_patterns.headfirst.observer.java_native;
 
 
-import com.test.everything.design_patterns.headfirst.observer.java_native.subject.WeatherData;
-import com.test.everything.design_patterns.headfirst.observer.not_java_native.display.DisplayElement;
+import everything.design_patterns.headfirst.observer.java_native.subject.WeatherData;
+import everything.design_patterns.headfirst.observer.not_java_native.display.DisplayElement;
 
 import java.util.Observable;
 import java.util.Observer;

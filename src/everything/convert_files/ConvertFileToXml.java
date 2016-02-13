@@ -1,4 +1,4 @@
-package com.test.everything.convert_files;
+package everything.convert_files;
 
 import org.apache.commons.lang.StringEscapeUtils;
 

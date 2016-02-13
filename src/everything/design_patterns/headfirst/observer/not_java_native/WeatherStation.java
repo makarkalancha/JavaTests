@@ -1,6 +1,6 @@
-package com.test.everything.design_patterns.headfirst.observer.not_java_native;
+package everything.design_patterns.headfirst.observer.not_java_native;
 
-import com.test.everything.design_patterns.headfirst.observer.not_java_native.subject.WeatherData;
+import everything.design_patterns.headfirst.observer.not_java_native.subject.WeatherData;
 
 /**
  * User: Makar Kalancha

@@ -1,4 +1,4 @@
-package com.test.everything.design_patterns.headfirst.observer.not_java_native.observer;
+package everything.design_patterns.headfirst.observer.not_java_native.observer;
 
 /**
  * User: Makar Kalancha

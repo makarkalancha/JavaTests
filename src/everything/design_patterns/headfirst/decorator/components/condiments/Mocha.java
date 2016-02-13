@@ -1,7 +1,7 @@
-package com.test.everything.design_patterns.headfirst.decorator.components.condiments;
+package everything.design_patterns.headfirst.decorator.components.condiments;
 
-import com.test.everything.design_patterns.headfirst.decorator.components.Beverage;
-import com.test.everything.design_patterns.headfirst.decorator.components.CondimentDecorator;
+import everything.design_patterns.headfirst.decorator.components.Beverage;
+import everything.design_patterns.headfirst.decorator.components.CondimentDecorator;
 
 /**
  * User: Makar Kalancha

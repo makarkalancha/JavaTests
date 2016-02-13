@@ -1,4 +1,4 @@
-package com.test.everything.collections;
+package everything.collections;
 
 import java.util.*;
 
@@ -9,17 +9,17 @@ import java.util.*;
  */
 public class MyHashMap {
     public static void main(String [] args){
-//        com.test.everything.collections.Person_hashmap a = new com.test.everything.collections.Person_hashmap("1","john");
-//        com.test.everything.collections.Person_hashmap b = new com.test.everything.collections.SubPerson_hashmap("2","jack","any");
-//        com.test.everything.collections.SubPerson_hashmap c = new com.test.everything.collections.SubPerson_hashmap("3","jess","bbb");
-//        Map<String, com.test.everything.collections.Person_hashmap> map = new HashMap<String, com.test.everything.collections.Person_hashmap>();
+//        everything.collections.Person_hashmap a = new everything.collections.Person_hashmap("1","john");
+//        everything.collections.Person_hashmap b = new everything.collections.SubPerson_hashmap("2","jack","any");
+//        everything.collections.SubPerson_hashmap c = new everything.collections.SubPerson_hashmap("3","jess","bbb");
+//        Map<String, everything.collections.Person_hashmap> map = new HashMap<String, everything.collections.Person_hashmap>();
 //        map.put("1",a);
 //        map.put("2",b);
 //        map.put("3",c);
 //
-//        com.test.everything.collections.Person_hashmap a1 = map.get("1");
-//        com.test.everything.collections.Person_hashmap b1 = map.get("2");
-//        com.test.everything.collections.Person_hashmap c1 = map.get("3");
+//        everything.collections.Person_hashmap a1 = map.get("1");
+//        everything.collections.Person_hashmap b1 = map.get("2");
+//        everything.collections.Person_hashmap c1 = map.get("3");
 //        System.out.println(a1);
 //        System.out.println(b1);
 //        System.out.println(c1);

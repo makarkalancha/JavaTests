@@ -1,12 +1,12 @@
-package com.test.everything.design_patterns.headfirst.decorator;
+package everything.design_patterns.headfirst.decorator;
 
 
-import com.test.everything.design_patterns.headfirst.decorator.components.Beverage;
-import com.test.everything.design_patterns.headfirst.decorator.components.beverages.Espresso;
-import com.test.everything.design_patterns.headfirst.decorator.components.beverages.HouseBlend;
-import com.test.everything.design_patterns.headfirst.decorator.components.condiments.Mocha;
-import com.test.everything.design_patterns.headfirst.decorator.components.condiments.Soy;
-import com.test.everything.design_patterns.headfirst.decorator.components.condiments.Whip;
+import everything.design_patterns.headfirst.decorator.components.Beverage;
+import everything.design_patterns.headfirst.decorator.components.beverages.Espresso;
+import everything.design_patterns.headfirst.decorator.components.beverages.HouseBlend;
+import everything.design_patterns.headfirst.decorator.components.condiments.Mocha;
+import everything.design_patterns.headfirst.decorator.components.condiments.Soy;
+import everything.design_patterns.headfirst.decorator.components.condiments.Whip;
 
 /**
  * User: Makar Kalancha

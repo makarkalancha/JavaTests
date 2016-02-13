@@ -1,4 +1,4 @@
-package com.test.everything.collections;
+package everything.collections;
 
 import java.util.HashMap;
 import java.util.HashSet;

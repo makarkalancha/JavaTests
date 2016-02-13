@@ -1,6 +1,6 @@
-package com.test.everything.design_patterns.headfirst.observer.not_java_native.subject;
+package everything.design_patterns.headfirst.observer.not_java_native.subject;
 
-import com.test.everything.design_patterns.headfirst.observer.not_java_native.observer.Observer;
+import everything.design_patterns.headfirst.observer.not_java_native.observer.Observer;
 
 import java.util.ArrayList;
 

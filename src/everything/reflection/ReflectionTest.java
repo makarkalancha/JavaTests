@@ -1,7 +1,7 @@
 package everything.reflection;
 
 import org.apache.commons.lang.StringUtils;
-
+import everything.reflection.UseTestClass;
 import java.lang.reflect.Field;
 
 /**
@@ -9,7 +9,7 @@ import java.lang.reflect.Field;
  */
 public class ReflectionTest {
     public static void main(String[] args) {
-        Class clazz= UseTestClass.class;
+        Class clazz=UseTestClass.class;
         Field[] fields = clazz.getFields();
         for(Field field : fields) {
             System.out.println(field.getType().getSimpleName()+":"+StringUtils.isAllUpperCase(field.getType().getSimpleName()));

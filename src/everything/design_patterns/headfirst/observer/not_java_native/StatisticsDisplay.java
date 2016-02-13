@@ -1,8 +1,8 @@
-package com.test.everything.design_patterns.headfirst.observer.not_java_native;
+package everything.design_patterns.headfirst.observer.not_java_native;
 
-import com.test.everything.design_patterns.headfirst.observer.not_java_native.display.DisplayElement;
-import com.test.everything.design_patterns.headfirst.observer.not_java_native.observer.Observer;
-import com.test.everything.design_patterns.headfirst.observer.not_java_native.subject.Subject;
+import everything.design_patterns.headfirst.observer.not_java_native.display.DisplayElement;
+import everything.design_patterns.headfirst.observer.not_java_native.observer.Observer;
+import everything.design_patterns.headfirst.observer.not_java_native.subject.Subject;
 
 import java.util.ArrayList;
 import java.util.List;

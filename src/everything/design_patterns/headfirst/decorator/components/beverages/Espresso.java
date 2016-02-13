@@ -1,6 +1,6 @@
-package com.test.everything.design_patterns.headfirst.decorator.components.beverages;
+package everything.design_patterns.headfirst.decorator.components.beverages;
 
-import com.test.everything.design_patterns.headfirst.decorator.components.Beverage;
+import everything.design_patterns.headfirst.decorator.components.Beverage;
 
 /**
  * User: Makar Kalancha

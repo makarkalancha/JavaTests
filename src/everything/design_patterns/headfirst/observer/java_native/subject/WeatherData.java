@@ -1,4 +1,4 @@
-package com.test.everything.design_patterns.headfirst.observer.java_native.subject;
+package everything.design_patterns.headfirst.observer.java_native.subject;
 
 import java.util.Observable;
 
