@@ -1,9 +1,8 @@
 package everything.strings;
 
-import org.jsoup.Jsoup;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.jsoup.Jsoup;
 
 /**
  * User: Makar Kalancha
