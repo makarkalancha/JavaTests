@@ -1,0 +1,13 @@
+https://intellij-support.jetbrains.com/hc/en-us/articles/206544839-How-to-manage-projects-under-Version-Control-Systems
+
+Directory based project format (.idea directory)
+
+This format is used by all the recent IDE versions by default. Here is what you need to share:
+
+    All the files under .idea directory in the project root except the workspace.xml and tasks.xml files which store user specific settings
+    All the .iml module files that can be located in different module directories (applies to IntelliJ IDEA)
+
+Be careful about sharing the following:
+
+    Android artifacts that produce a signed build (will contain keystore passwords)
+    In IDEA 13 and earlier dataSources.ids, datasources.xml can contain database passwords. IDEA 14 solves this problem.
