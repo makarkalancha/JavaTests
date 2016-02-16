@@ -2,53 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="9c72869d-7f20-4db6-85f1-9c16c59f0086" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/everything/jaxbtest" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/everything/jaxbtest/Book.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/everything/jaxbtest/BookMain.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/everything/jaxbtest/BookStore.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/everything/reflection/ReflectionTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/everything/reflection/TESTCLASS.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/everything/reflection/UseTestClass.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/rebel_project.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/everything/utils/DateUtils.java" afterPath="$PROJECT_DIR$/src/everything/utils/DateUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaTests.iml" afterPath="$PROJECT_DIR$/JavaTests.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/everything/strings/StringTest.java" afterPath="$PROJECT_DIR$/src/everything/strings/StringTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="D:\SRC\Java_work_dir\JavaTests\.idea\checkstyle-idea.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\SRC\Java_work_dir\JavaTests\.idea\misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\SRC\Java_work_dir\JavaTests\.idea\rebel_project.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\SRC\Java_work_dir\JavaTests\.idea\uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\SRC\Java_work_dir\JavaTests\.idea\vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\SRC\Java_work_dir\JavaTests\.idea\workspace.xml" afterPath="" />
     </list>
-    <list id="b7f6ad86-77a0-4dca-887d-20299e6d707b" name="Failed commit: Default" comment="java 8 test exercises">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch01\ConcurrentGreeter.java" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch01/ConcurrentGreeter.java" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch01\DemoAppCh001.java" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch01/DemoAppCh001.java" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch01\Greeter.java" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch01/Greeter.java" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch01\InterfaceStatic.java" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch01/InterfaceStatic.java" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch01\Named.java" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch01/Named.java" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch01\NamedAnother.java" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch01/NamedAnother.java" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch01\Person.java" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch01/Person.java" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch01\PersonClass.java" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch01/PersonClass.java" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch01\RealNamedAnotherPerson.java" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch01/RealNamedAnotherPerson.java" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch01\RealNamedPerson.java" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch01/RealNamedPerson.java" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch01\RealPerson.java" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch01/RealPerson.java" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch01\Student.java" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch01/Student.java" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch01\exercises\Collection2.java" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch01/exercises/Collection2.java" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch01\exercises\Exercises.java" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch01/exercises/Exercises.java" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch01\exercises\RunnableEx.java" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch01/exercises/RunnableEx.java" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch02\City.java" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch02/City.java" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch02\DemoAppCh02.java" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch02/DemoAppCh02.java" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch02\exercises\Exercises.java" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch02/exercises/Exercises.java" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch02\exercises\Num001Counter.java" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch02/exercises/Num001Counter.java" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch03\DemoAppCh03.java" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch03/DemoAppCh03.java" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch01" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch01" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch02" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch02" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch03" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch03" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch01\exercises" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch01/exercises" />
-      <change type="MOVED" beforePath="C:\acquisio\SRC\Java_working_dir\JavaTests\src\everything\java8tests\ch02\exercises" afterPath="$PROJECT_DIR$/src/everything/java8tests/forimpatient/ch02/exercises" />
-    </list>
+    <list id="b7f6ad86-77a0-4dca-887d-20299e6d707b" name="Failed commit: Default" comment="java 8 test exercises" />
     <ignored path="Test.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path=".idea/copyright/" />
+    <ignored path=".idea/libraries/" />
+    <ignored path=".idea/scopes/" />
+    <ignored path=".idea/dictionaries/" />
+    <ignored path=".idea/" />
+    <ignored path="JavaTests.iml" />
+    <ignored path="test.iml_old" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +30,9 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
   </component>
   <component name="DebuggerManager">
     <ui_properties converted="true" />
@@ -591,37 +565,9 @@
       <file leaf-file-name="Book.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/everything/jaxbtest/Book.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="1326">
               <caret line="30" column="57" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#618#619#0" expanded="false" />
-                <element signature="e#698#699#0" expanded="false" />
-                <element signature="e#744#745#0" expanded="false" />
-                <element signature="e#790#791#0" expanded="false" />
-                <element signature="e#856#857#0" expanded="false" />
-                <element signature="e#918#919#0" expanded="false" />
-                <element signature="e#1376#1377#0" expanded="false" />
-                <element signature="e#1403#1404#0" expanded="false" />
-                <element signature="e#1443#1444#0" expanded="false" />
-                <element signature="e#1475#1476#0" expanded="false" />
-                <element signature="e#1508#1509#0" expanded="false" />
-                <element signature="e#1537#1538#0" expanded="false" />
-                <element signature="e#1581#1582#0" expanded="false" />
-                <element signature="e#1617#1618#0" expanded="false" />
-                <element signature="e#1653#1654#0" expanded="false" />
-                <element signature="e#1685#1686#0" expanded="false" />
-                <element signature="e#1735#1736#0" expanded="false" />
-                <element signature="e#1777#1778#0" expanded="false" />
-                <element signature="e#1808#1809#0" expanded="false" />
-                <element signature="e#1835#1836#0" expanded="false" />
-                <element signature="e#1875#1876#0" expanded="false" />
-                <element signature="e#1907#1908#0" expanded="false" />
-                <element signature="e#1962#1963#0" expanded="false" />
-                <element signature="e#2028#2029#0" expanded="false" />
-                <element signature="e#2097#2098#0" expanded="false" />
-                <element signature="e#2186#2187#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -629,11 +575,9 @@
       <file leaf-file-name="ReflectionTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/everything/reflection/ReflectionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="374">
               <caret line="14" column="125" selection-start-line="14" selection-start-column="94" selection-end-line="14" selection-end-column="125" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -641,13 +585,9 @@
       <file leaf-file-name="StringTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/everything/strings/StringTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.0" vertical-offset="4624" max-vertical-offset="6902">
               <caret line="275" column="0" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#15310#15311#0" expanded="false" />
-                <element signature="e#15363#15364#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -655,12 +595,10 @@
       <file leaf-file-name="PredicateString.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/everything/java8tests/functionalprogramming/ch02/PredicateString.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.78032786">
+            <state vertical-scroll-proportion="1.2" vertical-offset="154" max-vertical-offset="714">
               <caret line="28" column="83" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#550#551#0" expanded="true" />
-                <element signature="e#604#605#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -669,7 +607,7 @@
       <file leaf-file-name="DateUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/everything/utils/DateUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1054" max-vertical-offset="2363">
               <caret line="66" column="34" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
               <folding />
             </state>
@@ -679,7 +617,7 @@
       <file leaf-file-name="TESTCLASS.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/everything/reflection/TESTCLASS.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="238">
               <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="11" />
               <folding />
             </state>
@@ -689,7 +627,7 @@
       <file leaf-file-name="UseTestClass.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/everything/reflection/UseTestClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="238">
               <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
               <folding />
             </state>
@@ -699,23 +637,9 @@
       <file leaf-file-name="BookStore.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/everything/jaxbtest/BookStore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="697">
               <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#683#684#0" expanded="false" />
-                <element signature="e#719#720#0" expanded="false" />
-                <element signature="e#829#830#0" expanded="false" />
-                <element signature="e#869#870#0" expanded="false" />
-                <element signature="e#900#901#0" expanded="false" />
-                <element signature="e#927#928#0" expanded="false" />
-                <element signature="e#967#968#0" expanded="false" />
-                <element signature="e#999#1000#0" expanded="false" />
-                <element signature="e#1034#1035#0" expanded="false" />
-                <element signature="e#1065#1066#0" expanded="false" />
-                <element signature="e#1113#1114#0" expanded="false" />
-                <element signature="e#1153#1154#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -723,7 +647,7 @@
       <file leaf-file-name="BookMain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/everything/jaxbtest/BookMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1071">
               <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
               <folding />
             </state>
@@ -746,11 +670,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -796,14 +715,11 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="NamedScopeManager">
-    <order />
-  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="width" value="1382" />
+    <option name="height" value="722" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -838,7 +754,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Changed Files" proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers ProjectPane="false" />
       <showModules />
@@ -851,167 +767,19 @@
     </navigator>
     <panes>
       <pane id="Scope">
-        <subPane subId="Changed Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="JavaTests">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="JavaTests">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="everything">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="utils">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="JavaTests">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="everything">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="JavaTests">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="everything">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="java8tests">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="functionalprogramming/ch02">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="JavaTests">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="everything">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="java8tests">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="forimpatient">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="JavaTests">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="everything">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="java8tests">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="forimpatient">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ch01">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="JavaTests">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT=".idea">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane subId="Changed Files" />
       </pane>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JavaTests" />
+              <option name="myItemId" value="Test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JavaTests" />
+              <option name="myItemId" value="Test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1021,7 +789,21 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="JavaTests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1039,29 +821,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JavaTests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaTests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="everything" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaTests" />
+              <option name="myItemId" value="Test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1083,7 +843,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JavaTests" />
+              <option name="myItemId" value="Test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1100,6 +860,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java8tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functionalprogramming" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaTests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="everything" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java8tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functionalprogramming" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1109,7 +899,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JavaTests" />
+              <option name="myItemId" value="Test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1117,7 +907,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1205,6 +995,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1225,7 +1016,7 @@
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="options.lastSelected" value="editor.preferences.completion" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -1253,431 +1044,6 @@
       <recent name="com.test.everything.design_patterns.headfirst.decorator.components.condiments" />
       <recent name="com.test.everything.design_patterns.headfirst.decorator.beverage" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\com\sherpa\test\junit\ObjectTestUtils.java</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\com\sherpa\test\monitoring\AbstractMonitorTestCase.java</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\com\sherpa\test\monitoring\JRevisionFetchWorker.java</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\com\sherpa\test\monitoring\LegacyRegistrationTransferWorker.java</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\com\sherpa\test\monitoring\LoginWorker.java</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\com\sherpa\test\monitoring\MonitorTestSuite.java</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\com\sherpa\test\ws\AbstractWebServiceTestCase.java</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\com\sherpa\test\ws\JRevisionTest.java</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\com\sherpa\test\ws\LegacyRegistrationTransferTest.java</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\com\sherpa\test\ws\LoginTest.java</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\com\sherpa\test\ws\Registration2Test.java</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\com\sherpa\test\ws\RegistrationTransfer2Test.java</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\com\sherpa\test\ws\ShortlistTransferTest.java</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\com\sherpa\test\ws\SmsTest.java</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\com\sherpa\test\ws\UserDataTest.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\.idea\.name</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\collections</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\collections\MapTesting.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\collections\MySet.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\collections\SubPerson_hashmap.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\collections\MyMap.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\collections\MyMapSubclass.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\collections\MyHashMap.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\collections\Person_hashmap.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\collections\MyMapClass.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\collections\MyMap_v1.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\convert_files</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\convert_files\ConvertFileToXml.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\observer</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\observer\java_native</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\observer\java_native\subject</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\observer\java_native\subject\WeatherData.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\observer\java_native\ForecastDisplay.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\observer\java_native\WeatherStation.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\observer\java_native\CurrentConditionsDisplay.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\observer\not_java_native</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\observer\not_java_native\StatisticsDisplay.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\observer\not_java_native\WeatherStation.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\observer\not_java_native\display</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\observer\not_java_native\display\DisplayElement.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\observer\not_java_native\CurrentConditionsDisplay.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\observer\not_java_native\observer</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\observer\not_java_native\observer\Observer.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\observer\not_java_native\subject</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\observer\not_java_native\subject\WeatherData.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\observer\not_java_native\subject\Subject.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\observer\not_java_native\ForecastDisplay.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\decorator</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\decorator\components</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\decorator\components\beverages</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\decorator\components\beverages\HouseBlend.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\decorator\components\beverages\Espresso.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\decorator\components\condiments</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\decorator\components\condiments\Mocha.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\decorator\components\condiments\Whip.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\decorator\components\condiments\Soy.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\decorator\components\Beverage.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\decorator\components\CondimentDecorator.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\com\test\everything\design_patterns\headfirst\decorator\StarbuzzCoffee.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\StatEventExperiment$MinMax.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\IfCheck.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\ExceptionTest.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\Bool$Product.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\RuntimeTest$1.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\RegexTest.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\PolygonTestV3Simple.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\Base.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\StatEventExperiment.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\MyGeneric$CategoryTwo.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\PolygonTestV3Simple$GeoZonePoint.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\inhB.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\B.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\filetodb</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\filetodb\Pojo.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\filetodb\FileToDB.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\testDB.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\ForTest.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\Encoding.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\MyGeneric$CategoryOne.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\PolygonTest.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\JDBC</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\JDBC\JDBCBatch.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\PolygonTestV2.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\LocaleTest.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\PassByValueDemo.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\ProcessorClass.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\downloadqueue</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\downloadqueue\ProcessLoad.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\PassByValueDemo$Target.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\Test.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\Bool$1.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\RuntimeTest.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\strings</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\strings\RandomSherpaCode.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\strings\HtmlParsers.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\strings\StringUtil.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\strings\ClassA.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\strings\StringTest.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\strings\ClassB.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\strings\classAB.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\LambdaTest$PrefixCategorie.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\reflection</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\reflection\Reflection_v1.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\reflection\SimplePojo.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\reflection\Context.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\reflection\MyResponse.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\reflection\ReflectionCleanString.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\reflection\MyResponseA.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\reflection\MyResponseB.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\reflection\MySoapClient.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\reflection\ReflectionCleanString$Device.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\reflection\Reflection.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\reflection\GePlanner.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\reflection\GePlanner$GePlannerProduct.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\threads</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\threads\SingletonBase.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\threads\SingletonTest.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\threads\Person.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\threads\MySemaphore.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\java8tests</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\java8tests\Demo.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\java8tests\lambda</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\java8tests\lambda\LambdaDemo.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\java8tests\lambda\Person.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\java8tests\lambda\LambdaDemo$1.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\java8tests\lambda\Person$Sex.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\java8tests\lambda\CheckPersonEligibleForSelectiveService.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\java8tests\lambda\CheckPerson.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\Inheritance.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\interesting_problems</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\interesting_problems\ProjectEuler001.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\interesting_problems\ProjectEuler002.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\ShutDownHookTest.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\UrlCheck.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\StaticFinal.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\PolygonTestV2$GeoZonePoint.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\GsonTest.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\PassByValueDemo$Client.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\http</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\http\UrlReader.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\inhA.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\A.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\LambdaTest.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\inhC.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\ShutDownHookTest$1.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\MyGeneric.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\state</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\state\GumballDemo.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\state\GumballMachine.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\state\states</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\state\states\SoldOutState.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\state\states\HasQuarterState.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\state\states\State.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\state\states\NoQuarterState.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\state\states\SoldState.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\state\states\WinnerState.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\proxy</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\proxy\test</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\proxy\test\Demo.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\proxy\test\client</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\proxy\test\client\MyRemoteClient.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\proxy\test\server</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\proxy\test\server\MyRemote.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\proxy\test\server\MyRemoteImpl.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\proxy\test\server\MyRemoteServer.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\proxy\test_from_rmi_docs</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\proxy\test_from_rmi_docs\compute</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\proxy\test_from_rmi_docs\compute\Compute.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\proxy\test_from_rmi_docs\compute\Task.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\strategy</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\strategy\behavior</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\strategy\behavior\quack</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\strategy\behavior\quack\Quack.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\strategy\behavior\quack\QuackBehavior.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\strategy\behavior\quack\Squeak.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\strategy\behavior\quack\MuteQuack.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\strategy\behavior\fly</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\strategy\behavior\fly\FlyNoWay.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\strategy\behavior\fly\FlyRocketPowered.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\strategy\behavior\fly\FlyBehavior.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\strategy\behavior\fly\FlyWithWings.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\strategy\duck</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\strategy\duck\MallardDuck.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\strategy\duck\Duck.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\strategy\duck\ModelDuck.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\strategy\DuckSimulator.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\design_patterns\headfirst\p103_ForecastDisplay.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\RuntimeTest$Unit.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\Polygon.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\HttpDownloadUtility.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\Bool.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\fileUtils</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\fileUtils\FileList.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\fileUtils\FileReadCharacters.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\fileUtils\FileAppender.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\fileUtils\FileTest.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\fileUtils\FileUtils.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\fileUtils\FileDeleteFromList.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\fileUtils\FileListByPattern.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\fileUtils\FileListByPattern$FileVisitor.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\utils</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\utils\RandomNumbers$RandomWeird.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\utils\RandomNumbers.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\utils\DateUtils.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\utils\FileToChars.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\utils\IOUtils.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\InsideRectangleCheck.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\PolygonTestV1.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\utilsDB</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\utilsDB\QueryTool.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\utilsDB\config.jrevision.properties</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\utilsDB\Conf.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\utilsDB\config.local.properties</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\utilsDB\DBUtils.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\utilsDB\SQLStatements.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\utilsDB\config.test.properties</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\utilsDB\config.prod.properties</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\PolygonTestV1$GeoZonePoint.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\BubbleSort.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\QuickSort.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\Search.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\exercises</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\exercises\RoundString.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\BinarySearch.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\p57_1_1_19.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\p54_1_1_3.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\p54_1_1_5.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\p54_1_1_6.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\p55_1_1_7.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\p55_1_1_8.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\p55_1_1_9.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\p56_1_1_11.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\TestRunner.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\p58_1_1_21_test$testPass2ExtraSpace.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\p58_1_1_21_test.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\p58_1_1_22_test.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\p58_1_1_22_test$testPassRecursive1.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\p58_1_1_21_test$testPass4FirstDecimal.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\p58_1_1_22_test$testPassRecursive2.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\p58_1_1_22_test$testPassRecursive3.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\p58_1_1_22_test$testPassRecursive4.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\p58_1_1_22_test$testPassRecursive5.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\p58_1_1_22_test$testFailRecursive1.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\p58_1_1_22_test$testPassRecursive6.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\p58_1_1_21_test$testPass1.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\p58_1_1_22_test$testPass1.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\p58_1_1_21_test$testPass6BothDecimal.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\p58_1_1_22_test$testPass2.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\p58_1_1_22_test$testPass3.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\p58_1_1_22_test$testPass4.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\p58_1_1_22_test$testPass5.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\p58_1_1_22_test$testPass6.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\p58_1_1_22_test$testFail1.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\p58_1_1_21_test$testFail1NoSpace.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\test\p58_1_1_21_test$testPass5SecondDecimal.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\p56_1_1_12.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\p58_1_1_20.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\p56_1_1_13.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\p56_1_1_14.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\p58_1_1_21.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\p56_1_1_15.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\p58_1_1_22.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\p56_1_1_16.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\p57_1_1_17.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertSedgewick\ch1_1\p57_1_1_18.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\CompareSearch.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\SelectionSort.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertLafore</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertLafore\ch04</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertLafore\ch04\StackDemo.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertLafore\ch06</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertLafore\ch06\TriangleNumbersDemo.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertLafore\ch06\test</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\byRobertLafore\ch06\test\TriangleNumbersDemoTest.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\LinearSearch.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\HolderT.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\algorithms\Swapper.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\parsers</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\parsers\gnydm</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\parsers\gnydm\Speaker.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\parsers\gnydm\Exhibitor.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\parsers\gnydm\Session.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\parsers\gnydm\Track.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\parsers\GnydmAllTargets.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\parsers\targets</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\parsers\targets\GnydmSessions.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\parsers\targets\GnydmExhibitors.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\GsonTest$SomeData.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\Casting.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\PassByValueDemo$1.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\Point.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\ThreadShootingRange</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\ThreadShootingRange\WorkerScheduler.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\ThreadShootingRange\WorkerCallable.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\ThreadShootingRange\WorkerThreadFactory.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\ThreadShootingRange\WorkerRunnable.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\ThreadShootingRange\Main.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\ThreadShootingRange\data</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\everything\ThreadShootingRange\data\ThreadNameResult.class</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\conf</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\conf\log4j.properties</PATH>
-          <PATH vcs="svn" revision="62">C:\acquisio\SRC\Java_working_dir\JavaTests\out\production\test\log4j.properties</PATH>
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="Application.PredicateString">
     <configuration default="false" name="BookMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -1780,10 +1146,33 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1827,30 +1216,6 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -1867,25 +1232,23 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -1893,43 +1256,18 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+    <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <extension name="scalaCoverage" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <extension name="scalaCoverage" />
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
       <envs />
       <method />
     </configuration>
@@ -1959,22 +1297,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <extension name="scalaCoverage" />
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <envs />
       <method />
     </configuration>
     <configuration default="false" name="QueryTool" type="Application" factoryName="Application" nameIsGenerated="true">
@@ -2085,26 +1407,8 @@
     <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
   </component>
   <component name="SvnConfiguration" myUseAcceleration="nothing" cleanupOnStartRun="true">
-    <configuration>C:\Users\mcalancea\AppData\Roaming\Subversion</configuration>
+    <configuration>C:\Users\Makar\AppData\Roaming\Subversion</configuration>
     <supportedVersion>125</supportedVersion>
-  </component>
-  <component name="SvnFileUrlMappingImpl">
-    <option name="myMappingRoots">
-      <list>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\acquisio\SRC\Java_working_dir\JavaTests" />
-          <option name="myCopyRoot" value="C:\acquisio\SRC\Java_working_dir\JavaTests" />
-        </SvnCopyRootSimple>
-      </list>
-    </option>
-    <option name="myMoreRealMappingRoots">
-      <list>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\acquisio\SRC\Java_working_dir\JavaTests" />
-          <option name="myCopyRoot" value="C:\acquisio\SRC\Java_working_dir\JavaTests" />
-        </SvnCopyRootSimple>
-      </list>
-    </option>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -2213,35 +1517,35 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="722" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.52566373" sideWeight="0.5400908" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32055378" sideWeight="0.4946695" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34185302" sideWeight="0.18336888" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.52566373" sideWeight="0.45990923" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32800853" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38019168" sideWeight="0.81663114" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16151386" sideWeight="0.44621938" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16111952" sideWeight="0.44621938" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16151386" sideWeight="0.5537806" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37693223" sideWeight="0.49573562" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37693223" sideWeight="0.49573562" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32055378" sideWeight="0.4946695" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38019168" sideWeight="0.81663114" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278328" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -2285,6 +1589,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
     <MESSAGE value="string test and encoding" />
     <MESSAGE value="Gnydm session: month + 1" />
     <MESSAGE value="read file by bit" />
@@ -2533,21 +1840,25 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/everything/jaxbtest/BookMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1071">
+          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#15310#15311#0" expanded="false" />
-            <element signature="e#15363#15364#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
           <folding />
         </state>
@@ -2555,26 +1866,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringNameToNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#15310#15311#0" expanded="false" />
-            <element signature="e#15363#15364#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
           <folding />
         </state>
@@ -2582,26 +1889,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringNameToNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#15310#15311#0" expanded="false" />
-            <element signature="e#15363#15364#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
           <folding />
         </state>
@@ -2609,26 +1912,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringNameToNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#15310#15311#0" expanded="false" />
-            <element signature="e#15363#15364#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
           <folding />
         </state>
@@ -2636,26 +1935,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringNameToNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#15310#15311#0" expanded="false" />
-            <element signature="e#15363#15364#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
           <folding />
         </state>
@@ -2663,26 +1958,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringNameToNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#15310#15311#0" expanded="false" />
-            <element signature="e#15363#15364#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
           <folding />
         </state>
@@ -2690,26 +1981,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringNameToNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#15310#15311#0" expanded="false" />
-            <element signature="e#15363#15364#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
           <folding />
         </state>
@@ -2717,26 +2004,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringNameToNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#15310#15311#0" expanded="false" />
-            <element signature="e#15363#15364#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
           <folding />
         </state>
@@ -2744,26 +2027,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringNameToNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#15310#15311#0" expanded="false" />
-            <element signature="e#15363#15364#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
           <folding />
         </state>
@@ -2771,26 +2050,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringNameToNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#15310#15311#0" expanded="false" />
-            <element signature="e#15363#15364#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding />
         </state>
@@ -2798,33 +2073,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringNameToNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#15310#15311#0" expanded="false" />
-            <element signature="e#15363#15364#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/algorithms/byRobertLafore/ch13/GraphDirected.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/algorithms/byRobertSedgewick/ch1_1/test/p58_1_1_21_test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
           <folding />
         </state>
@@ -2832,21 +2103,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/enumtest/EnumSetTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/booleantest/BooleanMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
           <folding />
         </state>
@@ -2854,64 +2125,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/numbertest/DoubleTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="18" column="82" selection-start-line="18" selection-start-column="82" selection-end-line="18" selection-end-column="82" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/references/WeakReferenceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringNameToNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/effectivejava/ch03/CaseInsensitiveString.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/effectivejava/ch03/EqualsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="10" column="85" selection-start-line="10" selection-start-column="85" selection-end-line="10" selection-end-column="85" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/jaxbtest/BookStore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#683#684#0" expanded="false" />
-            <element signature="e#719#720#0" expanded="false" />
-            <element signature="e#829#830#0" expanded="false" />
-            <element signature="e#869#870#0" expanded="false" />
-            <element signature="e#900#901#0" expanded="false" />
-            <element signature="e#927#928#0" expanded="false" />
-            <element signature="e#967#968#0" expanded="false" />
-            <element signature="e#999#1000#0" expanded="false" />
-            <element signature="e#1034#1035#0" expanded="false" />
-            <element signature="e#1065#1066#0" expanded="false" />
-            <element signature="e#1113#1114#0" expanded="false" />
-            <element signature="e#1153#1154#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/jaxbtest/BookMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
           <folding />
         </state>
@@ -2919,50 +2176,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/jaxbtest/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="30" column="57" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#618#619#0" expanded="false" />
-            <element signature="e#698#699#0" expanded="false" />
-            <element signature="e#744#745#0" expanded="false" />
-            <element signature="e#790#791#0" expanded="false" />
-            <element signature="e#856#857#0" expanded="false" />
-            <element signature="e#918#919#0" expanded="false" />
-            <element signature="e#1376#1377#0" expanded="false" />
-            <element signature="e#1403#1404#0" expanded="false" />
-            <element signature="e#1443#1444#0" expanded="false" />
-            <element signature="e#1475#1476#0" expanded="false" />
-            <element signature="e#1508#1509#0" expanded="false" />
-            <element signature="e#1537#1538#0" expanded="false" />
-            <element signature="e#1581#1582#0" expanded="false" />
-            <element signature="e#1617#1618#0" expanded="false" />
-            <element signature="e#1653#1654#0" expanded="false" />
-            <element signature="e#1685#1686#0" expanded="false" />
-            <element signature="e#1735#1736#0" expanded="false" />
-            <element signature="e#1777#1778#0" expanded="false" />
-            <element signature="e#1808#1809#0" expanded="false" />
-            <element signature="e#1835#1836#0" expanded="false" />
-            <element signature="e#1875#1876#0" expanded="false" />
-            <element signature="e#1907#1908#0" expanded="false" />
-            <element signature="e#1962#1963#0" expanded="false" />
-            <element signature="e#2028#2029#0" expanded="false" />
-            <element signature="e#2097#2098#0" expanded="false" />
-            <element signature="e#2186#2187#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_40/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3326613">
-          <caret line="2335" column="17" selection-start-line="2335" selection-start-column="17" selection-end-line="2335" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/reflection/UseTestClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
           <folding />
         </state>
@@ -2970,7 +2192,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/reflection/TESTCLASS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="11" />
           <folding />
         </state>
@@ -2978,29 +2200,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/reflection/ReflectionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="14" column="125" selection-start-line="14" selection-start-column="94" selection-end-line="14" selection-end-column="125" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/strings/StringTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="275" column="0" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#15310#15311#0" expanded="false" />
-            <element signature="e#15363#15364#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/utils/DateUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="66" column="34" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
           <folding />
         </state>
@@ -3008,12 +2224,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/everything/java8tests/functionalprogramming/ch02/PredicateString.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78032786">
+        <state vertical-scroll-proportion="1.2" vertical-offset="154" max-vertical-offset="714">
           <caret line="28" column="83" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="83" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#604#605#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3059,7 +2273,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.6</last-edited>
+          <last-edited>1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -3076,6 +2290,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
