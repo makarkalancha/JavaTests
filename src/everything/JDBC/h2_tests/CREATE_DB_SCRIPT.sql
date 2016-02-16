@@ -6,6 +6,9 @@
 --create table test2(id bigint auto_increment primary key);
 
 
+--http://www.revenuquebec.ca/fr/entreprises/taxes/tpstvhtvq/reglesdebase/historiquetauxtpstvq.aspx
+--https://fr.wikipedia.org/wiki/Taxe_de_vente_du_Qu%C3%A9bec
+
 CREATE TABLE TAX(
 ID identity,
 NAME VARCHAR(100),
