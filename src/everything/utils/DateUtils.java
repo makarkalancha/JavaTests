@@ -49,8 +49,8 @@ public class DateUtils {
 //            System.out.println("date1 millis:\n"+date1+"\n"+date1.getTime());
 
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-//            String dateEndString = "2014-01-15";
-            String dateEndString = null;
+            String dateEndString = "2014-01-15";
+//            String dateEndString = null;
 
             Calendar dateEnd = Calendar.getInstance();
             dateEnd.setTime(sdf.parse(dateEndString));
