@@ -1,10 +1,13 @@
 package everything.JDBC.h2_tests;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import org.h2.jdbcx.JdbcConnectionPool;
 import org.h2.tools.DeleteDbFiles;
-import org.h2.util.Tool;
-
-import java.sql.*;
 
 /**
  * Created by mcalancea on 2016-02-15.
@@ -13,16 +16,7 @@ import java.sql.*;
 //http://www.javatips.net/blog/2014/07/h2-database-example
 //java -jar D:\SRC\Java_work_dir\JavaTests\lib\h2-1.4.191.jar
 public class H2Demo {
-    private static final String DB_DRIVER = "org.h2.Driver";
-    private static final String DB_DIR = "~";
-    private static final String DB_NAME = "test";
-    private static final String DB_CONNECTION = "jdbc:h2:"+DB_DIR+"/"+DB_NAME+";IFEXISTS=TRUE";
-    private static final String DB_DIR1 = "~/smart_finance";
-    private static final String DB_NAME1 = "finance";
-    private static final String DB_CONNECTION1 = "jdbc:h2:"+DB_DIR1+"/"+DB_NAME1;
-    private static final String DB_CONNECTION1_IFEXISTS = "jdbc:h2:"+DB_DIR1+"/"+DB_NAME1+";IFEXISTS=TRUE";
-    private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "root";
+
 
     private static JdbcConnectionPool pool = null;
 
@@ -32,7 +26,7 @@ public class H2Demo {
 //            DeleteDbFiles.execute(DB_DIR, DB_NAME, true);
 //            insertWithStatement();
 
-            DeleteDbFiles.execute(DB_DIR, DB_NAME, true);
+            DeleteDbFiles.execute(H2DbConstants.DB_DIR, H2DbConstants.DB_NAME, true);
             insertWithPreparedStatement();
         }catch (SQLException e){
             e.printStackTrace();
@@ -42,7 +36,7 @@ public class H2Demo {
 
 
     private static Connection getDBConnection() throws SQLException {
-        return DriverManager.getConnection(DB_CONNECTION1, DB_USER, DB_PASSWORD);
+        return DriverManager.getConnection(H2DbConstants.DB_CONNECTION1, H2DbConstants.DB_USER, H2DbConstants.DB_PASSWORD);
 //http://www.h2database.com/html/tutorial.html#creating_new_databases
 //Using a Connection Pool
 //        return pool = JdbcConnectionPool.create(DB_CONNECTION, DB_USER, DB_PASSWORD);
