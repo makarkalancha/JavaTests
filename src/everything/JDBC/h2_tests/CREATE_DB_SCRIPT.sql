@@ -16,6 +16,9 @@ DESCRIPTION VARCHAR(512),
 FORMULA VARCHAR(512)
 );
 
+--load tax in a context class when app is starting to avoid query this table everytime
+--put a listener in UI part if tax rate is changed then update in config file
+--2 types of app: general and specific for Canada
 CREATE TABLE TAX_RATE(
 ID identity,
 TAX_ID BIGINT,
