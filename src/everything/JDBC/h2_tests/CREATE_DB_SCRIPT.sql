@@ -5,11 +5,13 @@
 --or
 --create table test2(id bigint auto_increment primary key);
 
+//http://blog.sqlauthority.com/2009/09/07/sql-server-importance-of-database-schemas-in-sql-server/
+CREATE SCHEMA FINANCE;
+
 
 --http://www.revenuquebec.ca/fr/entreprises/taxes/tpstvhtvq/reglesdebase/historiquetauxtpstvq.aspx
 --https://fr.wikipedia.org/wiki/Taxe_de_vente_du_Qu%C3%A9bec
-
-CREATE TABLE TAX(
+CREATE TABLE PUBLIC.TAX(
 ID identity,
 NAME VARCHAR(100),
 DESCRIPTION VARCHAR(512),
@@ -19,7 +21,7 @@ FORMULA VARCHAR(512)
 --load tax in a context class when app is starting to avoid query this table everytime
 --put a listener in UI part if tax rate is changed then update in config file
 --2 types of app: general and specific for Canada
-CREATE TABLE TAX_RATE(
+CREATE TABLE PUBLIC.TAX_RATE(
 ID identity,
 TAX_ID BIGINT,
 RATE DECIMAL(20,2) DEFAULT 0.00,
