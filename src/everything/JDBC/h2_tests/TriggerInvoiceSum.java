@@ -9,7 +9,7 @@ import org.h2.api.Trigger;
 /**
  * Created by mcalancea on 2016-02-16.
  */
-public class TriggerTransactionSum implements Trigger{
+public class TriggerInvoiceSum implements Trigger{
 
     @Override
     public void close() throws SQLException {
@@ -38,7 +38,7 @@ public class TriggerTransactionSum implements Trigger{
         }
 
         PreparedStatement preparedStatement = connection.prepareStatement(
-                "UPDATE TRANSACTION SET BALANCE = BALANCE + ? WHERE ID = ?"
+                "UPDATE INVOICE SET BALANCE = BALANCE + ? WHERE ID = ?"
         );
         preparedStatement.setBigDecimal(1,diff);
         preparedStatement.setLong(2, transactionId);

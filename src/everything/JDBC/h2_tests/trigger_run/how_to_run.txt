@@ -1,0 +1,3 @@
+java -cp h2-1.4.191.jar:TriggerInvoiceSum org.h2.tools.Server
+
+D:\SRC\Java_work_dir\JavaTests\src\everything\JDBC\h2_tests\trigger_run>java -cp ./* org.h2.tools.Server

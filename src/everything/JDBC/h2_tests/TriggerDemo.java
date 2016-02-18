@@ -15,7 +15,7 @@ public class TriggerDemo {
         String createTriggerName = "ITEM_INS_T";
         String updateTriggerName = "ITEM_UPD_T";
         String deleteTriggerName = "ITEM_DEL_T";
-        String triggerName = "CALL \"everything.JDBC.h2_tests.TriggerTransactionSum\" ";
+        String triggerName = "CALL \"everything.JDBC.h2_tests.TriggerInvoiceSum\" ";
         String createTrigger = "CREATE TRIGGER " + createTriggerName +
                 " AFTER INSERT ON ITEM FOR EACH ROW " +
                 triggerName;
@@ -28,43 +28,43 @@ public class TriggerDemo {
         String dropTrigger = "DROP TRIGGER IF EXISTS ";
 
         try (
-                Connection conn = DriverManager.getConnection(H2DbConstants.DB_CONNECTION1, H2DbConstants.DB_USER, H2DbConstants.DB_PASSWORD);
+                Connection conn = DriverManager.getConnection(H2DbConstants.DB_CONNECTION1_IFEXISTS, H2DbConstants.DB_USER, H2DbConstants.DB_PASSWORD);
                 Statement stat = conn.createStatement();
         ) {
             stat.execute(dropTrigger + createTriggerName);
             stat.execute(dropTrigger + updateTriggerName);
             stat.execute(dropTrigger + deleteTriggerName);
 
-            stat.execute("DELETE FROM ITEM;");
-            stat.execute("DELETE FROM TRANSACTION;");
+//            stat.execute("DELETE FROM ITEM;");
+//            stat.execute("DELETE FROM INVOICE;");
 
             stat.execute(createTrigger);
             stat.execute(updateTrigger);
             stat.execute(deleteTrigger);
 
-            stat.execute("INSERT INTO TRANSACTION VALUES(1, '2016-02-16', null, 0,0,0)");
-
-            ResultSet rs = null;
-            System.out.println("insert: 10 and 19.95 = 29.95");
-            stat.execute("INSERT INTO ITEM VALUES(1, 'a*', 'a**',1, 10.0,null,null)");
-            stat.execute("INSERT INTO ITEM VALUES(2, 'b*', 'b**',1, 19.95,null,null)");
-            rs = stat.executeQuery("SELECT BALANCE FROM TRANSACTION");
-            rs.next();
-            System.out.println("The sum is " + rs.getBigDecimal(1));
-
-            System.out.println("update: 10 and 20 [was 19.95] = 30.00");
-            stat.execute("UPDATE ITEM SET AMOUNT=20.0 WHERE ID=2");
-            rs = stat.executeQuery("SELECT BALANCE FROM TRANSACTION");
-            rs.next();
-            System.out.println("The sum is " + rs.getBigDecimal(1));
-
-            System.out.println("delete: [10 removed] 20 = 20.00");
-            stat.execute("DELETE FROM ITEM WHERE ID=1");
-            rs = stat.executeQuery("SELECT BALANCE FROM TRANSACTION");
-            rs.next();
-            System.out.println("The sum is " + rs.getBigDecimal(1));
-
-            rs.close();
+//            stat.execute("INSERT INTO INVOICE VALUES(1, '2016-02-16', null, 0,0,0)");
+//
+//            ResultSet rs = null;
+//            System.out.println("insert: 10 and 19.95 = 29.95");
+//            stat.execute("INSERT INTO ITEM VALUES(1, 'a*', 'a**',1, 10.0,null,null)");
+//            stat.execute("INSERT INTO ITEM VALUES(2, 'b*', 'b**',1, 19.95,null,null)");
+//            rs = stat.executeQuery("SELECT BALANCE FROM TRANSACTION");
+//            rs.next();
+//            System.out.println("The sum is " + rs.getBigDecimal(1));
+//
+//            System.out.println("update: 10 and 20 [was 19.95] = 30.00");
+//            stat.execute("UPDATE ITEM SET AMOUNT=20.0 WHERE ID=2");
+//            rs = stat.executeQuery("SELECT BALANCE FROM TRANSACTION");
+//            rs.next();
+//            System.out.println("The sum is " + rs.getBigDecimal(1));
+//
+//            System.out.println("delete: [10 removed] 20 = 20.00");
+//            stat.execute("DELETE FROM ITEM WHERE ID=1");
+//            rs = stat.executeQuery("SELECT BALANCE FROM TRANSACTION");
+//            rs.next();
+//            System.out.println("The sum is " + rs.getBigDecimal(1));
+//
+//            rs.close();
         }
     }
 
