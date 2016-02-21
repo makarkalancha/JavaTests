@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="H2" id="Project_32899271" html="y" template="Default" database="H2" >
+	<schema name="FINANCE1" catalogname="FINANCE" schemaname="FINANCE1" >
+		<table name="ACCOUNT" >
+			<column name="ID" type="bigint" length="19" decimal="0" jt="-5" mandatory="y" >
+				<defo>(NEXT VALUE FOR FINANCE1.SYSTEM_SEQUENCE_A67FF410_F86F_406D_9991_9034F8C77966)</defo>
+			</column>
+			<column name="ACCOUNT_GROUP_ID" type="bigint" length="19" decimal="0" jt="-5" />
+			<column name="CURRENCY_ID" type="bigint" length="19" decimal="0" jt="-5" />
+			<column name="NAME" type="varchar" length="65" decimal="0" jt="12" mandatory="y" />
+			<column name="DESCRIPTION" type="varchar" length="1024" decimal="0" jt="12" />
+			<column name="INITIAL_BALANCE" type="decimal" length="20" decimal="6" jt="3" >
+				<defo>0.00</defo>
+			</column>
+			<column name="T_CREATEDON" type="timestamp" length="23" decimal="10" jt="93" />
+			<column name="T_CREATEDBY" type="varchar" length="512" decimal="0" jt="12" />
+			<column name="T_UPDATEDON" type="timestamp" length="23" decimal="10" jt="93" />
+			<column name="T_UPDATEDBY" type="varchar" length="512" decimal="0" jt="12" />
+			<index name="CONSTRAINT_E" unique="PRIMARY_KEY" >
+				<column name="ID" />
+			</index>
+			<index name="CONSTRAINT_INDEX_E" unique="NORMAL" >
+				<column name="ACCOUNT_GROUP_ID" />
+			</index>
+			<index name="CONSTRAINT_INDEX_E4" unique="NORMAL" >
+				<column name="CURRENCY_ID" />
+			</index>
+			<fk name="CONSTRAINT_E4" to_schema="FINANCE1" to_table="ACCOUNT_GROUP" delete_action="restrict" update_action="restrict" >
+				<fk_column name="ACCOUNT_GROUP_ID" pk="ID" />
+			</fk>
+			<fk name="CONSTRAINT_E49" to_schema="FINANCE1" to_table="CURRENCY" delete_action="restrict" update_action="restrict" >
+				<fk_column name="CURRENCY_ID" pk="ID" />
+			</fk>
+		</table>
+		<table name="ACCOUNT_GROUP" >
+			<column name="ID" type="bigint" length="19" decimal="0" jt="-5" mandatory="y" >
+				<defo>(NEXT VALUE FOR FINANCE1.SYSTEM_SEQUENCE_6B69C270_FAF1_4339_911D_744557C7E7CF)</defo>
+			</column>
+			<column name="NAME" type="varchar" length="65" decimal="0" jt="12" mandatory="y" />
+			<column name="DESCRIPTION" type="varchar" length="1024" decimal="0" jt="12" />
+			<column name="T_CREATEDON" type="timestamp" length="23" decimal="10" jt="93" />
+			<column name="T_CREATEDBY" type="varchar" length="512" decimal="0" jt="12" />
+			<column name="T_UPDATEDON" type="timestamp" length="23" decimal="10" jt="93" />
+			<column name="T_UPDATEDBY" type="varchar" length="512" decimal="0" jt="12" />
+			<index name="CONSTRAINT_D" unique="PRIMARY_KEY" >
+				<column name="ID" />
+			</index>
+		</table>
+		<table name="CATEGORY" >
+			<column name="ID" type="bigint" length="19" decimal="0" jt="-5" mandatory="y" >
+				<defo>(NEXT VALUE FOR FINANCE1.SYSTEM_SEQUENCE_62D0A2B7_CAFA_4131_9A57_7E0A54B178B2)</defo>
+			</column>
+			<column name="CATEGORY_GROUP_ID" type="bigint" length="19" decimal="0" jt="-5" />
+			<column name="NAME" type="varchar" length="65" decimal="0" jt="12" mandatory="y" />
+			<column name="DESCRIPTION" type="varchar" length="1024" decimal="0" jt="12" />
+			<column name="T_CREATEDON" type="timestamp" length="23" decimal="10" jt="93" />
+			<column name="T_CREATEDBY" type="varchar" length="512" decimal="0" jt="12" />
+			<column name="T_UPDATEDON" type="timestamp" length="23" decimal="10" jt="93" />
+			<column name="T_UPDATEDBY" type="varchar" length="512" decimal="0" jt="12" />
+			<index name="CONSTRAINT_3" unique="PRIMARY_KEY" >
+				<column name="ID" />
+			</index>
+			<index name="CONSTRAINT_INDEX_3" unique="NORMAL" >
+				<column name="CATEGORY_GROUP_ID" />
+			</index>
+			<fk name="CONSTRAINT_31" to_schema="FINANCE1" to_table="CATEGORY_GROUP" delete_action="restrict" update_action="restrict" >
+				<fk_column name="CATEGORY_GROUP_ID" pk="ID" />
+			</fk>
+		</table>
+		<table name="CATEGORY_GROUP" >
+			<column name="ID" type="bigint" length="19" decimal="0" jt="-5" mandatory="y" >
+				<defo>(NEXT VALUE FOR FINANCE1.SYSTEM_SEQUENCE_49E8D557_81C7_4DB1_9852_DF7E453A6566)</defo>
+			</column>
+			<column name="NAME" type="varchar" length="65" decimal="0" jt="12" mandatory="y" />
+			<column name="DESCRIPTION" type="varchar" length="1024" decimal="0" jt="12" />
+			<column name="T_CREATEDON" type="timestamp" length="23" decimal="10" jt="93" />
+			<column name="T_CREATEDBY" type="varchar" length="512" decimal="0" jt="12" />
+			<column name="T_UPDATEDON" type="timestamp" length="23" decimal="10" jt="93" />
+			<column name="T_UPDATEDBY" type="varchar" length="512" decimal="0" jt="12" />
+			<index name="CONSTRAINT_2" unique="PRIMARY_KEY" >
+				<column name="ID" />
+			</index>
+		</table>
+		<table name="CURRENCY" >
+			<column name="ID" type="bigint" length="19" decimal="0" jt="-5" mandatory="y" >
+				<defo>(NEXT VALUE FOR FINANCE1.SYSTEM_SEQUENCE_C4651B95_93B3_41CB_9E42_8AF4ACB145A3)</defo>
+			</column>
+			<column name="CODE" type="varchar" length="12" decimal="0" jt="12" mandatory="y" />
+			<column name="NAME" type="varchar" length="65" decimal="0" jt="12" />
+			<column name="DESCRIPTION" type="varchar" length="1024" decimal="0" jt="12" />
+			<column name="T_CREATEDON" type="timestamp" length="23" decimal="10" jt="93" />
+			<column name="T_CREATEDBY" type="varchar" length="512" decimal="0" jt="12" />
+			<column name="T_UPDATEDON" type="timestamp" length="23" decimal="10" jt="93" />
+			<column name="T_UPDATEDBY" type="varchar" length="512" decimal="0" jt="12" />
+			<index name="CONSTRAINT_5" unique="PRIMARY_KEY" >
+				<column name="ID" />
+			</index>
+		</table>
+		<table name="INVOICE" >
+			<column name="ID" type="bigint" length="19" decimal="0" jt="-5" mandatory="y" >
+				<defo>(NEXT VALUE FOR FINANCE1.SYSTEM_SEQUENCE_15FAD325_858F_478E_900D_375B4275AB90)</defo>
+			</column>
+			<column name="ORGANIZATION_ID" type="bigint" length="19" decimal="0" jt="-5" />
+			<column name="COMMENT" type="varchar" length="512" decimal="0" jt="12" />
+			<column name="CUSTOM1" type="decimal" length="20" decimal="6" jt="3" >
+				<defo>0.00</defo>
+			</column>
+			<column name="CUSTOM2" type="decimal" length="20" decimal="6" jt="3" >
+				<defo>0.00</defo>
+			</column>
+			<column name="BALANCE" type="decimal" length="20" decimal="6" jt="3" >
+				<defo>0.00</defo>
+			</column>
+			<column name="T_CREATEDON" type="timestamp" length="23" decimal="10" jt="93" />
+			<column name="T_CREATEDBY" type="varchar" length="512" decimal="0" jt="12" />
+			<column name="T_UPDATEDON" type="timestamp" length="23" decimal="10" jt="93" />
+			<column name="T_UPDATEDBY" type="varchar" length="512" decimal="0" jt="12" />
+			<index name="CONSTRAINT_9" unique="PRIMARY_KEY" >
+				<column name="ID" />
+			</index>
+			<index name="CONSTRAINT_INDEX_9" unique="NORMAL" >
+				<column name="ORGANIZATION_ID" />
+			</index>
+			<fk name="CONSTRAINT_9F" to_schema="FINANCE1" to_table="ORGANIZATION" delete_action="restrict" update_action="restrict" >
+				<fk_column name="ORGANIZATION_ID" pk="ID" />
+			</fk>
+		</table>
+		<table name="ITEM" >
+			<column name="ID" type="bigint" length="19" decimal="0" jt="-5" mandatory="y" >
+				<defo>(NEXT VALUE FOR FINANCE1.SYSTEM_SEQUENCE_87616FD2_854F_4FC2_8BB2_C39E1426F7E8)</defo>
+			</column>
+			<column name="INVOICE_ID" type="bigint" length="19" decimal="0" jt="-5" />
+			<column name="CATEGORY_ID" type="bigint" length="19" decimal="0" jt="-5" />
+			<column name="TAX_ID" type="bigint" length="19" decimal="0" jt="-5" />
+			<column name="DESCRIPTION1" type="varchar" length="512" decimal="0" jt="12" mandatory="y" />
+			<column name="DESCRIPTION2" type="varchar" length="512" decimal="0" jt="12" />
+			<column name="AMOUNT" type="decimal" length="20" decimal="6" jt="3" >
+				<defo>0.00</defo>
+			</column>
+			<column name="COMMENT" type="varchar" length="512" decimal="0" jt="12" />
+			<index name="CONSTRAINT_22" unique="PRIMARY_KEY" >
+				<column name="ID" />
+			</index>
+			<index name="CONSTRAINT_INDEX_2" unique="NORMAL" >
+				<column name="INVOICE_ID" />
+			</index>
+			<index name="CONSTRAINT_INDEX_22" unique="NORMAL" >
+				<column name="CATEGORY_ID" />
+			</index>
+			<index name="CONSTRAINT_INDEX_227" unique="NORMAL" >
+				<column name="TAX_ID" />
+			</index>
+			<fk name="CONSTRAINT_2273" to_schema="FINANCE1" to_table="CATEGORY" delete_action="restrict" update_action="restrict" >
+				<fk_column name="CATEGORY_ID" pk="ID" />
+			</fk>
+			<fk name="CONSTRAINT_227" to_schema="FINANCE1" to_table="INVOICE" delete_action="restrict" update_action="restrict" >
+				<fk_column name="INVOICE_ID" pk="ID" />
+			</fk>
+			<fk name="CONSTRAINT_22731" to_schema="FINANCE1" to_table="TAX" delete_action="restrict" update_action="restrict" >
+				<fk_column name="TAX_ID" pk="ID" />
+			</fk>
+		</table>
+		<table name="ORGANIZATION" >
+			<column name="ID" type="bigint" length="19" decimal="0" jt="-5" mandatory="y" >
+				<defo>(NEXT VALUE FOR FINANCE1.SYSTEM_SEQUENCE_FF8FC44B_F52A_4B3D_900E_E1E81A1337E7)</defo>
+			</column>
+			<column name="NAME" type="varchar" length="65" decimal="0" jt="12" mandatory="y" />
+			<column name="DESCRIPTION" type="varchar" length="1024" decimal="0" jt="12" />
+			<column name="T_CREATEDON" type="timestamp" length="23" decimal="10" jt="93" />
+			<column name="T_CREATEDBY" type="varchar" length="512" decimal="0" jt="12" />
+			<column name="T_UPDATEDON" type="timestamp" length="23" decimal="10" jt="93" />
+			<column name="T_UPDATEDBY" type="varchar" length="512" decimal="0" jt="12" />
+			<index name="CONSTRAINT_D0" unique="PRIMARY_KEY" >
+				<column name="ID" />
+			</index>
+		</table>
+		<table name="TAX" >
+			<column name="ID" type="bigint" length="19" decimal="0" jt="-5" mandatory="y" >
+				<defo>(NEXT VALUE FOR FINANCE1.SYSTEM_SEQUENCE_B9FEFE9A_7969_4CB6_B86F_73E5D2684CF7)</defo>
+			</column>
+			<column name="NAME" type="varchar" length="100" decimal="0" jt="12" mandatory="y" />
+			<column name="DESCRIPTION" type="varchar" length="512" decimal="0" jt="12" />
+			<column name="FORMULA" type="varchar" length="512" decimal="0" jt="12" />
+			<index name="CONSTRAINT_1" unique="PRIMARY_KEY" >
+				<column name="ID" />
+			</index>
+		</table>
+		<table name="TAX_RATE" >
+			<column name="ID" type="bigint" length="19" decimal="0" jt="-5" mandatory="y" >
+				<defo>(NEXT VALUE FOR FINANCE1.SYSTEM_SEQUENCE_CCC94598_E2A4_4193_A2B5_22E2B3ECAE16)</defo>
+			</column>
+			<column name="TAX_ID" type="bigint" length="19" decimal="0" jt="-5" />
+			<column name="RATE" type="decimal" length="20" decimal="2" jt="3" >
+				<defo>0.00</defo>
+			</column>
+			<column name="DESCRIPTION" type="varchar" length="512" decimal="0" jt="12" />
+			<column name="STARTDATE" type="timestamp" length="23" decimal="10" jt="93" >
+				<defo>&#039;1970-01-01 00:00:00&#039;</defo>
+			</column>
+			<column name="ENDDATE" type="timestamp" length="23" decimal="10" jt="93" >
+				<defo>&#039;2037-01-01 00:00:00&#039;</defo>
+			</column>
+			<index name="CONSTRAINT_1F" unique="PRIMARY_KEY" >
+				<column name="ID" />
+			</index>
+			<index name="CONSTRAINT_INDEX_1" unique="NORMAL" >
+				<column name="TAX_ID" />
+			</index>
+			<fk name="CONSTRAINT_1FE" to_schema="FINANCE1" to_table="TAX" delete_action="restrict" update_action="restrict" >
+				<fk_column name="TAX_ID" pk="ID" />
+			</fk>
+		</table>
+		<table name="TRANSACTION" >
+			<column name="ACCOUNT_ID" type="bigint" length="19" decimal="0" jt="-5" mandatory="y" />
+			<column name="INVOICE_ID" type="bigint" length="19" decimal="0" jt="-5" mandatory="y" />
+			<column name="DATE" type="date" length="8" decimal="0" jt="91" />
+			<column name="DEBIT_AMOUNT" type="decimal" length="20" decimal="6" jt="3" >
+				<defo>0.00</defo>
+			</column>
+			<column name="CREDIT_AMOUNT" type="decimal" length="20" decimal="6" jt="3" >
+				<defo>0.00</defo>
+			</column>
+			<index name="CONSTRAINT_F" unique="PRIMARY_KEY" >
+				<column name="ACCOUNT_ID" />
+				<column name="INVOICE_ID" />
+			</index>
+			<index name="CONSTRAINT_INDEX_F" unique="NORMAL" >
+				<column name="INVOICE_ID" />
+			</index>
+			<fk name="CONSTRAINT_FF" to_schema="FINANCE1" to_table="ACCOUNT" delete_action="restrict" update_action="restrict" >
+				<fk_column name="ACCOUNT_ID" pk="ID" />
+			</fk>
+			<fk name="CONSTRAINT_FFF" to_schema="FINANCE1" to_table="INVOICE" delete_action="restrict" update_action="restrict" >
+				<fk_column name="INVOICE_ID" pk="ID" />
+			</fk>
+		</table>
+		<sequence name="SYSTEM_SEQUENCE_15FAD325_858F_478E_900D_375B4275AB90" start="1" />
+		<sequence name="SYSTEM_SEQUENCE_49E8D557_81C7_4DB1_9852_DF7E453A6566" start="1" />
+		<sequence name="SYSTEM_SEQUENCE_62D0A2B7_CAFA_4131_9A57_7E0A54B178B2" start="1" />
+		<sequence name="SYSTEM_SEQUENCE_6B69C270_FAF1_4339_911D_744557C7E7CF" start="1" />
+		<sequence name="SYSTEM_SEQUENCE_87616FD2_854F_4FC2_8BB2_C39E1426F7E8" start="1" />
+		<sequence name="SYSTEM_SEQUENCE_A67FF410_F86F_406D_9991_9034F8C77966" start="1" />
+		<sequence name="SYSTEM_SEQUENCE_B9FEFE9A_7969_4CB6_B86F_73E5D2684CF7" start="1" />
+		<sequence name="SYSTEM_SEQUENCE_C4651B95_93B3_41CB_9E42_8AF4ACB145A3" start="1" />
+		<sequence name="SYSTEM_SEQUENCE_CCC94598_E2A4_4193_A2B5_22E2B3ECAE16" start="1" />
+		<sequence name="SYSTEM_SEQUENCE_FF8FC44B_F52A_4B3D_900E_E1E81A1337E7" start="1" />
+	</schema>
+	<connector name="H2" database="H2" driver_class="org.h2.Driver" driver_jar="h2-1.4.189.jar" host="localhost" port="-1" user="root" />
+	<layout id="Layout_2ef7a4d8" name="Default" show_relation_columns="y" >
+		<entity schema="FINANCE1" name="CATEGORY" color="c8f5bf" x="195" y="75" />
+		<entity schema="FINANCE1" name="CATEGORY_GROUP" color="c8f5bf" x="45" y="75" />
+		<entity schema="FINANCE1" name="ITEM" color="c8f5bf" x="420" y="165" />
+		<entity schema="FINANCE1" name="TAX" color="bfbff5" x="210" y="300" />
+		<entity schema="FINANCE1" name="TAX_RATE" color="bfbff5" x="75" y="315" />
+		<entity schema="FINANCE1" name="INVOICE" color="f5ddbf" x="585" y="120" />
+		<entity schema="FINANCE1" name="ORGANIZATION" color="f5ddbf" x="510" y="360" />
+		<entity schema="FINANCE1" name="TRANSACTION" color="f5ddbf" x="810" y="120" />
+		<entity schema="FINANCE1" name="ACCOUNT" color="bfd4f5" x="1020" y="45" />
+		<entity schema="FINANCE1" name="CURRENCY" color="bfd4f5" x="960" y="300" />
+		<entity schema="FINANCE1" name="ACCOUNT_GROUP" color="bfd4f5" x="1215" y="45" />
+		<browser id="Browse_341b8c4c" name="ACCOUNT" >
+			<browse_table schema="FINANCE1" entity="ACCOUNT" x="-2147483648" y="-2147483648" width="-2147483648" height="-2147483648" >
+				<browse_table schema="FINANCE1" entity="ACCOUNT_GROUP" fk="CONSTRAINT_E4" x="-2147483648" y="-2147483648" width="-2147483648" height="-2147483648" record_view="y" />
+			</browse_table>
+		</browser>
+	</layout>
+</project>
