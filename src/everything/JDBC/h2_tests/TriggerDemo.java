@@ -15,6 +15,7 @@ public class TriggerDemo {
 //        invoiceTrigger();
         ////impossible to update same table with trigger in h2
         ////use hibernate @PreUpdate and @PrePersist
+        ////https://docs.jboss.org/hibernate/entitymanager/3.5/reference/en/html/listeners.html
         organizationTrigger();
     }
 
