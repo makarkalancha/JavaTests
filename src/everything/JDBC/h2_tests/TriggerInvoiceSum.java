@@ -13,7 +13,7 @@ public class TriggerInvoiceSum implements Trigger{
 
     @Override
     public void close() throws SQLException {
-
+        System.out.println("close");
     }
 
     @Override

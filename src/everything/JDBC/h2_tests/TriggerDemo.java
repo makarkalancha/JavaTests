@@ -12,6 +12,61 @@ import java.sql.Statement;
 public class TriggerDemo {
 
     public static void main(String[] args) throws Exception {
+//        invoiceTrigger();
+        ////impossible to update same table with trigger in h2
+        ////use hibernate @PreUpdate and @PrePersist
+        organizationTrigger();
+    }
+
+    public static void organizationTrigger() throws Exception {
+        String createTriggerName = "ORG_INS_T";
+        String updateTriggerName = "ORG_UPD_T";
+        String deleteTriggerName = "ORG_DEL_T";
+        String triggerName = "CALL \"everything.JDBC.h2_tests.TriggerCreateUpdateTimestamp\" ";
+        String createTrigger = "CREATE TRIGGER " + createTriggerName +
+                " AFTER INSERT ON ORGANIZATION FOR EACH ROW " +
+                triggerName;
+        String updateTrigger = "CREATE TRIGGER " + updateTriggerName +
+                " AFTER UPDATE ON ORGANIZATION FOR EACH ROW " +
+                triggerName;
+        String deleteTrigger = "CREATE TRIGGER " + deleteTriggerName +
+                " AFTER DELETE ON ORGANIZATION FOR EACH ROW " +
+                triggerName;
+        String dropTrigger = "DROP TRIGGER IF EXISTS ";
+
+        try (
+                Connection conn = DriverManager.getConnection(H2DbConstants.DB_CONNECTION1_IFEXISTS, H2DbConstants.DB_USER, H2DbConstants.DB_PASSWORD);
+                Statement stat = conn.createStatement();
+        ) {
+            stat.execute(dropTrigger + createTriggerName);
+            stat.execute(dropTrigger + updateTriggerName);
+            stat.execute(dropTrigger + deleteTriggerName);
+
+//            stat.execute("DELETE FROM ITEM;");
+//            stat.execute("DELETE FROM INVOICE;");
+
+            stat.execute(createTrigger);
+            stat.execute(updateTrigger);
+            stat.execute(deleteTrigger);
+
+            stat.execute("INSERT INTO ORGANIZATION(NAME, DESCRIPTION) VALUES('name','desc')");
+
+            ResultSet id = stat.executeQuery("select @job := scope_identity()");
+            id.next();
+            long idLong = id.getLong(1);
+            System.out.println("id " + idLong);
+
+            ResultSet rs = stat.executeQuery("SELECT * FROM ORGANIZATION where id = "+idLong);
+            rs.next();
+            System.out.println("create " + rs.getTimestamp(4));
+            System.out.println("update " + rs.getTimestamp(5));
+
+
+            rs.close();
+        }
+    }
+
+    public static void invoiceTrigger() throws Exception {
         String createTriggerName = "ITEM_INS_T";
         String updateTriggerName = "ITEM_UPD_T";
         String deleteTriggerName = "ITEM_DEL_T";

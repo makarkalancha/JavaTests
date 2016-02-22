@@ -6,7 +6,7 @@ package everything.JDBC.h2_tests;
 public class H2DbConstants {
     public static final String DB_DRIVER = "org.h2.Driver";
     public static final String DB_DIR = "~";
-    public static final String DB_SCHEMA = "FINANCE";
+    public static final String DB_SCHEMA = "FINANCE1";
     public static final String DB_NAME = "test";
     public static final String DB_CONNECTION = "jdbc:h2:"+DB_DIR+"/"+DB_NAME+";IFEXISTS=TRUE;SCHEMA="+DB_SCHEMA;
     public static final String DB_DIR1 = "~/smart_finance";
