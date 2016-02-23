@@ -17,6 +17,9 @@ T_CREATEDON TIMESTAMP,
 T_UPDATEDON TIMESTAMP AS NOW()
 );
 
+--@Entity
+--@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+--@DiscriminatorColumn(name = "TYPE", discriminatorType = DiscriminatorType.CHAR, length = 1)
 CREATE TABLE FINANCE1.ACCOUNT_GROUP(
 ID identity,
 TYPE CHAR(1) NOT NULL,--discriminator: CREDIT/DEBIT account group
@@ -26,6 +29,9 @@ T_CREATEDON TIMESTAMP,
 T_UPDATEDON TIMESTAMP AS NOW()
 );
 
+--@Entity
+--@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+--@DiscriminatorColumn(name = "ACCOUNT_GROUP_TYPE", discriminatorType = DiscriminatorType.CHAR, length = 1)
 CREATE TABLE FINANCE1.ACCOUNT(
 ID identity,
 ACCOUNT_GROUP_ID BIGINT,
@@ -72,6 +78,9 @@ PRIMARY KEY (ACCOUNT_ID,DATE),
 FOREIGN KEY (ACCOUNT_ID) REFERENCES ACCOUNT(ID)
 );
 
+--@Entity
+--@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+--@DiscriminatorColumn(name = "TYPE", discriminatorType = DiscriminatorType.CHAR, length = 1)
 CREATE TABLE FINANCE1.CATEGORY_GROUP(
 ID identity,
 TYPE CHAR(1) NOT NULL,--discriminator: CREDIT/DEBIT category group, i.e. expenses/income
@@ -81,6 +90,9 @@ T_CREATEDON TIMESTAMP,
 T_UPDATEDON TIMESTAMP AS NOW()
 );
 
+--@Entity
+--@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+--@DiscriminatorColumn(name = "CATEGORY_GROUP_TYPE", discriminatorType = DiscriminatorType.CHAR, length = 1)
 CREATE TABLE FINANCE1.CATEGORY(
 ID identity,
 CATEGORY_GROUP_ID BIGINT,
