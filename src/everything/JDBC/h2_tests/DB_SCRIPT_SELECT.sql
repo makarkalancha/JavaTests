@@ -1,5 +1,6 @@
 --http://www.h2database.com/html/tutorial.html#creating_new_databases
 --http://www.h2database.com/html/tutorial.html#connection_pool
+--http://www.h2database.com/javadoc/org/h2/jdbcx/JdbcConnectionPool.html
 --For H2, it is about twice as faster to get a connection from the built-in connection pool than to get one using DriverManager.getConnection()
 
 

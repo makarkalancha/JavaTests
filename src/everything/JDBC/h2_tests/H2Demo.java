@@ -16,10 +16,10 @@ import org.h2.tools.DeleteDbFiles;
 //java -jar D:\SRC\Java_work_dir\JavaTests\lib\h2-1.4.191.jar
 public class H2Demo {
 
+    private static final JdbcConnectionPool pool =
+            JdbcConnectionPool.create(H2DbConstants.DB_CONNECTION1, H2DbConstants.DB_USER, H2DbConstants.DB_PASSWORD);
 
-    private static JdbcConnectionPool pool = null;
-
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException{
         try{
             // delete the H2 database named 'test' in the user home directory
 //            DeleteDbFiles.execute(DB_DIR, DB_NAME, true);
@@ -29,6 +29,8 @@ public class H2Demo {
             insertWithPreparedStatement();
         }catch (SQLException e){
             e.printStackTrace();
+        }finally {
+            closeDBConnection();
         }
     }
 
@@ -38,10 +40,20 @@ public class H2Demo {
 //        return DriverManager.getConnection(H2DbConstants.DB_CONNECTION1, H2DbConstants.DB_USER, H2DbConstants.DB_PASSWORD);
 //http://www.h2database.com/html/tutorial.html#creating_new_databases
 //http://www.h2database.com/html/tutorial.html#connection_pool
+//http://www.h2database.com/javadoc/org/h2/jdbcx/JdbcConnectionPool.html
 //For H2, it is about twice as faster to get a connection from the built-in connection pool than to get one using DriverManager.getConnection()
 //Using a Connection Pool
-        JdbcConnectionPool pool = JdbcConnectionPool.create(H2DbConstants.DB_CONNECTION1, H2DbConstants.DB_USER, H2DbConstants.DB_PASSWORD);
         return pool.getConnection();
+    }
+
+    private static void closeDBConnection() throws SQLException {
+//        return DriverManager.getConnection(H2DbConstants.DB_CONNECTION1, H2DbConstants.DB_USER, H2DbConstants.DB_PASSWORD);
+//http://www.h2database.com/html/tutorial.html#creating_new_databases
+//http://www.h2database.com/html/tutorial.html#connection_pool
+//http://www.h2database.com/javadoc/org/h2/jdbcx/JdbcConnectionPool.html
+//For H2, it is about twice as faster to get a connection from the built-in connection pool than to get one using DriverManager.getConnection()
+//Using a Connection Pool
+        pool.dispose();
     }
 
     private static void insertWithPreparedStatement() throws SQLException {
