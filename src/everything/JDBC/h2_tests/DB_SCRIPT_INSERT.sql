@@ -8,35 +8,21 @@ select @wife := scope_identity();
 INSERT INTO FAMILY_MEMBER (NAME,DESCRIPTION) VALUES('the Flintstones','family');
 select @family := scope_identity();
 
+INSERT INTO ORGANIZATION (NAME,DESCRIPTION) VALUES('job','my job');
+select @job := scope_identity();
+INSERT INTO ORGANIZATION (NAME,DESCRIPTION) VALUES('walmart','shop');
+select @walmart := scope_identity();
+INSERT INTO ORGANIZATION (NAME,DESCRIPTION) VALUES('rbc','bank');
+select @rbc := scope_identity();
+INSERT INTO ORGANIZATION (NAME,DESCRIPTION) VALUES('sami fruits','shop');
+select @sami_fruits := scope_identity();
+
 INSERT INTO CURRENCY (CODE, NAME, DESCRIPTION) VALUES('CAD','canadian dollar','canadian dollar desc');
 select @cad := scope_identity();
 INSERT INTO CURRENCY (CODE, NAME, DESCRIPTION) VALUES('USD','american dollar','american dollar desc');
 select @usd := scope_identity();
 INSERT INTO CURRENCY (CODE, NAME, DESCRIPTION) VALUES('MDL','moldavian lei','moldavian lei desc');
 select @mdl := scope_identity();
-
-INSERT INTO ACCOUNT_GROUP (TYPE, NAME, DESCRIPTION) VALUES('D', 'cash', 'money in wallet');
-select @cash := scope_identity();
-INSERT INTO ACCOUNT_GROUP (TYPE, NAME, DESCRIPTION) VALUES('D', 'bank account', 'money on the bank account');
-select @bank_acc := scope_identity();
-INSERT INTO ACCOUNT_GROUP (TYPE, NAME, DESCRIPTION) VALUES('C', 'credit card', 'credit cards');
-select @credit_card := scope_identity();
-
-INSERT INTO ACCOUNT (ACCOUNT_GROUP_ID, ACCOUNT_GROUP_TYPE, CURRENCY_ID, NAME, DESCRIPTION, INITIAL_BALANCE) VALUES(@cash,'D',@cad,'cash CAD','money in wallet cad', 100);
-select @cash_cad := scope_identity();
-INSERT INTO ACCOUNT (ACCOUNT_GROUP_ID, ACCOUNT_GROUP_TYPE, CURRENCY_ID, NAME, DESCRIPTION, INITIAL_BALANCE) VALUES(@cash,'D',@usd,'cash USD','money in wallet usd', 100);
-select @cash_usd := scope_identity();
-INSERT INTO ACCOUNT (ACCOUNT_GROUP_ID, ACCOUNT_GROUP_TYPE, CURRENCY_ID, NAME, DESCRIPTION, INITIAL_BALANCE,ACC_LIMIT) VALUES(@credit_card,'C',@cad,'visa 1234 CAD','credit card ???initial balance is a limit??', 0, 500);
-select @visa_1234_cad := scope_identity();
-INSERT INTO ACCOUNT (ACCOUNT_GROUP_ID, ACCOUNT_GROUP_TYPE, CURRENCY_ID, NAME, DESCRIPTION, INITIAL_BALANCE,ACC_LIMIT) VALUES(@credit_card,'C',@cad,'mastercard 4321 CAD','credit card ???initial balance is a limit??', 0, 500);
-select @mastercard_4321_cad := scope_identity();
-INSERT INTO ACCOUNT (ACCOUNT_GROUP_ID, ACCOUNT_GROUP_TYPE, CURRENCY_ID, NAME, DESCRIPTION, INITIAL_BALANCE,ACC_LIMIT) VALUES(@credit_card,'C',@usd,'american express 5678 USD','credit card ???initial balance is a limit??', 0, 500);
-select @amex_5678_usd := scope_identity();
-
-INSERT INTO BILL_COIN_AMT(ACCOUNT_ID,DATE,AMT_CENT1,AMT_CENT5,AMT_CENT10,AMT_CENT25,AMT_DOLLAR1,AMT_DOLLAR2,AMT_DOLLAR5,AMT_DOLLAR10,AMT_DOLLAR20,AMT_DOLLAR50,AMT_DOLLAR100)
-VALUES(@cash_cad,'2016-02-03',0,0,0,0,0,0,0,0,0,0,1);
-
-INSERT INTO ACCOUNT_BALANCE(ACCOUNT_ID, DATE, BALANCE) VALUES(@cash_cad,'2016-02-03',100);
 
 INSERT INTO CATEGORY_GROUP (TYPE, NAME, DESCRIPTION) VALUES('D', 'доходы', 'income');
 select @income := scope_identity();
@@ -54,15 +40,6 @@ select @clothes := scope_identity();
 INSERT INTO CATEGORY(CATEGORY_GROUP_ID, CATEGORY_GROUP_TYPE, NAME, DESCRIPTION) VALUES(@credit_exp,'C', 'вернул кредит','credit return');
 select @credit_return := scope_identity();
 
-INSERT INTO ORGANIZATION (NAME,DESCRIPTION) VALUES('job','my job');
-select @job := scope_identity();
-INSERT INTO ORGANIZATION (NAME,DESCRIPTION) VALUES('walmart','shop');
-select @walmart := scope_identity();
-INSERT INTO ORGANIZATION (NAME,DESCRIPTION) VALUES('rbc','bank');
-select @rbc := scope_identity();
-INSERT INTO ORGANIZATION (NAME,DESCRIPTION) VALUES('sami fruits','shop');
-select @sami_fruits := scope_identity();
-
 INSERT INTO TAX (NAME,DESCRIPTION) VALUES('GST/TPS','The goods and services tax / La taxe sur les produits et services');
 select @gst_tps := scope_identity();
 INSERT INTO TAX_RATE (TAX_ID,RATE,DESCRIPTION,STARTDATE,ENDDATE) VALUES(@gst_tps,5,null,default,default);
@@ -77,6 +54,46 @@ INSERT INTO TAX (NAME,DESCRIPTION) VALUES('no tax','no tax');
 select @no_tax := scope_identity();
 INSERT INTO TAX_RATE (TAX_ID,RATE,DESCRIPTION,STARTDATE,ENDDATE) VALUES(@no_tax,default, null,default,default);
 select @no_tax0 := scope_identity();
+
+INSERT INTO ACCOUNT_GROUP (TYPE, NAME, DESCRIPTION) VALUES('D', 'cash', 'money in wallet');
+select @cash := scope_identity();
+INSERT INTO ACCOUNT_GROUP (TYPE, NAME, DESCRIPTION) VALUES('D', 'bank account', 'money on the bank account');
+select @bank_acc := scope_identity();
+INSERT INTO ACCOUNT_GROUP (TYPE, NAME, DESCRIPTION) VALUES('C', 'credit card', 'credit cards');
+select @credit_card := scope_identity();
+
+select @init_bal_cash_cad := 100;
+INSERT INTO ACCOUNT (ACCOUNT_GROUP_ID, ACCOUNT_GROUP_TYPE, CURRENCY_ID, NAME, DESCRIPTION, INITIAL_BALANCE) VALUES(@cash,'D',@cad,'cash CAD','money in wallet cad', @init_bal_cash_cad);
+select @cash_cad := scope_identity();
+
+INSERT INTO INVOICE (ORGANIZATION_ID, COMMENT) VALUES(@job,'INITIAL CASH CAD BALANCE');
+select @inv_init_bal_cad := scope_identity();
+INSERT INTO ITEM (INVOICE_ID, CATEGORY_ID, TAX_ID, FAMILY_MEMBER_ID, DESCRIPTION1, DESCRIPTION2, AMOUNT, COMMENT) VALUES(@inv_init_bal_cad, @salary, @no_tax, @husband,'INITIAL CASH CAD BALANCE','INITIAL CASH CAD BALANCE',@init_bal_cash_cad,'INITIAL BALANCE CAD comm');
+UPDATE INVOICE SET BALANCE = @init_bal_cash_cad WHERE ID = @inv_init_bal;
+INSERT INTO TRANSACTION (ACCOUNT_ID, ACCOUNT_GROUP_TYPE, INVOICE_ID, DATE, DEBIT_AMOUNT, CREDIT_AMOUNT, COMMENT) VALUES(@cash_cad,'D',@inv_init_bal_cad,'2016-01-31',@init_bal_cash_cad,DEFAULT,'trans comm');
+
+select @init_bal_cash_usd := 100;
+INSERT INTO ACCOUNT (ACCOUNT_GROUP_ID, ACCOUNT_GROUP_TYPE, CURRENCY_ID, NAME, DESCRIPTION, INITIAL_BALANCE) VALUES(@cash,'D',@usd,'cash USD','money in wallet usd', @init_bal_cash_usd);
+select @cash_usd := scope_identity();
+
+INSERT INTO INVOICE (ORGANIZATION_ID, COMMENT) VALUES(@job,'INITIAL CASH USD BALANCE');
+select @inv_init_bal_usd := scope_identity();
+INSERT INTO ITEM (INVOICE_ID, CATEGORY_ID, TAX_ID, FAMILY_MEMBER_ID, DESCRIPTION1, DESCRIPTION2, AMOUNT, COMMENT) VALUES(@inv_init_bal_usd, @salary, @no_tax, @husband,'INITIAL CASH USD BALANCE','INITIAL CASH USD BALANCE',@init_bal_cash_usd,'INITIAL BALANCE USD comm');
+UPDATE INVOICE SET BALANCE = @init_bal_cash_usd WHERE ID = @inv_init_bal_usd;
+INSERT INTO TRANSACTION (ACCOUNT_ID, ACCOUNT_GROUP_TYPE, INVOICE_ID, DATE, DEBIT_AMOUNT, CREDIT_AMOUNT, COMMENT) VALUES(@cash_usd,'D',@inv_init_bal_usd,'2016-01-30',@init_bal_cash_usd,DEFAULT,'trans comm');
+
+
+INSERT INTO ACCOUNT (ACCOUNT_GROUP_ID, ACCOUNT_GROUP_TYPE, CURRENCY_ID, NAME, DESCRIPTION, INITIAL_BALANCE,ACC_LIMIT) VALUES(@credit_card,'C',@cad,'visa 1234 CAD','credit card ???initial balance is a limit??', 0, 500);
+select @visa_1234_cad := scope_identity();
+INSERT INTO ACCOUNT (ACCOUNT_GROUP_ID, ACCOUNT_GROUP_TYPE, CURRENCY_ID, NAME, DESCRIPTION, INITIAL_BALANCE,ACC_LIMIT) VALUES(@credit_card,'C',@cad,'mastercard 4321 CAD','credit card ???initial balance is a limit??', 0, 500);
+select @mastercard_4321_cad := scope_identity();
+INSERT INTO ACCOUNT (ACCOUNT_GROUP_ID, ACCOUNT_GROUP_TYPE, CURRENCY_ID, NAME, DESCRIPTION, INITIAL_BALANCE,ACC_LIMIT) VALUES(@credit_card,'C',@usd,'american express 5678 USD','credit card ???initial balance is a limit??', 0, 500);
+select @amex_5678_usd := scope_identity();
+
+INSERT INTO BILL_COIN_AMT(ACCOUNT_ID,DATE,AMT_CENT1,AMT_CENT5,AMT_CENT10,AMT_CENT25,AMT_DOLLAR1,AMT_DOLLAR2,AMT_DOLLAR5,AMT_DOLLAR10,AMT_DOLLAR20,AMT_DOLLAR50,AMT_DOLLAR100)
+VALUES(@cash_cad,'2016-02-03',0,0,0,0,0,0,0,0,0,0,1);
+
+INSERT INTO ACCOUNT_BALANCE(ACCOUNT_ID, DATE, BALANCE) VALUES(@cash_cad,'2016-02-03',100);
 
 INSERT INTO INVOICE (ORGANIZATION_ID, COMMENT) VALUES(@job,'SALARY comment');
 select @inv1 := scope_identity();
