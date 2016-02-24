@@ -1,7 +1,6 @@
 package everything.JDBC.h2_tests;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -36,10 +35,11 @@ public class H2Demo {
 
 
     private static Connection getDBConnection() throws SQLException {
-        return DriverManager.getConnection(H2DbConstants.DB_CONNECTION1, H2DbConstants.DB_USER, H2DbConstants.DB_PASSWORD);
+//        return DriverManager.getConnection(H2DbConstants.DB_CONNECTION1, H2DbConstants.DB_USER, H2DbConstants.DB_PASSWORD);
 //http://www.h2database.com/html/tutorial.html#creating_new_databases
 //Using a Connection Pool
-//        return pool = JdbcConnectionPool.create(DB_CONNECTION, DB_USER, DB_PASSWORD);
+        JdbcConnectionPool pool = JdbcConnectionPool.create(H2DbConstants.DB_CONNECTION1, H2DbConstants.DB_USER, H2DbConstants.DB_PASSWORD);
+        return pool.getConnection();
     }
 
     private static void insertWithPreparedStatement() throws SQLException {
