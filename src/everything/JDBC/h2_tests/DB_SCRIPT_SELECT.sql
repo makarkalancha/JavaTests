@@ -1,3 +1,8 @@
+--http://www.h2database.com/html/tutorial.html#creating_new_databases
+--http://www.h2database.com/html/tutorial.html#connection_pool
+--For H2, it is about twice as faster to get a connection from the built-in connection pool than to get one using DriverManager.getConnection()
+
+
 --balance per account
 SELECT A.ID,A.NAME,A.ACCOUNT_GROUP_TYPE,SUM(T.DEBIT_AMOUNT) ,SUM(T.CREDIT_AMOUNT),SUM(T.DEBIT_AMOUNT)-SUM(T.CREDIT_AMOUNT) BALANCE FROM FINANCE.TRANSACTION T join FINANCE.ACCOUNT A ON T.ACCOUNT_ID = A.ID GROUP BY T.ACCOUNT_ID
 --reverse: calculate with credit/debit in mind

@@ -37,6 +37,8 @@ public class H2Demo {
     private static Connection getDBConnection() throws SQLException {
 //        return DriverManager.getConnection(H2DbConstants.DB_CONNECTION1, H2DbConstants.DB_USER, H2DbConstants.DB_PASSWORD);
 //http://www.h2database.com/html/tutorial.html#creating_new_databases
+//http://www.h2database.com/html/tutorial.html#connection_pool
+//For H2, it is about twice as faster to get a connection from the built-in connection pool than to get one using DriverManager.getConnection()
 //Using a Connection Pool
         JdbcConnectionPool pool = JdbcConnectionPool.create(H2DbConstants.DB_CONNECTION1, H2DbConstants.DB_USER, H2DbConstants.DB_PASSWORD);
         return pool.getConnection();
