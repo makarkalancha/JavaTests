@@ -11,6 +11,8 @@ import java.util.Locale;
  * Time: 19:22
  */
 public class LocaleDemo {
+
+    //vm option: -Djava.ext.dirs=lib
     public static void main(String[] args) {
         System.out.println(System.getProperty("java.locale.providers"));
         System.setProperty("java.locale.providers", "SPI,JRE");
