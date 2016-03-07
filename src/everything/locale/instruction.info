@@ -1,0 +1,55 @@
+https://docs.oracle.com/javase/8/docs/api/java/util/spi/LocaleServiceProvider.html
+http://docs.oracle.com/javase/tutorial/i18n/serviceproviders/resourcebundlecontrolprovider.html
+
+Locale-Sensitive Services SPI
+(https://docs.oracle.com/javase/tutorial/i18n/locale/services.html)
+java.util.spi
+CurrencyNameProvider
+LocaleServiceProvider
+TimeZoneNameProvider
+CalendarDataProvider
+
+java.text.spi
+BreakIteratorProvider
+CollatorProvider
+DateFormatProvider
+DateFormatSymbolsProvider
+DecimalFormatSymbolsProvider
+NumberFormatProvider
+-extend these classes and package them:
+    META-INF
+        services
+            java.util.spi.ResourceBundleControlProvider
+    rbcp
+        PropertiesResourceBundleControl.class
+        PropertiesResourceBundleControlProvider.class
+        XMLResourceBundleControl.class
+        XMLResourceBundleControlProvider.class
+    resources
+        RBControl.properties
+        RBControl_zh.properties
+        RBControl_zh_CN.properties
+        RBControl_zh_HK.properties
+        RBControl_zh_TW.properties
+        XmlRB.xml
+        XmlRB_ja.xml
+----intellij:
+-packing:
+1)project structure->artifacts->+->jar->empty
+2)name it, for example "mylocales"
+3)use existing manifest.mf (optional)
+4)click on folder 'meta-inf' (create one, if it doesn't exist)->create directory->name it 'services'
+5)click on folder 'services'->'+'->file->choose 'java.util.spi.ResourceBundleControlProvider'
+-name of the file is a full name of the extended class
+6)click on jar 'mylocales'->'+'->module output
+7)you may change 'output directory' and check 'build on make'
+
+-usage:
+1)put 'mylocales.jar' in folder 'lib'
+2)edit configuration->vm options "-Djava.ext.dirs=lib"
+-D is an important switch that allows you to set environment properties. (http://www.coderanch.com/t/178539/java-OCAJ/certification/java-command-line-option-good)
+
+
+https://docs.oracle.com/javase/8/docs/technotes/guides/intl/enhancements.8.html
+-HOST represents the current user's customization of the underlying operating system's settings. It works only with the user's default locale, and the customizable settings may vary depending on the OS, but primarily Date, Time, Number, and Currency formats are supported.
+
