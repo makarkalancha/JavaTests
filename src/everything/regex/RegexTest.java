@@ -1,14 +1,6 @@
-package everything;
+package everything.regex;
 
-import com.sun.media.sound.SoftTuning;
-import com.sun.org.apache.xpath.internal.SourceTree;
-
-import javax.sound.midi.Soundbank;
-import java.io.File;
-import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
