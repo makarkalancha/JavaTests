@@ -1,15 +1,9 @@
-package everything;
+package everything.json_utils;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream;
-
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -23,7 +17,7 @@ public class GsonTest {
     private Path file_p = Paths.get("D:\\Tasks\\!_archive\\011_573_rsna_speaker\\json_test.js");
 
     public static void main(String [] args){
-//        everything.GsonTest g = new everything.GsonTest();
+//        everything.json_utils.GsonTest g = new everything.json_utils.GsonTest();
 //        String json = "";
 //        BufferedReader br = null;
 //        try{
@@ -44,14 +38,14 @@ public class GsonTest {
 //            e.printStackTrace();
 //        }
 //
-//        everything.GsonTest.SomeData someData = g._gson.fromJson(json, everything.GsonTest.SomeData.class);
+//        everything.json_utils.GsonTest.SomeData someData = g._gson.fromJson(json, everything.json_utils.GsonTest.SomeData.class);
 //        System.out.println(someData);
 //
 
         String transform = "{\"image_resize\":{\"width\":170}}";
         System.out.println(transform);
 
-        Gson gson = new Gson();
+//        Gson gson = new Gson();
         JsonParser jsonParser = new JsonParser();
         JsonElement jsonElement = jsonParser.parse(transform);
 //        JsonObject jsonObject  = (JsonObject) jsonParser.parse(transform);
