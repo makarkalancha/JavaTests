@@ -149,51 +149,44 @@ public class WorkerAndTaskExample extends Application {
             startButton = new Button("Start");
             cancelButton = new Button("Cancel");
             exceptionButton = new Button("Exception");
-            final ReadOnlyObjectProperty<Worker.State> stateProperty =
-                    model.worker.stateProperty();
+            final ReadOnlyObjectProperty<Worker.State> stateProperty = model.worker.stateProperty();
             progressBar.progressProperty().bind(model.worker.progressProperty());
-            title.textProperty().bind(
-                    model.worker.titleProperty());
-            message.textProperty().bind(
-                    model.worker.messageProperty());
-            running.textProperty().bind(
-                    Bindings.format("%s", model.worker.runningProperty()));
-            state.textProperty().bind(
-                    Bindings.format("%s", stateProperty));
-            totalWork.textProperty().bind(
-                    model.worker.totalWorkProperty().asString());
-            workDone.textProperty().bind(
-                    model.worker.workDoneProperty().asString());
-            progress.textProperty().bind(
-                    Bindings.format("%5.2f%%", model.worker.progressProperty().multiply(100)));
-            value.textProperty().bind(
-                    model.worker.valueProperty());
+            title.textProperty().bind(model.worker.titleProperty());
+            message.textProperty().bind(model.worker.messageProperty());
+            running.textProperty().bind(Bindings.format("%s", model.worker.runningProperty()));
+            state.textProperty().bind(Bindings.format("%s", stateProperty));
+            totalWork.textProperty().bind(model.worker.totalWorkProperty().asString());
+            workDone.textProperty().bind(model.worker.workDoneProperty().asString());
+            progress.textProperty().bind(Bindings.format("%5.2f%%", model.worker.progressProperty().multiply(100)));
+            value.textProperty().bind(model.worker.valueProperty());
+
             exception.textProperty().bind(Bindings.createStringBinding(() -> {
                 final Throwable exception = model.worker.getException();
                 if (exception == null) return "";
                 return exception.getMessage();
             }, model.worker.exceptionProperty()));
-            startButton.disableProperty().bind(
-                    stateProperty.isNotEqualTo(Worker.State.READY));
-            cancelButton.disableProperty().bind(
-                    stateProperty.isNotEqualTo(Worker.State.RUNNING));
-            exceptionButton.disableProperty().bind(
-                    stateProperty.isNotEqualTo(Worker.State.RUNNING));
+
+            startButton.disableProperty().bind(stateProperty.isNotEqualTo(Worker.State.READY));
+            cancelButton.disableProperty().bind(stateProperty.isNotEqualTo(Worker.State.RUNNING));
+            exceptionButton.disableProperty().bind(stateProperty.isNotEqualTo(Worker.State.RUNNING));
+
             HBox topPane = new HBox(10, progressBar);
             topPane.setAlignment(Pos.CENTER);
             topPane.setPadding(new Insets(10, 10, 10, 10));
+
             ColumnConstraints constraints1 = new ColumnConstraints();
             constraints1.setHalignment(HPos.CENTER);
             constraints1.setMinWidth(65);
+
             ColumnConstraints constraints2 = new ColumnConstraints();
             constraints2.setHalignment(HPos.LEFT);
             constraints2.setMinWidth(200);
+
             GridPane centerPane = new GridPane();
             centerPane.setHgap(10);
             centerPane.setVgap(10);
             centerPane.setPadding(new Insets(10, 10, 10, 10));
-            centerPane.getColumnConstraints()
-                    .addAll(constraints1, constraints2);
+            centerPane.getColumnConstraints().addAll(constraints1, constraints2);
             centerPane.add(new Label("Title:"), 0, 0);
             centerPane.add(new Label("Message:"), 0, 1);
             centerPane.add(new Label("Running:"), 0, 2);
@@ -212,10 +205,12 @@ public class WorkerAndTaskExample extends Application {
             centerPane.add(progress, 1, 6);
             centerPane.add(value, 1, 7);
             centerPane.add(exception, 1, 8);
+
             HBox buttonPane = new HBox(10,
                     startButton, cancelButton, exceptionButton);
             buttonPane.setPadding(new Insets(10, 10, 10, 10));
             buttonPane.setAlignment(Pos.CENTER);
+
             BorderPane root = new BorderPane(centerPane,
                     topPane, null, buttonPane, null);
             scene = new Scene(root);
