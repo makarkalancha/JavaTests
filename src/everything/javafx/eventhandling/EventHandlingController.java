@@ -13,6 +13,9 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.util.StringConverter;
 
+import java.util.Deque;
+import java.util.LinkedList;
+
 /**
  * View-Controller for the person table.
  * 
@@ -20,7 +23,7 @@ import javafx.util.StringConverter;
  */
 public class EventHandlingController {
 
-
+    Deque<EventCommand> history = new LinkedList<>();
 
     @FXML
     private Button undoButton;
