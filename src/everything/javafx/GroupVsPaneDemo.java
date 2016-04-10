@@ -16,6 +16,16 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
+
+//http://stackoverflow.com/questions/30901185/difference-between-pane-and-group
+/*
+A Group is not resizable (meaning that its size is not managed by its parent in the scene graph),
+and takes on the union of the bounds of its child nodes. (So, in other words, the local bounds of a
+Group will be the smallest rectangle containing the bounds of all the child nodes). If it is larger than
+the space it is allocated in its parent, it will be clipped.
+
+By contrast, a Pane is resizable, so its size is set by its parent, which essentially determine its bounds.
+ */
 public class GroupVsPaneDemo extends Application {
 
     @Override
