@@ -222,7 +222,7 @@ public class RegexTest {
         // !
         String bold = "hello <b>world</b>, and <b>you</b>!";
         String separatorPattern = "\\.*<b>\\.+</b>\\.*";
-        String[] strings = bold.split(separatorPattern)
+        String[] strings = bold.split(separatorPattern);
     }
 
     public static String getDatabaseUrl(String edition){
