@@ -17,6 +17,6 @@ public class TextFieldCommand implements EventCommand {
 
     @Override
     public void execute() {
-        changeListener.changed();
+//        changeListener.changed();
     }
 }

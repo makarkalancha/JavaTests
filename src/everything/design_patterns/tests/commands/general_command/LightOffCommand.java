@@ -1,9 +1,11 @@
-package everything.design_patterns.tests.command;
+package everything.design_patterns.tests.commands.general_command;
+
+import everything.design_patterns.tests.commands.Light;
 
 /**
  * Created by mcalancea on 2016-04-11.
  */
-public class LightOffCommand implements Command{
+public class LightOffCommand implements GeneralCommand{
     private final Light light;
 
     public LightOffCommand(Light l){
