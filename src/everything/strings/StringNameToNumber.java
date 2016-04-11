@@ -6,7 +6,7 @@ package everything.strings;
 public class StringNameToNumber {
 
     /**
-     * @param args the command line arguments
+     * @param args the general_command line arguments
      */
     public static void main(String[] args) {
 //        String[] stringArray = {"A", "a", "b", "c", "d"};
