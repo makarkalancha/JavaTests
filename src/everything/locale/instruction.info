@@ -47,7 +47,7 @@ NumberFormatProvider
 -usage:
 1)put 'mylocales.jar' in folder 'lib'
 2)edit configuration->vm options "-Djava.ext.dirs=lib"
--D is an important switch that allows you to set environment properties. (http://www.coderanch.com/t/178539/java-OCAJ/certification/java-command-line-option-good)
+-D is an important switch that allows you to set environment properties. (http://www.coderanch.com/t/178539/java-OCAJ/certification/java-generalCommand-line-option-good)
 
 
 https://docs.oracle.com/javase/8/docs/technotes/guides/intl/enhancements.8.html
