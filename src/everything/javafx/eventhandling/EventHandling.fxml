@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import java.lang.*?>
 <?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane minWidth="315.0" prefHeight="307.0" prefWidth="421.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="everything.javafx.eventhandling.EventHandlingController">
+<AnchorPane minWidth="315.0" prefHeight="382.0" prefWidth="421.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="everything.javafx.eventhandling.EventHandlingController">
   <children>
     <VBox id="VBox" alignment="CENTER" layoutX="14.0" layoutY="17.0" spacing="5.0">
       <children>
-        <Button fx:id="undoButton" mnemonicParsing="false" prefWidth="-1.0" text="UNDO" VBox.vgrow="SOMETIMES" />
+            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="undoButton" mnemonicParsing="false" prefWidth="-1.0" text="UNDO" VBox.vgrow="SOMETIMES">
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="redoButton" mnemonicParsing="false" text="REDO" VBox.vgrow="SOMETIMES" />
+               </children>
+            </HBox>
         <Button fx:id="myButton" mnemonicParsing="false" prefWidth="-1.0" text="Button" VBox.vgrow="SOMETIMES" />
         <CheckBox fx:id="myCheckBox" mnemonicParsing="false" text="CheckBox" />
         <ComboBox fx:id="myComboBox">
@@ -26,8 +36,8 @@
         <TextField fx:id="myTextField" prefWidth="168.0" />
       </children>
     </VBox>
-    <ListView fx:id="myListView" layoutX="212.0" layoutY="17.0" prefHeight="154.0" prefWidth="196.0" />
-    <TextArea fx:id="outputTextArea" layoutX="13.0" layoutY="194.0" prefHeight="99.0" prefWidth="395.0" wrapText="true" />
-    <Separator layoutX="14.0" layoutY="182.0" prefWidth="395.0" />
+    <ListView fx:id="myListView" layoutX="212.0" layoutY="17.0" prefHeight="184.0" prefWidth="196.0" />
+    <TextArea fx:id="outputTextArea" layoutX="15.0" layoutY="220.0" prefHeight="154.0" prefWidth="395.0" wrapText="true" />
+    <Separator layoutX="15.0" layoutY="207.0" prefHeight="14.0" prefWidth="395.0" />
   </children>
 </AnchorPane>

@@ -1,4 +1,6 @@
 package everything.javafx.eventhandling;
+import everything.javafx.eventhandling.memento.CheckBoxStateMemento;
+import everything.javafx.eventhandling.memento.TextFieldStateMemento;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -13,20 +15,20 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.util.StringConverter;
 
-import java.util.Deque;
-import java.util.LinkedList;
-
 /**
  * View-Controller for the person table.
  * 
  * @author Marco Jakob
  */
-public class EventHandlingController {
+public class EventHandlingController{
 
-    Deque<EventCommand> history = new LinkedList<>();
+	UndoCakeTaker cakeTaker = new UndoCakeTaker();
 
     @FXML
     private Button undoButton;
+
+    @FXML
+    private Button redoButton;
 
 	@FXML
 	private Button myButton;
@@ -78,7 +80,15 @@ public class EventHandlingController {
 	 */
 	@FXML
 	private void initialize() {
-		// Handle Button event.
+        undoButton.setOnAction((event) -> {
+            cakeTaker.undoState();
+        });
+
+        redoButton.setOnAction((event) -> {
+            cakeTaker.redoState();
+        });
+
+        // Handle Button event.
 		myButton.setOnAction((event) -> {
 			outputTextArea.appendText("Button Action\n");
 		});
@@ -87,7 +97,8 @@ public class EventHandlingController {
 		myCheckBox.setOnAction((event) -> {
 			boolean selected = myCheckBox.isSelected();
 			outputTextArea.appendText("CheckBox Action (selected: " + selected + ")\n");
-		});
+            cakeTaker.saveState(new CheckBoxStateMemento(selected));
+        });
 		
 		// Init ComboBox items.
 		myComboBox.setItems(myComboBoxData);
@@ -165,6 +176,7 @@ public class EventHandlingController {
 		
 		// Handle TextField text changes.
 		myTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+			cakeTaker.saveState(new TextFieldStateMemento(newValue));
 			outputTextArea.appendText("TextField Text Changed (newValue: " + newValue + ")\n");
 		});
 		

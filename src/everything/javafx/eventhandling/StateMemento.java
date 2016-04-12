@@ -5,6 +5,6 @@ package everything.javafx.eventhandling;
  * Date: 10/04/2016
  * Time: 01:20
  */
-public interface EventCommand {
-    void execute();
+public interface StateMemento<V> {
+    V getState();
 }
