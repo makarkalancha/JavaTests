@@ -1,6 +1,11 @@
 package everything.javafx.eventhandling;
-import everything.javafx.eventhandling.memento.CheckBoxStateMemento;
-import everything.javafx.eventhandling.memento.TextFieldStateMemento;
+import java.util.Map;
+import java.util.HashMap;
+import everything.javafx.eventhandling.memento.State;
+import everything.javafx.eventhandling.memento.UndoCakeTaker;
+import everything.javafx.eventhandling.memento.state.CheckBoxStateMemento;
+import everything.javafx.eventhandling.memento.state.TextFieldStateMemento;
+import javafx.beans.property.Property;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -24,10 +29,14 @@ import javafx.util.StringConverter;
  */
 public class EventHandlingController{
 
-	UndoCakeTaker cakeTaker = new UndoCakeTaker();
-    SimpleStringProperty myTextFieldText = new SimpleStringProperty();
-    SimpleBooleanProperty isNotUndo = new SimpleBooleanProperty(true);
-    SimpleBooleanProperty isNotRedo = new SimpleBooleanProperty(true);
+	private UndoCakeTaker cakeTaker = new UndoCakeTaker();
+    private SimpleBooleanProperty isNotUndo = new SimpleBooleanProperty(true);
+
+    private SimpleStringProperty myTextFieldProperty = new SimpleStringProperty();
+    private SimpleBooleanProperty myCheckBoxProperty = new SimpleBooleanProperty();
+    private Map<String, Property> mapProperty = new HashMap<>();
+    private static final String TF_KEY = "myTextFieldProperty";
+    private static final String CB_KEY = "myCheckBoxProperty";
 
     @FXML
     private Button undoButton;
@@ -66,20 +75,23 @@ public class EventHandlingController{
 	 * The constructor (is called before the initialize()-method).
 	 */
 	public EventHandlingController() {
-		// Create some sample data for the ComboBox and ListView.
-		myComboBoxData.add(new Person("Hans", "Muster"));
-		myComboBoxData.add(new Person("Ruth", "Mueller"));
-		myComboBoxData.add(new Person("Heinz", "Kurz"));
-		myComboBoxData.add(new Person("Cornelia", "Meier"));
-		myComboBoxData.add(new Person("Werner", "Meyer"));
-		
-		listViewData.add(new Person("Lydia", "Kunz"));
-		listViewData.add(new Person("Anna", "Best"));
-		listViewData.add(new Person("Stefan", "Meier"));
-		listViewData.add(new Person("Martin", "Mueller"));
-	}
-	
-	/**
+        mapProperty.put(TF_KEY, myTextFieldProperty);
+        mapProperty.put(CB_KEY, myCheckBoxProperty);
+
+        // Create some sample data for the ComboBox and ListView.
+        myComboBoxData.add(new Person("Hans", "Muster"));
+        myComboBoxData.add(new Person("Ruth", "Mueller"));
+        myComboBoxData.add(new Person("Heinz", "Kurz"));
+        myComboBoxData.add(new Person("Cornelia", "Meier"));
+        myComboBoxData.add(new Person("Werner", "Meyer"));
+
+        listViewData.add(new Person("Lydia", "Kunz"));
+        listViewData.add(new Person("Anna", "Best"));
+        listViewData.add(new Person("Stefan", "Meier"));
+        listViewData.add(new Person("Martin", "Mueller"));
+    }
+
+    /**
 	 * Initializes the controller class. This method is automatically called
 	 * after the fxml file has been loaded.
 	 */
@@ -91,10 +103,11 @@ public class EventHandlingController{
         });
 		
 		// Handle CheckBox event.
+        myCheckBox.selectedProperty().bindBidirectional(myCheckBoxProperty);
 		myCheckBox.setOnAction((event) -> {
             boolean selected = myCheckBox.isSelected();
             outputTextArea.appendText("CheckBox Action (selected: " + selected + ")\n");
-            cakeTaker.saveState(new CheckBoxStateMemento(selected));
+            cakeTaker.saveState(new CheckBoxStateMemento(CB_KEY, !selected));
         });
 		
 		// Init ComboBox items.
@@ -172,21 +185,21 @@ public class EventHandlingController{
         });
 		
 		// Handle TextField text changes.
-        myTextField.textProperty().bindBidirectional(myTextFieldText);
-//        myTextField.textProperty().bind(myTextFieldText);
+        myTextField.textProperty().bindBidirectional(myTextFieldProperty);
+//        myTextField.textProperty().bind(myTextFieldProperty);
         myTextField.textProperty().addListener((observable, oldValue, newValue) -> {
-//        myTextFieldText.addListener((observable, oldValue, newValue) -> {
+//        myTextFieldProperty.addListener((observable, oldValue, newValue) -> {
             System.out.println(
-                    "EventHandlingController.myTextField.textProperty().addListener->cakeTaker.saveState:" + myTextFieldText.getValue());
-            if(isNotUndo.getValue()/* && isNotRedo.getValue()*/) {
-                cakeTaker.saveState(new TextFieldStateMemento(newValue));
-            } else{
+                    "EventHandlingController.myTextField.textProperty().addListener->cakeTaker.saveState:" + myTextFieldProperty.getValue());
+            if (isNotUndo.getValue()/* && isNotRedo.getValue()*/) {
+                cakeTaker.saveState(new TextFieldStateMemento(TF_KEY, newValue));
+            } else {
                 isNotUndo.setValue(true);
 //                isNotRedo.setValue(true);
             }
             System.out.println(
-                    "EventHandlingController.myTextField.textProperty().addListener->myTextFieldText:" + myTextFieldText.getValue());
-//            cakeTaker.saveState(new TextFieldStateMemento(myTextFieldText));
+                    "EventHandlingController.myTextField.textProperty().addListener->myTextFieldProperty:" + myTextFieldProperty.getValue());
+//            cakeTaker.saveState(new TextFieldStateMemento(myTextFieldProperty));
             outputTextArea.appendText("TextField Text Changed (newValue: " + newValue + ")\n");
         });
 
@@ -199,13 +212,20 @@ public class EventHandlingController{
         undoButton.setOnAction((event) -> {
             isNotUndo.setValue(false);
             System.out.println("\n\n>>>>>>>>click undo");
-            myTextFieldText.set((String) cakeTaker.undoState());
+//            String undo = (String) cakeTaker.undoState();
+//            Property property = myTextFieldProperty;
+//            property.setValue(undo);
+            State state = cakeTaker.undoState();
+            if(state != null) {
+                Property property = mapProperty.get(state.getPropertyFieldName());
+                property.setValue(state.getValue());
+            }
         });
 
         redoButton.setOnAction((event) -> {
             isNotUndo.setValue(false);
             System.out.println("\n\n>>>>>>>>click redo");
-            myTextFieldText.set((String) cakeTaker.redoState());
+//            myTextFieldProperty.set((String) cakeTaker.redoState());
         });
     }
 }

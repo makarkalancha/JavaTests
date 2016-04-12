@@ -1,4 +1,4 @@
-package everything.javafx.eventhandling;
+package everything.javafx.eventhandling.memento;
 
 import everything.javafx.eventhandling.storage.DequeStack;
 import everything.javafx.eventhandling.storage.Stack;
@@ -31,9 +31,9 @@ public class UndoCakeTaker <V>{
         log("saveState: after if");
     }
 
-    public V undoState(){
+    public State<V> undoState(){
         log("undoState: before if");
-        V result = null;
+        State<V> result = null;
         if(currentState != null) {
             redoStates.push(currentState);
         }
@@ -48,7 +48,7 @@ public class UndoCakeTaker <V>{
         return result;
     }
 
-    public V redoState(){
+    public State<V> redoState(){
         log("redoState: before if");
 //        V result = null;
 

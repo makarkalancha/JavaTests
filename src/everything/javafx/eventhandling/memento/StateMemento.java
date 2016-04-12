@@ -1,4 +1,4 @@
-package everything.javafx.eventhandling;
+package everything.javafx.eventhandling.memento;
 
 /**
  * User: Makar Kalancha
@@ -6,5 +6,5 @@ package everything.javafx.eventhandling;
  * Time: 01:20
  */
 public interface StateMemento<V> {
-    V getState();
+    State<V> getState();
 }

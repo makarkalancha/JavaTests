@@ -1,7 +1,7 @@
-package everything.javafx.eventhandling.memento;
+package everything.javafx.eventhandling.memento.state;
 
-import everything.javafx.eventhandling.StateMemento;
-
+import everything.javafx.eventhandling.memento.State;
+import everything.javafx.eventhandling.memento.StateMemento;
 
 /**
  * User: Makar Kalancha
@@ -9,15 +9,15 @@ import everything.javafx.eventhandling.StateMemento;
  * Time: 01:24
  */
 public class TextFieldStateMemento implements StateMemento<String> {
-    private final String state;
+    private final State<String> state;
 
-    public TextFieldStateMemento(String s){
-        this.state = s;
+    public TextFieldStateMemento(String propertyFieldName, String value){
+        this.state = new State<>(propertyFieldName, value);
         System.out.println("TextFieldStateMemento.constructor:" + state);
     }
 
     @Override
-    public String getState() {
+    public State<String> getState() {
         System.out.println("TextFieldStateMemento.getState:" + state);
         return state;
     }
