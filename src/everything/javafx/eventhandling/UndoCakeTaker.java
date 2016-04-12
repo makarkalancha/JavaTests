@@ -14,9 +14,11 @@ public class UndoCakeTaker <V>{
     private StateMemento<V> currentState;
 
     private void log(String source){
-//        System.out.println(source + "->currentState is null:" + (currentState == null));
-//        System.out.println(source + "->undoStates is empty:"+(undoStates.isEmpty()));
-//        System.out.println(source + "->redoStates is empty:"+(redoStates.isEmpty()));
+        System.out.println("======================================================");
+        System.out.println(source + "->currentState is null:" + (currentState == null));
+        System.out.println(source + "->undoStates is empty:"+(undoStates.isEmpty()));
+        System.out.println(source + "->redoStates is empty:"+(redoStates.isEmpty()));
+        System.out.println("======================================================");
     }
 
     public void saveState(StateMemento<V> state){

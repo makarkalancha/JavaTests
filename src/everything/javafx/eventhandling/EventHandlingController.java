@@ -1,6 +1,7 @@
 package everything.javafx.eventhandling;
 import everything.javafx.eventhandling.memento.CheckBoxStateMemento;
 import everything.javafx.eventhandling.memento.TextFieldStateMemento;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -23,6 +24,7 @@ import javafx.util.StringConverter;
 public class EventHandlingController{
 
 	UndoCakeTaker cakeTaker = new UndoCakeTaker();
+    SimpleStringProperty myTextFieldText = new SimpleStringProperty();
 
     @FXML
     private Button undoButton;
@@ -82,11 +84,11 @@ public class EventHandlingController{
 	private void initialize() {
 //        https://docs.oracle.com/javase/8/javafx/properties-binding-tutorial/binding.htm
         undoButton.setOnAction((event) -> {
-            cakeTaker.undoState();
+            myTextFieldText.set((String)cakeTaker.undoState());
         });
 
         redoButton.setOnAction((event) -> {
-            cakeTaker.redoState();
+            myTextFieldText.set((String) cakeTaker.redoState());
         });
 
         // Handle Button event.
@@ -176,10 +178,15 @@ public class EventHandlingController{
 		});
 		
 		// Handle TextField text changes.
-		myTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+        myTextField.textProperty().bindBidirectional(myTextFieldText);
+        myTextField.textProperty().addListener((observable, oldValue, newValue) -> {
 			cakeTaker.saveState(new TextFieldStateMemento(newValue));
+            System.out.println("myTextField.textProperty().addListener->myTextFieldText:" + myTextFieldText.getValue());
+//            cakeTaker.saveState(new TextFieldStateMemento(myTextFieldText));
 			outputTextArea.appendText("TextField Text Changed (newValue: " + newValue + ")\n");
 		});
+
+
 		
 		// Handle TextField enter key event.
 		myTextField.setOnAction((event) -> {
