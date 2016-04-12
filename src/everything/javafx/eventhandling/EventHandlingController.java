@@ -1,6 +1,7 @@
 package everything.javafx.eventhandling;
 import everything.javafx.eventhandling.memento.CheckBoxStateMemento;
 import everything.javafx.eventhandling.memento.TextFieldStateMemento;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -25,6 +26,8 @@ public class EventHandlingController{
 
 	UndoCakeTaker cakeTaker = new UndoCakeTaker();
     SimpleStringProperty myTextFieldText = new SimpleStringProperty();
+    SimpleBooleanProperty isNotUndo = new SimpleBooleanProperty(true);
+    SimpleBooleanProperty isNotRedo = new SimpleBooleanProperty(true);
 
     @FXML
     private Button undoButton;
@@ -82,24 +85,15 @@ public class EventHandlingController{
 	 */
 	@FXML
 	private void initialize() {
-//        https://docs.oracle.com/javase/8/javafx/properties-binding-tutorial/binding.htm
-        undoButton.setOnAction((event) -> {
-            myTextFieldText.set((String)cakeTaker.undoState());
-        });
-
-        redoButton.setOnAction((event) -> {
-            myTextFieldText.set((String) cakeTaker.redoState());
-        });
-
         // Handle Button event.
 		myButton.setOnAction((event) -> {
-			outputTextArea.appendText("Button Action\n");
-		});
+            outputTextArea.appendText("Button Action\n");
+        });
 		
 		// Handle CheckBox event.
 		myCheckBox.setOnAction((event) -> {
-			boolean selected = myCheckBox.isSelected();
-			outputTextArea.appendText("CheckBox Action (selected: " + selected + ")\n");
+            boolean selected = myCheckBox.isSelected();
+            outputTextArea.appendText("CheckBox Action (selected: " + selected + ")\n");
             cakeTaker.saveState(new CheckBoxStateMemento(selected));
         });
 		
@@ -108,91 +102,110 @@ public class EventHandlingController{
 		
 		// Define rendering of the list of values in ComboBox drop down. 
 		myComboBox.setCellFactory((comboBox) -> {
-			return new ListCell<Person>() {
-				@Override
-				protected void updateItem(Person item, boolean empty) {
-					super.updateItem(item, empty);
-					
-					if (item == null || empty) {
-						setText(null);
-					} else {
-						setText(item.getFirstName() + " " + item.getLastName());
-					}
-				}
-			};
-		});
+            return new ListCell<Person>() {
+                @Override
+                protected void updateItem(Person item, boolean empty) {
+                    super.updateItem(item, empty);
+
+                    if (item == null || empty) {
+                        setText(null);
+                    } else {
+                        setText(item.getFirstName() + " " + item.getLastName());
+                    }
+                }
+            };
+        });
 		
 		// Define rendering of selected value shown in ComboBox.
 		myComboBox.setConverter(new StringConverter<Person>() {
-			@Override
-			public String toString(Person person) {
-				if (person == null) {
-					return null;
-				} else {
-					return person.getFirstName() + " " + person.getLastName();
-				}
-			}
+            @Override
+            public String toString(Person person) {
+                if (person == null) {
+                    return null;
+                } else {
+                    return person.getFirstName() + " " + person.getLastName();
+                }
+            }
 
-			@Override
-			public Person fromString(String personString) {
-				return null; // No conversion fromString needed.
-			}
-		});
+            @Override
+            public Person fromString(String personString) {
+                return null; // No conversion fromString needed.
+            }
+        });
 		
 		// Handle ComboBox event.
 		myComboBox.setOnAction((event) -> {
-			Person selectedPerson = myComboBox.getSelectionModel().getSelectedItem();
-			outputTextArea.appendText("ComboBox Action (selected: " + selectedPerson.toString() + ")\n");
-		});
+            Person selectedPerson = myComboBox.getSelectionModel().getSelectedItem();
+            outputTextArea.appendText("ComboBox Action (selected: " + selectedPerson.toString() + ")\n");
+        });
 		
 		// Handle Hyperlink event.
 		myHyperlink.setOnAction((event) -> {
-			outputTextArea.appendText("Hyperlink Action\n");
-		});
+            outputTextArea.appendText("Hyperlink Action\n");
+        });
 		
 		// Init ListView.
 		myListView.setItems(listViewData);
 		myListView.setCellFactory((list) -> {
-			return new ListCell<Person>() {
-				@Override
-				protected void updateItem(Person item, boolean empty) {
-					super.updateItem(item, empty);
-					
-					if (item == null || empty) {
-						setText(null);
-					} else {
-						setText(item.getFirstName() + " " + item.getLastName());
-					}
-				}
-			};
-		});
+            return new ListCell<Person>() {
+                @Override
+                protected void updateItem(Person item, boolean empty) {
+                    super.updateItem(item, empty);
+
+                    if (item == null || empty) {
+                        setText(null);
+                    } else {
+                        setText(item.getFirstName() + " " + item.getLastName());
+                    }
+                }
+            };
+        });
 		
 		// Handle ListView selection changes.
 		myListView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-			outputTextArea.appendText("ListView Selection Changed (selected: " + newValue.toString() + ")\n");
-		});
+            outputTextArea.appendText("ListView Selection Changed (selected: " + newValue.toString() + ")\n");
+        });
 		
 		// Handle Slider value change events.
 		mySlider.valueProperty().addListener((observable, oldValue, newValue) -> {
-			outputTextArea.appendText("Slider Value Changed (newValue: " + newValue.intValue() + ")\n");
-		});
+            outputTextArea.appendText("Slider Value Changed (newValue: " + newValue.intValue() + ")\n");
+        });
 		
 		// Handle TextField text changes.
         myTextField.textProperty().bindBidirectional(myTextFieldText);
+//        myTextField.textProperty().bind(myTextFieldText);
         myTextField.textProperty().addListener((observable, oldValue, newValue) -> {
-			cakeTaker.saveState(new TextFieldStateMemento(newValue));
-            System.out.println("myTextField.textProperty().addListener->myTextFieldText:" + myTextFieldText.getValue());
+//        myTextFieldText.addListener((observable, oldValue, newValue) -> {
+            System.out.println(
+                    "EventHandlingController.myTextField.textProperty().addListener->cakeTaker.saveState:" + myTextFieldText.getValue());
+            if(isNotUndo.getValue()/* && isNotRedo.getValue()*/) {
+                cakeTaker.saveState(new TextFieldStateMemento(newValue));
+            } else{
+                isNotUndo.setValue(true);
+//                isNotRedo.setValue(true);
+            }
+            System.out.println(
+                    "EventHandlingController.myTextField.textProperty().addListener->myTextFieldText:" + myTextFieldText.getValue());
 //            cakeTaker.saveState(new TextFieldStateMemento(myTextFieldText));
-			outputTextArea.appendText("TextField Text Changed (newValue: " + newValue + ")\n");
-		});
+            outputTextArea.appendText("TextField Text Changed (newValue: " + newValue + ")\n");
+        });
 
-
-		
-		// Handle TextField enter key event.
+        // Handle TextField enter key event.
 		myTextField.setOnAction((event) -> {
-			outputTextArea.appendText("TextField Action\n");
-		});
-		
-	}
-	
+            outputTextArea.appendText("TextField Action\n");
+        });
+
+        //        https://docs.oracle.com/javase/8/javafx/properties-binding-tutorial/binding.htm
+        undoButton.setOnAction((event) -> {
+            isNotUndo.setValue(false);
+            System.out.println("\n\n>>>>>>>>click undo");
+            myTextFieldText.set((String) cakeTaker.undoState());
+        });
+
+        redoButton.setOnAction((event) -> {
+            isNotUndo.setValue(false);
+            System.out.println("\n\n>>>>>>>>click redo");
+            myTextFieldText.set((String) cakeTaker.redoState());
+        });
+    }
 }

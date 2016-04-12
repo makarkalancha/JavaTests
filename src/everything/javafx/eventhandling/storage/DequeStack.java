@@ -32,4 +32,9 @@ public class DequeStack<T> implements Stack<T> {
         deque.clear();
     }
 
+    @Override
+    public String toString() {
+        return deque.toString();
+    }
+
 }

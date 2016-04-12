@@ -1,7 +1,6 @@
 package everything.javafx.eventhandling.memento;
 
 import everything.javafx.eventhandling.StateMemento;
-import javafx.scene.control.TextField;
 
 
 /**
@@ -21,5 +20,12 @@ public class TextFieldStateMemento implements StateMemento<String> {
     public String getState() {
         System.out.println("TextFieldStateMemento.getState:" + state);
         return state;
+    }
+
+    @Override
+    public String toString() {
+        return "TextFieldStateMemento{" +
+                "state='" + state + '\'' +
+                '}';
     }
 }

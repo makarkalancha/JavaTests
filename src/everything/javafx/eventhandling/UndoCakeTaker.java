@@ -15,40 +15,52 @@ public class UndoCakeTaker <V>{
 
     private void log(String source){
         System.out.println("======================================================");
-        System.out.println(source + "->currentState is null:" + (currentState == null));
-        System.out.println(source + "->undoStates is empty:"+(undoStates.isEmpty()));
-        System.out.println(source + "->redoStates is empty:"+(redoStates.isEmpty()));
+        System.out.println("UndoCakeTaker." + source + "->currentState:" + currentState);
+        System.out.println("UndoCakeTaker." + source + "->undoStates:" + undoStates);
+        System.out.println("UndoCakeTaker." + source + "->redoStates:" + redoStates);
         System.out.println("======================================================");
     }
 
     public void saveState(StateMemento<V> state){
-        log("saveState");
+        log("saveState: before if");
         if(currentState != null) {
             undoStates.push(currentState);
             redoStates.clear();
         }
         currentState = state;
+        log("saveState: after if");
     }
 
     public V undoState(){
-        log("undoState");
+        log("undoState: before if");
         V result = null;
-        if(!undoStates.isEmpty()){
+        if(currentState != null) {
             redoStates.push(currentState);
-            currentState = undoStates.pop();
-            result = currentState.getState();
         }
+        if(!undoStates.isEmpty()){
+            currentState = undoStates.pop();
+            System.out.println("getState from UndoCakeTaker.undoState");
+            result = currentState.getState();
+        } else {
+            currentState = null;
+        }
+        log("undoState: after if");
         return result;
     }
 
     public V redoState(){
-        log("redoState");
-        V result = null;
+        log("redoState: before if");
+//        V result = null;
+
         if(!redoStates.isEmpty()){
-            undoStates.push(currentState);
+            if(currentState != null) {
+                undoStates.push(currentState);
+            }
             currentState = redoStates.pop();
-            result = currentState.getState();
+            System.out.println("getState from UndoCakeTaker.redoState");
+//            result = currentState.getState();
         }
-        return result;
+        log("redoState: after if");
+        return currentState.getState();
     }
 }
