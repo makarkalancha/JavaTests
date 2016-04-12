@@ -80,6 +80,7 @@ public class EventHandlingController{
 	 */
 	@FXML
 	private void initialize() {
+//        https://docs.oracle.com/javase/8/javafx/properties-binding-tutorial/binding.htm
         undoButton.setOnAction((event) -> {
             cakeTaker.undoState();
         });
