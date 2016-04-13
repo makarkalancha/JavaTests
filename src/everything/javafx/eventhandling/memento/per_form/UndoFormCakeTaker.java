@@ -9,8 +9,8 @@ import everything.javafx.eventhandling.storage.Stack;
  * Time: 23:30
  */
 public class UndoFormCakeTaker<V>{
-    private Stack<FormState> undoStates = new DequeStack<>();
-    private Stack<FormState> redoStates = new DequeStack<>();
+    private Stack<FormState> undoStates = new DequeStack<>(3);
+    private Stack<FormState> redoStates = new DequeStack<>(3);
     private FormState currentState;
 
     private void log(String source){
