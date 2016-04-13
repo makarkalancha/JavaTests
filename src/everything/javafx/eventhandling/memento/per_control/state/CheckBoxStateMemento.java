@@ -1,7 +1,7 @@
-package everything.javafx.eventhandling.memento.state;
+package everything.javafx.eventhandling.memento.per_control.state;
 
-import everything.javafx.eventhandling.memento.State;
-import everything.javafx.eventhandling.memento.StateMemento;
+import everything.javafx.eventhandling.memento.per_control.State;
+import everything.javafx.eventhandling.memento.per_control.StateMemento;
 
 
 /**

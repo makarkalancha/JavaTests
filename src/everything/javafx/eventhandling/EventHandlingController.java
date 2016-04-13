@@ -1,10 +1,12 @@
 package everything.javafx.eventhandling;
-import java.util.Map;
+
 import java.util.HashMap;
-import everything.javafx.eventhandling.memento.State;
-import everything.javafx.eventhandling.memento.UndoCakeTaker;
-import everything.javafx.eventhandling.memento.state.CheckBoxStateMemento;
-import everything.javafx.eventhandling.memento.state.TextFieldStateMemento;
+import java.util.Map;
+import everything.javafx.eventhandling.memento.per_form.UndoFormCakeTaker;
+import everything.javafx.eventhandling.memento.per_form.form.Element;
+import everything.javafx.eventhandling.memento.per_form.form.FormSnapshot;
+import everything.javafx.eventhandling.memento.per_form.state.CheckBoxStateMemento;
+import everything.javafx.eventhandling.memento.per_form.state.TextFieldStateMemento;
 import javafx.beans.property.Property;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -29,7 +31,7 @@ import javafx.util.StringConverter;
  */
 public class EventHandlingController{
 
-	private UndoCakeTaker cakeTaker = new UndoCakeTaker();
+	private UndoFormCakeTaker cakeTaker = new UndoFormCakeTaker();
     private SimpleBooleanProperty isNotUndo = new SimpleBooleanProperty(true);
 
     private SimpleStringProperty myTextFieldProperty = new SimpleStringProperty();
@@ -97,24 +99,31 @@ public class EventHandlingController{
 	 */
 	@FXML
 	private void initialize() {
+        myCheckBox.selectedProperty().bindBidirectional(myCheckBoxProperty);
+        myTextField.textProperty().bindBidirectional(myTextFieldProperty);
+
         // Handle Button event.
-		myButton.setOnAction((event) -> {
+        myButton.setOnAction((event) -> {
             outputTextArea.appendText("Button Action\n");
         });
-		
-		// Handle CheckBox event.
-        myCheckBox.selectedProperty().bindBidirectional(myCheckBoxProperty);
-		myCheckBox.setOnAction((event) -> {
+
+        // Handle CheckBox event.
+
+        myCheckBox.setOnAction((event) -> {
             boolean selected = myCheckBox.isSelected();
             outputTextArea.appendText("CheckBox Action (selected: " + selected + ")\n");
-            cakeTaker.saveState(new CheckBoxStateMemento(CB_KEY, !selected));
+//            cakeTaker.saveState(new CheckBoxStateMemento(CB_KEY, !selected));
+            FormSnapshot fs = new FormSnapshot();
+            fs.addElement(new Element(TF_KEY, myTextFieldProperty, new TextFieldStateMemento(myTextFieldProperty.getValue())));
+            fs.addElement(new Element(CB_KEY, myCheckBoxProperty, new CheckBoxStateMemento(myCheckBoxProperty.getValue())));
+            cakeTaker.saveState(fs);
         });
-		
-		// Init ComboBox items.
+
+        // Init ComboBox items.
 		myComboBox.setItems(myComboBoxData);
 		
 		// Define rendering of the list of values in ComboBox drop down. 
-		myComboBox.setCellFactory((comboBox) -> {
+        myComboBox.setCellFactory((comboBox) -> {
             return new ListCell<Person>() {
                 @Override
                 protected void updateItem(Person item, boolean empty) {
@@ -130,7 +139,7 @@ public class EventHandlingController{
         });
 		
 		// Define rendering of selected value shown in ComboBox.
-		myComboBox.setConverter(new StringConverter<Person>() {
+        myComboBox.setConverter(new StringConverter<Person>() {
             @Override
             public String toString(Person person) {
                 if (person == null) {
@@ -145,21 +154,21 @@ public class EventHandlingController{
                 return null; // No conversion fromString needed.
             }
         });
-		
-		// Handle ComboBox event.
-		myComboBox.setOnAction((event) -> {
+
+        // Handle ComboBox event.
+        myComboBox.setOnAction((event) -> {
             Person selectedPerson = myComboBox.getSelectionModel().getSelectedItem();
             outputTextArea.appendText("ComboBox Action (selected: " + selectedPerson.toString() + ")\n");
         });
-		
-		// Handle Hyperlink event.
-		myHyperlink.setOnAction((event) -> {
+
+        // Handle Hyperlink event.
+        myHyperlink.setOnAction((event) -> {
             outputTextArea.appendText("Hyperlink Action\n");
         });
 		
 		// Init ListView.
-		myListView.setItems(listViewData);
-		myListView.setCellFactory((list) -> {
+        myListView.setItems(listViewData);
+        myListView.setCellFactory((list) -> {
             return new ListCell<Person>() {
                 @Override
                 protected void updateItem(Person item, boolean empty) {
@@ -178,21 +187,25 @@ public class EventHandlingController{
 		myListView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             outputTextArea.appendText("ListView Selection Changed (selected: " + newValue.toString() + ")\n");
         });
-		
-		// Handle Slider value change events.
-		mySlider.valueProperty().addListener((observable, oldValue, newValue) -> {
+
+        // Handle Slider value change events.
+        mySlider.valueProperty().addListener((observable, oldValue, newValue) -> {
             outputTextArea.appendText("Slider Value Changed (newValue: " + newValue.intValue() + ")\n");
         });
 		
 		// Handle TextField text changes.
-        myTextField.textProperty().bindBidirectional(myTextFieldProperty);
+
 //        myTextField.textProperty().bind(myTextFieldProperty);
         myTextField.textProperty().addListener((observable, oldValue, newValue) -> {
 //        myTextFieldProperty.addListener((observable, oldValue, newValue) -> {
             System.out.println(
                     "EventHandlingController.myTextField.textProperty().addListener->cakeTaker.saveState:" + myTextFieldProperty.getValue());
             if (isNotUndo.getValue()/* && isNotRedo.getValue()*/) {
-                cakeTaker.saveState(new TextFieldStateMemento(TF_KEY, newValue));
+//                cakeTaker.saveState(new TextFieldStateMemento(TF_KEY, newValue));
+                FormSnapshot fs = new FormSnapshot();
+                fs.addElement(new Element(TF_KEY, myTextFieldProperty, new TextFieldStateMemento(myTextFieldProperty.getValue())));
+                fs.addElement(new Element(CB_KEY, myCheckBoxProperty, new CheckBoxStateMemento(myCheckBoxProperty.getValue())));
+                cakeTaker.saveState(fs);
             } else {
                 isNotUndo.setValue(true);
 //                isNotRedo.setValue(true);
@@ -212,14 +225,24 @@ public class EventHandlingController{
         undoButton.setOnAction((event) -> {
             isNotUndo.setValue(false);
             System.out.println("\n\n>>>>>>>>click undo");
-//            String undo = (String) cakeTaker.undoState();
-//            Property property = myTextFieldProperty;
-//            property.setValue(undo);
-            State state = cakeTaker.undoState();
-            if(state != null) {
-                Property property = mapProperty.get(state.getPropertyFieldName());
-                property.setValue(state.getValue());
-            }
+////            String undo = (String) cakeTaker.undoState();
+////            Property property = myTextFieldProperty;
+////            property.setValue(undo);
+//            State state = cakeTaker.undoState();
+//            if(state != null) {
+//                Property property = mapProperty.get(state.getPropertyFieldName());
+//                property.setValue(state.getValue());
+//            }
+            FormSnapshot fs = cakeTaker.undoState();
+            mapProperty.forEach((k, v) -> {
+                        System.out.println(k + "->" + v);
+                        System.out.println("fs.getElementByPropertyName(k):" + fs.getElementByPropertyName(k));
+                        System.out.println("fs.getElementByPropertyName(k).getElementState():" + fs.getElementByPropertyName(k).getElementState());
+                        System.out.println("fs.getElementByPropertyName(k).getElementState().getState():" + fs.getElementByPropertyName(k).getElementState().getState());
+                        System.out.println("fs.getElementByPropertyName(k).getElementState().getState().getValue():" + fs.getElementByPropertyName(k).getElementState().getState().getValue());
+                        v.setValue(fs.getElementByPropertyName(k).getElementState().getState().getValue());
+                    }
+            );
         });
 
         redoButton.setOnAction((event) -> {

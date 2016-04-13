@@ -1,4 +1,4 @@
-package everything.javafx.eventhandling.memento;
+package everything.javafx.eventhandling.memento.per_control;
 
 /**
  * User: Makar Kalancha

@@ -1,4 +1,4 @@
-package everything.javafx.eventhandling.memento;
+package everything.javafx.eventhandling.memento.per_control;
 
 import everything.javafx.eventhandling.storage.DequeStack;
 import everything.javafx.eventhandling.storage.Stack;
@@ -21,13 +21,13 @@ public class UndoCakeTaker <V>{
         System.out.println("======================================================");
     }
 
-    public void saveState(StateMemento<V> state){
+    public void saveState(StateMemento<V> stateMemento){
         log("saveState: before if");
         if(currentState != null) {
             undoStates.push(currentState);
             redoStates.clear();
         }
-        currentState = state;
+        currentState = stateMemento;
         log("saveState: after if");
     }
 
