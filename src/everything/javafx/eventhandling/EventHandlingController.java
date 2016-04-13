@@ -1,13 +1,7 @@
 package everything.javafx.eventhandling;
 
-import java.util.HashMap;
-import java.util.Map;
+import everything.javafx.eventhandling.memento.per_form.FormState;
 import everything.javafx.eventhandling.memento.per_form.UndoFormCakeTaker;
-import everything.javafx.eventhandling.memento.per_form.form.Element;
-import everything.javafx.eventhandling.memento.per_form.form.FormSnapshot;
-import everything.javafx.eventhandling.memento.per_form.state.CheckBoxStateMemento;
-import everything.javafx.eventhandling.memento.per_form.state.TextFieldStateMemento;
-import javafx.beans.property.Property;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -36,9 +30,9 @@ public class EventHandlingController{
 
     private SimpleStringProperty myTextFieldProperty = new SimpleStringProperty();
     private SimpleBooleanProperty myCheckBoxProperty = new SimpleBooleanProperty();
-    private Map<String, Property> mapProperty = new HashMap<>();
-    private static final String TF_KEY = "myTextFieldProperty";
-    private static final String CB_KEY = "myCheckBoxProperty";
+//    private Map<String, Property> mapProperty = new HashMap<>();
+//    private static final String TF_KEY = "myTextFieldProperty";
+//    private static final String CB_KEY = "myCheckBoxProperty";
 
     @FXML
     private Button undoButton;
@@ -71,14 +65,17 @@ public class EventHandlingController{
 	
 	@FXML
 	private TextArea outputTextArea;
-	
+
+
 	
 	/**
 	 * The constructor (is called before the initialize()-method).
 	 */
 	public EventHandlingController() {
-        mapProperty.put(TF_KEY, myTextFieldProperty);
-        mapProperty.put(CB_KEY, myCheckBoxProperty);
+//        formSnapshot = new FormSnapshot(myTextFieldProperty, myCheckBoxProperty);
+//
+//        mapProperty.put(TF_KEY, myTextFieldProperty);
+//        mapProperty.put(CB_KEY, myCheckBoxProperty);
 
         // Create some sample data for the ComboBox and ListView.
         myComboBoxData.add(new Person("Hans", "Muster"));
@@ -112,11 +109,8 @@ public class EventHandlingController{
         myCheckBox.setOnAction((event) -> {
             boolean selected = myCheckBox.isSelected();
             outputTextArea.appendText("CheckBox Action (selected: " + selected + ")\n");
-//            cakeTaker.saveState(new CheckBoxStateMemento(CB_KEY, !selected));
-            FormSnapshot fs = new FormSnapshot();
-            fs.addElement(new Element(TF_KEY, myTextFieldProperty, new TextFieldStateMemento(myTextFieldProperty.getValue())));
-            fs.addElement(new Element(CB_KEY, myCheckBoxProperty, new CheckBoxStateMemento(myCheckBoxProperty.getValue())));
-            cakeTaker.saveState(fs);
+//            cakeTaker.saveState(new BooleanStateMemento(CB_KEY, !selected));
+            cakeTaker.saveState(saveFormState());
         });
 
         // Init ComboBox items.
@@ -201,18 +195,15 @@ public class EventHandlingController{
             System.out.println(
                     "EventHandlingController.myTextField.textProperty().addListener->cakeTaker.saveState:" + myTextFieldProperty.getValue());
             if (isNotUndo.getValue()/* && isNotRedo.getValue()*/) {
-//                cakeTaker.saveState(new TextFieldStateMemento(TF_KEY, newValue));
-                FormSnapshot fs = new FormSnapshot();
-                fs.addElement(new Element(TF_KEY, myTextFieldProperty, new TextFieldStateMemento(myTextFieldProperty.getValue())));
-                fs.addElement(new Element(CB_KEY, myCheckBoxProperty, new CheckBoxStateMemento(myCheckBoxProperty.getValue())));
-                cakeTaker.saveState(fs);
+//                cakeTaker.saveState(new StringStateMemento(TF_KEY, newValue));
+                cakeTaker.saveState(saveFormState());
             } else {
                 isNotUndo.setValue(true);
 //                isNotRedo.setValue(true);
             }
             System.out.println(
                     "EventHandlingController.myTextField.textProperty().addListener->myTextFieldProperty:" + myTextFieldProperty.getValue());
-//            cakeTaker.saveState(new TextFieldStateMemento(myTextFieldProperty));
+//            cakeTaker.saveState(new StringStateMemento(myTextFieldProperty));
             outputTextArea.appendText("TextField Text Changed (newValue: " + newValue + ")\n");
         });
 
@@ -233,16 +224,18 @@ public class EventHandlingController{
 //                Property property = mapProperty.get(state.getPropertyFieldName());
 //                property.setValue(state.getValue());
 //            }
-            FormSnapshot fs = cakeTaker.undoState();
-            mapProperty.forEach((k, v) -> {
-                        System.out.println(k + "->" + v);
-                        System.out.println("fs.getElementByPropertyName(k):" + fs.getElementByPropertyName(k));
-                        System.out.println("fs.getElementByPropertyName(k).getElementState():" + fs.getElementByPropertyName(k).getElementState());
-                        System.out.println("fs.getElementByPropertyName(k).getElementState().getState():" + fs.getElementByPropertyName(k).getElementState().getState());
-                        System.out.println("fs.getElementByPropertyName(k).getElementState().getState().getValue():" + fs.getElementByPropertyName(k).getElementState().getState().getValue());
-                        v.setValue(fs.getElementByPropertyName(k).getElementState().getState().getValue());
-                    }
-            );
+
+            restoreFormState(cakeTaker.undoState());
+//            FormSnapshot fs = cakeTaker.undoState();
+//            mapProperty.forEach((k, v) -> {
+//                        System.out.println(k + "->" + v);
+//                        System.out.println("fs.getElementByPropertyName(k):" + fs.getElementByPropertyName(k));
+//                        System.out.println("fs.getElementByPropertyName(k).getElementState():" + fs.getElementByPropertyName(k).getElementState());
+//                        System.out.println("fs.getElementByPropertyName(k).getElementState().getState():" + fs.getElementByPropertyName(k).getElementState().getState());
+//                        System.out.println("fs.getElementByPropertyName(k).getElementState().getState().getValue():" + fs.getElementByPropertyName(k).getElementState().getState().getValue());
+//                        v.setValue(fs.getElementByPropertyName(k).getElementState().getState().getValue());
+//                    }
+//            );
         });
 
         redoButton.setOnAction((event) -> {
@@ -250,5 +243,20 @@ public class EventHandlingController{
             System.out.println("\n\n>>>>>>>>click redo");
 //            myTextFieldProperty.set((String) cakeTaker.redoState());
         });
+    }
+
+    private FormState saveFormState(){
+        return new FormState(myTextFieldProperty.getValue(), myCheckBoxProperty.getValue());
+    }
+
+    private void restoreFormState(FormState formState){
+        if(formState != null){
+            myTextFieldProperty.setValue(formState.getTextfield());
+            myCheckBoxProperty.setValue(formState.isCheckbox());
+        } else {
+            myTextFieldProperty.setValue("");
+            myCheckBoxProperty.setValue(false);
+        }
+
     }
 }

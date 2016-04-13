@@ -1,6 +1,5 @@
 package everything.javafx.eventhandling.memento.per_form;
 
-import everything.javafx.eventhandling.memento.per_form.form.FormSnapshot;
 import everything.javafx.eventhandling.storage.DequeStack;
 import everything.javafx.eventhandling.storage.Stack;
 
@@ -10,9 +9,9 @@ import everything.javafx.eventhandling.storage.Stack;
  * Time: 23:30
  */
 public class UndoFormCakeTaker<V>{
-    private Stack<FormSnapshot> undoStates = new DequeStack<>();
-    private Stack<FormSnapshot> redoStates = new DequeStack<>();
-    private FormSnapshot currentState;
+    private Stack<FormState> undoStates = new DequeStack<>();
+    private Stack<FormState> redoStates = new DequeStack<>();
+    private FormState currentState;
 
     private void log(String source){
         System.out.println("======================================================");
@@ -22,7 +21,7 @@ public class UndoFormCakeTaker<V>{
         System.out.println("======================================================");
     }
 
-    public void saveState(FormSnapshot state){
+    public void saveState(FormState state){
         log("saveState: before if");
         if(currentState != null) {
             undoStates.push(currentState);
@@ -32,9 +31,9 @@ public class UndoFormCakeTaker<V>{
         log("saveState: after if");
     }
 
-    public FormSnapshot undoState(){
+    public FormState undoState(){
         log("undoState: before if");
-        FormSnapshot result = null;
+        FormState result = null;
         if(currentState != null) {
             redoStates.push(currentState);
         }
@@ -49,7 +48,7 @@ public class UndoFormCakeTaker<V>{
         return result;
     }
 
-    public FormSnapshot redoState(){
+    public FormState redoState(){
         log("redoState: before if");
 //        V result = null;
 

@@ -14,18 +14,18 @@ public class CheckBoxStateMemento implements StateMemento<Boolean> {
 
     public CheckBoxStateMemento(String propertyFieldName, Boolean value) {
         this.state = new State<>(propertyFieldName, value);
-        System.out.println("CheckBoxStateMemento.constructor:" + state);
+        System.out.println("BooleanStateMemento.constructor:" + state);
     }
 
     @Override
     public State<Boolean> getState() {
-        System.out.println("CheckBoxStateMemento.getState:" + state);
+        System.out.println("BooleanStateMemento.getState:" + state);
         return state;
     }
 
     @Override
     public String toString() {
-        return "CheckBoxStateMemento{" +
+        return "BooleanStateMemento{" +
                 "state=" + state +
                 '}';
     }

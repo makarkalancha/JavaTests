@@ -13,18 +13,18 @@ public class TextFieldStateMemento implements StateMemento<String> {
 
     public TextFieldStateMemento(String propertyFieldName, String value){
         this.state = new State<>(propertyFieldName, value);
-        System.out.println("TextFieldStateMemento.constructor:" + state);
+        System.out.println("StringStateMemento.constructor:" + state);
     }
 
     @Override
     public State<String> getState() {
-        System.out.println("TextFieldStateMemento.getState:" + state);
+        System.out.println("StringStateMemento.getState:" + state);
         return state;
     }
 
     @Override
     public String toString() {
-        return "TextFieldStateMemento{" +
+        return "StringStateMemento{" +
                 "state='" + state + '\'' +
                 '}';
     }
