@@ -242,6 +242,7 @@ public class EventHandlingController{
             isNotUndo.setValue(false);
             System.out.println("\n\n>>>>>>>>click redo");
 //            myTextFieldProperty.set((String) cakeTaker.redoState());
+            restoreFormState(cakeTaker.redoState());
         });
     }
 
