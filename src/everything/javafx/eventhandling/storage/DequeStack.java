@@ -75,7 +75,8 @@ public class DequeStack<T> implements Stack<T> {
 
     @Override
     public boolean isEmpty() {
-        return deque.isEmpty();
+//        return deque.isEmpty();
+        return currentSize == 0;
     }
 
     @Override

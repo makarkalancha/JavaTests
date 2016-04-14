@@ -2,11 +2,6 @@ package everything.javafx.eventhandling.memento.per_form;
 
 import everything.javafx.eventhandling.storage.DequeStack;
 import everything.javafx.eventhandling.storage.Stack;
-import javafx.beans.property.ReadOnlyDoubleProperty;
-import javafx.beans.property.ReadOnlyDoublePropertyBase;
-import javafx.beans.property.ReadOnlyIntegerProperty;
-import javafx.beans.property.ReadOnlyIntegerPropertyBase;
-import javafx.beans.property.SimpleIntegerProperty;
 
 /**
  * User: Makar Kalancha
@@ -41,6 +36,18 @@ public class UndoFormCakeTaker<V>{
 //    public SimpleIntegerProperty redoSizeProperty() {
 //        return redoSize;
 //    }
+
+    public boolean isUndoEmpty() {
+        boolean a = undoStates.isEmpty();
+        System.out.println("isUndoEmpty:" + a);
+        return undoStates.isEmpty();
+    }
+
+    public boolean isRedoEmpty() {
+        boolean a = redoStates.isEmpty();
+        System.out.println("isRedoEmpty:" + a);
+        return redoStates.isEmpty();
+    }
 
     private void log(String source){
         System.out.println("======================================================");

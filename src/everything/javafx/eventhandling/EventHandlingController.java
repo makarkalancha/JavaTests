@@ -2,6 +2,7 @@ package everything.javafx.eventhandling;
 
 import everything.javafx.eventhandling.memento.per_form.FormState;
 import everything.javafx.eventhandling.memento.per_form.UndoFormCakeTaker;
+import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -25,7 +26,9 @@ import javafx.util.StringConverter;
 public class EventHandlingController{
 
 	private UndoFormCakeTaker cakeTaker = new UndoFormCakeTaker();
-    private SimpleBooleanProperty isNotUndo = new SimpleBooleanProperty(true);
+    private BooleanProperty isNotUndo = new SimpleBooleanProperty(true);
+    private BooleanProperty isUndoEmpty = new SimpleBooleanProperty(true);
+    private BooleanProperty isRedoEmpty = new SimpleBooleanProperty(true);
 
 //    private SimpleStringProperty myTextFieldProperty = new SimpleStringProperty();
 //    private SimpleBooleanProperty myCheckBoxProperty = new SimpleBooleanProperty();
@@ -89,16 +92,39 @@ public class EventHandlingController{
         listViewData.add(new Person("Martin", "Mueller"));
     }
 
+    private void initializeUnRedoFramework(){
+        System.out.println("initializeUnRedoFramework");
+        undoButton.setDisable(isUndoEmpty.getValue());
+        redoButton.setDisable(isRedoEmpty.getValue());
+//        isUndoEmpty.bind(undoButton.isd);
+        isUndoEmpty.addListener((observable, oldValue, newValue) -> {
+            System.out.println("isUndoEmpty.addListener-> observable: " + observable + ", oldValue: " + oldValue + ", newValue: " + newValue);
+            if (newValue) {
+                undoButton.setDisable(true);
+            } else {
+                undoButton.setDisable(false);
+            }
+        });
+
+        isRedoEmpty.addListener((observable, oldValue, newValue) -> {
+            System.out.println("isRedoEmpty.addListener-> observable: " + observable + ", oldValue: " + oldValue + ", newValue: " + newValue);
+            if (newValue) {
+                redoButton.setDisable(true);
+            } else {
+                redoButton.setDisable(false);
+            }
+            System.out.println("isRedoEmpty.addListener:" + newValue);
+        });
+        saveForm();
+    }
+
     /**
 	 * Initializes the controller class. This method is automatically called
 	 * after the fxml file has been loaded.
 	 */
 	@FXML
 	private void initialize() {
-//        myCheckBox.selectedProperty().bindBidirectional(myCheckBoxProperty);
-//        myTextField.textProperty().bindBidirectional(myTextFieldProperty);
-        cakeTaker.saveState(saveFormState());
-
+        initializeUnRedoFramework();
         // Handle Button event.
         myButton.setOnAction((event) -> {
             outputTextArea.appendText("Button Action\n");
@@ -110,7 +136,7 @@ public class EventHandlingController{
             boolean selected = myCheckBox.isSelected();
             outputTextArea.appendText("CheckBox Action (selected: " + selected + ")\n");
 //            cakeTaker.saveState(new BooleanStateMemento(CB_KEY, !selected));
-            cakeTaker.saveState(saveFormState());
+            saveForm();
         });
 
         // Init ComboBox items.
@@ -196,7 +222,7 @@ public class EventHandlingController{
 //                    "EventHandlingController.myTextField.textProperty().addListener->cakeTaker.saveState:" + myTextFieldProperty.getValue());
             if (isNotUndo.getValue()/* && isNotRedo.getValue()*/) {
 //                cakeTaker.saveState(new StringStateMemento(TF_KEY, newValue));
-                cakeTaker.saveState(saveFormState());
+                saveForm();
             } else {
                 isNotUndo.setValue(true);
 //                isNotRedo.setValue(true);
@@ -225,6 +251,7 @@ public class EventHandlingController{
 //                property.setValue(state.getValue());
 //            }
 
+//            restoreForm();
             restoreFormState(cakeTaker.undoState());
 //            FormSnapshot fs = cakeTaker.undoState();
 //            mapProperty.forEach((k, v) -> {
@@ -242,6 +269,7 @@ public class EventHandlingController{
             isNotUndo.setValue(false);
             System.out.println("\n\n>>>>>>>>click redo");
 //            myTextFieldProperty.set((String) cakeTaker.redoState());
+//            restoreForm();
             restoreFormState(cakeTaker.redoState());
         });
     }
@@ -260,20 +288,21 @@ public class EventHandlingController{
 //        }
 //    }
 
-    private FormState saveFormState(){
+    private void saveForm() {
+        cakeTaker.saveState(saveFormState());
+        isUndoEmpty.setValue(cakeTaker.isUndoEmpty());
+        isRedoEmpty.setValue(cakeTaker.isRedoEmpty());
+    }
+
+    private FormState saveFormState() {
 //        return new FormState(myTextFieldProperty.getValue(), myCheckBoxProperty.getValue());
         return new FormState(myTextField.getText(), myCheckBox.isSelected());
     }
 
     private void restoreFormState(FormState formState){
-//        if(formState != null){
-//            myTextFieldProperty.setValue(formState.getTextfieldValue());
-//            myCheckBoxProperty.setValue(formState.getCheckboxValue());
-//        } else {
-//            myTextFieldProperty.setValue("");
-//            myCheckBoxProperty.setValue(false);
-//        }
         myTextField.setText(formState.getTextfieldValue());
         myCheckBox.setSelected(formState.getCheckboxValue());
+        isUndoEmpty.setValue(cakeTaker.isUndoEmpty());
+        isRedoEmpty.setValue(cakeTaker.isRedoEmpty());
     }
 }
