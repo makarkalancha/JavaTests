@@ -2,6 +2,10 @@ package everything.javafx.eventhandling.memento.per_form;
 
 import everything.javafx.eventhandling.storage.DequeStack;
 import everything.javafx.eventhandling.storage.Stack;
+import javafx.beans.property.ReadOnlyDoubleProperty;
+import javafx.beans.property.ReadOnlyDoublePropertyBase;
+import javafx.beans.property.ReadOnlyIntegerProperty;
+import javafx.beans.property.ReadOnlyIntegerPropertyBase;
 import javafx.beans.property.SimpleIntegerProperty;
 
 /**
@@ -12,9 +16,31 @@ import javafx.beans.property.SimpleIntegerProperty;
 public class UndoFormCakeTaker<V>{
     private Stack<FormState> undoStates = new DequeStack<>(3);
     private Stack<FormState> redoStates = new DequeStack<>(3);
-    private SimpleIntegerProperty undoSize = new SimpleIntegerProperty();
-    private SimpleIntegerProperty redoSize = new SimpleIntegerProperty();
+
+//    http://blog.netopyr.com/2012/02/02/creating-read-only-properties-in-javafx/
+//    private SimpleIntegerProperty undoSize = new SimpleIntegerProperty();
+//    private SimpleIntegerProperty redoSize = new SimpleIntegerProperty();
     private FormState currentState;
+
+//    public UndoFormCakeTaker(){
+//        undoSize.
+//    }
+
+//    public int getUndoSize() {
+//        return undoSize.get();
+//    }
+//
+//    public SimpleIntegerProperty undoSizeProperty() {
+//        return undoSize;
+//    }
+//
+//    public int getRedoSize() {
+//        return redoSize.get();
+//    }
+//
+//    public SimpleIntegerProperty redoSizeProperty() {
+//        return redoSize;
+//    }
 
     private void log(String source){
         System.out.println("======================================================");
@@ -69,4 +95,48 @@ public class UndoFormCakeTaker<V>{
         log("redoState: after if");
         return currentState;
     }
+
+//    private class SizeClass extends ReadOnlyIntegerPropertyBase {
+//
+//        private int size;
+//
+//        @Override
+//        public final int get() {
+//            return size;
+//        }
+//
+//        private void set(int newValue) {
+//            size = newValue;
+//            fireValueChangedEvent();
+//        }
+//
+//        @Override
+//        public Object getBean() {
+//            return UndoFormCakeTaker.this;
+//        }
+//
+//        @Override
+//        public String getName() {
+//            return "size";
+//        }
+//    }
+//
+//    private SizeClass undoSize = new SizeClass();
+//    private SizeClass redoSize = new SizeClass();
+//
+//    public final int getUndoSize() {
+//        return undoSize.get();
+//    }
+//
+//    public final int getRedoSize() {
+//        return redoSize.get();
+//    }
+//
+//    public final ReadOnlyIntegerProperty undoSizeProperty() {
+//        return undoSize;
+//    }
+//
+//    public final ReadOnlyIntegerProperty redoSizeProperty() {
+//        return redoSize;
+//    }
 }

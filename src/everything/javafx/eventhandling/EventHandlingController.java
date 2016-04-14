@@ -99,7 +99,6 @@ public class EventHandlingController{
 //        myTextField.textProperty().bindBidirectional(myTextFieldProperty);
         cakeTaker.saveState(saveFormState());
 
-
         // Handle Button event.
         myButton.setOnAction((event) -> {
             outputTextArea.appendText("Button Action\n");
@@ -247,6 +246,20 @@ public class EventHandlingController{
         });
     }
 
+//    private void enableDisableUndoRedoBtn(){
+//        if(cakeTaker.getUndoSize() == 0){
+//            undoButton.setDisable(true);
+//        }else{
+//            undoButton.setDisable(false);
+//        }
+//
+//        if(cakeTaker.getRedoSize() == 0){
+//            redoButton.setDisable(true);
+//        }else{
+//            redoButton.setDisable(false);
+//        }
+//    }
+
     private FormState saveFormState(){
 //        return new FormState(myTextFieldProperty.getValue(), myCheckBoxProperty.getValue());
         return new FormState(myTextField.getText(), myCheckBox.isSelected());
@@ -262,6 +275,5 @@ public class EventHandlingController{
 //        }
         myTextField.setText(formState.getTextfieldValue());
         myCheckBox.setSelected(formState.getCheckboxValue());
-
     }
 }
