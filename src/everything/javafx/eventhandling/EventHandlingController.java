@@ -3,7 +3,6 @@ package everything.javafx.eventhandling;
 import everything.javafx.eventhandling.memento.per_form.FormState;
 import everything.javafx.eventhandling.memento.per_form.UndoFormCakeTaker;
 import javafx.beans.property.SimpleBooleanProperty;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -28,8 +27,8 @@ public class EventHandlingController{
 	private UndoFormCakeTaker cakeTaker = new UndoFormCakeTaker();
     private SimpleBooleanProperty isNotUndo = new SimpleBooleanProperty(true);
 
-    private SimpleStringProperty myTextFieldProperty = new SimpleStringProperty();
-    private SimpleBooleanProperty myCheckBoxProperty = new SimpleBooleanProperty();
+//    private SimpleStringProperty myTextFieldProperty = new SimpleStringProperty();
+//    private SimpleBooleanProperty myCheckBoxProperty = new SimpleBooleanProperty();
 //    private Map<String, Property> mapProperty = new HashMap<>();
 //    private static final String TF_KEY = "myTextFieldProperty";
 //    private static final String CB_KEY = "myCheckBoxProperty";
@@ -96,8 +95,10 @@ public class EventHandlingController{
 	 */
 	@FXML
 	private void initialize() {
-        myCheckBox.selectedProperty().bindBidirectional(myCheckBoxProperty);
-        myTextField.textProperty().bindBidirectional(myTextFieldProperty);
+//        myCheckBox.selectedProperty().bindBidirectional(myCheckBoxProperty);
+//        myTextField.textProperty().bindBidirectional(myTextFieldProperty);
+        cakeTaker.saveState(saveFormState());
+
 
         // Handle Button event.
         myButton.setOnAction((event) -> {
@@ -192,8 +193,8 @@ public class EventHandlingController{
 //        myTextField.textProperty().bind(myTextFieldProperty);
         myTextField.textProperty().addListener((observable, oldValue, newValue) -> {
 //        myTextFieldProperty.addListener((observable, oldValue, newValue) -> {
-            System.out.println(
-                    "EventHandlingController.myTextField.textProperty().addListener->cakeTaker.saveState:" + myTextFieldProperty.getValue());
+//            System.out.println(
+//                    "EventHandlingController.myTextField.textProperty().addListener->cakeTaker.saveState:" + myTextFieldProperty.getValue());
             if (isNotUndo.getValue()/* && isNotRedo.getValue()*/) {
 //                cakeTaker.saveState(new StringStateMemento(TF_KEY, newValue));
                 cakeTaker.saveState(saveFormState());
@@ -201,8 +202,8 @@ public class EventHandlingController{
                 isNotUndo.setValue(true);
 //                isNotRedo.setValue(true);
             }
-            System.out.println(
-                    "EventHandlingController.myTextField.textProperty().addListener->myTextFieldProperty:" + myTextFieldProperty.getValue());
+//            System.out.println(
+//                    "EventHandlingController.myTextField.textProperty().addListener->myTextFieldProperty:" + myTextFieldProperty.getValue());
 //            cakeTaker.saveState(new StringStateMemento(myTextFieldProperty));
             outputTextArea.appendText("TextField Text Changed (newValue: " + newValue + ")\n");
         });
@@ -247,17 +248,20 @@ public class EventHandlingController{
     }
 
     private FormState saveFormState(){
-        return new FormState(myTextFieldProperty.getValue(), myCheckBoxProperty.getValue());
+//        return new FormState(myTextFieldProperty.getValue(), myCheckBoxProperty.getValue());
+        return new FormState(myTextField.getText(), myCheckBox.isSelected());
     }
 
     private void restoreFormState(FormState formState){
-        if(formState != null){
-            myTextFieldProperty.setValue(formState.getTextfield());
-            myCheckBoxProperty.setValue(formState.isCheckbox());
-        } else {
-            myTextFieldProperty.setValue("");
-            myCheckBoxProperty.setValue(false);
-        }
+//        if(formState != null){
+//            myTextFieldProperty.setValue(formState.getTextfieldValue());
+//            myCheckBoxProperty.setValue(formState.getCheckboxValue());
+//        } else {
+//            myTextFieldProperty.setValue("");
+//            myCheckBoxProperty.setValue(false);
+//        }
+        myTextField.setText(formState.getTextfieldValue());
+        myCheckBox.setSelected(formState.getCheckboxValue());
 
     }
 }

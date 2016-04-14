@@ -12,11 +12,11 @@ public class FormState {
         this.checkbox = checkbox;
     }
 
-    public boolean isCheckbox() {
+    public boolean getCheckboxValue() {
         return checkbox;
     }
 
-    public String getTextfield() {
+    public String getTextfieldValue() {
         return textfield;
     }
 

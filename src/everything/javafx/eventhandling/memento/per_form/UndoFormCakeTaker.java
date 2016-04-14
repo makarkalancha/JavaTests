@@ -2,6 +2,7 @@ package everything.javafx.eventhandling.memento.per_form;
 
 import everything.javafx.eventhandling.storage.DequeStack;
 import everything.javafx.eventhandling.storage.Stack;
+import javafx.beans.property.SimpleIntegerProperty;
 
 /**
  * User: Makar Kalancha
@@ -11,6 +12,8 @@ import everything.javafx.eventhandling.storage.Stack;
 public class UndoFormCakeTaker<V>{
     private Stack<FormState> undoStates = new DequeStack<>(3);
     private Stack<FormState> redoStates = new DequeStack<>(3);
+    private SimpleIntegerProperty undoSize = new SimpleIntegerProperty();
+    private SimpleIntegerProperty redoSize = new SimpleIntegerProperty();
     private FormState currentState;
 
     private void log(String source){
@@ -33,19 +36,22 @@ public class UndoFormCakeTaker<V>{
 
     public FormState undoState(){
         log("undoState: before if");
-        FormState result = null;
-        if(currentState != null) {
-            redoStates.push(currentState);
-        }
+//        FormState result = null;
+//        if(currentState != null) {
+//            redoStates.push(currentState);
+//        }
         if(!undoStates.isEmpty()){
+            redoStates.push(currentState);
             currentState = undoStates.pop();
             System.out.println("getState from UndoCakeTaker.undoState");
-            result = currentState;
-        } else {
-            currentState = null;
+//            result = currentState;
         }
+// else {
+//            currentState = null;
+//        }
         log("undoState: after if");
-        return result;
+//        return result;
+        return currentState;
     }
 
     public FormState redoState(){
@@ -53,9 +59,9 @@ public class UndoFormCakeTaker<V>{
 //        V result = null;
 
         if(!redoStates.isEmpty()){
-            if(currentState != null) {
+//            if(currentState != null) {
                 undoStates.push(currentState);
-            }
+//            }
             currentState = redoStates.pop();
             System.out.println("getState from UndoCakeTaker.redoState");
 //            result = currentState.getState();

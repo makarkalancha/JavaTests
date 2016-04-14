@@ -10,5 +10,6 @@ public interface Stack<T> {
     T pop();// 	removeFirst()
     boolean isEmpty();
     void clear();
-//    T peek();// 	peekFirst()
+    T peek();// 	peekFirst()
+    int size();
 }

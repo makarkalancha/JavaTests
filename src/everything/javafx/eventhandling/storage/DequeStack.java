@@ -86,6 +86,17 @@ public class DequeStack<T> implements Stack<T> {
     }
 
     @Override
+    public T peek() {
+        return deque.peek();
+    }
+
+    @Override
+    public int size() {
+//        return deque.size();
+        return currentSize;
+    }
+
+    @Override
     public String toString() {
         return deque.toString();
     }
