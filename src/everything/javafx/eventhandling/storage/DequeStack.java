@@ -15,6 +15,31 @@ public class DequeStack<T> implements Stack<T> {
     private int currentSize = 0;
     private Deque<T> deque = new ArrayDeque<>();
 
+    public static void main(String[] args) {
+        Stack<Integer> stack = new DequeStack<>(3);
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        stack.clear();
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+
+    }
+
     public DequeStack(){
 
     }
@@ -41,8 +66,11 @@ public class DequeStack<T> implements Stack<T> {
     @Override
     public T pop() {
         System.out.println("pop->sizeLimit:" + sizeLimit + "; currentSize:" + currentSize + "; size:" + deque.size());
-        --currentSize;
-        return deque.removeFirst();
+        if(currentSize > 0) {
+            --currentSize;
+            return deque.removeFirst();
+        }
+        return null;
     }
 
     @Override
