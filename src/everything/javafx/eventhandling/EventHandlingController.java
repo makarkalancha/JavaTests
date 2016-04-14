@@ -30,12 +30,6 @@ public class EventHandlingController{
     private BooleanProperty isUndoEmpty = new SimpleBooleanProperty(true);
     private BooleanProperty isRedoEmpty = new SimpleBooleanProperty(true);
 
-//    private SimpleStringProperty myTextFieldProperty = new SimpleStringProperty();
-//    private SimpleBooleanProperty myCheckBoxProperty = new SimpleBooleanProperty();
-//    private Map<String, Property> mapProperty = new HashMap<>();
-//    private static final String TF_KEY = "myTextFieldProperty";
-//    private static final String CB_KEY = "myCheckBoxProperty";
-
     @FXML
     private Button undoButton;
 
@@ -74,11 +68,6 @@ public class EventHandlingController{
 	 * The constructor (is called before the initialize()-method).
 	 */
 	public EventHandlingController() {
-//        formSnapshot = new FormSnapshot(myTextFieldProperty, myCheckBoxProperty);
-//
-//        mapProperty.put(TF_KEY, myTextFieldProperty);
-//        mapProperty.put(CB_KEY, myCheckBoxProperty);
-
         // Create some sample data for the ComboBox and ListView.
         myComboBoxData.add(new Person("Hans", "Muster"));
         myComboBoxData.add(new Person("Ruth", "Mueller"));
@@ -96,7 +85,6 @@ public class EventHandlingController{
         System.out.println("initializeUnRedoFramework");
         undoButton.setDisable(isUndoEmpty.getValue());
         redoButton.setDisable(isRedoEmpty.getValue());
-//        isUndoEmpty.bind(undoButton.isd);
         isUndoEmpty.addListener((observable, oldValue, newValue) -> {
             System.out.println("isUndoEmpty.addListener-> observable: " + observable + ", oldValue: " + oldValue + ", newValue: " + newValue);
             if (newValue) {
@@ -289,15 +277,11 @@ public class EventHandlingController{
 //    }
 
     private void saveForm() {
-        cakeTaker.saveState(saveFormState());
+        cakeTaker.saveState(new FormState(myTextField.getText(), myCheckBox.isSelected()));
         isUndoEmpty.setValue(cakeTaker.isUndoEmpty());
         isRedoEmpty.setValue(cakeTaker.isRedoEmpty());
     }
 
-    private FormState saveFormState() {
-//        return new FormState(myTextFieldProperty.getValue(), myCheckBoxProperty.getValue());
-        return new FormState(myTextField.getText(), myCheckBox.isSelected());
-    }
 
     private void restoreFormState(FormState formState){
         myTextField.setText(formState.getTextfieldValue());
