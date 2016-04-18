@@ -93,8 +93,8 @@ public class BindingDemo {
         @Override
         public void setParent(Main main) {
             ct = main.getCareTaker();
-            size.bind(main.size);
-            isEmpty.bind(main.isEmpty);
+            size.bind(main.sizeProperty());
+            isEmpty.bind(main.isEmptyProperty());
             log("setParent");
 
             size.addListener((observable, oldValue, newValue) -> {
