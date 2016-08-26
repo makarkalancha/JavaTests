@@ -30,6 +30,10 @@ public class UrlCheck {
                 ""
             };
 
+        UrlValidator urlValidatorTest = new UrlValidator();
+        System.out.println("urlValidatorTest.isValid:" + urlValidatorTest.isValid("http://desturl24-1.com"));
+
+
         String[] schemes = {"http","https"};
         UrlValidator urlValidator1 = new UrlValidator(schemes);
 //        System.out.println("urlValidator1");
