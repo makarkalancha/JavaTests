@@ -1,4 +1,4 @@
-package everything;
+package everything.locale;
 
 import java.util.Locale;
 
@@ -16,7 +16,7 @@ public class LocaleTest {
         System.out.println(defaultLocale.getDisplayName());
         System.out.println(en.getDisplayName());
         System.out.println(en.getISO3Language());
-        System.out.println(en.getLanguage());
-        System.out.println(ja.getLanguage());
+        System.out.println(en.getDisplayLanguage(en));
+        System.out.println(ja.getDisplayLanguage(ja));
     }
 }
