@@ -18,17 +18,18 @@ import java.util.Arrays;
 public class UrlCheck {
     public static void main(String[] args) {
         String[] urls = {
-                "ftp://foo.bar.com/",           //
-                "http://www.google.com/foo.png",    //true
-                "www.google.com/foo.png",           //false
-                "google.com/foo.png",               //false
-                "foo.png",                          //false
-                "http://foo.png",                    //false
+//                "ftp://foo.bar.com/",           //
+//                "http://www.google.com/foo.png",    //true
+//                "www.google.com/foo.png",           //false
+//                "google.com/foo.png",               //false
+//                "foo.png",                          //false
+//                "http://foo.png",                    //false
                 "http://twitter.com/12345679",               //true
-                "twitter.com/12345679",               //
-                null,
-                "",
-                "http://desturl24-1.com"
+//                "twitter.com/12345679",               //
+//                null,
+//                "",
+//                "http://desturl24-1.com",
+                "http://www.acquisio.com/#$%^('\\'l\\bileurlupdated2~~```!^@%#$^!%@#$^!%@#^$!%@#$^!%@^#$!%@"
             };
 
 //        UrlValidator urlValidatorTest = new UrlValidator();
@@ -36,7 +37,8 @@ public class UrlCheck {
 
 
         String[] schemes = {"http","https"};
-        UrlValidator urlValidator1 = new UrlValidator(schemes);
+        UrlValidator urlValidator1 = new UrlValidator(schemes, UrlValidator.NO_FRAGMENTS);
+//        UrlValidator urlValidator1 = new UrlValidator(schemes);
 //        System.out.println("urlValidator1");
         checkArr(urlValidator1, urls);
 //
@@ -101,8 +103,8 @@ public class UrlCheck {
 
     static void checkArr(UrlValidator url, String[] arr){
         for(String s : arr){
-//            System.out.println(url.isValid(s)+"\t"+s);
-            System.out.println(url.isValid(encodeUrl(s))+"\t"+s);
+            System.out.println(url.isValid(s)+"\t"+s);
+//            System.out.println(url.isValid(encodeUrl(s))+"\t"+s);
         }
     }
 
