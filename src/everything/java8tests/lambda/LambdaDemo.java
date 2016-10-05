@@ -1,7 +1,6 @@
 package everything.java8tests.lambda;
 
-import org.joda.time.LocalDate;
-
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,12 +11,12 @@ import java.util.List;
  */
 public class LambdaDemo {
     public static void main(String[] args) {
-        Person person1 = new Person("John", new LocalDate(2010, 1, 1), Person.Sex.MALE, "john@doe.ca");
-        Person person2 = new Person("Jack", new LocalDate(1980, 2, 6), Person.Sex.MALE, "jack@smith.ca");
-        Person person3 = new Person("Jessica", new LocalDate(1959, 6, 20), Person.Sex.FEMALE, "jessica@pollak.ca");
-        Person person4 = new Person("Elizabeth", new LocalDate(1965, 12, 21), Person.Sex.FEMALE, "elizabeth@second.ca");
-        Person person5 = new Person("Charles", new LocalDate(1978, 10, 28), Person.Sex.MALE, "charles@prince.ca");
-        Person person6 = new Person("Kate", new LocalDate(1995, 7, 14), Person.Sex.FEMALE, "kate@dutches.ca");
+        Person person1 = new Person("John", LocalDate.of(2010, 1, 1), Person.Sex.MALE, "john@doe.ca");
+        Person person2 = new Person("Jack", LocalDate.of(1980, 2, 6), Person.Sex.MALE, "jack@smith.ca");
+        Person person3 = new Person("Jessica", LocalDate.of(1959, 6, 20), Person.Sex.FEMALE, "jessica@pollak.ca");
+        Person person4 = new Person("Elizabeth", LocalDate.of(1965, 12, 21), Person.Sex.FEMALE, "elizabeth@second.ca");
+        Person person5 = new Person("Charles", LocalDate.of(1978, 10, 28), Person.Sex.MALE, "charles@prince.ca");
+        Person person6 = new Person("Kate", LocalDate.of(1995, 7, 14), Person.Sex.FEMALE, "kate@dutches.ca");
 
         List<Person> persons = new ArrayList<>();
         persons.add(person1);

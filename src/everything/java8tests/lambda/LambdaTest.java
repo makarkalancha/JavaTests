@@ -1,4 +1,4 @@
-package everything;
+package everything.java8tests.lambda;
 
 import ch.lambdaj.Lambda;
 import ch.lambdaj.function.convert.Converter;
