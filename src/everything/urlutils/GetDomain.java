@@ -17,11 +17,11 @@ public class GetDomain {
 //        cases.add("wwwsupernatural-brasil.blogspot.com");
 //        cases.add("xtop10.net");
 //        cases.add("zoyanailpolish.blogspot.com");
-//        cases.add("comp.infosystems.www.servers.unix");
-
+//        cases.add("comp.infosystems.www.servers.unix");//false
+//
         cases.add("https://www.google.ca/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=nhl");
-        cases.add("https://google.ca/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=nhl/kj;lkj/");
-//        cases.add("https://comp.infosystems.www.servers.unix");
+//        cases.add("https://google.ca/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=nhl/kj;lkj/");
+//        cases.add("http://desturl24-1.com");
 
 
 

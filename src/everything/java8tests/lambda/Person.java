@@ -1,7 +1,11 @@
 package everything.java8tests.lambda;
 
-import org.joda.time.LocalDate;
+
+import com.google.common.base.Objects;
 import org.joda.time.Years;
+
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 /**
  * User: Makar Kalancha
@@ -13,7 +17,7 @@ public class Person {
         MALE,FEMALE
     }
 
-    public Person(String name,LocalDate birthday, Sex gender, String emailAddress){
+    public Person(String name, LocalDate birthday, Sex gender, String emailAddress){
         this._name = name;
         this._birthday = birthday;
         this._gender = gender;
@@ -41,10 +45,9 @@ public class Person {
         return _emailAddress;
     }
 
-    public int getAge() {
-        LocalDate now = new LocalDate();
-        Years age = Years.yearsBetween(_birthday, now);
-        return age.getYears();
+    public long getAge() {
+        LocalDate now = LocalDate.now();
+        return ChronoUnit.YEARS.between(_birthday, now);
     }
 
     @Override
@@ -56,5 +59,24 @@ public class Person {
                 ", _gender=" + _gender +
                 ", _emailAddress='" + _emailAddress + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (other instanceof Person) {
+            Person that = (Person) other;
+            return Objects.equal(getName(), that.getName())
+                    && Objects.equal(getBirthday(), that.getBirthday())
+                    && Objects.equal(getAge(), that.getAge())
+                    && Objects.equal(getGender(), that.getGender())
+                    && Objects.equal(getEmailAddress(), that.getEmailAddress())
+                    ;
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(getName(), getBirthday(), getAge(), getGender(), getEmailAddress());
     }
 }

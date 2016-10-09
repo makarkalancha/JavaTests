@@ -1,4 +1,4 @@
-package everything;//import com.sun.deploy.util.StringUtils;
+package everything.urlutils;//import com.sun.deploy.util.StringUtils;
 import org.apache.commons.lang.*;
 import org.apache.commons.codec.EncoderException;
 import org.apache.commons.codec.net.URLCodec;
@@ -25,13 +25,20 @@ public class UrlCheck {
 //                "foo.png",                          //false
 //                "http://foo.png",                    //false
                 "http://twitter.com/12345679",               //true
-//                "twitter.com/12345679"               //
-                null,
-                ""
+//                "twitter.com/12345679",               //
+//                null,
+//                "",
+//                "http://desturl24-1.com",
+                "http://www.acquisio.com/#$%^('\\'l\\bileurlupdated2~~```!^@%#$^!%@#$^!%@#^$!%@#$^!%@^#$!%@"
             };
 
+//        UrlValidator urlValidatorTest = new UrlValidator();
+//        System.out.println("urlValidatorTest.isValid:" + urlValidatorTest.isValid("http://desturl24-1.com"));
+
+
         String[] schemes = {"http","https"};
-        UrlValidator urlValidator1 = new UrlValidator(schemes);
+        UrlValidator urlValidator1 = new UrlValidator(schemes, UrlValidator.NO_FRAGMENTS);
+//        UrlValidator urlValidator1 = new UrlValidator(schemes);
 //        System.out.println("urlValidator1");
         checkArr(urlValidator1, urls);
 //
@@ -96,8 +103,8 @@ public class UrlCheck {
 
     static void checkArr(UrlValidator url, String[] arr){
         for(String s : arr){
-//            System.out.println(url.isValid(s)+"\t"+s);
-            System.out.println(url.isValid(encodeUrl(s))+"\t"+s);
+            System.out.println(url.isValid(s)+"\t"+s);
+//            System.out.println(url.isValid(encodeUrl(s))+"\t"+s);
         }
     }
 
@@ -107,13 +114,13 @@ public class UrlCheck {
         String result = "";
         try{
             if(url != null && url != ""){
-                System.out.println(">>>>url:"+url);
+//                System.out.println(">>>>url:"+url);
 
                 URL urlObj = new URL(url);
                 URLCodec codec = new URLCodec();
                 String protocol = urlObj.getProtocol();
                 String host = codec.encode(urlObj.getHost());
-                System.out.println(">>>>path:"+urlObj.getPath());
+//                System.out.println(">>>>path:"+urlObj.getPath());
     //            String[] path = urlObj.getPath().split("/");
                 String[] path = StringUtils.split(urlObj.getPath(),'/');
     //            for(String p : path){
@@ -125,14 +132,14 @@ public class UrlCheck {
                     path[i] = codec.encode(path[i]);
                 }
                 result = new URL(protocol,host,"/"+StringUtils.join(Arrays.asList(path),"/")).toString();
-                System.out.println(">>>>randomNumber: "+result);
+//                System.out.println(">>>>randomNumber: "+result);
             }
         }catch (MalformedURLException e){
-            e.printStackTrace();
-            System.out.println(">>ERROR: url=" + url + "; exception:" + e.getMessage());
+//            e.printStackTrace();
+            System.out.println(">>ERROR: url=" + url + "; MalformedURLException:" + e.getMessage());
         }catch (EncoderException e){
-            e.printStackTrace();
-            System.out.println(">>ERROR: url="+url+"; exception:"+e.getMessage());
+//            e.printStackTrace();
+            System.out.println(">>ERROR: url="+url+"; EncoderException:"+e.getMessage());
         }
 
         return result;

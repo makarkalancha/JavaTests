@@ -15,8 +15,8 @@ public class LocaleDemo {
     //vm option: -Djava.ext.dirs=lib
     public static void main(String[] args) {
         System.out.println(System.getProperty("java.locale.providers"));
-//        System.setProperty("java.locale.providers", "SPI,JRE");
-        System.setProperty("java.locale.providers", "HOST");
+        System.setProperty("java.locale.providers", "HOST,SPI,JRE");
+//        System.setProperty("java.locale.providers", "HOST");
         System.out.println(System.getProperty("java.locale.providers"));
 
 
