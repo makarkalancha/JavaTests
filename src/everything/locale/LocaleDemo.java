@@ -15,21 +15,21 @@ public class LocaleDemo {
     //vm option: -Djava.ext.dirs=lib
     public static void main(String[] args) {
         System.out.println(System.getProperty("java.locale.providers"));
-        System.setProperty("java.locale.providers", "SPI,JRE");
-//        System.setProperty("java.locale.providers", "HOST");
+//        System.setProperty("java.locale.providers", "SPI,JRE");
+        System.setProperty("java.locale.providers", "HOST");
         System.out.println(System.getProperty("java.locale.providers"));
 
 
-//        Locale myLocale = new Locale.Builder().setLanguageTag("me-ME-u-fw-mon").build();
-//        Locale myLocale = new Locale("me","ME");
-        Locale myLocale = new Locale("me_ME");
-//        Locale myLocale = new Locale.Builder().setLanguageTag("me-ME-u-ca-iso8601").build();
-//        ResourceBundle resourceBundle = ResourceBundle.getBundle("everything.locale.CustomLocale", myLocale);
-//        Locale myLocale = new Locale("ru");
-//        CalendarData calendarDataProvider = CalendarDataProvider.get
-//        Locale myLocale = new Locale("en", "US", "ru");
-//        System.out.println(new CalendarDataProviderImp().getFirstDayOfWeek(myLocale));
-        Locale.setDefault(myLocale);
+////        Locale myLocale = new Locale.Builder().setLanguageTag("me-ME-u-fw-mon").build();
+////        Locale myLocale = new Locale("me","ME");
+//        Locale myLocale = new Locale("me_ME");
+////        Locale myLocale = new Locale.Builder().setLanguageTag("me-ME-u-ca-iso8601").build();
+////        ResourceBundle resourceBundle = ResourceBundle.getBundle("everything.locale.CustomLocale", myLocale);
+////        Locale myLocale = new Locale("ru");
+////        CalendarData calendarDataProvider = CalendarDataProvider.get
+////        Locale myLocale = new Locale("en", "US", "ru");
+////        System.out.println(new CalendarDataProviderImp().getFirstDayOfWeek(myLocale));
+//        Locale.setDefault(myLocale);
         System.out.println(WeekFields.of(Locale.getDefault()).getFirstDayOfWeek());
 
 //        WeekFields.of(DayOfWeek.MONDAY, 1);
