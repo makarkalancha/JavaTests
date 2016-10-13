@@ -8,12 +8,16 @@ import org.apache.commons.lang3.StringUtils;
  * Time: 14:34
  */
 public class RemoveVowel {
-    //https://simple.wikipedia.org/wiki/Vowel
+
     public static void main(String[] args) {
-//        char[] vowels = {'A', 'E', 'I', 'O', 'U', 'Y'};
-        String vowels = "AEIOUY";
-        String stringToClean = "vowel".toUpperCase();
-        String cleanedString = StringUtils.replaceChars(stringToClean, vowels, "");
-        System.out.println(cleanedString);
+        System.out.println(removeVowel("OPERATION_ID, ACCOUNT_ID, DATEUNIT_UNITDAY"));
+    }
+
+    public static String removeVowel(String stringToClean){
+        //https://simple.wikipedia.org/wiki/Vowel
+        //        char[] vowels = {'A', 'E', 'I', 'O', 'U', 'Y'};
+        final String vowels = "AEIOUY_, ";
+        stringToClean = stringToClean.toUpperCase();
+        return StringUtils.replaceChars(stringToClean, vowels, "");
     }
 }
