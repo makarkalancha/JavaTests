@@ -10,7 +10,9 @@ import org.apache.commons.lang3.StringUtils;
 public class RemoveVowel {
 
     public static void main(String[] args) {
-        System.out.println(removeVowel("OPERATION_ID, ACCOUNT_ID, DATEUNIT_UNITDAY"));
+        System.out.println(removeVowel("TRANSFER_CURRENCY_RATE"));
+        System.out.println(removeVowel("TRANSFER_ID"));
+        System.out.println(removeVowel("CURRENCY_RATE_ID"));
     }
 
     public static String removeVowel(String stringToClean){
