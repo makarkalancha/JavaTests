@@ -31,7 +31,7 @@ public class EnumSetTest {
 
         @Override
         public String toString() {
-            return "Color." + this.name();
+            return this.getDeclaringClass().getSimpleName().toString() + "." + this.name();
         }
     }
 
