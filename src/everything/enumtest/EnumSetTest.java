@@ -28,6 +28,11 @@ public class EnumSetTest {
         public int getBlue() {
             return blue;
         }
+
+        @Override
+        public String toString() {
+            return "Color." + this.name();
+        }
     }
 
     public static void drawLine(Set<Color> colors){
@@ -47,6 +52,8 @@ public class EnumSetTest {
 //        EnumSet<Color> pink = EnumSet.of(Color.RED, Color.BLUE);
 //        drawLine(pink);
 
-        System.out.println("red:"+Color.valueOf("red".toUpperCase()));
+//        System.out.println("red:"+Color.valueOf("red".toUpperCase()));
+        System.out.println(Color.RED);
+
     }
 }
