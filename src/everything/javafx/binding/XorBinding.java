@@ -4,6 +4,7 @@ import javafx.beans.binding.Bindings;
 import javafx.beans.binding.BooleanBinding;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Created by Makar Kalancha
@@ -37,15 +38,20 @@ public class XorBinding {
                 ;
         System.out.println("booleanBinding.get(): " + booleanBinding.get());
 
-        String a = "a";
+        String a = "";
         String b = "a";
         String c = "a";
         String d = "a";
 
-        boolean disableBoolean =
-                (a == null || b == null || c == null || d == null)
+//        boolean disableBoolean =
+//                (a == null || b == null || c == null || d == null)
 //                &&
 //                (!(a == null && b == null && c == null && d == null))
+//                ;
+        boolean disableBoolean =
+                (StringUtils.isBlank(a) || StringUtils.isBlank(b) || StringUtils.isBlank(c) || StringUtils.isBlank(d))
+                        &&
+                        (!(StringUtils.isBlank(a) && StringUtils.isBlank(b) && StringUtils.isBlank(c) && StringUtils.isBlank(d)))
                 ;
         System.out.println("disableBoolean: " + disableBoolean);
 
