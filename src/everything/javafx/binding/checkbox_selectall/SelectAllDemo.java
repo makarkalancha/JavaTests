@@ -31,6 +31,7 @@ public class SelectAllDemo extends Application{
         VBox root = new VBox();
         Scene scene = new Scene(root, 300, 250);
 
+        //https://coderanch.com/t/667118/java/Indeterminate-Select-CheckBox
         CheckBox selectAll  = new CheckBox("all");
         selectAll.setAllowIndeterminate(true);
         selectAll.setIndeterminate(true);
