@@ -1,6 +1,7 @@
 package everything.javafx.binding.checkbox_selectall;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.BooleanBinding;
 import javafx.beans.binding.NumberBinding;
@@ -14,6 +15,10 @@ import javafx.scene.control.Separator;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Created by Makar Kalancha
  * Date: 27 Feb 2017
@@ -21,6 +26,10 @@ import javafx.stage.Stage;
  */
 public class SelectAllDemo extends Application{
     private ObservableSet<String> selectedNames = FXCollections.observableSet();
+    private CheckBox selectAll = new CheckBox("all");
+    private List<CheckBox> checkBoxList  = new ArrayList<>();
+    private Runnable selectAllStateChangeProcessor;
+
     public static void main(String[] args) {
         Application.launch(args);
     }
@@ -32,59 +41,88 @@ public class SelectAllDemo extends Application{
         Scene scene = new Scene(root, 300, 250);
 
         //https://coderanch.com/t/667118/java/Indeterminate-Select-CheckBox
-        CheckBox selectAll  = new CheckBox("all");
-        selectAll.setAllowIndeterminate(true);
-        selectAll.setIndeterminate(true);
 
         Separator separator = new Separator();
         CheckBox cb1= new CheckBox("cb1");
         cb1.selectedProperty().addListener((observable, oldValue, newValue) -> {
-            if(newValue){
-                selectedNames.add(cb1.getText());
-            }else {
-                selectedNames.remove(cb1.getText());
-            }
+            selectCheckBox();
         });
         CheckBox cb2= new CheckBox("cb2");
         cb2.selectedProperty().addListener((observable, oldValue, newValue) -> {
-            if(newValue){
-                selectedNames.add(cb2.getText());
-            }else {
-                selectedNames.remove(cb2.getText());
-            }
+            selectCheckBox();
         });
         CheckBox cb3= new CheckBox("cb3");
         cb3.selectedProperty().addListener((observable, oldValue, newValue) -> {
-            if(newValue){
-                selectedNames.add(cb3.getText());
-            }else {
-                selectedNames.remove(cb3.getText());
-            }
+            selectCheckBox();
         });
 
+        checkBoxList.addAll(Arrays.asList(cb1, cb2, cb3));
+
+//        selectAll.setAllowIndeterminate(true);
+        selectAll.setAllowIndeterminate(false);
         selectAll.selectedProperty().addListener((observable, oldValue, newValue) -> {
-            if(newValue){
-                cb1.setSelected(true);
-                cb2.setSelected(true);
-                cb3.setSelected(true);
-            }else {
-                cb1.setSelected(false);
-                cb2.setSelected(false);
-                cb3.setSelected(false);
-            }
+            scheduleSelectAllStateChangeProcessing();
         });
-        IntegerProperty checkboxQty = new SimpleIntegerProperty(4);
-        BooleanBinding booleanBinding = checkboxQty.isEqualTo(Bindings.size(selectedNames));
-        booleanBinding.addListener((observable, oldValue, newValue) -> {
-            if(newValue){
-                selectAll.setSelected(true);
-            }else {
-                selectAll.setSelected(false);
-            }
+        selectAll.indeterminateProperty().addListener((observable, oldValue, newValue) -> {
+            scheduleSelectAllStateChangeProcessing();
         });
+
+//        IntegerProperty checkboxQty = new SimpleIntegerProperty(4);
+//        BooleanBinding booleanBinding = checkboxQty.isEqualTo(Bindings.size(selectedNames));
+//        booleanBinding.addListener((observable, oldValue, newValue) -> {
+//            if(newValue){
+//                selectAll.setSelected(true);
+//            }else {
+//                selectAll.setSelected(false);
+//            }
+//        });
 
         root.getChildren().addAll(selectAll, separator, cb1, cb2, cb3);
         primaryStage.setScene(scene);
         primaryStage.show();
+    }
+
+//    private boolean isAllSelected(){
+//        return selectedNames.size() == 4;
+//    }
+
+    private void selectCheckBox(){
+        if(selectAllStateChangeProcessor == null) {
+            boolean allSelected = checkBoxList.stream()
+                    .map(CheckBox::isSelected)
+                    .reduce(true, (a, b) -> a && b);
+            boolean anySelected = checkBoxList.stream()
+                    .map(CheckBox::isSelected)
+                    .reduce(false, (a, b) -> a || b);
+
+            if(allSelected){
+                selectAll.setSelected(true);
+                selectAll.setIndeterminate(false);
+            }
+
+            if(!anySelected){
+                selectAll.setSelected(false);
+                selectAll.setIndeterminate(false);
+            }
+
+            if(anySelected && !allSelected){
+                selectAll.setSelected(false);
+                selectAll.setIndeterminate(true);
+            }
+        }
+    }
+
+    private void scheduleSelectAllStateChangeProcessing(){
+        if(selectAllStateChangeProcessor == null){
+            selectAllStateChangeProcessor = this::processSelectAllStateChange;
+            Platform.runLater(selectAllStateChangeProcessor);
+        }
+    }
+
+    private void processSelectAllStateChange(){
+        if(!selectAll.isIndeterminate()){
+            checkBoxList.forEach(checkBox -> checkBox.setSelected(selectAll.isSelected()));
+        }
+        selectAllStateChangeProcessor = null;
     }
 }
