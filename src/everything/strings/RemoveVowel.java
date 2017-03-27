@@ -2,6 +2,8 @@ package everything.strings;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.math.BigDecimal;
+
 /**
  * Created by Makar Kalancha
  * Date: 13 Oct 2016
