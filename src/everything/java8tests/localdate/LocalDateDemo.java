@@ -1,6 +1,17 @@
 package everything.java8tests.localdate;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.Date;
+import java.util.List;
+import java.util.Set;
+import java.util.TimeZone;
 
 /**
  * Created by mcalancea on 2016-04-19.
@@ -8,9 +19,48 @@ import java.time.LocalDate;
 public class LocalDateDemo {
 
     public static void main(String[] args) {
-        LocalDate localDate = LocalDate.now();
-        System.out.println(localDate);
-        System.out.println(localDate.toString());
+//        LocalDate localDate = LocalDate.now();
+//        System.out.println(localDate);
+//        System.out.println(localDate.toString());
+
+//        LocalDateDemo.testZones();
+        LocalDateDemo.testZones1();
+    }
+
+    public static void testZones(){
+        TimeZone timeZone = TimeZone.getTimeZone("Australia/Sydney");
+        ZoneId australia = ZoneId.of("Australia/Sydney");
+//        ZoneId australia = ZoneId.of("Australia/South");
+//        ZonedDateTime zonedDateTime= LocalDateTime.now().atZone(australia);
+//        ZonedDateTime zonedDateTime = ZonedDateTime.now().withZoneSameInstant(australia);
+        ZonedDateTime zonedDateTime = ZonedDateTime.now().withZoneSameInstant(timeZone.toZoneId());
+        System.out.println(zonedDateTime);
+//        Date date = Date.from(zonedDateTime.toLocalDate().atStartOfDay(timeZone.toZoneId()).toInstant());
+        Date date = java.sql.Date.valueOf(zonedDateTime.toLocalDate());
+        System.out.println(date);
+    }
+
+    public static void testZones1(){
+        Set<String> allZones = ZoneId.getAvailableZoneIds();
+        LocalDateTime dt = LocalDateTime.now();
+
+// Create a List using the set of zones and sort it.
+        List<String> zoneList = new ArrayList<String>(allZones);
+        Collections.sort(zoneList);
+
+        for (String s : zoneList) {
+            ZoneId zone = ZoneId.of(s);
+            ZonedDateTime zdt = dt.atZone(zone);
+            ZoneOffset offset = zdt.getOffset();
+            int secondsOfHour = offset.getTotalSeconds() % (60 * 60);
+            String out = String.format("%35s\t%10s%n", zone, offset);
+
+            // Write only time zones that do not have a whole hour offset
+            // to standard out.
+//            if (secondsOfHour != 0) {
+                System.out.printf(out);
+//            }
+        }
     }
 
 }
