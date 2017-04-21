@@ -13,5 +13,9 @@ public class BigDecimalTest {
         BigDecimal two = new BigDecimal("2");
         System.out.println(one.compareTo(two));
 
+        String str = null;
+        BigDecimal three = new BigDecimal(str);
+        System.out.println(three);
+
     }
 }
