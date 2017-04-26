@@ -1,10 +1,13 @@
 package everything.java8tests.localdate;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
@@ -24,7 +27,30 @@ public class LocalDateDemo {
 //        System.out.println(localDate.toString());
 
 //        LocalDateDemo.testZones();
-        LocalDateDemo.testZones1();
+//        LocalDateDemo.testZones1();
+        LocalDateDemo.testDateRange();
+    }
+
+    public static void testDateRange(){
+        LocalDate today = LocalDate.now();
+
+        LocalDate start = today.withDayOfMonth(1);
+        LocalDate end = today.withDayOfMonth(today.lengthOfMonth());
+
+        DateRange cycle = new DateRange(start, end);
+
+        String startDate = "2011-01-01";
+        String endDate = "2017-04-01";
+        if(!StringUtils.isEmpty(startDate) && !StringUtils.isEmpty(endDate)) {
+            // Both fields should be standard iso days without time.
+            start = LocalDate.parse(startDate, DateTimeFormatter.ISO_DATE);
+            end = LocalDate.parse(endDate, DateTimeFormatter.ISO_DATE);
+
+            if (start.isBefore(end)) {
+                cycle = new DateRange(start, end);
+            }
+        }
+        System.out.println();
     }
 
     public static void testZones(){
@@ -63,4 +89,21 @@ public class LocalDateDemo {
         }
     }
 
+    private static class DateRange {
+        private final LocalDate start;
+        private final LocalDate end;
+
+        public DateRange(LocalDate start, LocalDate end) {
+            this.start = start;
+            this.end = end;
+        }
+
+        public LocalDate getStart() {
+            return start;
+        }
+
+        public LocalDate getEnd() {
+            return end;
+        }
+    }
 }
