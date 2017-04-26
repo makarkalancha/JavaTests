@@ -1,5 +1,7 @@
 package everything.enumtest;
 
+import org.apache.commons.lang3.EnumUtils;
+
 import java.util.Set;
 
 /**
@@ -53,7 +55,10 @@ public class EnumSetTest {
 //        drawLine(pink);
 
 //        System.out.println("red:"+Color.valueOf("red".toUpperCase()));
-        System.out.println(Color.RED);
+//        System.out.println(Color.RED);
+
+        System.out.println("RED: " + EnumUtils.isValidEnum(Color.class, "RED"));
+        System.out.println("RED1: " + EnumUtils.isValidEnum(Color.class, "RED1"));
 
     }
 }
