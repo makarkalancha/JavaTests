@@ -48,6 +48,7 @@ public class MapTesting {
 //        System.out.println("get33:"+rowList.get(getInt33));
 
 
+
         Map<Integer, Wrapper> mapIntegerToString = new HashMap<>();
         Wrapper a = new Wrapper(0, "exh0");
         Wrapper b = new Wrapper(1, "exh1");
@@ -58,6 +59,7 @@ public class MapTesting {
         mapIntegerToString.put(b.getInteger(), b);
         mapIntegerToString.put(c.getInteger(), c);
         mapIntegerToString.put(d.getInteger(), d);
+        mapIntegerToString.put(20, null);
         System.out.println(mapIntegerToString);
 
         c.setInteger(22);
