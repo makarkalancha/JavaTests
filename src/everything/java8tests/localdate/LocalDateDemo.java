@@ -39,7 +39,7 @@ public class LocalDateDemo {
 
         DateRange cycle = new DateRange(start, end);
 
-        String startDate = "2011-01-01";
+        String startDate = "2011-1-01";
         String endDate = "2017-04-01";
         if(!StringUtils.isEmpty(startDate) && !StringUtils.isEmpty(endDate)) {
             // Both fields should be standard iso days without time.
