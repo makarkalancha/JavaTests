@@ -1,12 +1,18 @@
 package everything.javafx.linechart;
 
 import javafx.application.Application;
+import javafx.beans.binding.Bindings;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
+import javafx.geometry.Point2D;
 import javafx.scene.Scene;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.Tooltip;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
@@ -21,14 +27,14 @@ import java.util.stream.Collectors;
  * Time: 12:24
  */
 public class GraphTestXAxisString extends Application {
-
+    final CategoryAxis xAxis = new CategoryAxis();
+    final NumberAxis yAxis = new NumberAxis();
 
     @Override
     public void start(Stage stage) {
         stage.setTitle("Line Chart Sample");
         //defining the axes
-        final CategoryAxis xAxis = new CategoryAxis();
-        final NumberAxis yAxis = new NumberAxis();
+
         xAxis.setLabel("Number of Month");
         //creating the chart
         final LineChart<String, Number> lineChart
@@ -70,8 +76,35 @@ public class GraphTestXAxisString extends Application {
         series2.getData().add(new XYChart.Data("23", 36));
         series2.getData().add(new XYChart.Data("24", 22));
 
-        lineChart.getData().add(series2);
-        lineChart.getData().add(series1);
+//        lineChart.getData().add(series2);
+//        lineChart.getData().add(series1);
+        lineChart.getData().addAll(series2, series1);
+
+        /////////////////////////////////////////////////
+//        ObjectProperty<Point2D> mouseLocationInScene = new SimpleObjectProperty<>();
+//
+//        Tooltip tooltip = new Tooltip();
+//
+//        lineChart.addEventHandler(MouseEvent.MOUSE_MOVED, evt -> {
+//            if (!tooltip.isShowing()) {
+//                mouseLocationInScene.set(new Point2D(evt.getSceneX(), evt.getSceneY()));
+//            }
+//        });
+//
+//        tooltip.textProperty().bind(Bindings.createStringBinding(() -> {
+//                    if (mouseLocationInScene.isNull().get()) {
+//                        return "" ;
+//                    }
+//                    double xInXAxis = xAxis.sceneToLocal(mouseLocationInScene.get()).getX() ;
+//                    String x = xAxis.getValueForDisplay(xInXAxis);
+//                    double yInYAxis = yAxis.sceneToLocal(mouseLocationInScene.get()).getY() ;
+//                    double y = yAxis.getValueForDisplay(yInYAxis).doubleValue() ;
+//                    return String.format("[%s, %.3f]", x, y);
+//                }, mouseLocationInScene, xAxis.startMarginProperty(), xAxis.endMarginProperty(),
+//                yAxis.lowerBoundProperty(), yAxis.upperBoundProperty()));
+//
+//        Tooltip.install(lineChart, tooltip);
+        /////////////////////////////////////////////////
 
         xAxis.setAutoRanging(true);
 //        Set<String> xValues = new TreeSet<>(lineChart.getData().stream()

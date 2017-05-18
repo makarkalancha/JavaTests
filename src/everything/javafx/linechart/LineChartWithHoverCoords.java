@@ -1,13 +1,18 @@
 package everything.javafx.linechart;
 
 import javafx.application.Application;
+import javafx.beans.binding.Bindings;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
+import javafx.geometry.Point2D;
 import javafx.geometry.Pos;
 import javafx.scene.*;
 import javafx.scene.chart.*;
 import javafx.scene.control.Label;
+import javafx.scene.control.Tooltip;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -73,6 +78,32 @@ public class LineChartWithHoverCoords extends Application {
                         new XYChart.Data<Number, Number>(12, 25)
                 )
         );
+
+        /////////////////////////////////////////////////
+        ObjectProperty<Point2D> mouseLocationInScene = new SimpleObjectProperty<>();
+
+        Tooltip tooltip = new Tooltip();
+
+        lineChart.addEventHandler(MouseEvent.MOUSE_MOVED, evt -> {
+            if (! tooltip.isShowing()) {
+                mouseLocationInScene.set(new Point2D(evt.getSceneX(), evt.getSceneY()));
+            }
+        });
+
+        tooltip.textProperty().bind(Bindings.createStringBinding(() -> {
+                    if (mouseLocationInScene.isNull().get()) {
+                        return "" ;
+                    }
+                    double xInXAxis = xAxis.sceneToLocal(mouseLocationInScene.get()).getX() ;
+                    double x = xAxis.getValueForDisplay(xInXAxis).doubleValue();
+                    double yInYAxis = yAxis.sceneToLocal(mouseLocationInScene.get()).getY() ;
+                    double y = yAxis.getValueForDisplay(yInYAxis).doubleValue() ;
+                    return String.format("[%.3f, %.3f]", x, y);
+                }, mouseLocationInScene, xAxis.lowerBoundProperty(), xAxis.upperBoundProperty(),
+                yAxis.lowerBoundProperty(), yAxis.upperBoundProperty()));
+
+        Tooltip.install(lineChart, tooltip);
+        /////////////////////////////////////////////////
 
         lineChart.getData().add(series);
         return lineChart;

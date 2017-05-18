@@ -7,6 +7,7 @@ import javafx.geometry.Insets;
 import javafx.scene.*;
 import javafx.scene.chart.*;
 import javafx.scene.control.Label;
+import javafx.scene.control.Tooltip;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
@@ -23,6 +24,7 @@ public class LineChartWithHover extends Application {
     private NumberAxis yAxis = new NumberAxis();
     private Node chartBackground;
     private Label coord = new Label();
+    final Tooltip tooltip = new Tooltip();
 
     @SuppressWarnings("unchecked")
     @Override
@@ -90,28 +92,29 @@ public class LineChartWithHover extends Application {
             setStyle("-fx-background-color: rgba(0,0,0,0);");
 
 
-
-
-            final Label label = createDataThresholdLabel(priorValue, value);
+//            final Label label = createDataThresholdLabel(priorValue, value);
 
             setOnMouseEntered(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
-                    getChildren().setAll(label);
+//                    getChildren().setAll(label);
                     setCursor(Cursor.NONE);
                     toFront();
                     double top = 0d;
                     double right = 0d;
                     double bottom = 0d;
                     double left = 0d;
-                    if()
-                    setMargin(label, new Insets(top, right, bottom, left));
-                    System.out.println("=============================================================");
-                    System.out.println("x:" + event.getX() + "; y:" + event.getY());
-//                    System.out.println("getScreenX:"+event.getScreenX()+"; getScreenY:"+event.getScreenY());
-                    System.out.println("getSceneX:" + event.getSceneX() + "; getSceneY:" + event.getSceneY());
-                    System.out.println("xAxis:" + xAxis.getValueForDisplay(event.getX()) + "; yAxis:" + yAxis.getValueForDisplay(event.getY()));
-                    System.out.println("xAxis.getWidth():" + xAxis.getWidth()+"; yAxis.getHeight():" + yAxis.getHeight());
+//                    if()
+//                    setMargin(label, new Insets(top, right, bottom, left));
+//                    System.out.println("=============================================================");
+//                    System.out.println("x:" + event.getX() + "; y:" + event.getY());
+////                    System.out.println("getScreenX:"+event.getScreenX()+"; getScreenY:"+event.getScreenY());
+//                    System.out.println("getSceneX:" + event.getSceneX() + "; getSceneY:" + event.getSceneY());
+//                    System.out.println("xAxis:" + xAxis.getValueForDisplay(event.getX()) + "; yAxis:" + yAxis.getValueForDisplay(event.getY()));
+//                    System.out.println("xAxis.getWidth():" + xAxis.getWidth()+"; yAxis.getHeight():" + yAxis.getHeight());
+//                    tooltip.setText("x:" + event.getX() + "; y:" + event.getY());
+//                    tooltip.setX(event.getX());
+//                    tooltip.setY(event.getY());
                 }
             });
             setOnMouseExited(new EventHandler<MouseEvent>() {
