@@ -39,6 +39,8 @@ public class LineChartInStackPane extends Application {
     private Label coordLabelLineChart;
     private final Label label = new Label("text");
     private final Label label1 = new Label("text1");
+    private XYChart.Series<String, Number> series1;
+    private XYChart.Series<String, Number> series2;
 
     @Override
     public void start(Stage stage) {
@@ -53,7 +55,7 @@ public class LineChartInStackPane extends Application {
         lineChart.setTitle("Stock Monitoring, 2010");
 
         //defining a series
-        XYChart.Series<String, Number> series1 = new XYChart.Series();
+        series1 = new XYChart.Series();
         series1.setName("My portfolio 1");
         //populating the series with data
         series1.getData().add(new XYChart.Data("8", 45));
@@ -70,7 +72,7 @@ public class LineChartInStackPane extends Application {
         series1.getData().add(new XYChart.Data("7", 22));
 
         //defining a series
-        XYChart.Series<String, Number> series2 = new XYChart.Series();
+        series2 = new XYChart.Series();
         series2.setName("My portfolio 2");
         //populating the series with data
         series2.getData().add(new XYChart.Data("1", 45));
@@ -103,6 +105,8 @@ public class LineChartInStackPane extends Application {
         xAxis.setCategories(FXCollections.<String>observableArrayList(xValues));
         xAxis.invalidateRange(new ArrayList<>(xValues));
 
+        label.setVisible(false);
+        label1.setVisible(false);
 
         StackPane stackPane = new StackPane();
         stackPane.getChildren().add(lineChart);
@@ -132,7 +136,7 @@ public class LineChartInStackPane extends Application {
         final Node chartTitle = lineChart.lookup(".chart-title");
         final Node chartContent = lineChart.lookup(".chart-content");
 
-        label.setStyle("-fx-background-color: blue ");
+        label.setStyle("-fx-background-color: lightblue  ");
         label1.setStyle("-fx-background-color: deepskyblue ");
         lineChart.setStyle("-fx-background-color: red ");
         chartBackground.setStyle("-fx-background-color: lightgreen ");
@@ -142,7 +146,7 @@ public class LineChartInStackPane extends Application {
         Bounds boundsChartBackground = chartBackground.getLayoutBounds();
         double hChartBackground = boundsChartBackground.getHeight();
         double wChartBackground = boundsChartBackground.getWidth();
-        System.out.println("chartBackground->");
+        System.out.println("chartBackground->lightgreen");
         System.out.println("wChartBackground:" + wChartBackground + "; hChartBackground:" + hChartBackground);
         double xChartBackground = chartBackground.getLayoutX();
         double yChartBackground = chartBackground.getLayoutY();
@@ -151,7 +155,7 @@ public class LineChartInStackPane extends Application {
         Bounds boundsChartTitle = chartTitle.getLayoutBounds();
         double hChartTitle = boundsChartTitle.getHeight();
         double wChartTitle = boundsChartTitle.getWidth();
-        System.out.println("ChartTitle->");
+        System.out.println("ChartTitle->ivory");
         System.out.println("wChartTitle:" + wChartTitle + "; hChartTitle:" + hChartTitle);
         double xChartTitle = chartTitle.getLayoutX();
         double yChartTitle = chartTitle.getLayoutY();
@@ -160,7 +164,7 @@ public class LineChartInStackPane extends Application {
         Bounds boundsChartContent = chartContent.getLayoutBounds();
         double hChartContent = boundsChartContent.getHeight();
         double wChartContent = boundsChartContent.getWidth();
-        System.out.println("ChartContent->");
+        System.out.println("ChartContent->powderblue");
         System.out.println("wChartContent:" + wChartContent + "; hChartContent:" + hChartContent);
         double xChartContent = chartContent.getLayoutX();
         double yChartContent = chartContent.getLayoutY();
@@ -169,7 +173,7 @@ public class LineChartInStackPane extends Application {
         Bounds boundsLineChart = lineChart.getLayoutBounds();
         double hLineChart = boundsLineChart.getHeight();
         double wLineChart = boundsLineChart.getWidth();
-        System.out.println("lineChart->");
+        System.out.println("lineChart->red");
         System.out.println("wLineChart:" + wLineChart + "; hLineChart:" + hLineChart);
         double xLineChart = lineChart.getLayoutX();
         double yLineChart = lineChart.getLayoutY();
@@ -186,6 +190,7 @@ public class LineChartInStackPane extends Application {
                 0,
                 0));
         StackPane.setMargin(label1, new Insets(xChartBackground, 0, 0, yChartBackground));
+        passValuesToLabel1(chartBackground);
 //        Insets insets = stackPane.getPadding();
 //        System.out.println(insets);
 
@@ -215,6 +220,38 @@ public class LineChartInStackPane extends Application {
 //        strings.add("19");
 //        strings.add("20");
 //        System.out.println(strings);
+    }
+
+    private void passValuesToLabel1(Node chartBackground) {
+//        series1.setOnMouseEntered(new EventHandler<MouseEvent>() {
+//            @Override
+//            public void handle(MouseEvent mouseEvent) {
+//                label1.setVisible(true);
+//            }
+//        });
+
+        chartBackground.setOnMouseMoved(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                label1.setText(
+                        String.format(
+                                "(%s, %.2f)",
+                                xAxis.getValueForDisplay(mouseEvent.getX()),
+                                yAxis.getValueForDisplay(mouseEvent.getY())
+//                                "(%.2f, %.2f)",
+//                                mouseEvent.getX(),
+//                                mouseEvent.getY()
+                        )
+                );
+            }
+        });
+
+        chartBackground.setOnMouseExited(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                label1.setVisible(false);
+            }
+        });
     }
 
     private Label createCursorGraphCoordsMonitorLabel(LineChart<String, Number> lineChart) {
