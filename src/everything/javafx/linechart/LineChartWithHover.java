@@ -1,11 +1,18 @@
 package everything.javafx.linechart;
 
 import javafx.application.Application;
-import javafx.collections.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
+import javafx.geometry.Bounds;
 import javafx.geometry.Insets;
-import javafx.scene.*;
-import javafx.scene.chart.*;
+import javafx.geometry.Pos;
+import javafx.scene.Cursor;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tooltip;
 import javafx.scene.input.MouseEvent;
@@ -23,8 +30,10 @@ public class LineChartWithHover extends Application {
     private NumberAxis xAxis = new NumberAxis();
     private NumberAxis yAxis = new NumberAxis();
     private Node chartBackground;
+    private Node chartContent;
     private Label coord = new Label();
-    final Tooltip tooltip = new Tooltip();
+    private final Tooltip tooltip = new Tooltip();
+    private Label dataFromChart = new Label("text");
 
     @SuppressWarnings("unchecked")
     @Override
@@ -54,11 +63,41 @@ public class LineChartWithHover extends Application {
         lineChart.setCursor(Cursor.CROSSHAIR);
         lineChart.setTitle("Stock Monitoring, 2013");
 
+        dataFromChart.setVisible(true);
+
+        StackPane stackPane = new StackPane();
+        stackPane.getChildren().add(lineChart);
+        stackPane.getChildren().add(dataFromChart);
+
         VBox vBox = new VBox();
-        vBox.getChildren().addAll(coord, lineChart);
+        vBox.getChildren().addAll(coord, stackPane);
         stage.setScene(new Scene(vBox, 500, 400));
 //        stage.setScene(new Scene(lineChart, 500, 400));
         stage.show();
+
+        chartBackground = lineChart.lookup(".chart-plot-background");
+        final Node chartTitle = lineChart.lookup(".chart-title");
+        chartContent = lineChart.lookup(".chart-content");
+
+        Bounds boundsChartBackground = chartBackground.getLayoutBounds();
+        double wChartBackground = boundsChartBackground.getWidth();
+        double xChartBackground = chartBackground.getLayoutX();
+        double yChartBackground = chartBackground.getLayoutY();
+
+        Bounds boundsChartTitle = chartTitle.getLayoutBounds();
+        double hChartTitle = boundsChartTitle.getHeight();
+        double yChartTitle = chartTitle.getLayoutY();
+
+        Bounds boundsChartContent = chartContent.getLayoutBounds();
+        double wChartContent = boundsChartContent.getWidth();
+        double xChartContent = chartContent.getLayoutX();
+
+        StackPane.setAlignment(dataFromChart, Pos.TOP_RIGHT);
+        StackPane.setMargin(dataFromChart, new Insets(
+                yChartTitle + hChartTitle + yChartBackground,
+                wChartContent - wChartBackground - xChartBackground + xChartContent,
+                0,
+                0));
     }
 
     /** @return plotted y values for monotonically increasing integer x values, starting from x=1 */
@@ -71,8 +110,9 @@ public class LineChartWithHover extends Application {
                     new HoveredThresholdNode(
                             xAxis,
                             yAxis,
-                            coord,
+                            dataFromChart,
                             chartBackground,
+                            chartContent,
                             (i == 0) ? 0 : y[i-1],
                             y[i]
                     )
@@ -87,23 +127,26 @@ public class LineChartWithHover extends Application {
 
     /** a node which displays a value on hover, but is otherwise empty */
     private static class HoveredThresholdNode extends StackPane {
-        HoveredThresholdNode(NumberAxis xAxis, NumberAxis yAxis, Label coord, Node chartBackground, int priorValue, int value) {
+        HoveredThresholdNode(NumberAxis xAxis, NumberAxis yAxis, Label coord, Node chartBackground, Node chartContent, int priorValue, int value) {
             setPrefSize(15, 15);
             setStyle("-fx-background-color: rgba(0,0,0,0);");
 
-
-//            final Label label = createDataThresholdLabel(priorValue, value);
+            final Label label = createDataThresholdLabel(priorValue, value);
 
             setOnMouseEntered(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
-//                    getChildren().setAll(label);
+                    getChildren().setAll(label);
                     setCursor(Cursor.NONE);
+//                    xAxis.toBack();
+//                    yAxis.toBack();
+//                    chartContent.toBack();
+//                    chartBackground.toBack();
                     toFront();
-                    double top = 0d;
-                    double right = 0d;
-                    double bottom = 0d;
-                    double left = 0d;
+//                    double top = 0d;
+//                    double right = 0d;
+//                    double bottom = 0d;
+//                    double left = 0d;
 //                    if()
 //                    setMargin(label, new Insets(top, right, bottom, left));
 //                    System.out.println("=============================================================");
@@ -115,6 +158,8 @@ public class LineChartWithHover extends Application {
 //                    tooltip.setText("x:" + event.getX() + "; y:" + event.getY());
 //                    tooltip.setX(event.getX());
 //                    tooltip.setY(event.getY());
+                    coord.setVisible(true);
+                    changeLabel(coord, priorValue, value);
                 }
             });
             setOnMouseExited(new EventHandler<MouseEvent>() {
@@ -122,6 +167,7 @@ public class LineChartWithHover extends Application {
                 public void handle(MouseEvent mouseEvent) {
                     getChildren().clear();
                     setCursor(Cursor.CROSSHAIR);
+                    coord.setVisible(false);
                 }
             });
 
@@ -170,6 +216,22 @@ public class LineChartWithHover extends Application {
 
             label.setMinSize(Label.USE_PREF_SIZE, Label.USE_PREF_SIZE);
             return label;
+        }
+
+        private void changeLabel(Label label, int priorValue, int value) {
+            label.setText(value + "");
+            label.getStyleClass().addAll("default-color0", "chart-line-symbol", "chart-series-line");
+            label.setStyle("-fx-font-size: 20; -fx-font-weight: bold;");
+
+            if (priorValue == 0) {
+                label.setTextFill(Color.DARKGRAY);
+            } else if (value > priorValue) {
+                label.setTextFill(Color.FORESTGREEN);
+            } else {
+                label.setTextFill(Color.FIREBRICK);
+            }
+
+            label.setMinSize(Label.USE_PREF_SIZE, Label.USE_PREF_SIZE);
         }
     }
 
