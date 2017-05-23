@@ -46,6 +46,10 @@ public class LineChartWithHover extends Application {
 //            }
 //        }
 
+        lineChart.getYAxis() set Y axis higher than max value, so label is not shown over chart
+        divide chart in 4 parts: top_left, top_right, bottom_left, bottom_right
+        and show label depending on where chart node is
+
         lineChart.setData(
                 FXCollections.observableArrayList(
                         new XYChart.Series(
