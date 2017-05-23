@@ -135,13 +135,14 @@ public class LineChartWithHover extends Application {
             setPrefSize(15, 15);
             setStyle("-fx-background-color: rgba(0,0,0,0);");
 
-            final Label label = createDataThresholdLabel(priorValue, value);
+//            final Label label = createDataThresholdLabel(priorValue, value);
 
             setOnMouseEntered(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
-                    getChildren().setAll(label);
-                    setCursor(Cursor.NONE);
+//                    getChildren().setAll(label);
+//                    setCursor(Cursor.NONE);
+                    setCursor(Cursor.CROSSHAIR);
 //                    xAxis.toBack();
 //                    yAxis.toBack();
 //                    chartContent.toBack();
@@ -170,7 +171,7 @@ public class LineChartWithHover extends Application {
                 @Override
                 public void handle(MouseEvent mouseEvent) {
                     getChildren().clear();
-                    setCursor(Cursor.CROSSHAIR);
+                    setCursor(Cursor.NONE);
                     coord.setVisible(false);
                 }
             });
