@@ -105,13 +105,13 @@ public class LineChartInStackPane extends Application {
         xAxis.setCategories(FXCollections.<String>observableArrayList(xValues));
         xAxis.invalidateRange(new ArrayList<>(xValues));
 
-        label.setVisible(false);
-        label1.setVisible(false);
+        label.setVisible(true);
+        label1.setVisible(true);
 
         StackPane stackPane = new StackPane();
         stackPane.getChildren().add(lineChart);
-        stackPane.getChildren().add(label1);
         stackPane.getChildren().add(label);
+        stackPane.getChildren().add(label1);
 
         HBox hBox1 = new HBox(new Label("linechart: "), coordLabelLineChart);
         HBox hBox2 = new HBox(new Label("plot: "), coordLabel);
@@ -136,7 +136,7 @@ public class LineChartInStackPane extends Application {
         final Node chartTitle = lineChart.lookup(".chart-title");
         final Node chartContent = lineChart.lookup(".chart-content");
 
-        label.setStyle("-fx-background-color: lightblue  ");
+        label.setStyle("-fx-background-color: orange   ");
         label1.setStyle("-fx-background-color: deepskyblue ");
         lineChart.setStyle("-fx-background-color: red ");
         chartBackground.setStyle("-fx-background-color: lightgreen ");
@@ -180,16 +180,21 @@ public class LineChartInStackPane extends Application {
         System.out.println("xLineChart:" + xLineChart + "; yLineChart:" + yLineChart);
 
         StackPane.setAlignment(label, Pos.TOP_RIGHT);
-        StackPane.setAlignment(label1, Pos.TOP_LEFT);
 //        StackPane.setMargin(label, new Insets(hLineChart - hChartBackground, 0, 0, 0));
 //        StackPane.setMargin(label, new Insets(xChartBackground + 6, yChartBackground + 4, 0, 0));
         StackPane.setMargin(label, new Insets(
 //                xChartBackground + 6,
-                yChartTitle+hChartTitle+yChartBackground,
+                yChartTitle + hChartTitle + yChartBackground,
                 wChartContent - wChartBackground - xChartBackground + xChartContent,
                 0,
                 0));
-        StackPane.setMargin(label1, new Insets(xChartBackground, 0, 0, yChartBackground));
+
+        StackPane.setAlignment(label1, Pos.TOP_LEFT);
+        StackPane.setMargin(label1, new Insets(
+                yChartTitle + hChartTitle + yChartBackground,
+                0,
+                0,
+                xChartBackground + xChartContent));
         passValuesToLabel1(chartBackground);
 //        Insets insets = stackPane.getPadding();
 //        System.out.println(insets);
@@ -223,12 +228,12 @@ public class LineChartInStackPane extends Application {
     }
 
     private void passValuesToLabel1(Node chartBackground) {
-//        series1.setOnMouseEntered(new EventHandler<MouseEvent>() {
-//            @Override
-//            public void handle(MouseEvent mouseEvent) {
-//                label1.setVisible(true);
-//            }
-//        });
+        chartBackground.setOnMouseEntered(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                label1.setVisible(true);
+            }
+        });
 
         chartBackground.setOnMouseMoved(new EventHandler<MouseEvent>() {
             @Override
