@@ -27,7 +27,18 @@ import javafx.stage.Stage;
  * Date: 17/05/2017
  * Time: 23:24
  */
+/*
+variant 1:
+-label is in top right corner
+-when chart is under the label:
+    -if cursor enters dot from chart line, label is still rendered in top left corner blinking
+    -if cursor enters dot from any other side except chart line, then label is rendered in top right corner
+variant 2:
+-label is in top left corner and moves with cursor
+
+ */
 public class LineChartWithHover extends Application {
+    private StackPane stackPane;
     private LineChart lineChart;
     private NumberAxis xAxis = new NumberAxis();
     private NumberAxis yAxis = new NumberAxis();
@@ -41,6 +52,7 @@ public class LineChartWithHover extends Application {
     @SuppressWarnings("unchecked")
     @Override
     public void start(Stage stage) {
+        stackPane = new StackPane();
         lineChart = new LineChart(xAxis, yAxis);
 //        chartBackground = lineChart.lookup(".chart-plot-background");
 //        for (Node n : chartBackground.getParent().getChildrenUnmodifiable()) {
@@ -73,7 +85,6 @@ public class LineChartWithHover extends Application {
 
         dataFromChart.setVisible(true);
 
-        StackPane stackPane = new StackPane();
         stackPane.getChildren().add(lineChart);
         stackPane.getChildren().add(dataFromChart);
 
@@ -99,46 +110,46 @@ public class LineChartWithHover extends Application {
         Bounds boundsChartContent = chartContent.getLayoutBounds();
         double wChartContent = boundsChartContent.getWidth();
         double xChartContent = chartContent.getLayoutX();
-
-        StackPane.setAlignment(dataFromChart, Pos.TOP_RIGHT);
-        StackPane.setMargin(dataFromChart, new Insets(
-                yChartTitle + hChartTitle + yChartBackground,
-                wChartContent - wChartBackground - xChartBackground + xChartContent,
-                0,
-                0));
-
-        Node chartSeriesLine = lineChart.lookup(".chart-series-line");
-        chartSeriesLine.setOnMouseEntered(event ->{
-            boolean contain = dataFromChart.getBoundsInParent().contains(event.getSceneX(), event.getSceneY());
-
-            booleanProperty.set(contain);
-            System.out.println("->chartSeriesLine->contain:" + contain);
-            System.out.println("->chartSeriesLine->booleanProperty:" + booleanProperty.get());
-            System.out.println("===============================================================================");
-        });
-
-
-        booleanProperty.addListener((observable, oldValue, newValue) -> {
-            System.out.println("booleanProperty:"+booleanProperty);
-            if(newValue != null){
-                if(newValue){
-                    StackPane.setAlignment(dataFromChart, Pos.TOP_LEFT);
-                    StackPane.setMargin(dataFromChart, new Insets(
-                            yChartTitle + hChartTitle + yChartBackground,
-                            0,
-                            0,
-                            xChartBackground + xChartContent));
-                }else {
-                    StackPane.setAlignment(dataFromChart, Pos.TOP_RIGHT);
-                    StackPane.setMargin(dataFromChart, new Insets(
-                            yChartTitle + hChartTitle + yChartBackground,
-                            wChartContent - wChartBackground - xChartBackground + xChartContent,
-                            0,
-                            0));
-                }
-            }
-        });
-
+///////////////////////////////////////////////////
+//variant 1
+//        StackPane.setAlignment(dataFromChart, Pos.TOP_RIGHT);
+//        StackPane.setMargin(dataFromChart, new Insets(
+//                yChartTitle + hChartTitle + yChartBackground,
+//                wChartContent - wChartBackground - xChartBackground + xChartContent,
+//                0,
+//                0));
+//
+//        Node chartSeriesLine = lineChart.lookup(".chart-series-line");
+//        chartSeriesLine.setOnMouseEntered(event ->{
+//            boolean contain = dataFromChart.getBoundsInParent().contains(event.getSceneX(), event.getSceneY());
+//
+//            booleanProperty.set(contain);
+//            System.out.println("->chartSeriesLine->contain:" + contain);
+//            System.out.println("->chartSeriesLine->booleanProperty:" + booleanProperty.get());
+//            System.out.println("===============================================================================");
+//        });
+//
+//        booleanProperty.addListener((observable, oldValue, newValue) -> {
+//            System.out.println("booleanProperty:"+booleanProperty);
+//            if(newValue != null){
+//                if(newValue){
+//                    StackPane.setAlignment(dataFromChart, Pos.TOP_LEFT);
+//                    StackPane.setMargin(dataFromChart, new Insets(
+//                            yChartTitle + hChartTitle + yChartBackground,
+//                            0,
+//                            0,
+//                            xChartBackground + xChartContent));
+//                }else {
+//                    StackPane.setAlignment(dataFromChart, Pos.TOP_RIGHT);
+//                    StackPane.setMargin(dataFromChart, new Insets(
+//                            yChartTitle + hChartTitle + yChartBackground,
+//                            wChartContent - wChartBackground - xChartBackground + xChartContent,
+//                            0,
+//                            0));
+//                }
+//            }
+//        });
+///////////////////////////////////////////////////
     }
 
     /** @return plotted y values for monotonically increasing integer x values, starting from x=1 */
@@ -157,7 +168,8 @@ public class LineChartWithHover extends Application {
                             (i == 0) ? 0 : y[i-1],
                             y[i],
                             booleanProperty,
-                            lineChart
+                            lineChart,
+                            stackPane
                     )
             );
 
@@ -172,7 +184,7 @@ public class LineChartWithHover extends Application {
     private static class HoveredThresholdNode extends StackPane {
         public HoveredThresholdNode(
                 NumberAxis xAxis, NumberAxis yAxis, Label dataFromChart, Node chartBackground, Node chartContent,
-                int priorValue, int value, BooleanProperty booleanProperty, LineChart lineChart
+                int priorValue, int value, BooleanProperty booleanProperty, LineChart lineChart, StackPane stackPane
         ) {
             setPrefSize(15, 15);
 //            setStyle("-fx-background-color: rgba(0,0,0,0);");
@@ -198,34 +210,59 @@ public class LineChartWithHover extends Application {
 //                    double left = 0d;
 //                    if()
 //                    setMargin(label, new Insets(top, right, bottom, left));
-//                    System.out.println("=============================================================");
+                    System.out.println("=============================================================");
                     System.out.println("x:" + event.getX() + "; y:" + event.getY());
-                    System.out.println("getScreenX:"+event.getScreenX()+"; getScreenY:"+event.getScreenY());
-                    System.out.println("getSceneX:" + event.getSceneX() + "; getSceneY:" + event.getSceneY());
-////                    System.out.println("xAxis:" + xAxis.getValueForDisplay(event.getX()) + "; yAxis:" + yAxis.getValueForDisplay(event.getY()));
-//                    System.out.println("xAxis:" + xAxis.getDisplayPosition(event.getX()) + "; yAxis:" + yAxis.getDisplayPosition(event.getY()));
-//                    System.out.println(dataFromChart.getWidth());
-//                    System.out.println(dataFromChart.getHeight());
-                    System.out.println(dataFromChart.getLayoutBounds());
-                    System.out.println(dataFromChart.getLayoutBounds().contains(xAxis.getDisplayPosition(event.getX()), yAxis.getDisplayPosition(event.getY())));
-                    System.out.println(dataFromChart.getBoundsInLocal());
-                    System.out.println(dataFromChart.getBoundsInLocal().contains(xAxis.getDisplayPosition(event.getX()), yAxis.getDisplayPosition(event.getY())));
-                    System.out.println(dataFromChart.getBoundsInParent());
-                    System.out.println(dataFromChart.getBoundsInParent().contains(xAxis.getDisplayPosition(event.getX()), yAxis.getDisplayPosition(event.getY())));
-                    System.out.println("->" + dataFromChart.getBoundsInParent().contains(event.getSceneX(), event.getSceneY()));
-//                    System.out.println("xAxis.getWidth():" + xAxis.getWidth()+"; yAxis.getHeight():" + yAxis.getHeight());
-//                    tooltip.setText("x:" + event.getX() + "; y:" + event.getY());
-//                    tooltip.setX(event.getX());
-//                    tooltip.setY(event.getY());
+//                    System.out.println("getScreenX:"+event.getScreenX()+"; getScreenY:"+event.getScreenY());
+//                    System.out.println("getSceneX:" + event.getSceneX() + "; getSceneY:" + event.getSceneY());
+//////                    System.out.println("xAxis:" + xAxis.getValueForDisplay(event.getX()) + "; yAxis:" + yAxis.getValueForDisplay(event.getY()));
+////                    System.out.println("xAxis:" + xAxis.getDisplayPosition(event.getX()) + "; yAxis:" + yAxis.getDisplayPosition(event.getY()));
+////                    System.out.println(dataFromChart.getWidth());
+////                    System.out.println(dataFromChart.getHeight());
+//                    System.out.println(dataFromChart.getLayoutBounds());
+//                    System.out.println(dataFromChart.getLayoutBounds().contains(xAxis.getDisplayPosition(event.getX()), yAxis.getDisplayPosition(event.getY())));
+//                    System.out.println(dataFromChart.getBoundsInLocal());
+//                    System.out.println(dataFromChart.getBoundsInLocal().contains(xAxis.getDisplayPosition(event.getX()), yAxis.getDisplayPosition(event.getY())));
+//                    System.out.println(dataFromChart.getBoundsInParent());
+//                    System.out.println(dataFromChart.getBoundsInParent().contains(xAxis.getDisplayPosition(event.getX()), yAxis.getDisplayPosition(event.getY())));
+//                    System.out.println("->" + dataFromChart.getBoundsInParent().contains(event.getSceneX(), event.getSceneY()));
+////                    System.out.println("xAxis.getWidth():" + xAxis.getWidth()+"; yAxis.getHeight():" + yAxis.getHeight());
+////                    tooltip.setText("x:" + event.getX() + "; y:" + event.getY());
+////                    tooltip.setX(event.getX());
+////                    tooltip.setY(event.getY());
                     dataFromChart.setVisible(true);
                     changeLabel(dataFromChart, priorValue, value);
 
-                    boolean contain = dataFromChart.getBoundsInParent().contains(event.getSceneX(), event.getSceneY());
+//                    chartTitle = lineChart.lookup(".chart-title");
+//
+//                    Bounds boundsChartBackground = chartBackground.getLayoutBounds();
+//                    double wChartBackground = boundsChartBackground.getWidth();
+//                    double xChartBackground = chartBackground.getLayoutX();
+//                    double yChartBackground = chartBackground.getLayoutY();
+//
+//                    Bounds boundsChartTitle = chartTitle.getLayoutBounds();
+//                    double hChartTitle = boundsChartTitle.getHeight();
+//                    double yChartTitle = chartTitle.getLayoutY();
+//
+//                    Bounds boundsChartContent = chartContent.getLayoutBounds();
+//                    double wChartContent = boundsChartContent.getWidth();
+//                    double xChartContent = chartContent.getLayoutX();
 
-                    booleanProperty.set(contain);
-                    System.out.println("->contain:" + contain);
-                    System.out.println("->booleanProperty:" + booleanProperty.get());
-                    System.out.println("===============================================================================");
+                    System.out.println("stackPane.getLayoutX():" + stackPane.getLayoutX() + "; stackPane.getLayoutY():" + stackPane.getLayoutY());
+                    StackPane.setAlignment(dataFromChart, Pos.TOP_LEFT);
+                    StackPane.setMargin(dataFromChart, new Insets(
+                            stackPane.getLayoutY() + event.getY(),
+                            0,
+                            0,
+                            stackPane.getLayoutX() + event.getX()));
+
+
+
+//                    boolean contain = dataFromChart.getBoundsInParent().contains(event.getSceneX(), event.getSceneY());
+//
+//                    booleanProperty.set(contain);
+//                    System.out.println("->contain:" + contain);
+//                    System.out.println("->booleanProperty:" + booleanProperty.get());
+//                    System.out.println("===============================================================================");
                 }
             });
             setOnMouseExited(new EventHandler<MouseEvent>() {
