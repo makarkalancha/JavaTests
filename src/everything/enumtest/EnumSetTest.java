@@ -2,6 +2,7 @@ package everything.enumtest;
 
 import org.apache.commons.lang3.EnumUtils;
 
+import java.util.EnumSet;
 import java.util.Set;
 
 /**
@@ -59,6 +60,22 @@ public class EnumSetTest {
 
         System.out.println("RED: " + EnumUtils.isValidEnum(Color.class, "RED"));
         System.out.println("RED1: " + EnumUtils.isValidEnum(Color.class, "RED1"));
+
+        EnumSet<Color> pink = EnumSet.of(Color.RED, Color.BLUE);
+        System.out.println(EnumSet.complementOf(pink));
+        System.out.println(EnumSet.copyOf(pink));
+        System.out.println("---------------------------------------");
+        EnumSet<Color> pink2 = EnumSet.copyOf(pink);
+        pink2.add(Color.GREEN);
+        System.out.println(pink);
+        System.out.println(pink2);
+        System.out.println("---------------------------------------");
+        EnumSet<Color> pink3 = pink;
+        pink3.remove(Color.BLUE);
+        System.out.println(pink);
+        System.out.println(pink2);
+        System.out.println(pink3);
+
 
     }
 }
