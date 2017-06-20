@@ -1,6 +1,7 @@
 package everything.json_utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 
 import java.util.EnumSet;
 
@@ -76,7 +77,19 @@ public class JacksonDemo {
         System.out.println(pictureIn1);
 
         String valueIn2 = "{\"colors\":[\"YELLO\",\"BLACK\"],\"number\":46,\"name\":\"title-23\"}";
-        Picture pictureIn2 = objectMapper.readValue(valueIn2, Picture.class);
-        System.out.println(pictureIn2);
+        try {
+            Picture pictureIn2 = objectMapper.readValue(valueIn2, Picture.class);
+            System.out.println(pictureIn2);
+        }catch (InvalidFormatException e){
+            System.out.println("e.getCause(): " + e.getCause());
+            System.out.println();
+            System.out.println("e.getLocalizedMessage(): " + e.getLocalizedMessage());
+            System.out.println();
+            System.out.println("e.getMessage(): " + e.getMessage());
+            System.out.println();
+            System.out.println("e.getOriginalMessage(): " + e.getOriginalMessage());
+            System.out.println();
+            System.out.println("e.getValue(): " + e.getValue());
+        }
     }
 }
