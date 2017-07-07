@@ -1,13 +1,17 @@
 package everything.collections;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * User: Makar Kalancha
  * Date: 06/06/14
  * Time: 10:43 AM
  */
-public class MySet {
+public class SetTests {
     public static void main(String[] args) {
         Set<String> a = new TreeSet<>();
         a.add("1");
@@ -28,19 +32,25 @@ public class MySet {
         Set<String> union = new TreeSet<>(a);
         union.addAll(b);
         System.out.println("union:"+Arrays.toString(union.toArray()));
-        Set<String> diff = new TreeSet<>(union);
-        diff.removeAll(b);
-        System.out.println("diff:"+Arrays.toString(diff.toArray()));
+
+        Set<String> intersection = new TreeSet<>(a);
+        intersection.retainAll(b);
+        System.out.println("intersection:"+Arrays.toString(intersection.toArray()));
+
+        Set<String> difference = new TreeSet<>(a);
+        difference.removeAll(b);
+        System.out.println("difference:"+Arrays.toString(difference.toArray()));
 
 
-        System.out.println("\nsymmetric diff");
+        System.out.println("\nsymmetric difference");
         Set<String> tmp = new TreeSet<>(a);
         tmp.retainAll(b);
         System.out.println("tmp:" + Arrays.toString(tmp.toArray()));
         union.removeAll(tmp);
         System.out.println("union:"+Arrays.toString(union.toArray()));
 
-
+        List<String> nullArrayList = null;
+        List<String> nullArrayList_1 = new ArrayList<>(nullArrayList);
 
 
 
