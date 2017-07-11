@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 
 import java.util.EnumSet;
+import java.util.List;
 
 /**
  * Created by Makar Kalancha
@@ -19,15 +20,18 @@ public class JacksonDemo {
         private EnumSet<Color> colors;
         private int number;
         private String name;
+        private boolean autoRun;
+        private List<String> data;
 
         public Picture() {
             super();
         }
 
-        public Picture(EnumSet<Color> colors, int number, String name) {
+        public Picture(EnumSet<Color> colors, int number, String name, Boolean autoRun) {
             this.colors = colors;
             this.number = number;
             this.name = name;
+            this.autoRun = autoRun;
         }
 
         public EnumSet<Color> getColors() {
@@ -54,31 +58,48 @@ public class JacksonDemo {
             this.name = name;
         }
 
+        public boolean isAutoRun() {
+            return autoRun;
+        }
+
+        public List<String> getData() {
+            return data;
+        }
+
+        public void setData(List<String> data) {
+            this.data = data;
+        }
+
+        public void setAutoRun(boolean autoRun) {
+            this.autoRun = autoRun;
+        }
+
         @Override
         public String toString() {
             return "Picture{" +
                     "colors=" + colors +
                     ", number=" + number +
                     ", name='" + name + '\'' +
+                    ", autoRun=" + autoRun +
+                    ", data=" + data +
                     '}';
         }
     }
 
-
     public static void main(String[] args) throws Exception{
         ObjectMapper objectMapper = new ObjectMapper();
 
-        Picture pictureOut = new Picture(EnumSet.of(Color.RED, Color.GREEN), 10, "name-10");
+        Picture pictureOut = new Picture(EnumSet.of(Color.RED, Color.GREEN), 10, "name-10", true);
         String valueOut = objectMapper.writeValueAsString(pictureOut);
         System.out.println(valueOut);
 
-        String valueIn1 = "{\"colors\":[\"YELLOW\",\"BLACK\"],\"number\":46,\"name\":\"title-23\"}";
+        String valueIn1 = "{\"colors\":[\"YELLOW\",\"BLACK\"],\"number\":46,\"name\":\"title-23\",\"autoRun\":true}";
         Picture pictureIn1 = objectMapper.readValue(valueIn1, Picture.class);
         System.out.println(pictureIn1);
 
-        String valueIn2 = "{\"colors\":[\"YELLO\",\"BLACK\"],\"number\":46,\"name\":\"title-23\"}";
+//        String valueIn2 = "{\"colors\":[\"YELLO\",\"BLACK\"],\"number\":46,\"name\":\"title-23\"}";
         try {
-            Picture pictureIn2 = objectMapper.readValue(valueIn2, Picture.class);
+            Picture pictureIn2 = objectMapper.readValue(valueIn1, Picture.class);
             System.out.println(pictureIn2);
         }catch (InvalidFormatException e){
             System.out.println("e.getCause(): " + e.getCause());
