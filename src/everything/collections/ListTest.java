@@ -1,6 +1,7 @@
 package everything.collections;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -64,6 +65,11 @@ public class ListTest {
         List<Integer> onePlusTwo = joinLists(listOne, listTwo, listThree);
 //        List<Integer> onePlusTwo = joinLists(listOne, listTwo);
         System.out.println(onePlusTwo);
+
+        List<Integer> integers = new ArrayList<>();
+//        integers.addAll(Arrays.asList(null, 2, 3));
+        integers.addAll(Arrays.asList(null,null));
+        System.out.println(integers);
     }
 
     public static <E> List<E> joinLists(List<E> listOne, List<E> listTwo){
