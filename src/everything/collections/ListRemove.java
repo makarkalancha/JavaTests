@@ -66,14 +66,17 @@ public class ListRemove {
         System.out.println(students);
         System.out.println(numbers);
 
-        students.removeIf(student -> numbers.contains(student.getId()));
-//        Iterator<Student> studentIterator = students.iterator();
-//        while(studentIterator.hasNext()) {
-//            Student student = studentIterator.next();
-//            if(numbers.contains(student.getId())){
-//                studentIterator.remove();
-//            }
-//        }
+        students.remove(new Student(2, "Jessica", "Beal"));
+        numbers.remove(2);
+
+//        students.removeIf(student -> numbers.contains(student.getId()));
+////        Iterator<Student> studentIterator = students.iterator();
+////        while(studentIterator.hasNext()) {
+////            Student student = studentIterator.next();
+////            if(numbers.contains(student.getId())){
+////                studentIterator.remove();
+////            }
+////        }
         System.out.println(students);
         System.out.println(numbers);
     }
