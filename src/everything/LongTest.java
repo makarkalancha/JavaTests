@@ -48,5 +48,14 @@ public class LongTest {
             System.out.println(one +" !equals "+ four);
         }
 
+        Long notNull = new Long(2);
+        Long nullLong = null;
+        getLong(notNull);
+        getLong(nullLong.longValue());
+
+    }
+
+    public static void getLong(long primitiveLong){
+        System.out.println(primitiveLong);
     }
 }
