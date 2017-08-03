@@ -3,6 +3,7 @@ package everything.collections;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 
+import java.math.BigDecimal;
 import java.util.Map;
 
 /**
@@ -16,13 +17,18 @@ public class MultiMapTest {
         stringStringMultimap.put("fish", "1");
         stringStringMultimap.put("fish", "2");
         stringStringMultimap.put("fish", "3");
-        stringStringMultimap.put("cat", "one");
+        stringStringMultimap.put("cat", "100.5");
 
         System.out.println(stringStringMultimap);
 
+        Multimap<String, BigDecimal> stringBigDecimalMultimap = ArrayListMultimap.create();
+
         for(Map.Entry<String, String> entry : stringStringMultimap.entries()){
             System.out.println(entry.getKey() + ": "+entry.getValue());
+            stringBigDecimalMultimap.put(entry.getKey(), new BigDecimal(entry.getValue()));
         }
+
+        System.out.println(stringBigDecimalMultimap);
 
         for(String key : stringStringMultimap.keySet()){
             System.out.println("-"+key);
