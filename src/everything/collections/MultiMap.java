@@ -6,6 +6,7 @@ import com.google.common.collect.Multimap;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 /**
@@ -39,5 +40,7 @@ public class MultiMap {
             result.putAll(((Long) objectArray[0]).longValue(), destinationIds);
         }
         System.out.println(result);
+
+        System.out.println(TimeUnit.MILLISECONDS.toMinutes(3600000L));
     }
 }
