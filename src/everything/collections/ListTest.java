@@ -57,7 +57,8 @@ public class ListTest {
 
         List<Integer> listThree = new ArrayList<>();
         listThree.add(9);
-        listThree.add(10);
+//        listThree.add(10);
+        listThree.add(null);
         listThree.add(11);
         listThree.add(12);
         listThree.add(13);

@@ -4,15 +4,17 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.Month;
 import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.TextStyle;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 import java.util.TimeZone;
 
@@ -28,7 +30,15 @@ public class LocalDateDemo {
 
 //        LocalDateDemo.testZones();
 //        LocalDateDemo.testZones1();
-        LocalDateDemo.testDateRange();
+//        LocalDateDemo.testDateRange();
+
+        LocalDate firstDayOfMonthDate = LocalDate.of(2011, Month.JANUARY, 1);
+        firstDayOfMonthDate.getMonth().getDisplayName(TextStyle.FULL, )
+        String month1 = firstDayOfMonthDate.format(DateTimeFormatter.loofPattern("MMMM, yyyy", new Locale("ru")));
+        System.out.println(month1);
+
+        String month2 = firstDayOfMonthDate.format(DateTimeFormatter.ofPattern("MMMM", new Locale("ru")));
+        System.out.println(month2);
     }
 
     public static void testDateRange(){
