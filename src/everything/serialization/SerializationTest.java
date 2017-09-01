@@ -17,8 +17,6 @@ public class SerializationTest {
 
     public static void main(String[] args) {
         Student student1 = new Student("John1", new Address("street1", "city1"));
-        Student student2 = new Student("John2", new Address("street2", "city2"));
-        Student student3 = new Student("John3", new Address("stre2t3", "city3"));
 
         try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME))){
             oos.writeObject(student1);
