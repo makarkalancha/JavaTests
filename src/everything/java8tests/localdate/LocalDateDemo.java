@@ -9,7 +9,6 @@ import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.time.format.TextStyle;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
@@ -33,9 +32,9 @@ public class LocalDateDemo {
 //        LocalDateDemo.testDateRange();
 
         LocalDate firstDayOfMonthDate = LocalDate.of(2011, Month.JANUARY, 1);
-        firstDayOfMonthDate.getMonth().getDisplayName(TextStyle.FULL, )
-        String month1 = firstDayOfMonthDate.format(DateTimeFormatter.loofPattern("MMMM, yyyy", new Locale("ru")));
-        System.out.println(month1);
+//        firstDayOfMonthDate.getMonth().getDisplayName(TextStyle.FULL, )
+//        String month1 = firstDayOfMonthDate.format(DateTimeFormatter.loofPattern("MMMM, yyyy", new Locale("ru")));
+//        System.out.println(month1);
 
         String month2 = firstDayOfMonthDate.format(DateTimeFormatter.ofPattern("MMMM", new Locale("ru")));
         System.out.println(month2);
