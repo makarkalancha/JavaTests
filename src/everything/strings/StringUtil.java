@@ -14,7 +14,12 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.StringTokenizer;
 
 /**
  * User: Makar Kalancha
@@ -53,6 +58,15 @@ public class StringUtil {
         for(String name : names){
             System.out.println(convertStringToCamelCase(name));
         }
+
+        int oneInt = 1;
+        Long twoLong = 2L;
+        System.out.println(String.format("message int=%s; long = %s", oneInt, twoLong));
+        System.out.println(format(Integer.toString(oneInt), twoLong.toString()));
+    }
+
+    private static String format(String... param){
+        return String.format("message int=%s; long = %s", param);
     }
 
     // remove left and right spaces

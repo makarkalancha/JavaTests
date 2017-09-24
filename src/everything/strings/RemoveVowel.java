@@ -2,8 +2,6 @@ package everything.strings;
 
 import org.apache.commons.lang3.StringUtils;
 
-import java.math.BigDecimal;
-
 /**
  * Created by Makar Kalancha
  * Date: 13 Oct 2016
@@ -12,8 +10,9 @@ import java.math.BigDecimal;
 public class RemoveVowel {
 
     public static void main(String[] args) {
-        System.out.println(removeVowel("CLONER_USAGE"));
-        System.out.println(removeVowel("UAJID"));
+        System.out.println(removeVowel("ACCOUNT_BALANCE"));
+        System.out.println(removeVowel("ACCOUNT_ID"));
+        System.out.println(removeVowel("DATEUNIT"));
     }
 
     public static String removeVowel(String stringToClean){

@@ -35,20 +35,24 @@ public class LineChartInStackPane extends Application {
     private final NumberAxis yAxis = new NumberAxis();
     private final LineChart<String, Number> lineChart = new LineChart<>(xAxis, yAxis);
 
+    private StackPane stackPane;
     private Label coordLabel;
     private Label coordLabelLineChart;
     private final Label label = new Label("text");
-    private final Label label1 = new Label("text1");
+    private Label label1 = new Label("text1");
     private XYChart.Series<String, Number> series1;
     private XYChart.Series<String, Number> series2;
 
     @Override
     public void start(Stage stage) {
         stage.setTitle("Line Chart Sample");
+
+        stackPane = new StackPane();
         //defining the axes
         xAxis.setLabel("Number of Month");
 
         coordLabel = createCursorGraphCoordsMonitorLabel(lineChart);
+        label1 = createCursorCoordsMonitorLabel(stackPane);
         coordLabelLineChart = createCursorGraphCoordsMonitorLabelLineChart(lineChart);
 
         //creating the chart
@@ -105,13 +109,12 @@ public class LineChartInStackPane extends Application {
         xAxis.setCategories(FXCollections.<String>observableArrayList(xValues));
         xAxis.invalidateRange(new ArrayList<>(xValues));
 
-        label.setVisible(false);
-        label1.setVisible(false);
+        label.setVisible(true);
+        label1.setVisible(true);
 
-        StackPane stackPane = new StackPane();
         stackPane.getChildren().add(lineChart);
-        stackPane.getChildren().add(label1);
         stackPane.getChildren().add(label);
+        stackPane.getChildren().add(label1);
 
         HBox hBox1 = new HBox(new Label("linechart: "), coordLabelLineChart);
         HBox hBox2 = new HBox(new Label("plot: "), coordLabel);
@@ -136,7 +139,7 @@ public class LineChartInStackPane extends Application {
         final Node chartTitle = lineChart.lookup(".chart-title");
         final Node chartContent = lineChart.lookup(".chart-content");
 
-        label.setStyle("-fx-background-color: lightblue  ");
+        label.setStyle("-fx-background-color: orange   ");
         label1.setStyle("-fx-background-color: deepskyblue ");
         lineChart.setStyle("-fx-background-color: red ");
         chartBackground.setStyle("-fx-background-color: lightgreen ");
@@ -180,17 +183,22 @@ public class LineChartInStackPane extends Application {
         System.out.println("xLineChart:" + xLineChart + "; yLineChart:" + yLineChart);
 
         StackPane.setAlignment(label, Pos.TOP_RIGHT);
-        StackPane.setAlignment(label1, Pos.TOP_LEFT);
 //        StackPane.setMargin(label, new Insets(hLineChart - hChartBackground, 0, 0, 0));
 //        StackPane.setMargin(label, new Insets(xChartBackground + 6, yChartBackground + 4, 0, 0));
         StackPane.setMargin(label, new Insets(
 //                xChartBackground + 6,
-                yChartTitle+hChartTitle+yChartBackground,
+                yChartTitle + hChartTitle + yChartBackground,
                 wChartContent - wChartBackground - xChartBackground + xChartContent,
                 0,
                 0));
-        StackPane.setMargin(label1, new Insets(xChartBackground, 0, 0, yChartBackground));
-        passValuesToLabel1(chartBackground);
+
+        StackPane.setAlignment(label1, Pos.TOP_LEFT);
+//        StackPane.setMargin(label1, new Insets(
+//                yChartTitle + hChartTitle + yChartBackground,
+//                0,
+//                0,
+//                xChartBackground + xChartContent));
+//        passValuesToLabel1(chartBackground);
 //        Insets insets = stackPane.getPadding();
 //        System.out.println(insets);
 
@@ -223,12 +231,12 @@ public class LineChartInStackPane extends Application {
     }
 
     private void passValuesToLabel1(Node chartBackground) {
-//        series1.setOnMouseEntered(new EventHandler<MouseEvent>() {
-//            @Override
-//            public void handle(MouseEvent mouseEvent) {
-//                label1.setVisible(true);
-//            }
-//        });
+        chartBackground.setOnMouseEntered(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                label1.setVisible(true);
+            }
+        });
 
         chartBackground.setOnMouseMoved(new EventHandler<MouseEvent>() {
             @Override
@@ -343,6 +351,54 @@ public class LineChartInStackPane extends Application {
         });
 
         yAxis.setOnMouseExited(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                cursorCoords.setVisible(false);
+            }
+        });
+
+        return cursorCoords;
+    }
+
+    private Label createCursorCoordsMonitorLabel(StackPane stackPane) {
+        final Label cursorCoords = new Label("text123");
+
+        stackPane.setOnMouseEntered(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                cursorCoords.setVisible(true);
+            }
+        });
+
+        stackPane.setOnMouseMoved(mouseEvent -> {
+            double halfH = stackPane.getHeight() / 2;
+            double halfW = stackPane.getWidth() / 2;
+            double mouseX = mouseEvent.getX();
+            double mouseY = mouseEvent.getY();
+            double deltaX = (mouseX < halfW) ? 5 : -1 * cursorCoords.getWidth() - 5;
+            double deltaY = (mouseY < halfH) ? 5 : -1 * cursorCoords.getHeight() - 5;
+
+            System.out.println("===============================================");
+            System.out.println("halfH:" + halfH + "; halfW:" + halfW);
+            System.out.println("mouseX:" + mouseX + "; mouseY:" + mouseY);
+            System.out.println("deltaX:" + deltaX + "; deltaY:" + deltaY);
+            StackPane.setMargin(cursorCoords, new Insets(
+                    mouseY + deltaY,
+                    0,
+                    0,
+                    mouseX + deltaX));
+                cursorCoords.setText(
+                        String.format(
+//                                "(%s, %.2f)",
+//                                xAxis.getValueForDisplay(mouseEvent.getX()),
+//                                yAxis.getValueForDisplay(mouseEvent.getY())
+                                "(%.2f, %.2f)",
+                                mouseX + deltaX,
+                                mouseY + deltaY
+                        ));
+        });
+
+        stackPane.setOnMouseExited(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 cursorCoords.setVisible(false);
