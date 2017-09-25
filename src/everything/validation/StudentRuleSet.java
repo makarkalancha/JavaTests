@@ -25,7 +25,6 @@ public class StudentRuleSet implements RuleSet<Student>{
         rules.add(new StudentFirstNameTooLong(student.getFirstName()));
         rules.add(new NotJanuary(student.getMonthOfBirth()));
 
-        rules.
         return new LinkedList<>(rules);
     }
 }
