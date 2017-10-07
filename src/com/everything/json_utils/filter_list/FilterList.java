@@ -24,13 +24,30 @@ import java.util.Set;
  */
 public class FilterList {
 
-    private static Gson gson = new GsonBuilder()
-            .registerTypeAdapter(Set.class, new CurrencyIdToNominalValueAdapter())
-//            .registerTypeAdapter(FilterA.class, new CurrencyIdToNominalValueAdapter())
-//            .registerTypeAdapter(FilterB.class, new CurrencyIdToNominalValueAdapter())
-            .create();
+//    private static Gson gson = new GsonBuilder()
+//            .registerTypeAdapter(Set.class, new CurrencyIdToNominalValueAdapter())
+////            .registerTypeAdapter(FilterA.class, new CurrencyIdToNominalValueAdapter())
+////            .registerTypeAdapter(FilterB.class, new CurrencyIdToNominalValueAdapter())
+//            .create();
 
     public static void main(String[] args) {
+
+        Gson gson = new GsonBuilder()
+                .registerTypeAdapter(Set.class, new CurrencyIdToNominalValueAdapter())
+//            .registerTypeAdapter(FilterA.class, new CurrencyIdToNominalValueAdapter())
+//            .registerTypeAdapter(FilterB.class, new CurrencyIdToNominalValueAdapter())
+                .create();
+
+        Class<?> klass = null;
+        try{
+            klass = Class.forName("com.everything.json_utils.filter_list.FilterA");
+        }catch (ClassNotFoundException e){
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+
+        System.out.println(klass);
+
         Filter filterA = new FilterA("nameA", "by name");
         Filter filterB = new FilterB("nameB", "by date");
         Set<Filter> filtersOriginal = new LinkedHashSet<>();
@@ -45,8 +62,6 @@ public class FilterList {
         for(Filter filter : filtersFromJson){
             System.out.println(filter);
         }
-
-
     }
 
     //https://stackoverflow.com/questions/25673984/convert-guava-hashmultimap-to-json
@@ -101,9 +116,9 @@ public class FilterList {
             JsonArray jsonArray = json.getAsJsonArray();
             for(JsonElement jsonElement : jsonArray){
                 JsonObject jsonObject = jsonElement.getAsJsonObject();
-                String className =  jsonObject.get(CLASS_NAME).toString();
-                String name =  jsonObject.get(NAME).toString();
-                String criterion =  jsonObject.get(CRITERION).toString();
+                String className =  jsonObject.get(CLASS_NAME).getAsString();
+                String name =  jsonObject.get(NAME).getAsString();
+                String criterion =  jsonObject.get(CRITERION).getAsString();
 
                 Class<?> klass = null;
                 try{
