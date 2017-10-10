@@ -1,0 +1,63 @@
+
+--cmd#1-server
+D:\SRC\Java_work_dir\test\src>
+javac com.everything\design_patterns\headfirst\proxy\test\server\MyRemoteImpl.java
+rmic com.everything.design_patterns.headfirst.proxy.test.server.MyRemoteImpl
+javac com.everything\design_patterns\headfirst\proxy\test\server\MyRemoteServer.java
+--cmd#2-client
+D:\SRC\Java_work_dir\test\src>
+javac com.everything\design_patterns\headfirst\proxy\test\client\MyRemoteClient.java
+--cmd#3
+rmiregistry &
+--cmd#1-server
+java com.everything.design_patterns.headfirst.proxy.test.server.MyRemoteServer &
+--cmd#2-client
+D:\SRC\Java_work_dir\test\src>
+java com.everything.design_patterns.headfirst.proxy.test.client.MyRemoteClient
+
+
+
+-----------DOCS-----------
+--http://docs.oracle.com/javase/tutorial/rmi/TOC.html
+--cmd#1
+--building compute.jar
+cd D:\SRC\Java_work_dir\test\src
+javac com.everything\design_patterns\headfirst\proxy\test_from_rmi_docs\compute\Compute.java com.everything\design_patterns\headfirst\proxy\test_from_rmi_docs\compute\Task.java
+jar cvf com.everything\design_patterns\headfirst\proxy\test_from_rmi_docs\compute.jar com.everything\design_patterns\headfirst\proxy\test_from_rmi_docs\compute\*.class
+
+--file:/c:/home/user/public_html/classes/
+--file:/c:/users/makar/public_html/classes/
+--http:/test/public_html/compute/classes/
+--http:/test/public_html/engine/classes/
+
+--cmd#2
+--(file compute.jar is in D:\SRC\PHP\test\public_html\compute\classes directory)
+cd D:\SRC\Java_work_dir\test\src
+javac -cp D:\SRC\PHP\test\public_html\compute\classes\compute.jar com.everything\design_patterns\headfirst\proxy\test_from_rmi_docs\server\engine\ComputeEngine.java
+
+--cmd#1
+--building client
+cd D:\SRC\Java_work_dir\test\src
+javac -cp D:\SRC\PHP\test\public_html\compute\classes\compute.jar com.everything\design_patterns\headfirst\proxy\test_from_rmi_docs\client\ComputePi.java com.everything\design_patterns\headfirst\proxy\test_from_rmi_docs\client\Pi.java
+mkdir D:\SRC\PHP\test\public_html\client\classes\
+copy com.everything\design_patterns\headfirst\proxy\test_from_rmi_docs\client\Pi.class D:\SRC\PHP\test\public_html\client\classes\
+
+--cmd#3
+--start rmiregistery
+start rmiregistry
+or
+rmiregistry &
+--with port different from 1099
+start rmiregistry 2001
+or
+rmiregistry 2001 &
+
+--cmd#2
+--start server
+cd D:\SRC\Java_work_dir\test\src
+java -cp D:\SRC\Java_work_dir\test\src;D:\SRC\PHP\test\public_html\compute\classes -Djava.rmi.server.codebase=http://test/public_html/compute/classes/compute.jar -Djava.rmi.server.hostname=test -Djava.security.policy=D:\SRC\PHP\test\public_html\engine\server.policy com.everything.design_patterns.headfirst.proxy.test_from_rmi_docs.server.engine.ComputeEngine
+
+--cmd#1
+--start client
+cd D:\SRC\Java_work_dir\test\src
+java -cp D:\SRC\Java_work_dir\test\src;D:\SRC\PHP\test\public_html\compute\classes -Djava.rmi.server.codebase=http://test/public_html/client/classes/ -Djava.security.policy=D:\SRC\PHP\test\public_html\client\client.policy com.everything.design_patterns.headfirst.proxy.test_from_rmi_docs.client.ComputePi test 45
