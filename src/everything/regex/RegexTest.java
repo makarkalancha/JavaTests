@@ -220,9 +220,17 @@ public class RegexTest {
         // , and
         // <b>you</b>
         // !
-        String bold = "hello <b>world</b>, and <b>you</b>!";
-        String separatorPattern = "\\.*<b>\\.+</b>\\.*";
-        String[] strings = bold.split(separatorPattern);
+//        String bold = "hello <b>world</b>, and <b>you</b>!";
+//        String separatorPattern = "\\.*<b>\\.+</b>\\.*";
+//        String[] strings = bold.split(separatorPattern);
+
+        String string = "asldkf*asdf";
+        String regex = "*";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(string);
+        if(m.find()){
+            System.out.println(m.group(0));
+        }
     }
 
     public static String getDatabaseUrl(String edition){
