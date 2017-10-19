@@ -1,10 +1,7 @@
 package com.everything.utils;
 
-import java.io.IOException;
-import java.nio.file.Paths;
-import java.util.HashSet;
 import java.util.Random;
-import java.util.Set;
+import java.util.UUID;
 
 /**
  * User: Makar Kalancha
@@ -31,21 +28,25 @@ public class RandomNumbers {
 //        }
 
 //        List<RandomWeird> whitelistLong = new ArrayList<>();
-        Set<RandomWeird> whitelistLong = new HashSet<>();
-        for (int i = 0; i < 1_000_000; i++) {
-            whitelistLong.add(getWeirdRandom());
-        }
-        try{
-            String filePath = Paths.get("").toAbsolutePath().toString()+"\\text_weird_set_1M.txt";
-            IOUtils iou = new IOUtils(filePath, false);
-//            IOUtils.writeIntoFile(filePath,"",false);
-            for(RandomWeird i : whitelistLong){
-//                IOUtils.writeIntoFile(filePath,Integer.toString(i),true);
-                iou.writeIntoFile(i.toString());
-            }
-        }catch(IOException e){
-            e.printStackTrace();
-        }
+//////////////////////////////////////////////////////////////////////////////////
+//        Set<RandomWeird> whitelistLong = new HashSet<>();
+//        for (int i = 0; i < 1_000_000; i++) {
+//            whitelistLong.add(getWeirdRandom());
+//        }
+//        try{
+//            String filePath = Paths.get("").toAbsolutePath().toString()+"\\text_weird_set_1M.txt";
+//            IOUtils iou = new IOUtils(filePath, false);
+////            IOUtils.writeIntoFile(filePath,"",false);
+//            for(RandomWeird i : whitelistLong){
+////                IOUtils.writeIntoFile(filePath,Integer.toString(i),true);
+//                iou.writeIntoFile(i.toString());
+//            }
+//        }catch(IOException e){
+//            e.printStackTrace();
+//        }
+//////////////////////////////////////////////////////////////////////////////////
+        UUID oneUuid = UUID.randomUUID();
+        System.out.println(oneUuid);
     }
 
     //// [lo,hi] - including lo and hi;
