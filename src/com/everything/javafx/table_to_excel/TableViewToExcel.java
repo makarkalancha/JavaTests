@@ -37,7 +37,6 @@ import java.util.stream.Collectors;
  */
 public class TableViewToExcel extends Application{
     private TableView<Person> table = new TableView();
-    private ContextMenu cm = new ContextMenu();
 
     public static void main(String[] args) {
         launch(args);
@@ -80,12 +79,22 @@ public class TableViewToExcel extends Application{
         table.setItems(data);
         table.getColumns().addAll(firstNameCol, lastNameCol, emailCol);
 
+        addExportToTableView(stage, table);
+
         final VBox vbox = new VBox();
         vbox.setSpacing(5);
         vbox.setPadding(new Insets(10, 0, 0, 10));
         vbox.getChildren().addAll(label, table);
 
-        MenuItem export = new MenuItem("Export to excel");
+        ((Group) scene.getRoot()).getChildren().addAll(vbox);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    private void addExportToTableView(Stage stage, TableView table) throws Exception{
+        final ContextMenu cm = new ContextMenu();
+        final MenuItem export = new MenuItem("Export to excel");
         export.setOnAction(event -> {
             try {
                 exportTableViewToExcelFile(stage, table);
@@ -102,13 +111,6 @@ public class TableViewToExcel extends Application{
                 }
             }
         });
-
-
-
-        ((Group) scene.getRoot()).getChildren().addAll(vbox);
-
-        stage.setScene(scene);
-        stage.show();
     }
 
     private void exportTableViewToExcelFile(Stage stage, TableView table) throws Exception{
