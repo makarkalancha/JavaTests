@@ -87,7 +87,11 @@ public class TableViewToExcel extends Application{
 
         MenuItem export = new MenuItem("Export to excel");
         export.setOnAction(event -> {
-
+            try {
+                exportTableViewToExcelFile(stage, table);
+            }catch (Exception e){
+                e.printStackTrace();
+            }
         });
         cm.getItems().add(export);
         table.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
@@ -99,7 +103,7 @@ public class TableViewToExcel extends Application{
             }
         });
 
-        exportTableViewToExcelFile(stage, table);
+
 
         ((Group) scene.getRoot()).getChildren().addAll(vbox);
 
