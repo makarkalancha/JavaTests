@@ -19,7 +19,9 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import org.apache.commons.lang3.StringUtils;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.CreationHelper;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -27,6 +29,10 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.math.BigDecimal;
+import java.sql.Date;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -45,11 +51,11 @@ public class TableViewToExcel extends Application{
     @Override
     public void start(Stage stage) throws Exception{
         final ObservableList<Person> data = FXCollections.observableArrayList(
-                new Person("Jacob", "Smith", "jacob.smith@example.com"),
-                new Person("Isabella", "Johnson", "isabella.johnson@example.com"),
-                new Person("Ethan", "Williams", "ethan.williams@example.com"),
-                new Person("Emma", "Jones", "emma.jones@example.com"),
-                new Person("Michael", "Brown", "michael.brown@example.com")
+                new Person("Jacob", 1, new BigDecimal("100.01"), LocalDateTime.now().minusDays(1)),
+                new Person("Isabella", 2, new BigDecimal("90.01"), LocalDateTime.now().minusDays(2)),
+                new Person("Ethan", 3, new BigDecimal("80.01"), LocalDateTime.now().minusDays(3)),
+                new Person("Emma", 4, new BigDecimal("70.01"), LocalDateTime.now().minusDays(4)),
+                new Person("Michael", 5, new BigDecimal("60.01"), LocalDateTime.now().minusDays(5))
         );
 
         Scene scene = new Scene(new Group());
@@ -67,19 +73,24 @@ public class TableViewToExcel extends Application{
                 new PropertyValueFactory<Person,String>("firstName")
         );
 
-        TableColumn lastNameCol = new TableColumn("Last Name");
-        lastNameCol.setCellValueFactory(
-                new PropertyValueFactory<Person,String>("lastName")
+        TableColumn ageCol = new TableColumn("age");
+        ageCol.setCellValueFactory(
+                new PropertyValueFactory<Person,String>("age")
         );
 
-        TableColumn emailCol = new TableColumn("Email");
-        emailCol.setCellValueFactory(
-                new PropertyValueFactory<Person,String>("email")
+        TableColumn salaryCol = new TableColumn("salary");
+        salaryCol.setCellValueFactory(
+                new PropertyValueFactory<Person,String>("salary")
+        );
+
+        TableColumn startdateCol = new TableColumn("startDate");
+        startdateCol.setCellValueFactory(
+                new PropertyValueFactory<Person,String>("startDate")
         );
         table.setItems(data);
-        table.getColumns().addAll(firstNameCol, lastNameCol, emailCol);
+        table.getColumns().addAll(firstNameCol, ageCol, salaryCol, startdateCol);
 
-        addExportToTableView(stage, table);
+        addExportToTableView(table);
 
         final VBox vbox = new VBox();
         vbox.setSpacing(5);
@@ -92,12 +103,12 @@ public class TableViewToExcel extends Application{
         stage.show();
     }
 
-    private void addExportToTableView(Stage stage, TableView table) throws Exception{
+    private void addExportToTableView(TableView table) throws Exception{
         final ContextMenu cm = new ContextMenu();
         final MenuItem export = new MenuItem("Export to excel");
         export.setOnAction(event -> {
             try {
-                exportTableViewToExcelFile(stage, table);
+                exportTableViewToExcelFile(table);
             }catch (Exception e){
                 e.printStackTrace();
             }
@@ -113,7 +124,7 @@ public class TableViewToExcel extends Application{
         });
     }
 
-    private void exportTableViewToExcelFile(Stage stage, TableView table) throws Exception{
+    private void exportTableViewToExcelFile(/*ActionEvent event, */TableView table) throws Exception{
         /*
 https://stackoverflow.com/questions/46017483/javafx-export-tableview-to-excel-with-name-of-columns
 <dependency>
@@ -140,13 +151,28 @@ https://stackoverflow.com/questions/46017483/javafx-export-tableview-to-excel-wi
             header.createCell(i).setCellValue(columns.get(i));
         }
 
+        CellStyle dateTime = workbook.createCellStyle();
+        CreationHelper creationHelper = workbook.getCreationHelper();
+        dateTime.setDataFormat(
+                creationHelper.createDataFormat().getFormat("yyyy-mm-dd h:mm:ss"));
 
         for (int tableInx = 0, excelRowInx = 1; tableInx < table.getItems().size(); tableInx++, excelRowInx++) {
             Row row = sheet.createRow(excelRowInx);
             for (int columnInx = 0; columnInx < table.getColumns().size(); columnInx++) {
-                String value = ((TableColumn)table.getColumns().get(columnInx)).getCellData(tableInx).toString();
-                if(!StringUtils.isBlank(value)) {
-                    row.createCell(columnInx).setCellValue(value);
+                Object valueObj = ((TableColumn) table.getColumns().get(columnInx)).getCellData(tableInx);
+                if (valueObj != null) {
+                    Cell cell = row.createCell(columnInx);
+                    if (valueObj instanceof Integer) {
+                        cell.setCellValue((Integer)valueObj);
+                    }else if(valueObj instanceof BigDecimal){
+                        cell.setCellValue(((BigDecimal)valueObj).doubleValue());
+                    }else if(valueObj instanceof LocalDateTime){
+                        cell.setCellValue(Date.from(((LocalDateTime) valueObj).atZone(ZoneId.systemDefault()).toInstant()));
+                        cell.setCellStyle(dateTime);
+                    }else {
+                        cell.setCellValue(valueObj.toString());
+                    }
+
                 }
             }
         }
@@ -162,7 +188,8 @@ https://stackoverflow.com/questions/46017483/javafx-export-tableview-to-excel-wi
                 new File(System.getProperty("user.home"))
         );
 
-        File file = fileChooser.showSaveDialog(stage);
+//        File file = fileChooser.showSaveDialog(((Node)event.getTarget()).getScene().getWindow());
+        File file = fileChooser.showSaveDialog(table.getScene().getWindow());
         if (file != null) {
             try{
                 FileOutputStream fileOutputStream = new FileOutputStream(file);
