@@ -172,7 +172,6 @@ https://stackoverflow.com/questions/46017483/javafx-export-tableview-to-excel-wi
                     }else {
                         cell.setCellValue(valueObj.toString());
                     }
-
                 }
             }
         }
