@@ -1,4 +1,4 @@
-package com.everything.javafx.table_to_excel;
+package com.everything.javafx.table_to_excel.pojo;
 
 import com.google.common.base.Objects;
 

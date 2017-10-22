@@ -1,7 +1,12 @@
 package com.everything.javafx.table_to_excel;
 
+import com.everything.javafx.table_to_excel.decorator.PersonDecorator;
+import com.everything.javafx.table_to_excel.decorator.PersonDepartmentDecorator;
+import com.everything.javafx.table_to_excel.decorator.PersonObjDecorator;
+import com.everything.javafx.table_to_excel.decorator.PersonRootDecorator;
 import com.everything.javafx.table_to_excel.pojo.Person;
 import javafx.application.Application;
+import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
@@ -12,8 +17,9 @@ import javafx.scene.control.ContextMenu;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.TreeItem;
+import javafx.scene.control.TreeTableColumn;
+import javafx.scene.control.TreeTableView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
@@ -42,8 +48,8 @@ import java.util.stream.Collectors;
  * Date: 19 Oct 2017
  * Time: 11:48
  */
-public class TableViewToExcel extends Application{
-    private TableView<Person> table = new TableView();
+public class TreeTableViewToExcel extends Application{
+    private TreeTableView<PersonDecorator> table = new TreeTableView();
 
     public static void main(String[] args) {
         launch(args);
@@ -61,37 +67,96 @@ public class TableViewToExcel extends Application{
 
         Scene scene = new Scene(new Group());
         stage.setTitle("Table View Sample");
-        stage.setWidth(300);
+        stage.setWidth(600);
         stage.setHeight(500);
 
         final Label label = new Label("Address Book");
         label.setFont(new Font("Arial", 20));
 
-        table.setEditable(true);
+        TreeTableColumn<PersonDecorator, Long> idCol = new TreeTableColumn<>("Id");
+        idCol.setCellValueFactory(
+                (TreeTableColumn.CellDataFeatures<PersonDecorator,Long> param) ->
+                        new ReadOnlyObjectWrapper<Long>(param.getValue().getValue().getId())
+        );
 
-        TableColumn firstNameCol = new TableColumn("First Name");
+        TreeTableColumn<PersonDecorator, String> rootNameCol = new TreeTableColumn<>("root");
+        rootNameCol.setCellValueFactory(
+                (TreeTableColumn.CellDataFeatures<PersonDecorator, String> param) ->
+                        new ReadOnlyObjectWrapper<String>(param.getValue().getValue().getRootName())
+        );
+
+        TreeTableColumn<PersonDecorator, String> deptNameCol = new TreeTableColumn<>("dept name");
+        deptNameCol.setCellValueFactory(
+                (TreeTableColumn.CellDataFeatures<PersonDecorator, String> param) ->
+                        new ReadOnlyObjectWrapper<String>(param.getValue().getValue().getDepartmentName())
+        );
+
+        TreeTableColumn<PersonDecorator, String> firstNameCol = new TreeTableColumn<>("First Name");
         firstNameCol.setCellValueFactory(
-                new PropertyValueFactory<Person,String>("firstName")
+                (TreeTableColumn.CellDataFeatures<PersonDecorator, String> param) ->
+                        new ReadOnlyObjectWrapper<String>(param.getValue().getValue().getFirstName())
         );
 
-        TableColumn ageCol = new TableColumn("age");
+        TreeTableColumn<PersonDecorator, Integer> ageCol = new TreeTableColumn("age");
         ageCol.setCellValueFactory(
-                new PropertyValueFactory<Person,String>("age")
+                (TreeTableColumn.CellDataFeatures<PersonDecorator, Integer> param) ->
+                        new ReadOnlyObjectWrapper<Integer>(param.getValue().getValue().getAge())
         );
 
-        TableColumn salaryCol = new TableColumn("salary");
+        TreeTableColumn<PersonDecorator, String> salaryCol = new TreeTableColumn("salary");
         salaryCol.setCellValueFactory(
-                new PropertyValueFactory<Person,String>("salary")
+                (TreeTableColumn.CellDataFeatures<PersonDecorator, String> param) ->
+                {
+                    String result = null;
+                    BigDecimal bigDecimal = param.getValue().getValue().getSalary();
+                    if(bigDecimal != null) {
+                        result = bigDecimal.toString();
+                    }
+                    return new ReadOnlyObjectWrapper<>(result);
+                }
         );
 
-        TableColumn startdateCol = new TableColumn("startDate");
+        TreeTableColumn<PersonDecorator, LocalDateTime> startdateCol = new TreeTableColumn("startDate");
         startdateCol.setCellValueFactory(
-                new PropertyValueFactory<Person,String>("startDate")
+                (TreeTableColumn.CellDataFeatures<PersonDecorator, LocalDateTime> param) ->
+                        new ReadOnlyObjectWrapper<LocalDateTime>(param.getValue().getValue().getStartDate())
         );
-        table.setItems(data);
-        table.getColumns().addAll(firstNameCol, ageCol, salaryCol, startdateCol);
+        table.getColumns().addAll(idCol,rootNameCol, deptNameCol, firstNameCol, ageCol, salaryCol, startdateCol);
 
-        addExportToTableView(table);
+        table.setEditable(true);
+        table.setRoot(null);
+
+        final TreeItem<PersonDecorator> rootNode = new TreeItem<>(new PersonRootDecorator("All Persons"));
+        rootNode.setExpanded(true);
+
+        final TreeItem<PersonDecorator> dept1Node = new TreeItem<>(new PersonDepartmentDecorator(1L, "Main"));
+        dept1Node.setExpanded(true);
+        int i = 0;
+        for (; i < 2 && i < data.size(); i++) {
+            TreeItem<PersonDecorator> personNode = new TreeItem<>(new PersonObjDecorator(data.get(i)));
+            dept1Node.getChildren().add(personNode);
+        }
+
+        final TreeItem<PersonDecorator> dept2Node = new TreeItem<>(new PersonDepartmentDecorator(2L, "Sales"));
+        dept2Node.setExpanded(true);
+        for (; i < 4 && i < data.size(); i++) {
+            TreeItem<PersonDecorator> personNode = new TreeItem<>(new PersonObjDecorator(data.get(i)));
+            dept2Node.getChildren().add(personNode);
+        }
+
+        final TreeItem<PersonDecorator> dept3Node = new TreeItem<>(new PersonDepartmentDecorator(3L, "Stock"));
+        dept3Node.setExpanded(true);
+        for (; i < 6 && i < data.size(); i++) {
+            TreeItem<PersonDecorator> personNode = new TreeItem<>(new PersonObjDecorator(data.get(i)));
+            dept3Node.getChildren().add(personNode);
+        }
+
+        //Adding tree items to the root
+        rootNode.getChildren().addAll(dept1Node, dept2Node, dept3Node);
+
+        table.setRoot(rootNode);
+
+        addExportToTreeTableView(table);
 
         final VBox vbox = new VBox();
         vbox.setSpacing(5);
@@ -104,7 +169,7 @@ public class TableViewToExcel extends Application{
         stage.show();
     }
 
-    private void addExportToTableView(TableView table) throws Exception{
+    private void addExportToTreeTableView(TreeTableView table) throws Exception{
         final ContextMenu cm = new ContextMenu();
         final MenuItem export = new MenuItem("Export to excel");
         export.setOnAction(event -> {
@@ -125,7 +190,7 @@ public class TableViewToExcel extends Application{
         });
     }
 
-    private void exportTableViewToExcelFile(/*ActionEvent event, */TableView table) throws Exception{
+    private void exportTableViewToExcelFile(/*ActionEvent event, */TreeTableView table) throws Exception{
         /*
 https://stackoverflow.com/questions/46017483/javafx-export-tableview-to-excel-with-name-of-columns
 <dependency>
@@ -157,7 +222,14 @@ https://stackoverflow.com/questions/46017483/javafx-export-tableview-to-excel-wi
         dateTime.setDataFormat(
                 creationHelper.createDataFormat().getFormat("yyyy-mm-dd h:mm:ss"));
 
-        for (int tableInx = 0, excelRowInx = 1; tableInx < table.getItems().size(); tableInx++, excelRowInx++) {
+        https://stackoverflow.com/questions/35144827/javafx-exporting-table-treetable-view-content-to-pdf-and-excel
+        int rowIndex = treeTableView.getRow(treeRowItem);
+        for(int i=0;i<treeTable.getColumns();i++){
+            TreeTableColumn ttc = treeTable.getColumns().get(i);
+            String value = ttc.getCellData(rowIndex).toString();
+        }
+
+        for (int tableInx = 0, excelRowInx = 1; tableInx < table.getleverItems().size(); tableInx++, excelRowInx++) {
             Row row = sheet.createRow(excelRowInx);
             for (int columnInx = 0; columnInx < table.getColumns().size(); columnInx++) {
                 Object valueObj = ((TableColumn) table.getColumns().get(columnInx)).getCellData(tableInx);
