@@ -173,7 +173,7 @@ public class TreeTableViewToExcel extends Application{
         final MenuItem export = new MenuItem("Export to excel");
         export.setOnAction(event -> {
             try {
-                exportTableViewToExcelFile(table);
+                exportTreeTableViewToExcelFile(table);
             }catch (Exception e){
                 e.printStackTrace();
             }
@@ -189,7 +189,7 @@ public class TreeTableViewToExcel extends Application{
         });
     }
 
-    private void exportTableViewToExcelFile(/*ActionEvent event, */TreeTableView table) throws Exception{
+    private void exportTreeTableViewToExcelFile(/*ActionEvent event, */TreeTableView table) throws Exception{
         /*
 https://stackoverflow.com/questions/46017483/javafx-export-tableview-to-excel-with-name-of-columns
 <dependency>
