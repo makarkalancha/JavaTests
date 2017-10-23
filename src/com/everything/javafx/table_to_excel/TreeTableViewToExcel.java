@@ -16,7 +16,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
-import javafx.scene.control.TableColumn;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
 import javafx.scene.control.TreeTableView;
@@ -207,9 +206,9 @@ https://stackoverflow.com/questions/46017483/javafx-export-tableview-to-excel-wi
         Workbook workbook = new XSSFWorkbook();
         Sheet sheet = workbook.createSheet("table");
 
-        ObservableList<TableColumn> col = table.getColumns();
+        ObservableList<TreeTableColumn> col = table.getColumns();
         List<String> columns = col.stream()
-                .map(tableColumn -> ((TableColumn) tableColumn).getText().toString())
+                .map(tableColumn -> tableColumn.getText().toString())
                 .collect(Collectors.toList());
 
         Row header = sheet.createRow(0);
@@ -222,27 +221,30 @@ https://stackoverflow.com/questions/46017483/javafx-export-tableview-to-excel-wi
         dateTime.setDataFormat(
                 creationHelper.createDataFormat().getFormat("yyyy-mm-dd h:mm:ss"));
 
-        https://stackoverflow.com/questions/35144827/javafx-exporting-table-treetable-view-content-to-pdf-and-excel
-        int rowIndex = treeTableView.getRow(treeRowItem);
-        for(int i=0;i<treeTable.getColumns();i++){
-            TreeTableColumn ttc = treeTable.getColumns().get(i);
-            String value = ttc.getCellData(rowIndex).toString();
-        }
+        ObservableList<TreeTableColumn> treeTableColumns = table.getColumns();
 
-        for (int tableInx = 0, excelRowInx = 1; tableInx < table.getleverItems().size(); tableInx++, excelRowInx++) {
+        TreeItem rootNode = table.getRoot();
+        ObservableList<TreeItem> level = rootNode.getChildren();
+        long size = level.size()
+                + level.stream()
+                .mapToInt(treeItem -> treeItem.getChildren().size())
+                .sum()
+                + 1;
+        for (int excelRowInx = 1, treeTableRowInx = 0; treeTableRowInx < size; excelRowInx++, treeTableRowInx++) {
             Row row = sheet.createRow(excelRowInx);
             for (int columnInx = 0; columnInx < table.getColumns().size(); columnInx++) {
-                Object valueObj = ((TableColumn) table.getColumns().get(columnInx)).getCellData(tableInx);
+                TreeTableColumn ttc = treeTableColumns.get(columnInx);
+                Object valueObj = ttc.getCellData(treeTableRowInx);
                 if (valueObj != null) {
                     Cell cell = row.createCell(columnInx);
                     if (valueObj instanceof Integer) {
-                        cell.setCellValue((Integer)valueObj);
-                    }else if(valueObj instanceof BigDecimal){
-                        cell.setCellValue(((BigDecimal)valueObj).doubleValue());
-                    }else if(valueObj instanceof LocalDateTime){
+                        cell.setCellValue((Integer) valueObj);
+                    } else if (valueObj instanceof BigDecimal) {
+                        cell.setCellValue(((BigDecimal) valueObj).doubleValue());
+                    } else if (valueObj instanceof LocalDateTime) {
                         cell.setCellValue(Date.from(((LocalDateTime) valueObj).atZone(ZoneId.systemDefault()).toInstant()));
                         cell.setCellStyle(dateTime);
-                    }else {
+                    } else {
                         cell.setCellValue(valueObj.toString());
                     }
                 }
@@ -260,7 +262,6 @@ https://stackoverflow.com/questions/46017483/javafx-export-tableview-to-excel-wi
                 new File(System.getProperty("user.home"))
         );
 
-//        File file = fileChooser.showSaveDialog(((Node)event.getTarget()).getScene().getWindow());
         File file = fileChooser.showSaveDialog(table.getScene().getWindow());
         if (file != null) {
             try{
@@ -271,7 +272,5 @@ https://stackoverflow.com/questions/46017483/javafx-export-tableview-to-excel-wi
                 System.out.println(e);
             }
         }
-
-
     }
 }

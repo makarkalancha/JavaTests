@@ -13,7 +13,7 @@ public interface PersonDecorator {
     String getRootName();
     String getDepartmentName();
     String getFirstName();
-    int getAge();
+    Integer getAge();
     BigDecimal getSalary();
     LocalDateTime getStartDate();
 }

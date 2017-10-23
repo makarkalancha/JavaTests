@@ -38,7 +38,7 @@ public class PersonObjDecorator implements PersonDecorator {
     }
 
     @Override
-    public int getAge() {
+    public Integer getAge() {
         return person.getAge();
     }
 

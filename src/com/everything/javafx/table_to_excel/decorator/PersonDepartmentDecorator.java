@@ -38,8 +38,8 @@ public class PersonDepartmentDecorator implements PersonDecorator {
     }
 
     @Override
-    public int getAge() {
-        return 0;
+    public Integer getAge() {
+        return null;
     }
 
     @Override
