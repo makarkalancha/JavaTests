@@ -5,6 +5,7 @@ import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
+import javafx.event.EventType;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -28,6 +29,8 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.math.BigDecimal;
@@ -92,6 +95,22 @@ public class TableViewToExcel extends Application{
         table.getColumns().addAll(firstNameCol, ageCol, salaryCol, startdateCol);
 
         addExportToTableView(table);
+        table.getSelectionModel().selectedItemProperty().addListener((observable, oldSelection, newSelection) -> {
+            if (newSelection != null && !newSelection.equals(oldSelection)){
+                System.out.println("getSelectionModel");
+            }
+        });
+
+
+        ActionListener actionListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println(e.getActionCommand());
+            }
+        };
+        table.addEventHandler(EventType.ROOT, event -> {
+            System.out.println(event.getEventType());
+        });
 
         final VBox vbox = new VBox();
         vbox.setSpacing(5);
