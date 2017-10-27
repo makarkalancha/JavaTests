@@ -116,7 +116,7 @@ public class JacksonDemo2 {
         String json = objectWriter.writeValueAsString(wrapper);
 //        System.out.println(json);
 
-        JavaType collectionType = mapper.getTypeFactory().constructParametrizedType(Wrapper.class,  Wrapper.class, Inside.class);
+        JavaType collectionType = mapper.getTypeFactory().constructParametricType(Wrapper.class, Inside.class/*, String.class*/);
         Wrapper<Inside> wrapper1 = mapper.readValue(json, collectionType);
         System.out.println(wrapper1);
     }
