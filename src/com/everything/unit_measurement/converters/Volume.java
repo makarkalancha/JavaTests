@@ -543,77 +543,77 @@ public enum Volume {
     DECILITER{
         @Override
         public BigDecimal toBarrel(BigDecimal value) {
-            return super.toBarrel(value);
+            return value.multiply(new BigDecimal("0.0006289308"));
         }
 
         @Override
         public BigDecimal toCubicCentimeter(BigDecimal value) {
-            return super.toCubicCentimeter(value);
+            return value.multiply(new BigDecimal("100"));
         }
 
         @Override
         public BigDecimal toCubicFoot(BigDecimal value) {
-            return super.toCubicFoot(value);
+            return value.multiply(new BigDecimal("0.0035314667"));
         }
 
         @Override
         public BigDecimal toCubicInch(BigDecimal value) {
-            return super.toCubicInch(value);
+            return value.multiply(new BigDecimal("6,1023744095"));
         }
 
         @Override
         public BigDecimal toCubicMeter(BigDecimal value) {
-            return super.toCubicMeter(value);
+            return value.multiply(new BigDecimal("0,0001"));
         }
 
         @Override
         public BigDecimal toCubicMillimeter(BigDecimal value) {
-            return super.toCubicMillimeter(value);
+            return value.multiply(new BigDecimal("100000"));
         }
 
         @Override
         public BigDecimal toCubicYard(BigDecimal value) {
-            return super.toCubicYard(value);
+            return value.multiply(new BigDecimal("100000"));
         }
 
         @Override
         public BigDecimal toDeciliter(BigDecimal value) {
-            return super.toDeciliter(value);
+            return value.multiply(BigDecimal.ONE);
         }
 
         @Override
         public BigDecimal toFluidOunceUS(BigDecimal value) {
-            return super.toFluidOunceUS(value);
+            return value.multiply(new BigDecimal("3.3814056503"));
         }
 
         @Override
         public BigDecimal toGallonUS(BigDecimal value) {
-            return super.toGallonUS(value);
+            return value.multiply(new BigDecimal("0.0264172316"));
         }
 
         @Override
         public BigDecimal toHectoliter(BigDecimal value) {
-            return super.toHectoliter(value);
+            return value.multiply(new BigDecimal("0.001"));
         }
 
         @Override
         public BigDecimal toLiter(BigDecimal value) {
-            return super.toLiter(value);
+            return value.multiply(new BigDecimal("0.1"));
         }
 
         @Override
         public BigDecimal toMilliliter(BigDecimal value) {
-            return super.toMilliliter(value);
+            return value.multiply(new BigDecimal("100"));
         }
 
         @Override
         public BigDecimal toPintUS(BigDecimal value) {
-            return super.toPintUS(value);
+            return value.multiply(new BigDecimal("0,2113378531"));
         }
 
         @Override
         public BigDecimal toQuartUS(BigDecimal value) {
-            return super.toQuartUS(value);
+            return value.multiply(new BigDecimal("0,1056689266"));
         }
     },
     FLUID_OUNCE_US,
