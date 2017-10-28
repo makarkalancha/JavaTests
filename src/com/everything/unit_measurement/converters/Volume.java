@@ -920,7 +920,82 @@ public enum Volume {
             return value.multiply(new BigDecimal("1,056688209432594"));
         }
     },
-    MILLILITER,
+    MILLILITER{
+        @Override
+        public BigDecimal toBarrel(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,0000062893"));
+        }
+
+        @Override
+        public BigDecimal toCubicCentimeter(BigDecimal value) {
+            return value.multiply(BigDecimal.ONE);
+        }
+
+        @Override
+        public BigDecimal toCubicFoot(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,0000353147"));
+        }
+
+        @Override
+        public BigDecimal toCubicInch(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,0610237441"));
+        }
+
+        @Override
+        public BigDecimal toCubicMeter(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,000001"));
+        }
+
+        @Override
+        public BigDecimal toCubicMillimeter(BigDecimal value) {
+            return value.multiply(new BigDecimal("1000"));
+        }
+
+        @Override
+        public BigDecimal toCubicYard(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,000001308"));
+        }
+
+        @Override
+        public BigDecimal toDeciliter(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,01"));
+        }
+
+        @Override
+        public BigDecimal toFluidOunceUS(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,0338140565"));
+        }
+
+        @Override
+        public BigDecimal toGallonUS(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,0002641723"));
+        }
+
+        @Override
+        public BigDecimal toHectoliter(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,00001"));
+        }
+
+        @Override
+        public BigDecimal toLiter(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,001"));
+        }
+
+        @Override
+        public BigDecimal toMilliliter(BigDecimal value) {
+            return value.multiply(BigDecimal.ONE);
+        }
+
+        @Override
+        public BigDecimal toPintUS(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,0021133785"));
+        }
+
+        @Override
+        public BigDecimal toQuartUS(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,0010566893"));
+        }
+    },
     PINT_US,
     QUART_US;
 
