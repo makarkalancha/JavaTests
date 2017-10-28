@@ -236,11 +236,386 @@ public enum Volume {
             return value.multiply(new BigDecimal("29,92207792207792"));
         }
     },
-    CUBIC_INCH,
-    CUBIC_METER,
-    CUBIC_MILLIMETER,
-    CUBIC_YARD,
-    DECILITER,
+    CUBIC_INCH{
+        @Override
+        public BigDecimal toBarrel(BigDecimal value) {
+            return value.multiply(new BigDecimal("0.0001030633"));
+        }
+
+        @Override
+        public BigDecimal toCubicCentimeter(BigDecimal value) {
+            return value.multiply(new BigDecimal("16,387064"));
+        }
+
+        @Override
+        public BigDecimal toCubicFoot(BigDecimal value) {
+            return value.multiply(new BigDecimal("0.0005787037037037037"));
+        }
+
+        @Override
+        public BigDecimal toCubicInch(BigDecimal value) {
+            return value.multiply(BigDecimal.ONE);
+        }
+
+        @Override
+        public BigDecimal toCubicMeter(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,000016387064"));
+        }
+
+        @Override
+        public BigDecimal toCubicMillimeter(BigDecimal value) {
+            return value.multiply(new BigDecimal("16387,064"));
+        }
+
+        @Override
+        public BigDecimal toCubicYard(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,00002143347050754458"));
+        }
+
+        @Override
+        public BigDecimal toDeciliter(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,16387064"));
+        }
+
+        @Override
+        public BigDecimal toFluidOunceUS(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,5541125541125541"));
+        }
+
+        @Override
+        public BigDecimal toGallonUS(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,0043290043290043"));
+        }
+
+        @Override
+        public BigDecimal toHectoliter(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,00016387064"));
+        }
+
+        @Override
+        public BigDecimal toLiter(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,016387064"));
+        }
+
+        @Override
+        public BigDecimal toMilliliter(BigDecimal value) {
+            return value.multiply(new BigDecimal("16,387064"));
+        }
+
+        @Override
+        public BigDecimal toPintUS(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,0346320346320346"));
+        }
+
+        @Override
+        public BigDecimal toQuartUS(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,0173160173160173"));
+        }
+    },
+    CUBIC_METER{
+        @Override
+        public BigDecimal toBarrel(BigDecimal value) {
+            return value.multiply(new BigDecimal("6.2893081761"));
+        }
+
+        @Override
+        public BigDecimal toCubicCentimeter(BigDecimal value) {
+            return value.multiply(new BigDecimal("1000000"));
+        }
+
+        @Override
+        public BigDecimal toCubicFoot(BigDecimal value) {
+            return value.multiply(new BigDecimal("35,31466672148859"));
+        }
+
+        @Override
+        public BigDecimal toCubicInch(BigDecimal value) {
+            return value.multiply(new BigDecimal("61023,74409473228"));
+        }
+
+        @Override
+        public BigDecimal toCubicMeter(BigDecimal value) {
+            return value.multiply(BigDecimal.ONE);
+        }
+
+        @Override
+        public BigDecimal toCubicMillimeter(BigDecimal value) {
+            return value.multiply(new BigDecimal("1000000000"));
+        }
+
+        @Override
+        public BigDecimal toCubicYard(BigDecimal value) {
+            return value.multiply(new BigDecimal("1,307950619314392"));
+        }
+
+        @Override
+        public BigDecimal toDeciliter(BigDecimal value) {
+            return value.multiply(new BigDecimal("10000"));
+        }
+
+        @Override
+        public BigDecimal toFluidOunceUS(BigDecimal value) {
+            return value.multiply(new BigDecimal("33814,022701843"));
+        }
+
+        @Override
+        public BigDecimal toGallonUS(BigDecimal value) {
+            return value.multiply(new BigDecimal("264,1720523581484"));
+        }
+
+        @Override
+        public BigDecimal toHectoliter(BigDecimal value) {
+            return value.multiply(BigDecimal.TEN);
+        }
+
+        @Override
+        public BigDecimal toLiter(BigDecimal value) {
+            return value.multiply(new BigDecimal("1000"));
+        }
+
+        @Override
+        public BigDecimal toMilliliter(BigDecimal value) {
+            return value.multiply(new BigDecimal("1000000"));
+        }
+
+        @Override
+        public BigDecimal toPintUS(BigDecimal value) {
+            return value.multiply(new BigDecimal("2113,376418865187"));
+        }
+
+        @Override
+        public BigDecimal toQuartUS(BigDecimal value) {
+            return value.multiply(new BigDecimal("1056,688209432594"));
+        }
+    },
+    CUBIC_MILLIMETER{
+        @Override
+        public BigDecimal toBarrel(BigDecimal value) {
+            return value.multiply(new BigDecimal("0.0000000063"));
+        }
+
+        @Override
+        public BigDecimal toCubicCentimeter(BigDecimal value) {
+            return value.multiply(new BigDecimal("0.001"));
+        }
+
+        @Override
+        public BigDecimal toCubicFoot(BigDecimal value) {
+            return value.multiply(new BigDecimal("0.0000000353"));
+        }
+
+        @Override
+        public BigDecimal toCubicInch(BigDecimal value) {
+            return value.multiply(new BigDecimal("0.0000610237"));
+        }
+
+        @Override
+        public BigDecimal toCubicMeter(BigDecimal value) {
+            return value.multiply(new BigDecimal("0.000000001"));
+        }
+
+        @Override
+        public BigDecimal toCubicMillimeter(BigDecimal value) {
+            return value.multiply(BigDecimal.ONE);
+        }
+
+        @Override
+        public BigDecimal toCubicYard(BigDecimal value) {
+            return value.multiply(new BigDecimal("0.0000000013"));
+        }
+
+        @Override
+        public BigDecimal toDeciliter(BigDecimal value) {
+            return value.multiply(new BigDecimal("0.00001"));
+        }
+
+        @Override
+        public BigDecimal toFluidOunceUS(BigDecimal value) {
+            return value.multiply(new BigDecimal("0.0000338141"));
+        }
+
+        @Override
+        public BigDecimal toGallonUS(BigDecimal value) {
+            return value.multiply(new BigDecimal("0.0000002642"));
+        }
+
+        @Override
+        public BigDecimal toHectoliter(BigDecimal value) {
+            return value.multiply(new BigDecimal("0.00000001"));
+        }
+
+        @Override
+        public BigDecimal toLiter(BigDecimal value) {
+            return value.multiply(new BigDecimal("0.000001"));
+        }
+
+        @Override
+        public BigDecimal toMilliliter(BigDecimal value) {
+            return value.multiply(new BigDecimal("0.001"));
+        }
+
+        @Override
+        public BigDecimal toPintUS(BigDecimal value) {
+            return value.multiply(new BigDecimal("0.0000021134"));
+        }
+
+        @Override
+        public BigDecimal toQuartUS(BigDecimal value) {
+            return value.multiply(new BigDecimal("0.0000010567"));
+        }
+    },
+    CUBIC_YARD{
+        @Override
+        public BigDecimal toBarrel(BigDecimal value) {
+            return value.multiply(new BigDecimal("4,8085211194"));
+        }
+
+        @Override
+        public BigDecimal toCubicCentimeter(BigDecimal value) {
+            return value.multiply(new BigDecimal("764554,857984"));
+        }
+
+        @Override
+        public BigDecimal toCubicFoot(BigDecimal value) {
+            return value.multiply(new BigDecimal("27"));
+        }
+
+        @Override
+        public BigDecimal toCubicInch(BigDecimal value) {
+            return value.multiply(new BigDecimal("46656"));
+        }
+
+        @Override
+        public BigDecimal toCubicMeter(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,764554857984"));
+        }
+
+        @Override
+        public BigDecimal toCubicMillimeter(BigDecimal value) {
+            return value.multiply(new BigDecimal("0.0000000764554857984"));
+        }
+
+        @Override
+        public BigDecimal toCubicYard(BigDecimal value) {
+            return value.multiply(BigDecimal.ONE);
+        }
+
+        @Override
+        public BigDecimal toDeciliter(BigDecimal value) {
+            return value.multiply(new BigDecimal("7645,54857984"));
+        }
+
+        @Override
+        public BigDecimal toFluidOunceUS(BigDecimal value) {
+            return value.multiply(new BigDecimal("25852,67532467532"));
+        }
+
+        @Override
+        public BigDecimal toGallonUS(BigDecimal value) {
+            return value.multiply(new BigDecimal("201,974025974026"));
+        }
+
+        @Override
+        public BigDecimal toHectoliter(BigDecimal value) {
+            return value.multiply(new BigDecimal("7,64554857984"));
+        }
+
+        @Override
+        public BigDecimal toLiter(BigDecimal value) {
+            return value.multiply(new BigDecimal("764,554857984"));
+        }
+
+        @Override
+        public BigDecimal toMilliliter(BigDecimal value) {
+            return value.multiply(new BigDecimal("0,0000764554857984"));
+        }
+
+        @Override
+        public BigDecimal toPintUS(BigDecimal value) {
+            return value.multiply(new BigDecimal("1615,792207792208"));
+        }
+
+        @Override
+        public BigDecimal toQuartUS(BigDecimal value) {
+            return value.multiply(new BigDecimal("807,8961038961039"));
+        }
+    },
+    DECILITER{
+        @Override
+        public BigDecimal toBarrel(BigDecimal value) {
+            return super.toBarrel(value);
+        }
+
+        @Override
+        public BigDecimal toCubicCentimeter(BigDecimal value) {
+            return super.toCubicCentimeter(value);
+        }
+
+        @Override
+        public BigDecimal toCubicFoot(BigDecimal value) {
+            return super.toCubicFoot(value);
+        }
+
+        @Override
+        public BigDecimal toCubicInch(BigDecimal value) {
+            return super.toCubicInch(value);
+        }
+
+        @Override
+        public BigDecimal toCubicMeter(BigDecimal value) {
+            return super.toCubicMeter(value);
+        }
+
+        @Override
+        public BigDecimal toCubicMillimeter(BigDecimal value) {
+            return super.toCubicMillimeter(value);
+        }
+
+        @Override
+        public BigDecimal toCubicYard(BigDecimal value) {
+            return super.toCubicYard(value);
+        }
+
+        @Override
+        public BigDecimal toDeciliter(BigDecimal value) {
+            return super.toDeciliter(value);
+        }
+
+        @Override
+        public BigDecimal toFluidOunceUS(BigDecimal value) {
+            return super.toFluidOunceUS(value);
+        }
+
+        @Override
+        public BigDecimal toGallonUS(BigDecimal value) {
+            return super.toGallonUS(value);
+        }
+
+        @Override
+        public BigDecimal toHectoliter(BigDecimal value) {
+            return super.toHectoliter(value);
+        }
+
+        @Override
+        public BigDecimal toLiter(BigDecimal value) {
+            return super.toLiter(value);
+        }
+
+        @Override
+        public BigDecimal toMilliliter(BigDecimal value) {
+            return super.toMilliliter(value);
+        }
+
+        @Override
+        public BigDecimal toPintUS(BigDecimal value) {
+            return super.toPintUS(value);
+        }
+
+        @Override
+        public BigDecimal toQuartUS(BigDecimal value) {
+            return super.toQuartUS(value);
+        }
+    },
     FLUID_OUNCE_US,
     GALLON_US,
     HECTOLITER,
