@@ -1,7 +1,7 @@
 package com.everything.unit_measurement;
 
 
-import com.everything.unit_measurement.converters.Length;
+import com.everything.unit_measurement.converters.LengthUnit;
 
 import java.math.BigDecimal;
 import java.util.concurrent.TimeUnit;
@@ -45,8 +45,28 @@ public class UnitDemo {
 //        Quantity<Length> length = lengthQuantityFactory.create(34.5, MILE);
 
         System.out.println("hours->seconds: " + TimeUnit.HOURS.toSeconds(1));
-        System.out.println("meter->foot: " + Length.METER.toFoot(new BigDecimal("112")));
-        System.out.println("meter->inch: " + Length.METER.toInch(new BigDecimal("112")));
-        System.out.println("meter->meter: " + Length.METER.toMeter(new BigDecimal("112")));
+        System.out.println("meter->foot: " + LengthUnit.METER.toFoot(new BigDecimal("112")));
+        System.out.println("meter->inch: " + LengthUnit.METER.toInch(new BigDecimal("112")));
+        System.out.println("meter->meter: " + LengthUnit.METER.toMeter(new BigDecimal("112")));
+
+        Unit each = Unit.EACH;
+        Unit liter = Unit.LITER;
+        Unit kg = Unit.KG;
+        Unit lb = Unit.LB;
+
+        Class enumFromEach = UnitConverterConstructor.getEnumByKey(each.getUnitKey());
+        System.out.println(enumFromEach);
+
+        Class enumFromLiter = UnitConverterConstructor.getEnumByKey(liter.getUnitKey());
+        System.out.println(enumFromLiter);
+
+        Class enumFromKg = UnitConverterConstructor.getEnumByKey(kg.getUnitKey());
+        System.out.println(enumFromKg);
+
+        Class enumFromLb = UnitConverterConstructor.getEnumByKey(lb.getUnitKey());
+        System.out.println(enumFromLb);
+
+        System.out.println(UnitConverterConstructor.convertWeight(Unit.KG.getUnitKey(), new BigDecimal("10"), Unit.LB.getUnitKey()));
+        System.out.println(UnitConverterConstructor.convertWeight(Unit.KG.getUnitKey(), new BigDecimal("10"), Unit.F_OZ.getUnitKey()));
     }
 }

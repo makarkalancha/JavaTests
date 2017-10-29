@@ -7,16 +7,16 @@ import java.math.BigDecimal;
  * Date: 28/10/2017
  * Time: 17:39
  */
-public enum Weight {
-    GRAM{
+public enum WeightUnit{
+    GRAM {
         @Override
         public BigDecimal toGram(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
         public BigDecimal toKilogram(BigDecimal value) {
-            return value.multiply(new BigDecimal("0,001"));
+            return value.multiply(new BigDecimal("0.001"));
         }
 
         @Override
@@ -26,20 +26,25 @@ public enum Weight {
 
         @Override
         public BigDecimal toOunce(BigDecimal value) {
-            return value.multiply(new BigDecimal("0,0352739619495804"));
+            return value.multiply(new BigDecimal("0.0352739619495804"));
         }
 
         @Override
         public BigDecimal toPound(BigDecimal value) {
-            return value.multiply(new BigDecimal("0,0022046226218488"));
+            return value.multiply(new BigDecimal("0.0022046226218488"));
         }
 
         @Override
         public BigDecimal toTonne(BigDecimal value) {
-            return value.multiply(new BigDecimal("0,000001"));
+            return value.multiply(new BigDecimal("0.000001"));
+        }
+
+        @Override
+        public BigDecimal convert(BigDecimal value, WeightUnit weightUnit) {
+            return weightUnit.toGram(value);
         }
     },
-    KILOGRAM{
+    KILOGRAM {
         @Override
         public BigDecimal toGram(BigDecimal value) {
             return value.multiply(new BigDecimal("1000"));
@@ -57,28 +62,33 @@ public enum Weight {
 
         @Override
         public BigDecimal toOunce(BigDecimal value) {
-            return value.multiply(new BigDecimal("35,27396194958041"));
+            return value.multiply(new BigDecimal("35.27396194958041"));
         }
 
         @Override
         public BigDecimal toPound(BigDecimal value) {
-            return value.multiply(new BigDecimal("2,204622621848776"));
+            return value.multiply(new BigDecimal("2.204622621848776"));
         }
 
         @Override
         public BigDecimal toTonne(BigDecimal value) {
-            return value.multiply(new BigDecimal("0,001"));
+            return value.multiply(new BigDecimal("0.001"));
+        }
+
+        @Override
+        public BigDecimal convert(BigDecimal value, WeightUnit weightUnit) {
+            return weightUnit.toKilogram(value);
         }
     },
-    MILLIGRAM{
+    MILLIGRAM {
         @Override
         public BigDecimal toGram(BigDecimal value) {
-            return value.multiply(new BigDecimal("0,001"));
+            return value.multiply(new BigDecimal("0.001"));
         }
 
         @Override
         public BigDecimal toKilogram(BigDecimal value) {
-            return value.multiply(new BigDecimal("0,000001"));
+            return value.multiply(new BigDecimal("0.000001"));
         }
 
         @Override
@@ -88,33 +98,38 @@ public enum Weight {
 
         @Override
         public BigDecimal toOunce(BigDecimal value) {
-            return value.multiply(new BigDecimal("0,00003527396194958041"));
+            return value.multiply(new BigDecimal("0.00003527396194958041"));
         }
 
         @Override
         public BigDecimal toPound(BigDecimal value) {
-            return value.multiply(new BigDecimal("0,000002,204622621848776"));
+            return value.multiply(new BigDecimal("0.000002.204622621848776"));
         }
 
         @Override
         public BigDecimal toTonne(BigDecimal value) {
-            return value.multiply(new BigDecimal("0,000000001"));
+            return value.multiply(new BigDecimal("0.000000001"));
+        }
+
+        @Override
+        public BigDecimal convert(BigDecimal value, WeightUnit weightUnit) {
+            return weightUnit.toMilligram(value);
         }
     },
-    OUNCE{
+    OUNCE {
         @Override
         public BigDecimal toGram(BigDecimal value) {
-            return value.multiply(new BigDecimal("28,349523125"));
+            return value.multiply(new BigDecimal("28.349523125"));
         }
 
         @Override
         public BigDecimal toKilogram(BigDecimal value) {
-            return value.multiply(new BigDecimal("0,028349523125"));
+            return value.multiply(new BigDecimal("0.028349523125"));
         }
 
         @Override
         public BigDecimal toMilligram(BigDecimal value) {
-            return value.multiply(new BigDecimal("28349,523125"));
+            return value.multiply(new BigDecimal("28349.523125"));
         }
 
         @Override
@@ -124,28 +139,33 @@ public enum Weight {
 
         @Override
         public BigDecimal toPound(BigDecimal value) {
-            return value.multiply(new BigDecimal("0,0625"));
+            return value.multiply(new BigDecimal("0.0625"));
         }
 
         @Override
         public BigDecimal toTonne(BigDecimal value) {
-            return value.multiply(new BigDecimal("0,000028349523125"));
+            return value.multiply(new BigDecimal("0.000028349523125"));
+        }
+
+        @Override
+        public BigDecimal convert(BigDecimal value, WeightUnit weightUnit) {
+            return weightUnit.toOunce(value);
         }
     },
-    POUND{
+    POUND {
         @Override
         public BigDecimal toGram(BigDecimal value) {
-            return value.multiply(new BigDecimal("453,59237"));
+            return value.multiply(new BigDecimal("453.59237"));
         }
 
         @Override
         public BigDecimal toKilogram(BigDecimal value) {
-            return value.multiply(new BigDecimal("0,45359237"));
+            return value.multiply(new BigDecimal("0.45359237"));
         }
 
         @Override
         public BigDecimal toMilligram(BigDecimal value) {
-            return value.multiply(new BigDecimal("453592,37"));
+            return value.multiply(new BigDecimal("453592.37"));
         }
 
         @Override
@@ -160,10 +180,15 @@ public enum Weight {
 
         @Override
         public BigDecimal toTonne(BigDecimal value) {
-            return value.multiply(new BigDecimal("0,00045359237"));
+            return value.multiply(new BigDecimal("0.00045359237"));
+        }
+
+        @Override
+        public BigDecimal convert(BigDecimal value, WeightUnit weightUnit) {
+            return weightUnit.toPound(value);
         }
     },
-    TONNE{
+    TONNE {
         @Override
         public BigDecimal toGram(BigDecimal value) {
             return value.multiply(new BigDecimal("1000000"));
@@ -181,42 +206,50 @@ public enum Weight {
 
         @Override
         public BigDecimal toOunce(BigDecimal value) {
-            return value.multiply(new BigDecimal("35273,96194958041"));
+            return value.multiply(new BigDecimal("35273.96194958041"));
         }
 
         @Override
         public BigDecimal toPound(BigDecimal value) {
-            return value.multiply(new BigDecimal("2204,622621848776"));
+            return value.multiply(new BigDecimal("2204.622621848776"));
         }
 
         @Override
         public BigDecimal toTonne(BigDecimal value) {
             return value.multiply(BigDecimal.ONE);
         }
+
+        @Override
+        public BigDecimal convert(BigDecimal value, WeightUnit weightUnit) {
+            return weightUnit.toTonne(value);
+        }
     };
 
-    public BigDecimal toGram(BigDecimal value){
+    public BigDecimal toGram(BigDecimal value) {
         throw new AbstractMethodError();
     }
 
-    public BigDecimal toKilogram(BigDecimal value){
+    public BigDecimal toKilogram(BigDecimal value) {
         throw new AbstractMethodError();
     }
 
-    public BigDecimal toMilligram(BigDecimal value){
+    public BigDecimal toMilligram(BigDecimal value) {
         throw new AbstractMethodError();
     }
 
-    public BigDecimal toOunce(BigDecimal value){
+    public BigDecimal toOunce(BigDecimal value) {
         throw new AbstractMethodError();
     }
 
-    public BigDecimal toPound(BigDecimal value){
+    public BigDecimal toPound(BigDecimal value) {
         throw new AbstractMethodError();
     }
 
-    public BigDecimal toTonne(BigDecimal value){
+    public BigDecimal toTonne(BigDecimal value) {
         throw new AbstractMethodError();
     }
 
+    public BigDecimal convert(BigDecimal value, WeightUnit weightUnit) {
+        throw new AbstractMethodError();
+    }
 }
