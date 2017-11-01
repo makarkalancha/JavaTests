@@ -2,6 +2,7 @@ package com.everything.javafx.table_to_excel;
 
 import com.everything.javafx.table_to_excel.pojo.Person;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
@@ -9,14 +10,18 @@ import javafx.event.EventType;
 import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
@@ -33,6 +38,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.time.LocalDateTime;
@@ -52,8 +59,55 @@ public class TableViewToExcel extends Application{
         launch(args);
     }
 
+    private static void showError(Thread t, Throwable e){
+        System.err.println("***default exception handler***");
+        if(Platform.isFxApplicationThread()){
+            showExceptionAlert(e);
+        }else {
+            System.err.println("an unexpected error occurred in " + t + ": " + e);
+        }
+    }
+
+    public static void showExceptionAlert(Throwable t){
+        System.err.println(t);
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
+        alert.setContentText(t.getMessage());
+
+//            Exception ex = new FileNotFoundException("Could not find file blabla.txt");
+
+// Create expandable Exception.
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
+        t.printStackTrace(pw);
+        String exceptionText = sw.toString();
+
+        Label label = new Label("error:");
+
+        TextArea textArea = new TextArea(exceptionText);
+        textArea.setEditable(false);
+        textArea.setWrapText(true);
+
+        textArea.setMaxWidth(Double.MAX_VALUE);
+        textArea.setMaxHeight(Double.MAX_VALUE);
+        GridPane.setVgrow(textArea, Priority.ALWAYS);
+        GridPane.setHgrow(textArea, Priority.ALWAYS);
+
+        GridPane expContent = new GridPane();
+        expContent.setMaxWidth(Double.MAX_VALUE);
+        expContent.add(label, 0, 0);
+        expContent.add(textArea, 0, 1);
+
+// Set expandable Exception into the dialog pane.
+        alert.getDialogPane().setExpandableContent(expContent);
+
+        alert.showAndWait();
+    }
+
     @Override
     public void start(Stage stage) throws Exception{
+        Thread.setDefaultUncaughtExceptionHandler(TableViewToExcel::showError);
+
         final ObservableList<Person> data = FXCollections.observableArrayList(
                 new Person("Jacob", 1, new BigDecimal("100.01"), LocalDateTime.now().minusDays(1)),
                 new Person("Isabella", 2, new BigDecimal("90.01"), LocalDateTime.now().minusDays(2)),
@@ -72,35 +126,43 @@ public class TableViewToExcel extends Application{
 
         table.setEditable(true);
 
-        TableColumn firstNameCol = new TableColumn("First Name");
-        firstNameCol.setCellValueFactory(
-                new PropertyValueFactory<Person,String>("firstName")
-        );
+        try {
 
-        TableColumn ageCol = new TableColumn("age");
-        ageCol.setCellValueFactory(
-                new PropertyValueFactory<Person,String>("age")
-        );
+            TableColumn<Person, String> firstNameCol = new TableColumn("First Name");
+            firstNameCol.setCellValueFactory(
+//                new PropertyValueFactory<Person,String>("firstName")
+                    param -> {
+                        throw new RuntimeException("test");
+                    }
+            );
 
-        TableColumn salaryCol = new TableColumn("salary");
-        salaryCol.setCellValueFactory(
-                new PropertyValueFactory<Person,String>("salary")
-        );
+            TableColumn ageCol = new TableColumn("age");
+            ageCol.setCellValueFactory(
+                    new PropertyValueFactory<Person, String>("age")
+            );
 
-        TableColumn startdateCol = new TableColumn("startDate");
-        startdateCol.setCellValueFactory(
-                new PropertyValueFactory<Person,String>("startDate")
-        );
-        table.setItems(data);
-        table.getColumns().addAll(firstNameCol, ageCol, salaryCol, startdateCol);
+            TableColumn salaryCol = new TableColumn("salary");
+            salaryCol.setCellValueFactory(
+                    new PropertyValueFactory<Person, String>("salary")
+            );
 
-        addExportToTableView(table);
-        table.getSelectionModel().selectedItemProperty().addListener((observable, oldSelection, newSelection) -> {
-            if (newSelection != null && !newSelection.equals(oldSelection)){
-                System.out.println("getSelectionModel");
-            }
-        });
+            TableColumn startdateCol = new TableColumn("startDate");
+            startdateCol.setCellValueFactory(
+                    new PropertyValueFactory<Person, String>("startDate")
+            );
+            table.setItems(data);
+            table.getColumns().addAll(firstNameCol, ageCol, salaryCol, startdateCol);
 
+            addExportToTableView(table);
+            table.getSelectionModel().selectedItemProperty().addListener((observable, oldSelection, newSelection) -> {
+                if (newSelection != null && !newSelection.equals(oldSelection)) {
+                    System.out.println("getSelectionModel");
+                }
+            });
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
         ActionListener actionListener = new ActionListener() {
             @Override
