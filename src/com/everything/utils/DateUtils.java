@@ -1,8 +1,6 @@
 package com.everything.utils;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -12,63 +10,76 @@ import java.util.concurrent.TimeUnit;
  * Time: 4:20 PM
  */
 public class DateUtils {
-    public static void main(String[] args) {
-//        Timestamp ts = new Timestamp(System.currentTimeMillis()+10000000000L);
-//        String str = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(ts.getTime())).toString();
-//        System.out.println(str);
-//        String dateSt = "2014-04-11 1:30 PM";
-        String dateSt = "2014-01-15 3:00 pm";
-//        String dateSt = "2014-february-20 11:30 am";
+    public static final LocalDate EPOCH = LocalDate.ofEpochDay(0);
 
-        try{
-////            System.out.println(new SimpleDateFormat("MM/dd/yyyy hh:mm a").parse(dateSt).toString());
-            System.out.println(new SimpleDateFormat("yyyy-MM-dd hh:mm a").parse(dateSt).toString());
-//            System.out.println(new SimpleDateFormat("yyyy-MMMM-dd hh:mm a").parse(dateSt).toString());
+    public static LocalDate getLocalDateByUnitDay(Long unitDay) throws Exception{
+        System.out.print(unitDay+": ");
+        return EPOCH.plusDays(unitDay);
+    }
+
+    public static void main(String[] args) throws Exception {
+////        Timestamp ts = new Timestamp(System.currentTimeMillis()+10000000000L);
+////        String str = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(ts.getTime())).toString();
+////        System.out.println(str);
+////        String dateSt = "2014-04-11 1:30 PM";
+//        String dateSt = "2014-01-15 3:00 pm";
+////        String dateSt = "2014-february-20 11:30 am";
 //
-////            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
-////            String dateSt1 = "2014-05-22 17:14:22.712";
-////            String dateSt2 = "2014-05-22 17:14:27.863";
-//            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss.SSS");
-//            String dateSt1 = "09:46:50.391";
-//            String dateSt2 = "11:24:32.788";
+//        try{
+//////            System.out.println(new SimpleDateFormat("MM/dd/yyyy hh:mm a").parse(dateSt).toString());
+//            System.out.println(new SimpleDateFormat("yyyy-MM-dd hh:mm a").parse(dateSt).toString());
+////            System.out.println(new SimpleDateFormat("yyyy-MMMM-dd hh:mm a").parse(dateSt).toString());
+////
+//////            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+//////            String dateSt1 = "2014-05-22 17:14:22.712";
+//////            String dateSt2 = "2014-05-22 17:14:27.863";
+////            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss.SSS");
+////            String dateSt1 = "09:46:50.391";
+////            String dateSt2 = "11:24:32.788";
+////
+////            Date date1 = sdf.parse(dateSt1);
+////            Date date2 = sdf.parse(dateSt2);
+////            System.out.println("date1 millis:"+date1+" / "+date1.getTime());
+////            System.out.println("date2 millis:"+date2+" / "+date2.getTime());
+////
+////            System.out.println(elapsedTimeToDateFormat(date1, date2));
+////            SimpleDateFormat sdfElapsed = new SimpleDateFormat("dd 'days' HH:mm:ss.SSS");
 //
-//            Date date1 = sdf.parse(dateSt1);
-//            Date date2 = sdf.parse(dateSt2);
-//            System.out.println("date1 millis:"+date1+" / "+date1.getTime());
-//            System.out.println("date2 millis:"+date2+" / "+date2.getTime());
 //
-//            System.out.println(elapsedTimeToDateFormat(date1, date2));
-//            SimpleDateFormat sdfElapsed = new SimpleDateFormat("dd 'days' HH:mm:ss.SSS");
-
-
-//            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd't'HH:mm:ssz");
-////            String dateSt1 = "Fri, 08 Aug 2014 18:00:18 +0000";
-//            String dateSt1 = "2014-11-03t00:00:00-0500";
+////            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd't'HH:mm:ssz");
+//////            String dateSt1 = "Fri, 08 Aug 2014 18:00:18 +0000";
+////            String dateSt1 = "2014-11-03t00:00:00-0500";
+////
+////            Date date1 = sdf.parse(dateSt1);
+////            System.out.println("date1 millis:\n"+date1+"\n"+date1.getTime());
 //
-//            Date date1 = sdf.parse(dateSt1);
-//            System.out.println("date1 millis:\n"+date1+"\n"+date1.getTime());
+//            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+//            String dateEndString = "2014-01-15";
+////            String dateEndString = null;
+//
+//            Calendar dateEnd = Calendar.getInstance();
+//            dateEnd.setTime(sdf.parse(dateEndString));
+//
+//            Calendar dateCurrent = Calendar.getInstance();
+//
+//            System.out.println("end date:" + sdf.format(dateEnd.getTime()));
+//            System.out.println("current date:" + sdf.format(dateCurrent.getTime()));
+//            System.out.println("is end date > current date: " + (dateEnd.compareTo(dateCurrent)));
+//
+////        System.out.println(str);
+////        String dateSt = "2014-04-11 1:30 PM";
+//
+//        }catch (ParseException e){
+//            e.printStackTrace();
+//        }
+//
+////        System.out.println(duration(135007L));
 
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-            String dateEndString = "2014-01-15";
-//            String dateEndString = null;
-
-            Calendar dateEnd = Calendar.getInstance();
-            dateEnd.setTime(sdf.parse(dateEndString));
-
-            Calendar dateCurrent = Calendar.getInstance();
-
-            System.out.println("end date:" + sdf.format(dateEnd.getTime()));
-            System.out.println("current date:" + sdf.format(dateCurrent.getTime()));
-            System.out.println("is end date > current date: " + (dateEnd.compareTo(dateCurrent)));
-
-//        System.out.println(str);
-//        String dateSt = "2014-04-11 1:30 PM";
-
-        }catch (ParseException e){
-            e.printStackTrace();
-        }
-
-//        System.out.println(duration(135007L));
+        System.out.println(getLocalDateByUnitDay(17471L));
+        System.out.println(getLocalDateByUnitDay(17473L));
+        System.out.println(getLocalDateByUnitDay(17476L));
+        System.out.println(getLocalDateByUnitDay(17478L));
+        System.out.println(getLocalDateByUnitDay(17476L));
     }
 
     public static String duration(long millis) {
