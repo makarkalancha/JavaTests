@@ -34,7 +34,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class UnitDemo {
     public static void main(String[] args) {
-//        UnitConverter toKilometers = NonSI.MILE.getConverterTo(SI.KILOMETER);
+//        UnitValueConverter toKilometers = NonSI.MILE.getConverterTo(SI.KILOMETER);
 //        double km = toKilometers.getConverterMultiplier(Measure.valueOf(100, NonSI.MILE).doubleValue(NonSI.MILE));
 //        System.out.println(km);
 

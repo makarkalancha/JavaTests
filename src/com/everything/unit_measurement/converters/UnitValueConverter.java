@@ -9,10 +9,10 @@ import java.math.BigDecimal;
  * Date: 09 Nov 2017
  * Time: 12:42
  */
-public class UnitConverter implements Converter {
+public class UnitValueConverter implements Converter {
     private Converter converter;
 
-    public UnitConverter() {
+    public UnitValueConverter() {
     }
 
     public Converter getConverter() {
