@@ -1,4 +1,4 @@
-package com.everything.unit_measurement.converters;
+package com.everything.unit_measurement.units;
 
 import java.math.BigDecimal;
 
@@ -8,10 +8,15 @@ import java.math.BigDecimal;
  * Time: 17:51
  */
 public enum VolumeUnit {
-    BARREL{
+    BARREL {
+        @Override
+        public BigDecimal convert(BigDecimal value, VolumeUnit volumeUnit) {
+            return volumeUnit.toBarrel(value);
+        }
+
         @Override
         public BigDecimal toBarrel(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -84,7 +89,12 @@ public enum VolumeUnit {
             return value.multiply(new BigDecimal("168.0135932507"));
         }
     },
-    CUBIC_CENTIMETER{
+    CUBIC_CENTIMETER {
+        @Override
+        public BigDecimal convert(BigDecimal value, VolumeUnit volumeUnit) {
+            return volumeUnit.toCubicCentimeter(value);
+        }
+
         @Override
         public BigDecimal toBarrel(BigDecimal value) {
             return value.multiply(new BigDecimal("0.0000062893"));
@@ -92,7 +102,7 @@ public enum VolumeUnit {
 
         @Override
         public BigDecimal toCubicCentimeter(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -147,7 +157,7 @@ public enum VolumeUnit {
 
         @Override
         public BigDecimal toMilliliter(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -160,7 +170,12 @@ public enum VolumeUnit {
             return value.multiply(new BigDecimal("0.0010566882094326"));
         }
     },
-    CUBIC_FOOT{
+    CUBIC_FOOT {
+        @Override
+        public BigDecimal convert(BigDecimal value, VolumeUnit volumeUnit) {
+            return volumeUnit.toCubicFoot(value);
+        }
+
         @Override
         public BigDecimal toBarrel(BigDecimal value) {
             return value.multiply(new BigDecimal("0.1780933748"));
@@ -173,7 +188,7 @@ public enum VolumeUnit {
 
         @Override
         public BigDecimal toCubicFoot(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -236,7 +251,12 @@ public enum VolumeUnit {
             return value.multiply(new BigDecimal("29.92207792207792"));
         }
     },
-    CUBIC_INCH{
+    CUBIC_INCH {
+        @Override
+        public BigDecimal convert(BigDecimal value, VolumeUnit volumeUnit) {
+            return volumeUnit.toCubicInch(value);
+        }
+
         @Override
         public BigDecimal toBarrel(BigDecimal value) {
             return value.multiply(new BigDecimal("0.0001030633"));
@@ -254,7 +274,7 @@ public enum VolumeUnit {
 
         @Override
         public BigDecimal toCubicInch(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -312,7 +332,12 @@ public enum VolumeUnit {
             return value.multiply(new BigDecimal("0.0173160173160173"));
         }
     },
-    CUBIC_METER{
+    CUBIC_METER {
+        @Override
+        public BigDecimal convert(BigDecimal value, VolumeUnit volumeUnit) {
+            return volumeUnit.toCubicMeter(value);
+        }
+
         @Override
         public BigDecimal toBarrel(BigDecimal value) {
             return value.multiply(new BigDecimal("6.2893081761"));
@@ -335,7 +360,7 @@ public enum VolumeUnit {
 
         @Override
         public BigDecimal toCubicMeter(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -388,7 +413,12 @@ public enum VolumeUnit {
             return value.multiply(new BigDecimal("1056.688209432594"));
         }
     },
-    CUBIC_MILLIMETER{
+    CUBIC_MILLIMETER {
+        @Override
+        public BigDecimal convert(BigDecimal value, VolumeUnit volumeUnit) {
+            return volumeUnit.toCubicMillimeter(value);
+        }
+
         @Override
         public BigDecimal toBarrel(BigDecimal value) {
             return value.multiply(new BigDecimal("0.0000000063"));
@@ -416,7 +446,7 @@ public enum VolumeUnit {
 
         @Override
         public BigDecimal toCubicMillimeter(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -464,7 +494,12 @@ public enum VolumeUnit {
             return value.multiply(new BigDecimal("0.0000010567"));
         }
     },
-    CUBIC_YARD{
+    CUBIC_YARD {
+        @Override
+        public BigDecimal convert(BigDecimal value, VolumeUnit volumeUnit) {
+            return volumeUnit.toCubicYard(value);
+        }
+
         @Override
         public BigDecimal toBarrel(BigDecimal value) {
             return value.multiply(new BigDecimal("4.8085211194"));
@@ -497,7 +532,7 @@ public enum VolumeUnit {
 
         @Override
         public BigDecimal toCubicYard(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -540,7 +575,12 @@ public enum VolumeUnit {
             return value.multiply(new BigDecimal("807.8961038961039"));
         }
     },
-    DECILITER{
+    DECILITER {
+        @Override
+        public BigDecimal convert(BigDecimal value, VolumeUnit volumeUnit) {
+            return volumeUnit.toDeciliter(value);
+        }
+
         @Override
         public BigDecimal toBarrel(BigDecimal value) {
             return value.multiply(new BigDecimal("0.0006289308"));
@@ -578,7 +618,7 @@ public enum VolumeUnit {
 
         @Override
         public BigDecimal toDeciliter(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -616,7 +656,12 @@ public enum VolumeUnit {
             return value.multiply(new BigDecimal("0.1056689266"));
         }
     },
-    FLUID_OUNCE_US{
+    FLUID_OUNCE_US {
+        @Override
+        public BigDecimal convert(BigDecimal value, VolumeUnit volumeUnit) {
+            return volumeUnit.toFluidOunceUS(value);
+        }
+
         @Override
         public BigDecimal toBarrel(BigDecimal value) {
             return value.multiply(new BigDecimal("0.0001859969"));
@@ -659,7 +704,7 @@ public enum VolumeUnit {
 
         @Override
         public BigDecimal toFluidOunceUS(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -692,7 +737,12 @@ public enum VolumeUnit {
             return value.multiply(new BigDecimal("0.03125"));
         }
     },
-    GALLON_US{
+    GALLON_US {
+        @Override
+        public BigDecimal convert(BigDecimal value, VolumeUnit volumeUnit) {
+            return volumeUnit.toGallonUS(value);
+        }
+
         @Override
         public BigDecimal toBarrel(BigDecimal value) {
             return value.multiply(new BigDecimal("0.0238075975"));
@@ -740,7 +790,7 @@ public enum VolumeUnit {
 
         @Override
         public BigDecimal toGallonUS(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -768,7 +818,12 @@ public enum VolumeUnit {
             return value.multiply(new BigDecimal("4"));
         }
     },
-    HECTOLITER{
+    HECTOLITER {
+        @Override
+        public BigDecimal convert(BigDecimal value, VolumeUnit volumeUnit) {
+            return volumeUnit.toHectoliter(value);
+        }
+
         @Override
         public BigDecimal toBarrel(BigDecimal value) {
             return value.multiply(new BigDecimal("0.6289308176"));
@@ -821,7 +876,7 @@ public enum VolumeUnit {
 
         @Override
         public BigDecimal toHectoliter(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -844,7 +899,12 @@ public enum VolumeUnit {
             return value.multiply(new BigDecimal("105.6689265728"));
         }
     },
-    LITER{
+    LITER {
+        @Override
+        public BigDecimal convert(BigDecimal value, VolumeUnit volumeUnit) {
+            return volumeUnit.toLiter(value);
+        }
+
         @Override
         public BigDecimal toBarrel(BigDecimal value) {
             return value.multiply(new BigDecimal("0.0062893082"));
@@ -902,7 +962,7 @@ public enum VolumeUnit {
 
         @Override
         public BigDecimal toLiter(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -920,7 +980,12 @@ public enum VolumeUnit {
             return value.multiply(new BigDecimal("1.056688209432594"));
         }
     },
-    MILLILITER{
+    MILLILITER {
+        @Override
+        public BigDecimal convert(BigDecimal value, VolumeUnit volumeUnit) {
+            return volumeUnit.toMilliliter(value);
+        }
+
         @Override
         public BigDecimal toBarrel(BigDecimal value) {
             return value.multiply(new BigDecimal("0.0000062893"));
@@ -928,7 +993,7 @@ public enum VolumeUnit {
 
         @Override
         public BigDecimal toCubicCentimeter(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -983,7 +1048,7 @@ public enum VolumeUnit {
 
         @Override
         public BigDecimal toMilliliter(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -996,7 +1061,12 @@ public enum VolumeUnit {
             return value.multiply(new BigDecimal("0.0010566893"));
         }
     },
-    PINT_US{
+    PINT_US {
+        @Override
+        public BigDecimal convert(BigDecimal value, VolumeUnit volumeUnit) {
+            return volumeUnit.toPintUS(value);
+        }
+
         @Override
         public BigDecimal toBarrel(BigDecimal value) {
             return value.multiply(new BigDecimal("0.0029759497"));
@@ -1064,7 +1134,7 @@ public enum VolumeUnit {
 
         @Override
         public BigDecimal toPintUS(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -1072,7 +1142,12 @@ public enum VolumeUnit {
             return value.multiply(new BigDecimal("0.5"));
         }
     },
-    QUART_US{
+    QUART_US {
+        @Override
+        public BigDecimal convert(BigDecimal value, VolumeUnit volumeUnit) {
+            return volumeUnit.toQuartUS(value);
+        }
+
         @Override
         public BigDecimal toBarrel(BigDecimal value) {
             return value.multiply(new BigDecimal("0.0059518994"));
@@ -1145,7 +1220,7 @@ public enum VolumeUnit {
 
         @Override
         public BigDecimal toQuartUS(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
     };
 
@@ -1206,6 +1281,10 @@ public enum VolumeUnit {
     }
 
     public BigDecimal toQuartUS(BigDecimal value) {
+        throw new AbstractMethodError();
+    }
+
+    public BigDecimal convert(BigDecimal value, VolumeUnit volumeUnit) {
         throw new AbstractMethodError();
     }
 }

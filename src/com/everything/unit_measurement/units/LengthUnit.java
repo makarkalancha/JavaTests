@@ -1,4 +1,4 @@
-package com.everything.unit_measurement.converters;
+package com.everything.unit_measurement.units;
 
 import java.math.BigDecimal;
 
@@ -8,10 +8,15 @@ import java.math.BigDecimal;
  * Time: 16:22
  */
 public enum LengthUnit {
-    CENTIMETER{
+    CENTIMETER {
+        @Override
+        public BigDecimal convert(BigDecimal value, LengthUnit lengthUnit) {
+            return lengthUnit.toCentimeter(value);
+        }
+
         @Override
         public BigDecimal toCentimeter(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -54,7 +59,12 @@ public enum LengthUnit {
             return value.multiply(new BigDecimal("0.0109361329833771"));
         }
     },
-    DECIMETER{
+    DECIMETER {
+        @Override
+        public BigDecimal convert(BigDecimal value, LengthUnit lengthUnit) {
+            return lengthUnit.toDecimeter(value);
+        }
+
         @Override
         public BigDecimal toCentimeter(BigDecimal value) {
             return value.multiply(BigDecimal.TEN);
@@ -62,7 +72,7 @@ public enum LengthUnit {
 
         @Override
         public BigDecimal toDecimeter(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -100,7 +110,12 @@ public enum LengthUnit {
             return value.multiply(new BigDecimal("0.109361329833771"));
         }
     },
-    FOOT{
+    FOOT {
+        @Override
+        public BigDecimal convert(BigDecimal value, LengthUnit lengthUnit) {
+            return lengthUnit.toFoot(value);
+        }
+
         @Override
         public BigDecimal toCentimeter(BigDecimal value) {
             return value.multiply(new BigDecimal("30.48"));
@@ -113,7 +128,7 @@ public enum LengthUnit {
 
         @Override
         public BigDecimal toFoot(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -146,7 +161,12 @@ public enum LengthUnit {
             return value.multiply(new BigDecimal("0.3333333333333333"));
         }
     },
-    INCH{
+    INCH {
+        @Override
+        public BigDecimal convert(BigDecimal value, LengthUnit lengthUnit) {
+            return lengthUnit.toInch(value);
+        }
+
         @Override
         public BigDecimal toCentimeter(BigDecimal value) {
             return value.multiply(new BigDecimal("2.54"));
@@ -164,7 +184,7 @@ public enum LengthUnit {
 
         @Override
         public BigDecimal toInch(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -192,7 +212,12 @@ public enum LengthUnit {
             return value.multiply(new BigDecimal("0.0277777777777778"));
         }
     },
-    KILOMETER{
+    KILOMETER {
+        @Override
+        public BigDecimal convert(BigDecimal value, LengthUnit lengthUnit) {
+            return lengthUnit.toKilometer(value);
+        }
+
         @Override
         public BigDecimal toCentimeter(BigDecimal value) {
             return value.multiply(new BigDecimal("100000"));
@@ -215,7 +240,7 @@ public enum LengthUnit {
 
         @Override
         public BigDecimal toKilometer(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -238,7 +263,12 @@ public enum LengthUnit {
             return value.multiply(new BigDecimal("1093.613298337708"));
         }
     },
-    METER{
+    METER {
+        @Override
+        public BigDecimal convert(BigDecimal value, LengthUnit lengthUnit) {
+            return lengthUnit.toMeter(value);
+        }
+
         @Override
         public BigDecimal toCentimeter(BigDecimal value) {
             return value.multiply(new BigDecimal("100"));
@@ -266,7 +296,7 @@ public enum LengthUnit {
 
         @Override
         public BigDecimal toMeter(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -284,7 +314,12 @@ public enum LengthUnit {
             return value.multiply(new BigDecimal("1.093613298337708"));
         }
     },
-    MILE{
+    MILE {
+        @Override
+        public BigDecimal convert(BigDecimal value, LengthUnit lengthUnit) {
+            return lengthUnit.toMile(value);
+        }
+
         @Override
         public BigDecimal toCentimeter(BigDecimal value) {
             return value.multiply(new BigDecimal("160934.4"));
@@ -317,7 +352,7 @@ public enum LengthUnit {
 
         @Override
         public BigDecimal toMile(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -330,7 +365,12 @@ public enum LengthUnit {
             return value.multiply(new BigDecimal("1760"));
         }
     },
-    MILLIMETER{
+    MILLIMETER {
+        @Override
+        public BigDecimal convert(BigDecimal value, LengthUnit lengthUnit) {
+            return lengthUnit.toMillimeter(value);
+        }
+
         @Override
         public BigDecimal toCentimeter(BigDecimal value) {
             return value.multiply(new BigDecimal("0.1"));
@@ -368,7 +408,7 @@ public enum LengthUnit {
 
         @Override
         public BigDecimal toMillimeter(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
 
         @Override
@@ -376,7 +416,12 @@ public enum LengthUnit {
             return value.multiply(new BigDecimal("0.0010936132983377"));
         }
     },
-    YARD{
+    YARD {
+        @Override
+        public BigDecimal convert(BigDecimal value, LengthUnit lengthUnit) {
+            return lengthUnit.toYard(value);
+        }
+
         @Override
         public BigDecimal toCentimeter(BigDecimal value) {
             return value.multiply(new BigDecimal("91.44"));
@@ -419,43 +464,47 @@ public enum LengthUnit {
 
         @Override
         public BigDecimal toYard(BigDecimal value) {
-            return value.multiply(BigDecimal.ONE);
+            return value;
         }
     };
 
-    public BigDecimal toCentimeter(BigDecimal value){
+    public BigDecimal toCentimeter(BigDecimal value) {
         throw new AbstractMethodError();
     }
 
-    public BigDecimal toDecimeter(BigDecimal value){
+    public BigDecimal toDecimeter(BigDecimal value) {
         throw new AbstractMethodError();
     }
 
-    public BigDecimal toFoot(BigDecimal value){
+    public BigDecimal toFoot(BigDecimal value) {
         throw new AbstractMethodError();
     }
 
-    public BigDecimal toInch(BigDecimal value){
+    public BigDecimal toInch(BigDecimal value) {
         throw new AbstractMethodError();
     }
 
-    public BigDecimal toKilometer(BigDecimal value){
+    public BigDecimal toKilometer(BigDecimal value) {
         throw new AbstractMethodError();
     }
 
-    public BigDecimal toMeter(BigDecimal value){
+    public BigDecimal toMeter(BigDecimal value) {
         throw new AbstractMethodError();
     }
 
-    public BigDecimal toMile(BigDecimal value){
+    public BigDecimal toMile(BigDecimal value) {
         throw new AbstractMethodError();
     }
 
-    public BigDecimal toMillimeter(BigDecimal value){
+    public BigDecimal toMillimeter(BigDecimal value) {
         throw new AbstractMethodError();
     }
 
-    public BigDecimal toYard(BigDecimal value){
+    public BigDecimal toYard(BigDecimal value) {
+        throw new AbstractMethodError();
+    }
+
+    public BigDecimal convert(BigDecimal value, LengthUnit lengthUnit) {
         throw new AbstractMethodError();
     }
 }

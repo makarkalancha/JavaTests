@@ -1,7 +1,7 @@
 package com.everything.unit_measurement;
 
 
-import com.everything.unit_measurement.converters.LengthUnit;
+import com.everything.unit_measurement.units.LengthUnit;
 
 import java.math.BigDecimal;
 import java.util.concurrent.TimeUnit;
@@ -35,7 +35,7 @@ import java.util.concurrent.TimeUnit;
 public class UnitDemo {
     public static void main(String[] args) {
 //        UnitConverter toKilometers = NonSI.MILE.getConverterTo(SI.KILOMETER);
-//        double km = toKilometers.convert(Measure.valueOf(100, NonSI.MILE).doubleValue(NonSI.MILE));
+//        double km = toKilometers.getConverterMultiplier(Measure.valueOf(100, NonSI.MILE).doubleValue(NonSI.MILE));
 //        System.out.println(km);
 
 //        ServiceProvider serviceProvider = ServiceProvider.current();
@@ -49,7 +49,7 @@ public class UnitDemo {
         System.out.println("meter->inch: " + LengthUnit.METER.toInch(new BigDecimal("112")));
         System.out.println("meter->meter: " + LengthUnit.METER.toMeter(new BigDecimal("112")));
 
-        Unit each = Unit.EACH;
+        Unit each = Unit.PIECE;
         Unit liter = Unit.LITER;
         Unit kg = Unit.KG;
         Unit lb = Unit.LB;

@@ -1,8 +1,8 @@
 package com.everything.unit_measurement;
 
-import com.everything.unit_measurement.converters.LengthUnit;
-import com.everything.unit_measurement.converters.VolumeUnit;
-import com.everything.unit_measurement.converters.WeightUnit;
+import com.everything.unit_measurement.units.LengthUnit;
+import com.everything.unit_measurement.units.VolumeUnit;
+import com.everything.unit_measurement.units.WeightUnit;
 
 import java.math.BigDecimal;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.everything.unit_measurement.converters;
+package com.everything.unit_measurement.units;
 
 import java.math.BigDecimal;
 
