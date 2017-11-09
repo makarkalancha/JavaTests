@@ -12,7 +12,7 @@ import java.math.BigDecimal;
  */
 public class LengthConverterMultiplier implements ConverterMultiplier {
     @Override
-    public BigDecimal getConverterMultiplier(Unit destination, Unit source, BigDecimal amount) {
+    public BigDecimal calculateMultiplier(Unit destination, Unit source, BigDecimal amount) {
         BigDecimal result = null;
         if(destination.isLengthUnit() && source.isLengthUnit()){
             LengthUnit srcLengthUnit = LengthUnit.valueOf(source.getUnitKey());

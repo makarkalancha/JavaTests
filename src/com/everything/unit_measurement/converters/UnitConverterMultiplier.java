@@ -24,7 +24,7 @@ public class UnitConverterMultiplier implements ConverterMultiplier {
     }
 
     @Override
-    public BigDecimal getConverterMultiplier(Unit destination, Unit source, BigDecimal amount) {
-        return converterMultiplier.getConverterMultiplier(destination, source, amount);
+    public BigDecimal calculateMultiplier(Unit destination, Unit source, BigDecimal amount) {
+        return converterMultiplier.calculateMultiplier(destination, source, amount);
     }
 }

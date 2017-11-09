@@ -11,7 +11,7 @@ import java.math.BigDecimal;
  */
 public class PieceConverterMultiplier implements ConverterMultiplier {
     @Override
-    public BigDecimal getConverterMultiplier(Unit destination, Unit source, BigDecimal amount) {
+    public BigDecimal calculateMultiplier(Unit destination, Unit source, BigDecimal amount) {
         BigDecimal result = null;
         if(destination.isPieceUnit() && source.isPieceUnit() && destination.equals(source)){
             result = BigDecimal.ONE.divide(amount, 9, BigDecimal.ROUND_HALF_UP);

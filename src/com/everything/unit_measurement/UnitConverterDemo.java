@@ -1,8 +1,10 @@
 package com.everything.unit_measurement;
 
 import com.everything.unit_measurement.converters.ConverterMultiplier;
+import com.everything.unit_measurement.converters.LengthConverterMultiplier;
 import com.everything.unit_measurement.converters.PieceConverterMultiplier;
 import com.everything.unit_measurement.converters.UnitConverterMultiplier;
+import com.everything.unit_measurement.converters.VolumeConverterMultiplier;
 import com.everything.unit_measurement.converters.WeightConverterMultiplier;
 import com.everything.unit_measurement.pojo.Commodity;
 
@@ -21,16 +23,16 @@ public class UnitConverterDemo {
         UnitConverterMultiplier unitValueConverter = new UnitConverterMultiplier();
 
         ConverterMultiplier weight = new WeightConverterMultiplier();
-        ConverterMultiplier length = new WeightConverterMultiplier();
-        ConverterMultiplier volume = new WeightConverterMultiplier();
+        ConverterMultiplier length = new LengthConverterMultiplier();
+        ConverterMultiplier volume = new VolumeConverterMultiplier();
         ConverterMultiplier piece = new PieceConverterMultiplier();
         Unit dst;
 
 //        unitValueConverter.setConverter(weight);
-//        System.out.println(unitValueConverter.getConverterMultiplier(Unit.GR, Unit.OZ, new BigDecimal("30")));
+//        System.out.println(unitValueConverter.calculateMultiplier(Unit.GR, Unit.OZ, new BigDecimal("30")));
 //
 //        unitValueConverter.setConverter(volume);
-//        System.out.println(unitValueConverter.getConverterMultiplier(Unit.LITER, Unit.F_OZ, new BigDecimal("13")));
+//        System.out.println(unitValueConverter.calculateMultiplier(Unit.LITER, Unit.F_OZ, new BigDecimal("13")));
 
         System.out.println("===================================================================================");
         Commodity commodity1 = new Commodity("name1", new BigDecimal("1.29"), Unit.KG, BigDecimal.ONE);
@@ -55,7 +57,7 @@ public class UnitConverterDemo {
     }
 
     private static void getPricePerOneUnit(UnitConverterMultiplier unitValueConverter, Unit dst, Commodity commodity){
-        BigDecimal dstUnitMultiplier = unitValueConverter.getConverterMultiplier(commodity.getUnit(), dst, commodity.getUnitValue());
+        BigDecimal dstUnitMultiplier = unitValueConverter.calculateMultiplier(commodity.getUnit(), dst, commodity.getUnitValue());
         System.out.println("dstUnitMultiplier: " + dstUnitMultiplier);
         BigDecimal newPricePerOneUnit = commodity.getPrice().multiply(dstUnitMultiplier);
         System.out.println("newPricePerOneUnit: " + newPricePerOneUnit);

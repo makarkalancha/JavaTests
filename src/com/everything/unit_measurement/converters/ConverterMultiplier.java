@@ -10,5 +10,5 @@ import java.math.BigDecimal;
  * Time: 12:33
  */
 public interface ConverterMultiplier {
-    BigDecimal getConverterMultiplier(Unit destination, Unit source, BigDecimal amount);
+    BigDecimal calculateMultiplier(Unit destination, Unit source, BigDecimal amount);
 }

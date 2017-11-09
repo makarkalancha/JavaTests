@@ -12,7 +12,7 @@ import java.math.BigDecimal;
  */
 public class VolumeConverterMultiplier implements ConverterMultiplier {
     @Override
-    public BigDecimal getConverterMultiplier(Unit destination, Unit source, BigDecimal amount) {
+    public BigDecimal calculateMultiplier(Unit destination, Unit source, BigDecimal amount) {
         BigDecimal result = null;
         if(destination.isVolumeUnit() && source.isVolumeUnit()){
             VolumeUnit srcLengthUnit = VolumeUnit.valueOf(source.getUnitKey());
