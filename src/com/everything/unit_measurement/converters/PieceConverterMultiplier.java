@@ -9,7 +9,7 @@ import java.math.BigDecimal;
  * Date: 09 Nov 2017
  * Time: 12:33
  */
-public class PieceConverter implements Converter {
+public class PieceConverterMultiplier implements ConverterMultiplier {
     @Override
     public BigDecimal getConverterMultiplier(Unit destination, Unit source, BigDecimal amount) {
         BigDecimal result = null;

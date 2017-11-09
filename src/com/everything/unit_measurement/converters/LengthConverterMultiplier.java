@@ -10,7 +10,7 @@ import java.math.BigDecimal;
  * Date: 09 Nov 2017
  * Time: 12:35
  */
-public class LengthConverter implements Converter {
+public class LengthConverterMultiplier implements ConverterMultiplier {
     @Override
     public BigDecimal getConverterMultiplier(Unit destination, Unit source, BigDecimal amount) {
         BigDecimal result = null;

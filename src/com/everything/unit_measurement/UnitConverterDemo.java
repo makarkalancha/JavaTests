@@ -1,11 +1,9 @@
 package com.everything.unit_measurement;
 
-import com.everything.unit_measurement.converters.Converter;
-import com.everything.unit_measurement.converters.LengthConverter;
-import com.everything.unit_measurement.converters.PieceConverter;
-import com.everything.unit_measurement.converters.UnitValueConverter;
-import com.everything.unit_measurement.converters.VolumeConverter;
-import com.everything.unit_measurement.converters.WeightConverter;
+import com.everything.unit_measurement.converters.ConverterMultiplier;
+import com.everything.unit_measurement.converters.PieceConverterMultiplier;
+import com.everything.unit_measurement.converters.UnitConverterMultiplier;
+import com.everything.unit_measurement.converters.WeightConverterMultiplier;
 import com.everything.unit_measurement.pojo.Commodity;
 
 import java.math.BigDecimal;
@@ -20,12 +18,12 @@ import java.util.List;
 public class UnitConverterDemo {
     public static void main(String[] args) {
         //state design pattern
-        UnitValueConverter unitValueConverter = new UnitValueConverter();
+        UnitConverterMultiplier unitValueConverter = new UnitConverterMultiplier();
 
-        Converter weight = new WeightConverter();
-        Converter length = new LengthConverter();
-        Converter volume = new VolumeConverter();
-        Converter piece = new PieceConverter();
+        ConverterMultiplier weight = new WeightConverterMultiplier();
+        ConverterMultiplier length = new WeightConverterMultiplier();
+        ConverterMultiplier volume = new WeightConverterMultiplier();
+        ConverterMultiplier piece = new PieceConverterMultiplier();
         Unit dst;
 
 //        unitValueConverter.setConverter(weight);
@@ -40,7 +38,7 @@ public class UnitConverterDemo {
         List<Commodity> commodities1And2 = Arrays.asList(commodity1, commodity2);
         dst = Unit.KG;
 
-        unitValueConverter.setConverter(weight);
+        unitValueConverter.setConverterMultiplier(weight);
         for(Commodity commodity : commodities1And2) {
             getPricePerOneUnit(unitValueConverter, dst, commodity);
         }
@@ -50,13 +48,13 @@ public class UnitConverterDemo {
         List<Commodity> commodities3And4 = Arrays.asList(commodity3, commodity4);
         dst = Unit.PIECE;
 
-        unitValueConverter.setConverter(piece);
+        unitValueConverter.setConverterMultiplier(piece);
         for(Commodity commodity : commodities3And4) {
             getPricePerOneUnit(unitValueConverter, dst, commodity);
         }
     }
 
-    private static void getPricePerOneUnit(UnitValueConverter unitValueConverter, Unit dst, Commodity commodity){
+    private static void getPricePerOneUnit(UnitConverterMultiplier unitValueConverter, Unit dst, Commodity commodity){
         BigDecimal dstUnitMultiplier = unitValueConverter.getConverterMultiplier(commodity.getUnit(), dst, commodity.getUnitValue());
         System.out.println("dstUnitMultiplier: " + dstUnitMultiplier);
         BigDecimal newPricePerOneUnit = commodity.getPrice().multiply(dstUnitMultiplier);

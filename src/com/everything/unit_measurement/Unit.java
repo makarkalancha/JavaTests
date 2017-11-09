@@ -13,13 +13,48 @@ import java.util.Set;
  * Time: 16:22
  */
 public enum Unit {
-    F_OZ(VolumeUnit.FLUID_OUNCE_US.name(), "unit.f_oz", false, true, false, false),
-    GR(WeightUnit.GRAM.name(), "unit.gr", true, false, false, false),
-    KG(WeightUnit.KILOGRAM.name(), "unit.kg", true, false, false, false),
-    LB(WeightUnit.POUND.name(), "unit.lb", true, false, false, false),
-    LITER(VolumeUnit.LITER.name(), "unit.liter", false, true, false, false),
-    OZ(WeightUnit.OUNCE.name(), "unit.oz", true, false, false, false),
-    PIECE(null, "unit.piece", false, false, false, true);
+    F_OZ(VolumeUnit.FLUID_OUNCE_US.name(), "unit.f_oz", false, true, false, false){
+        @Override
+        public Set<Unit> getAlikeUnits() {
+            return volumeUnits;
+        }
+    },
+    GR(WeightUnit.GRAM.name(), "unit.gr", true, false, false, false){
+        @Override
+        public Set<Unit> getAlikeUnits() {
+            return weightUnits;
+        }
+    },
+    KG(WeightUnit.KILOGRAM.name(), "unit.kg", true, false, false, false){
+        @Override
+        public Set<Unit> getAlikeUnits() {
+            return weightUnits;
+        }
+    },
+    LB(WeightUnit.POUND.name(), "unit.lb", true, false, false, false){
+        @Override
+        public Set<Unit> getAlikeUnits() {
+            return weightUnits;
+        }
+    },
+    LITER(VolumeUnit.LITER.name(), "unit.liter", false, true, false, false){
+        @Override
+        public Set<Unit> getAlikeUnits() {
+            return volumeUnits;
+        }
+    },
+    OZ(WeightUnit.OUNCE.name(), "unit.oz", true, false, false, false){
+        @Override
+        public Set<Unit> getAlikeUnits() {
+            return weightUnits;
+        }
+    },
+    PIECE(null, "unit.piece", false, false, false, true){
+        @Override
+        public Set<Unit> getAlikeUnits() {
+            return pieceUnits;
+        }
+    };
 
     private final String unitKey;
     private final String dictionaryKey;
@@ -84,18 +119,19 @@ public enum Unit {
     }
 
     public Set<Unit> getAlikeUnits() {
-        if(alikeUnits.isEmpty()){
-            if(this.isWeightUnit){
-                alikeUnits.addAll(weightUnits);
-            }else if(this.isVolumeUnit){
-                alikeUnits.addAll(volumeUnits);
-            }else if(this.isLengthUnit){
-                alikeUnits.addAll(lengthUnits);
-            }else if(this.isPieceUnit){
-                alikeUnits.addAll(pieceUnits);
-            }
-        }
-        return alikeUnits;
+//        if(alikeUnits.isEmpty()){
+//            if(this.isWeightUnit){
+//                alikeUnits.addAll(weightUnits);
+//            }else if(this.isVolumeUnit){
+//                alikeUnits.addAll(volumeUnits);
+//            }else if(this.isLengthUnit){
+//                alikeUnits.addAll(lengthUnits);
+//            }else if(this.isPieceUnit){
+//                alikeUnits.addAll(pieceUnits);
+//            }
+//        }
+//        return alikeUnits;
+        throw new AbstractMethodError();
     }
 
     public static Set<Unit> getWeightUnits() {
