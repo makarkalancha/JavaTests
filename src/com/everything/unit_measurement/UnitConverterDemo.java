@@ -57,7 +57,7 @@ public class UnitConverterDemo {
     }
 
     private static void getPricePerOneUnit(UnitConverter unitConverter, Unit dst, Commodity commodity){
-        BigDecimal dstUnitMultiplier = unitConverter.getConverterMultiplier(commodity.getUnit(), dst, commodity.getUnit_value());
+        BigDecimal dstUnitMultiplier = unitConverter.getConverterMultiplier(commodity.getUnit(), dst, commodity.getUnitValue());
         System.out.println("dstUnitMultiplier: " + dstUnitMultiplier);
         BigDecimal newPricePerOneUnit = commodity.getPrice().multiply(dstUnitMultiplier);
         System.out.println("newPricePerOneUnit: " + newPricePerOneUnit);

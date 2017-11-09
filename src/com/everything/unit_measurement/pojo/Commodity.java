@@ -13,13 +13,13 @@ public class Commodity {
     private String name;
     private BigDecimal price;
     private Unit unit;
-    private BigDecimal unit_value;
+    private BigDecimal unitValue;
 
-    public Commodity(String name, BigDecimal price, Unit unit, BigDecimal unit_value) {
+    public Commodity(String name, BigDecimal price, Unit unit, BigDecimal unitValue) {
         this.name = name;
         this.price = price;
         this.unit = unit;
-        this.unit_value = unit_value;
+        this.unitValue = unitValue;
     }
 
     public String getName() {
@@ -46,12 +46,12 @@ public class Commodity {
         this.unit = unit;
     }
 
-    public BigDecimal getUnit_value() {
-        return unit_value;
+    public BigDecimal getUnitValue() {
+        return unitValue;
     }
 
-    public void setUnit_value(BigDecimal unit_value) {
-        this.unit_value = unit_value;
+    public void setUnitValue(BigDecimal unitValue) {
+        this.unitValue = unitValue;
     }
 
     @Override
@@ -60,7 +60,7 @@ public class Commodity {
                 "name='" + name + '\'' +
                 ", price=" + price +
                 ", unit=" + unit +
-                ", unit_value=" + unit_value +
+                ", unitValue=" + unitValue +
                 '}';
     }
 }
