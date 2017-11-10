@@ -1,4 +1,4 @@
-package com.everything;
+package com.everything.inheritance;
 
 import java.util.Collections;
 import java.util.HashSet;
