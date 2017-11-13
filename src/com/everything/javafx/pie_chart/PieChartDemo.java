@@ -3,6 +3,7 @@ package com.everything.javafx.pie_chart;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.css.CssMetaData;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -42,11 +43,27 @@ public class PieChartDemo extends Application {
         chart.setTitle("Imported Fruits");
 
         final Label caption = new Label("");
-//        caption.setTextFill(Color.DARKORANGE);
-        caption.setTextFill(Color.BLACK);
+        caption.setTextFill(Color.DARKORANGE);
         caption.setStyle("-fx-font: 24 arial;");
 
-        for (final PieChart.Data data : chart.getData()) {
+//        for (final PieChart.Data data : chart.getData()) {
+//            data.getNode().addEventHandler(MouseEvent.MOUSE_PRESSED,
+//                    new EventHandler<MouseEvent>() {
+//                        @Override
+//                        public void handle(MouseEvent e) {
+//                            caption.setTranslateX(e.getSceneX());
+//                            caption.setTranslateY(e.getSceneY());
+//                            caption.setText(String.valueOf(data.getPieValue()) + "%");
+//                            System.out.println("x: "+e.getScreenX());
+//                            System.out.println("y: "+e.getScreenY());
+//                            System.out.println("data.name: "+data.getName());
+//                            System.out.println("data.value: "+data.getPieValue());
+//                        }
+//                    });
+//        }
+        for (int i = 0; i < chart.getData().size(); i++) {
+            final PieChart.Data data = chart.getData().get(i);
+            final int index = i;
             data.getNode().addEventHandler(MouseEvent.MOUSE_PRESSED,
                     new EventHandler<MouseEvent>() {
                         @Override
@@ -54,15 +71,28 @@ public class PieChartDemo extends Application {
                             caption.setTranslateX(e.getSceneX());
                             caption.setTranslateY(e.getSceneY());
                             caption.setText(String.valueOf(data.getPieValue()) + "%");
-                            System.out.println("x: "+e.getScreenX());
-                            System.out.println("y: "+e.getScreenY());
-                            System.out.println("data.name: "+data.getName());
-                            System.out.println("data.value: "+data.getPieValue());
+                            System.out.println("x: " + e.getScreenX());
+                            System.out.println("y: " + e.getScreenY());
+                            System.out.println("data.name: " + data.getName());
+                            System.out.println("data.value: " + data.getPieValue());
+                            System.out.println("data.node: " + data.getNode().lookupAll(String.format(".default-color%d.chart-pie", index)));
+                            String style = data.getNode().getStyleClass().stream().filter(s -> s.startsWith("default-color")).findFirst().orElse(null);
+                            System.out.println(style);
+                            CssMetaData value = data.getNode().getCssMetaData().stream()
+                                    .filter(p -> p.getProperty().equals(style))
+                                    .findFirst()
+                                    .orElse(null);
+                            System.out.println(value);
+                            data.getNode().getCssMetaData().forEach(System.out::println);
+                            https://stackoverflow.com/questions/25186238/constant-colors-on-a-piechart
+
+                            reverse color
+                            https://stackoverflow.com/questions/4672271/reverse-opposing-colors
                         }
                     });
         }
 
-        ((Group) scene.getRoot()).getChildren().add(chart);
+        ((Group) scene.getRoot()).getChildren().addAll(chart, caption);
         stage.setScene(scene);
         stage.show();
     }
