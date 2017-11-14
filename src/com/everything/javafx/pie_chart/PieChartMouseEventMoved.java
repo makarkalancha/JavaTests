@@ -10,12 +10,12 @@ import javafx.scene.layout.StackPane;
  * Date: 14 Nov 2017
  * Time: 09:09
  */
-public class PieChartMouseEventEntered implements EventHandler<MouseEvent> {
+public class PieChartMouseEventMoved implements EventHandler<MouseEvent> {
     private final StackPane stackPane;
     private final Label label;
     private final String data;
 
-    public PieChartMouseEventEntered(StackPane stackPane, Label label, String data) {
+    public PieChartMouseEventMoved(StackPane stackPane, Label label, String data) {
         this.stackPane = stackPane;
         this.label = label;
         this.data = data;
