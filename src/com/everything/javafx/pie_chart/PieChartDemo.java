@@ -160,7 +160,6 @@ public class PieChartDemo extends Application {
             }
         });
 
-
         backBtn.setVisible(false);
         backBtn.setOnAction(event -> {
             pieChartSubData.clear();
