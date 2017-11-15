@@ -11,6 +11,7 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressIndicator;
 import javafx.scene.input.MouseEvent;
@@ -18,9 +19,11 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * Created by mcalancea
@@ -33,6 +36,7 @@ public class PieChartDemo extends Application {
     private PieChart chart = new PieChart();
     private Label caption = new Label("");
     private Button backBtn = new Button("back");
+    private ComboBox<String> comboBox = new ComboBox<>();
 
     private String title = "Imported Fruits";
     private ProgressIndicator progressIndicator = new ProgressIndicator(1);
@@ -107,7 +111,7 @@ public class PieChartDemo extends Application {
             data.getNode().addEventHandler(MouseEvent.MOUSE_EXITED, new PieChartMouseEventExited(caption));
             data.getNode().addEventHandler(MouseEvent.MOUSE_MOVED, new PieChartMouseEventMoved(stackPane, caption, text.toString()));
             if (isServiceSet){
-                data.getNode().addEventHandler(MouseEvent.MOUSE_CLICKED, new PieChartMouseEventClicked((GetSubFruitsService) service, progressIndicator, data.getName()));
+                data.getNode().addEventHandler(MouseEvent.MOUSE_CLICKED, new PieChartMouseEventClicked((GetSubFruitsService) service, progressIndicator, comboBox, data.getName()));
             }
         }
     }
@@ -129,7 +133,6 @@ public class PieChartDemo extends Application {
 
         Scene scene = new Scene(new Group());
 
-
         chart.setAnimated(true);
 
 //        caption.setTextFill(Color.DARKORANGE);
@@ -140,17 +143,39 @@ public class PieChartDemo extends Application {
         caption.setVisible(false);
 
         setChartData(title, pieChartData, true);
+        comboBox.setItems(
+                FXCollections.observableArrayList(
+                        pieChartData.stream()
+                                .map(data -> data.getName())
+                                .collect(Collectors.toList())
+                )
+        );
+        comboBox.valueProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null && StringUtils.isNotBlank(newValue) && !newValue.equals(oldValue)) {
+                progressIndicator.setProgress(-1d);
+                if (service != null) {
+                    ((GetSubFruitsService)service).setSelected(newValue);
+                    ((GetSubFruitsService)service).restart();
+                }
+            }
+        });
+
 
         backBtn.setVisible(false);
         backBtn.setOnAction(event -> {
             pieChartSubData.clear();
             setChartData(title, pieChartData, true);
             backBtn.setVisible(false);
+            comboBox.setValue(null);
         });
 
-        stackPane.getChildren().addAll(chart, caption, backBtn);
+        stackPane.setStyle("-fx-background-color: #90ee90");
+        stackPane.getChildren().addAll(chart, caption, backBtn, comboBox);
         StackPane.setMargin(backBtn, new Insets(5, 0, 0, 5));
         StackPane.setAlignment(backBtn, Pos.TOP_LEFT);
+
+        StackPane.setMargin(comboBox, new Insets(5, 25, 0, 0));
+        StackPane.setAlignment(comboBox, Pos.TOP_RIGHT);
 
         Label test = new Label("test");
         vBox.getChildren().addAll(stackPane, test, progressIndicator);
