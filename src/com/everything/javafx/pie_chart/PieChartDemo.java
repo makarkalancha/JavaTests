@@ -65,6 +65,118 @@ public class PieChartDemo extends Application {
         fruit = new Fruit("None", 0);
         pieChartFruits.put(fruit.getName(), fruit);
 
+//        fruit = new Fruit("7", 7);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("8", 8);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("9", 9);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        ////////////////10/////////////////////////////////
+//        fruit = new Fruit("10", 10);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("11", 11);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("12", 12);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("13", 13);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("14", 14);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("15", 15);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("16", 16);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("17", 17);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("18", 18);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("19", 19);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        ////////////////20/////////////////////////////////
+//        fruit = new Fruit("20", 20);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("21", 21);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("22", 22);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("23", 23);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("24", 24);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("25", 25);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("26", 26);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("27", 27);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("28", 28);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("29", 29);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        ////////////////30/////////////////////////////////
+//        fruit = new Fruit("30", 30);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("31", 31);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("32", 32);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("33", 33);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("34", 34);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("35", 35);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("36", 36);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("37", 37);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("38", 38);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("39", 39);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        ////////////////40/////////////////////////////////
+//        fruit = new Fruit("40", 40);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("41", 41);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("42", 42);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("43", 43);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("44", 44);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("45", 45);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("46", 46);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("47", 47);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("48", 48);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("49", 49);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        ////////////////50/////////////////////////////////
+//        fruit = new Fruit("50", 50);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("51", 51);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("52", 52);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("53", 53);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("54", 54);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("55", 55);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("56", 56);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("57", 57);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("58", 58);
+//        pieChartFruits.put(fruit.getName(), fruit);
+//        fruit = new Fruit("59", 59);
+//        pieChartFruits.put(fruit.getName(), fruit);
+
         fillPieChartData(pieChartData, pieChartFruits);
     }
 
@@ -134,6 +246,7 @@ public class PieChartDemo extends Application {
         Scene scene = new Scene(new Group());
 
         chart.setAnimated(true);
+//        chart.setLegendSide(Side.LEFT);
 
 //        caption.setTextFill(Color.DARKORANGE);
         caption.getStyleClass().addAll("default-color0", "chart-line-symbol", "chart-series-line");
