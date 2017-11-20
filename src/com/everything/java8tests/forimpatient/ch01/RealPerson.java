@@ -30,4 +30,14 @@ public class RealPerson implements Person {
         }
         return name;
     }
+
+
+
+    @Override
+    public String toString() {
+        return "RealPerson{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
