@@ -19,6 +19,7 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -39,35 +40,49 @@ public class WebClient {
         String urlStr = "http://api.fixer.io/";
         String urlPath_latest = "latest";
         String urlPath_Sep012017 = "2017-09-01";
-        String urlParameter_baseCAD = "base=CAD";
-        String urlParameter_symbolsUSDEUR = "symbols=USD,EUR";
+        String urlParameter_base = "base";
+        String urlParameter_CAD = "CAD";
+        String urlParameter_symbols = "symbols";
+        String urlParameter_USDEUR = "USD,EUR,CAD";
+//        String urlParameter_USDEUR = "";
 
         StringBuilder urlSB = new StringBuilder();
         urlSB.append(urlStr);
         urlSB.append(urlPath_latest);
 
-        StringBuilder paramsSB = new StringBuilder();
-        paramsSB.append(urlParameter_baseCAD);
-        paramsSB.append("&");
-        paramsSB.append(urlParameter_symbolsUSDEUR);
+        Map<String, String> parameters = new HashMap<>();
+        parameters.put(urlParameter_base, urlParameter_CAD);
+        parameters.put(urlParameter_symbols, urlParameter_USDEUR);
 
 //http://fixer.io/
 //https://stackoverflow.com/questions/1359689/how-to-send-http-request-in-java
 //https://www.journaldev.com/7148/java-httpurlconnection-example-java-http-request-get-post
         HttpURLConnection connection = null;
+        if(!parameters.isEmpty()){
+            urlSB.append("?");
+            int i = 0;
+            for(Map.Entry<String, String> entry : parameters.entrySet()){
+                i++;
+                urlSB.append(entry.getKey());
+                urlSB.append("=");
+                urlSB.append(entry.getValue());
+                if(i < parameters.size()){
+                    urlSB.append("&");
+                }
+            }
+        }
+        System.out.println(urlSB.toString());
+
         try {
 //            URL url = new URL(urlSB.toString());
-            URL url = new URL(urlSB
-                    .append("?")
-                    .append(paramsSB)
-                    .toString());
+            URL url = new URL(urlSB.toString());
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
             connection.setRequestProperty("Content-Type", "application/json");
-            connection.setRequestProperty("Content-Length",
-                    Integer.toString(paramsSB.toString().getBytes().length));
+//            connection.setRequestProperty("Content-Length",
+//                    Integer.toString(paramsSB.toString().getBytes().length));
             connection.setUseCaches(false);
-            connection.setDoOutput(true);
+//            connection.setDoOutput(true);
 
             int responseCode = connection.getResponseCode();
             System.out.println(responseCode);
