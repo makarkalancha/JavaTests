@@ -1,4 +1,4 @@
-package com.everything.locale;
+package com.everything.locale.repeat;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -17,13 +17,14 @@ import java.util.Map;
  */
 public class WeekTests {
     public static void main(String[] args) {
-        int first = 1;
+        int first = 2;
         int second = 3;
         int third = 6;
         List<Integer> weekDays = Arrays.asList(first, second, third);
         Collections.sort(weekDays);
         LocalDate start = LocalDate.of(2017, Month.DECEMBER, 12);
         int maxOccurrence = 7;
+        LocalDate end = LocalDate.of(2017, Month.DECEMBER, 21);
         int repeatEvery = 2;
 
         /////////////////////method
@@ -49,13 +50,11 @@ public class WeekTests {
         }
         System.out.println("differenceToIndex:" + differenceToWeekDaysIndex);
         Map.Entry<Integer, Integer> minEntry = differenceToWeekDaysIndex.entrySet().stream()
+                .filter(entry -> !entry.getKey().equals(0))
                 .min((entry1, entry2) -> entry1.getKey().compareTo(entry2.getKey()))
                 .orElse(null);
         System.out.println(String.format("minEntry: %s, %s", minEntry.getKey(), minEntry.getValue()));
         System.out.println("next day: " + weekDays.get(minEntry.getValue()));
-
-        currentDate = currentDate.plus(minEntry.getKey(), ChronoUnit.DAYS);
-        result.add(currentDate);
 
         List<Integer> daysToAdd = new ArrayList<>();
         int current = cycleWeekDays.get(0);
@@ -74,13 +73,25 @@ public class WeekTests {
 //        -(+1)->3-(+3)->6-(+2)->1-(+2)->3-(+3)->6....
 
 
+        currentDate = currentDate.plus(minEntry.getKey(), ChronoUnit.DAYS);
+//        result.add(currentDate);
+        //by occurrence
         for (int i = minEntry.getValue(); result.size() < maxOccurrence; i++) {
             if(i >= daysToAdd.size()){
                 i = 0;
             }
-            currentDate = currentDate.plus(daysToAdd.get(i), ChronoUnit.DAYS);
             result.add(currentDate);
+            currentDate = currentDate.plus(daysToAdd.get(i), ChronoUnit.DAYS);
         }
+
+//        //by enddate
+//        for (int i = minEntry.getValue(); !currentDate.isAfter(end); i++) {
+//            if (i >= daysToAdd.size()) {
+//                i = 0;
+//            }
+//            result.add(currentDate);
+//            currentDate = currentDate.plus(daysToAdd.get(i), ChronoUnit.DAYS);
+//        }
 
         System.out.println(result);
     }
