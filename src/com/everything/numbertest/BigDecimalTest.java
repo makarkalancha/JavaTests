@@ -18,9 +18,11 @@ public class BigDecimalTest {
 //        System.out.println(three);
 
         BigDecimal first = new BigDecimal("11.3");
-        BigDecimal second = new BigDecimal("1.05");
+        BigDecimal second = new BigDecimal("-1.05");
         BigDecimal third = first.multiply(second).setScale(2, BigDecimal.ROUND_HALF_UP);
         BigDecimal forth = third.multiply(new BigDecimal("1.095")).setScale(2, BigDecimal.ROUND_HALF_UP);
         System.out.println(forth);
+
+        System.out.println(second.compareTo(BigDecimal.ZERO) == -1);
     }
 }
