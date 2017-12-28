@@ -66,7 +66,7 @@ public class OneTableToAnother extends Application {
         final HBox hbox = new HBox();
         hbox.setSpacing(5);
         hbox.setPadding(new Insets(10, 0, 0, 10));
-        hbox.getChildren().addAll(table1, table2);
+        hbox.getChildren().addAll(table1, table2/*);*/
 
         ((Group) scene.getRoot()).getChildren().addAll(hbox);
 
