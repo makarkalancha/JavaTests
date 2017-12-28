@@ -2,7 +2,9 @@ package com.everything.javafx.table;
 
 import com.google.common.base.Objects;
 import javafx.application.Application;
+import javafx.beans.property.ListProperty;
 import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleListProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -59,14 +61,20 @@ public class OneTableToAnother extends Application {
         text2Col.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getItem()));
         table2.getColumns().addAll(text2Col);
 
-        table1.setItems(BooleanTableRow.convertListIntoBooleanTableRowList(data, false));
+        ObservableList<BooleanTableRow<String>> list = BooleanTableRow.convertListIntoBooleanTableRowList(data, false);
+        ListProperty<BooleanTableRow<String>> listProperty = new SimpleListProperty<>();
+        listProperty.set(list);
+
+        listProperty.
+
+        table1.itemsProperty().bind(listProperty);
 
         table2.itemsProperty().bindBidirectional(table1.itemsProperty());
 
         final HBox hbox = new HBox();
         hbox.setSpacing(5);
         hbox.setPadding(new Insets(10, 0, 0, 10));
-        hbox.getChildren().addAll(table1, table2/*);*/
+        hbox.getChildren().addAll(table1, table2);
 
         ((Group) scene.getRoot()).getChildren().addAll(hbox);
 
