@@ -10,8 +10,8 @@ import org.apache.commons.lang3.StringUtils;
 public class RemoveVowel {
 
     public static void main(String[] args) {
-        System.out.println(removeVowel("ITEM_FILTER"));
-        System.out.println(removeVowel("FILTER_NAME"));
+        System.out.println(removeVowel("ACCOUNT_PLANNING"));
+        System.out.println(removeVowel("END_DATE"));
     }
 
     public static String removeVowel(String stringToClean){
