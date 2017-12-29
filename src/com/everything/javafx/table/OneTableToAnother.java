@@ -1,6 +1,5 @@
 package com.everything.javafx.table;
 
-import com.google.common.base.Objects;
 import javafx.application.Application;
 import javafx.beans.property.ListProperty;
 import javafx.beans.property.SimpleBooleanProperty;
@@ -19,8 +18,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
-import java.util.List;
-import java.util.stream.Collectors;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 /**
  * User: Makar Kalancha
@@ -28,15 +27,19 @@ import java.util.stream.Collectors;
  * Time: 16:27
  */
 public class OneTableToAnother extends Application {
-    private final ObservableList<String> data = FXCollections.observableArrayList(
-            "text1",
-            "text2",
-            "text3",
-            "text4",
-            "text5"
+    private final ObservableList<BooleanTableRow<String>> data = BooleanTableRow.convertListIntoBooleanTableRowList(
+            FXCollections.observableArrayList("text1", "text2", "text3", "text4", "text5"), false
     );
+
+    private Set<BooleanTableRow<String>> table1SetData = new LinkedHashSet<>();
+//    private ObservableList<BooleanTableRow<String>> table1Data = FXCollections.observableArrayList();
+    private Set<BooleanTableRow<String>> table2SetData = new LinkedHashSet<>();
+//    private ObservableList<BooleanTableRow<String>> table2Data = FXCollections.observableArrayList();
+
     private final TableView<BooleanTableRow<String>> table1 = new TableView<>();
     private final TableView<BooleanTableRow<String>> table2 = new TableView<>();
+    private ListProperty<BooleanTableRow<String>> listProperty1 = new SimpleListProperty<>();
+    private ListProperty<BooleanTableRow<String>> listProperty2 = new SimpleListProperty<>();
 
     public static void main(String[] args) {
         launch(args);
@@ -59,17 +62,22 @@ public class OneTableToAnother extends Application {
 
         TableColumn<BooleanTableRow<String>, String> text2Col = new TableColumn("text");
         text2Col.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getItem()));
-        table2.getColumns().addAll(text2Col);
 
-        ObservableList<BooleanTableRow<String>> list = BooleanTableRow.convertListIntoBooleanTableRowList(data, false);
-        ListProperty<BooleanTableRow<String>> listProperty = new SimpleListProperty<>();
-        listProperty.set(list);
+        TableColumn<BooleanTableRow<String>, Boolean> check2Col = new TableColumn("check");
+        check2Col.setCellValueFactory(param -> new SimpleBooleanProperty(param.getValue() != null));
+        check2Col.setCellFactory(param -> new IsPaidBooleanCell());
+        table2.getColumns().addAll(check2Col, text2Col);
 
-        listProperty.
+        table1SetData.addAll(data);
+        listProperty1.set(data);
+//        table1Data.addAll(data);
 
-        table1.itemsProperty().bind(listProperty);
+//        listProperty2.set(table2Data);
 
-        table2.itemsProperty().bindBidirectional(table1.itemsProperty());
+        table1.itemsProperty().bind(listProperty1);
+        table2.itemsProperty().bind(listProperty2);
+
+//        table2.itemsProperty().bindBidirectional(table1.itemsProperty());
 
         final HBox hbox = new HBox();
         hbox.setSpacing(5);
@@ -82,79 +90,43 @@ public class OneTableToAnother extends Application {
         stage.show();
     }
 
-    private static class BooleanTableRow<T> {
-        private final T item;
-        private boolean isChecked;
-
-        public BooleanTableRow(T item, boolean isChecked) {
-            this.item = item;
-            this.isChecked = isChecked;
-        }
-
-        public boolean isChecked() {
-            return isChecked;
-        }
-
-        public void setChecked(boolean checked) {
-            isChecked = checked;
-        }
-
-        public T getItem() {
-            return item;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if(o instanceof BooleanTableRow){
-                BooleanTableRow that = (BooleanTableRow) o;
-                return Objects.equal(item, that.item)
-                        && Objects.equal(isChecked, that.isChecked);
-            }
-            return false;
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hashCode(item, isChecked);
-        }
-
-        public static <I> ObservableList<BooleanTableRow<I>> convertListIntoBooleanTableRowList(List<I> items, boolean isChecked){
-            return FXCollections.observableArrayList(
-                    items.stream()
-                            .map(item -> new BooleanTableRow<I>(item, isChecked))
-                            .collect(Collectors.toList())
-            );
-        }
-    }
-    
     private class IsPaidBooleanCell extends TableCell<BooleanTableRow<String>, Boolean> {
         private CheckBox checkBox;
 
         public IsPaidBooleanCell() {
-            checkBox = new CheckBox();
+            this.checkBox = new CheckBox();
 
-            checkBox.selectedProperty().addListener((observable, oldValue, newValue) -> {
+            this.checkBox.selectedProperty().addListener((observable, oldValue, newValue) -> {
                 try {
+                    System.out.println("table items:" + getTableRow().getTableView().getItems());
                     BooleanTableRow<String> itemFilterTableRow = (BooleanTableRow<String>) getTableRow().getItem();
                     if(itemFilterTableRow != null) {
-                        itemFilterTableRow.setChecked(newValue);
-                        String text = itemFilterTableRow.getItem();
-                        if(newValue) {
-//                            table2.getItems().addAll(BooleanTableRow.convertListIntoBooleanTableRowList(Arrays.asList(text), false));
-//                        if (newValue && !selectedIdToStringMap.containsKey(String.getId())) {
-//                            selectStringFilterTableRow(String);
-//                        } else if(!newValue && selectedIdToStringMap.containsKey(String.getId())){
-//                            unselectStringFilterTableRow(String);
-//                        }
-//
-//                        if (newValue && selectedIdToStringMap.containsKey(String.getId())) {
-//                            getTableRow().setStyle(UserInterfaceConstants.CHART_TABLE_CHECKED_ROW);
-//                        } else {
-//                            getTableRow().setStyle("");
-//                        }
-                        }else if(!newValue){
-//                            table2.getItems().remove(text);
+
+//                        String text = itemFilterTableRow.getItem();
+//                        System.out.println(text + ": " + oldValue + "; " + newValue);
+                        if(newValue && table1SetData.contains(itemFilterTableRow)) {
+                            boolean resultRemove1 = table1SetData.remove(itemFilterTableRow);
+
+                            itemFilterTableRow.setChecked(newValue);
+                            table2SetData.add(itemFilterTableRow);
+                            listProperty1.set(FXCollections.observableArrayList(table1SetData));
+                            listProperty2.set(FXCollections.observableArrayList(table2SetData));
+
+                            System.out.println("resultRemove1:" + resultRemove1);
+                        }else if(!newValue && table2SetData.contains(itemFilterTableRow)){
+                            boolean resultRemove2 = table2SetData.remove(itemFilterTableRow);
+
+                            itemFilterTableRow.setChecked(newValue);
+                            table1SetData.add(itemFilterTableRow);
+                            listProperty1.set(FXCollections.observableArrayList(table1SetData));
+                            listProperty2.set(FXCollections.observableArrayList(table2SetData));
+
+                            System.out.println("resultRemove2:" + resultRemove2);
                         }
+
+//                        System.out.println("table1SetData:" + table1SetData);
+//                        System.out.println("table2SetData:" + table2SetData);
+                        System.out.println("=====================================");
                     } else {
                         getTableRow().setStyle("");
                     }
