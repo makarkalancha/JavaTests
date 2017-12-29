@@ -1,4 +1,4 @@
-package com.everything;
+package com.everything.casting;
 
 /**
  * User: Makar Kalancha
@@ -13,7 +13,7 @@ public class Casting {
 //        A ab1 = new B();
 //        ab1.doSmth();
 //
-////        com.everything.B b1 = (com.everything.B) a1;
+////        com.everything.casting.B b1 = (com.everything.casting.B) a1;
 //        B b1 = (B) ab1;
 //        b1.doSmth();
 
