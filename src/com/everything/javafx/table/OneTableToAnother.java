@@ -28,7 +28,28 @@ import java.util.Set;
  */
 public class OneTableToAnother extends Application {
     private final ObservableList<BooleanTableRow<String>> data = BooleanTableRow.convertListIntoBooleanTableRowList(
-            FXCollections.observableArrayList("text1", "text2", "text3", "text4", "text5"), false
+            FXCollections.observableArrayList(
+                    "text1",
+                    "text2",
+                    "text3",
+                    "text4",
+                    "text5",
+                    "text6",
+                    "text7",
+                    "text8",
+                    "text9",
+                    "text10",
+                    "text11",
+                    "text12",
+                    "text13",
+                    "text14",
+                    "text15",
+                    "text16",
+                    "text17",
+                    "text18",
+                    "text19",
+                    "text20"
+            ), false
     );
 
     private Set<BooleanTableRow<String>> table1SetData = new LinkedHashSet<>();
@@ -50,7 +71,9 @@ public class OneTableToAnother extends Application {
         Scene scene = new Scene(new Group());
         stage.setTitle("Table View Sample");
         stage.setWidth(550);
-        stage.setHeight(500);
+        stage.setHeight(300);
+        table1.setPrefHeight(200d);
+        table2.setPrefHeight(200d);
 
         TableColumn<BooleanTableRow<String>, String> text1Col = new TableColumn("text");
         text1Col.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getItem()));
