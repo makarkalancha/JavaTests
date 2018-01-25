@@ -5,6 +5,7 @@ import com.google.common.collect.TreeMultimap;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -14,6 +15,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -74,21 +76,44 @@ public class AddRemoveElement extends Application{
         setRight();
 
         rightSP = new ScrollPane();
+        rightSP.setPadding(new Insets(10, 10, 10, 10));
+        rightSP.setStyle("-fx-background: #ff0000;");
         rightSP.setContent(rightVB);
         rightSP.vvalueProperty().bind(rightVB.heightProperty());
 
+
         currencyAddBtn = new Button("Add");
         VBox rightMainVB = new VBox();
+        rightMainVB.setPadding(new Insets(10, 10, 10, 10));
+        rightMainVB.setSpacing(5d);
+        rightMainVB.setStyle("-fx-background: #00ff00;");
         rightMainVB.getChildren().addAll(rightSP, currencyAddBtn);
 
         HBox mainHB = new HBox(5);
+        mainHB.setPadding(new Insets(10, 10, 10, 10));
+        mainHB.setSpacing(5d);
+        mainHB.setStyle("-fx-background:  #0000ff;");
         mainHB.getChildren().addAll(leftTrV,rightMainVB);
+
+        rightMainVB.prefWidthProperty().bind(mainHB.widthProperty());
+        rightSP.prefWidthProperty().bind(rightMainVB.widthProperty());
 
         initializeControls();
 
-        Scene scene = new Scene(mainHB, 450, 100);
+        BorderPane bp = new BorderPane();
+        bp.setCenter(mainHB);
+
+//        Scene scene = new Scene(bp, 500, 150);
+        Scene scene = new Scene(bp);
         primaryStage.setTitle("add remove");
         primaryStage.setScene(scene);
+
+//        System.out.println(((HBox)bp.getCenter()).prefWidthProperty());
+//        rightSP.prefWidthProperty().bind(scene.widthProperty());
+//        rightMainVB.prefWidthProperty().bind(scene.widthProperty());
+//        mainHB.prefWidthProperty().bind(scene.widthProperty());
+        ((HBox)bp.getCenter()).prefWidthProperty().bind(scene.widthProperty());
+
         primaryStage.show();
     }
 
