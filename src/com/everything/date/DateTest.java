@@ -2,6 +2,7 @@ package com.everything.date;
 
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.TimeZone;
 
 /**
  * Created by Makar Kalancha
@@ -33,5 +34,8 @@ public class DateTest {
         System.out.println(addition);
         System.out.println(localDateTime);
         System.out.println(newLocalDateTime);
+
+
+        System.out.println("timezone: " + TimeZone.getDefault());
     }
 }
