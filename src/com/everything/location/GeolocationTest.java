@@ -82,7 +82,6 @@ public class GeolocationTest {
         WebResource webResource = client
 //                .resource("https://maps.googleapis.com/maps/api/timezone/json?location=38.908133,-77.047119&timestamp=1458000000&key="+googleKey);
                 .resource("https://maps.googleapis.com/maps/api/timezone/json?location=38.908133,-77.047119&key="+googleKey);
-        https://maps.googleapis.com/maps/api/timezone/json?latlng=12.0,12.0&timestamp=1458000000&key=AIzaSyCeS3jihtavgatsWDAMUXaXM0SN95vFLHE
         String json1 = webResource.accept(MediaType.APPLICATION_JSON).get(String.class);
         System.out.println(json1);
 
