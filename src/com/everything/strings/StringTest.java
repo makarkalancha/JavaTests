@@ -275,6 +275,10 @@ public class StringTest {
         System.out.println(newString);
 
 
+        String test0 = "1";
+        StringBuilder test1 = new StringBuilder(test0);
+        test1.append("hello");
+        System.out.println(test1);
     }
 
     private static String removeVerticalTab(String string) {
