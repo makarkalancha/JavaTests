@@ -21,22 +21,22 @@ public class DeleteFiles {
     public static BACKUP_UNIT backupUnit = BACKUP_UNIT.YEARS;
 
     public static void main(String[] args) throws IOException {
-        DeleteLast deleteLast = null;
+        Cleanup cleanup = null;
         switch (backupUnit){
             case DAYS:
-                deleteLast = new DeleteLastDays(pathStr);
+                cleanup = new CleanupByDays(pathStr);
                 break;
             case MONTHS:
-                deleteLast = new DeleteLastMonths(pathStr);
+                cleanup = new CleanupByMonths(pathStr);
                 break;
             case YEARS:
-                deleteLast = new DeleteLastYears(pathStr);
+                cleanup = new CleanupByYears(pathStr);
                 break;
             default:
                 System.out.println("ERROR!!");
         }
 
-        deleteLast.deleteLast(lastNumber);
+        cleanup.deleteLast(lastNumber);
 
 //        Multimap<LocalDate, File> dateToFilesMap = TreeMultimap.create();
 //        for(File file : FileUtils.listFiles(new File(pathStr), new RegexFileFilter(REGEX_FILTER, IOCase.INSENSITIVE), null)){
