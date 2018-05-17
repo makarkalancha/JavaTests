@@ -9,14 +9,14 @@ import java.time.temporal.ChronoUnit;
  * Date: 19 Jan 2018
  * Time: 15:02
  */
-public class DeleteLastMonths extends DeleteLast<Long> {
+public class CleanupByDays extends Cleanup<Long> {
 
-    public DeleteLastMonths(String pathStr) {
+    public CleanupByDays(String pathStr) {
         super(pathStr);
     }
 
     @Override
     protected void addInMap(LocalDate date,File file) {
-        dateToFilesMap.put(ChronoUnit.MONTHS.between(Constants.EPOCH, date), file);
+        dateToFilesMap.put(ChronoUnit.DAYS.between(Constants.EPOCH, date), file);
     }
 }

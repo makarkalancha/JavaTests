@@ -21,13 +21,13 @@ import java.util.regex.Matcher;
  * Date: 19 Jan 2018
  * Time: 15:01
  */
-public abstract class DeleteLast<T extends Number & Comparable> {
+public abstract class Cleanup<T extends Number & Comparable> {
 //    protected Multimap<T, File> dateToFilesMap = TreeMultimap.create((o1, o2) -> o2.compareTo(o1), (o1, o2) -> o1.compareTo(o2));
     protected Multimap<T, File> dateToFilesMap = TreeMultimap.create();
 //    protected Multimap<T, File> dateToFilesMap = HashMultimap.create();
     protected final File dir;
 
-    public DeleteLast(String dirPathStr) {
+    public Cleanup(String dirPathStr) {
         this.dir = new File(dirPathStr);
     }
 
