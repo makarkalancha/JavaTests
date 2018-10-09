@@ -10,20 +10,14 @@ import org.apache.commons.lang3.StringUtils;
 public class RemoveVowel {
 
     public static void main(String[] args) {
-        System.out.println(removeVowel("CATEGORY_ID,\n" +
-                "    TAX_ID,\n" +
-                "    BENEFICIARY_ID,\n" +
-                "    DESCRIPTION1,\n" +
-                "    D_SUB_TOTAL,\n" +
-                "    D_TOTAL,\n" +
-                "    C_SUB_TOTAL,\n" +
-                "    C_TOTAL ("));
+        System.out.println(removeVowel("LABELDETAIL"));
+        System.out.println(removeVowel("FK_PARENTID, FK_ENTITYTYPE, FK_ENTITYID ("));
     }
 
     public static String removeVowel(String stringToClean){
         //https://simple.wikipedia.org/wiki/Vowel
         //        char[] vowels = {'A', 'E', 'I', 'O', 'U', 'Y'};
-        final String vowels = "AEIOUY_, \n";
+        final String vowels = "AEIOUY_, ";
         stringToClean = stringToClean.toUpperCase();
         return StringUtils.replaceChars(stringToClean, vowels, "");
     }

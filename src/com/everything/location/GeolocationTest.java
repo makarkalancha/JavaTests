@@ -31,7 +31,7 @@ public class GeolocationTest {
                 .build();
 //        LatLng latLng = new LatLng(38.908133, -77.047119);
 //        LatLng latLng = new LatLng(45.461374, -73.4659812);
-        LatLng latLng = new LatLng(45.5027821, -73.5010193);
+        LatLng latLng = new LatLng(42.460116, -83.356941);
 
         TimeZone timeZone = TimeZoneApi.getTimeZone(context, latLng).await();
         System.out.println(timeZone.toZoneId().toString());
