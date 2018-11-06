@@ -77,5 +77,11 @@ public class EnumSetTest {
         System.out.println(pink3);
 
 
+        String blue1 = "BLUE1";
+//        Color colorBlue1 = Color.valueOf(blue1);
+//        System.out.println(colorBlue1);
+
+        System.out.println(EnumUtils.isValidEnum(Color.class, blue1));
+
     }
 }
