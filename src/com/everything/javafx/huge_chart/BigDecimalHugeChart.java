@@ -30,7 +30,9 @@ public class BigDecimalHugeChart extends GenericHugeChart<BigDecimal> {
         int high = 5000;
         DateTimeFormatter DATE_DTF = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.getDefault());
         List<XYChart.Data<String, BigDecimal>> data = new ArrayList<>();
-        for (int i = 0; i < 10_000; i++) {
+        for (int i = 0; i < 10_002; i++) {
+//        for (int i = 0; i < 9_407; i++) {
+//        for (int i = 0; i < 398; i++) {
 //            BigDecimal number = new BigDecimal(
 //                    RandomNumbers.getRandomIntNumber(low, high)
 ////                                    i
@@ -56,7 +58,9 @@ public class BigDecimalHugeChart extends GenericHugeChart<BigDecimal> {
                 String rootFolder = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath();
                 String specificFolder = this.getClass().getCanonicalName().replace(".", File.separator);
                 int lastIndexOf = specificFolder.lastIndexOf(this.getClass().getSimpleName());
-                specificFolder = rootFolder+specificFolder.substring(0, lastIndexOf)+"10_000_numbers.txt";
+                specificFolder = rootFolder+specificFolder.substring(0, lastIndexOf)+"10_002_numbers.txt";
+                //#2000 min value of -8999
+                //#8000 max value of 9001
 
                 inputStream = new FileInputStream(specificFolder);
                 sc = new Scanner(inputStream, "UTF-8");

@@ -25,7 +25,7 @@ import java.util.List;
  * Date: 03 Oct 2017
  * Time: 09:41
  */
-public abstract class GenericHugeChart<V extends Number> extends Application {
+public abstract class GenericHugeChart<V extends Number & Comparable> extends Application {
     private long t0;
     private long t1;
     private long t2;
@@ -38,6 +38,7 @@ public abstract class GenericHugeChart<V extends Number> extends Application {
 
     @Override
     public void start(Stage stage) {
+        t0 = System.nanoTime();
         Axis xAxis1 = new CategoryAxis();
         Axis yAxis1 = new NumberAxis();
         LineChart<String, V> graph1 = new LineChart<>(xAxis1, yAxis1);
@@ -56,8 +57,7 @@ public abstract class GenericHugeChart<V extends Number> extends Application {
         stage.show();
 
         t2 = System.nanoTime();
-//        System.out.println(String.format("Total time reduces points from %d to %d in %.1f ms", coordinates.length, list.size(), (t2 - t0) / 1e6));
-        System.out.println(String.format("Total time reduces points from %d to %d in %.1f ms", data.size(), list.size(), (t2 - t0) / 1e6));
+        System.out.println(String.format("Total time reduces points from %d to %d in %.1f ms (%.1f s)", data.size(), list.size(), (t2 - t0) / 1e6, (t2 - t0) / 1e9));
     }
 
     public abstract List<XYChart.Data<String, V>> fillData();
@@ -88,8 +88,21 @@ public abstract class GenericHugeChart<V extends Number> extends Application {
     private ObservableList<XYChart.Data<String, V>> update1(List<XYChart.Data<String, V>> data) {
         List<XYChart.Data<String, V>> update = new ArrayList<XYChart.Data<String, V>>();
         int pointCounter = data.size() / MAX_POINTS;
+        V min = null;
+        V max = null;
         for (int i = 0; i < data.size(); i++) {
-            if(i%pointCounter == 0) {
+            if(min == null || data.get(i).getYValue().compareTo(min) < 0){
+                min = data.get(i).getYValue();
+            }
+
+            if(max == null || data.get(i).getYValue().compareTo(max) > 0){
+                max = data.get(i).getYValue();
+            }
+
+            if (pointCounter == 0
+                    || data.get(i).getYValue().compareTo(min) == 0
+                    || data.get(i).getYValue().compareTo(max) == 0
+                    || i % pointCounter == 0) {
                 update.add(data.get(i));
             }
         }
@@ -97,16 +110,17 @@ public abstract class GenericHugeChart<V extends Number> extends Application {
 
         System.out.println(String.format("Reduces points from %d to %d in %.1f ms", data.size(), update.size(), (t1 - t0) / 1e6));
         return FXCollections.observableArrayList(update);
-//        Reduces points from 10000 to 400 in 736086868.3 ms
-//        Total time reduces points from 10000 to 400 in 736087199.1 ms
+//        Reduces points from 10000 to 400 in 213.3 ms
+//        Total time reduces points from 10000 to 400 in 511.9 ms (0.5 s)
     }
 
     private ObservableList<XYChart.Data<String, V>> huge(List<XYChart.Data<String, V>> data) {
         List<XYChart.Data<String, V>> update = new ArrayList<XYChart.Data<String, V>>(data);
 
         System.out.println(String.format("Reduces points from %d to %d in %.1f ms", data.size(), update.size(), (t1 - t0) / 1e6));
-//        Reduces points from 10000 to 10000 in 0.0 ms
-//        Total time reduces points from 10000 to 10000 in 735918107.1 ms
+//        Reduces points from 10000 to 10000 in -862883229.4 ms
+//        Total time reduces points from 10000 to 10000 in 2968.8 ms (3.0 s)
+//        but you have to wait UI to render the chart
         return FXCollections.observableArrayList(data);
     }
 
