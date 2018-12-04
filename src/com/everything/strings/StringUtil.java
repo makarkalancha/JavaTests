@@ -30,7 +30,7 @@ public class StringUtil {
     public static final String UTF8 = "UTF-8";
     public static final String MD5 = "MD5";
     public static final String EMPTY = "";
-    public static final String SHERPA_KEY_ALPHABET = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    public static final String SH_KEY_ALPHABET = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 
     public static void main (String[] args) {
@@ -251,13 +251,13 @@ public class StringUtil {
         return true;
     }
 
-    public static String randomSherpaKey ()
+    public static String randomShKey ()
     {
         StringBuilder buff = new StringBuilder();
         for (int i=0 ; i<6 ; i++)
         {
             double j = Math.random() * 61d;
-            buff.append(SHERPA_KEY_ALPHABET.charAt((int)j));
+            buff.append(SH_KEY_ALPHABET.charAt((int)j));
         }
         return buff.toString();
     }

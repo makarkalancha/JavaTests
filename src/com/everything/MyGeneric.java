@@ -29,10 +29,10 @@ public class MyGeneric {
 //        mapCategoryTwo.put(cTwo2.CategoryID, cTwo2);
 //        mapCategoryTwo.put(cTwo3.CategoryID, cTwo3);
 
-        createShowSherpaCategory(mapCategoryOne,CategoryOne.class);
+        createShowShCategory(mapCategoryOne,CategoryOne.class);
     }
 
-    public static <T> void createShowSherpaCategory(Map<String, T> categories, Class clazz) {
+    public static <T> void createShowShCategory(Map<String, T> categories, Class clazz) {
 //        Type[] pt = categories.getClass().getGenericInterfaces();
 //        ParameterizedType pt = (ParameterizedType)
 //        for(Type t : pt){
@@ -44,10 +44,10 @@ public class MyGeneric {
 
 //        if (!StringUtil.isEmpty(_showCode))
 //        {
-//            SherpaCategory cat = (SherpaCategory)categories.get(_showCode);
+//            ShCategory cat = (ShCategory)categories.get(_showCode);
 //            if (cat == null)
 //            {
-//                cat = new SherpaCategory();
+//                cat = new ShCategory();
 //                cat.CategoryID = _showCode;
 //                cat.CategoryName = _categoryName;
 //                cat.Domain = Category.DOMAIN_SHOW;
