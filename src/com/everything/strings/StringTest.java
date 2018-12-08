@@ -2,6 +2,7 @@ package com.everything.strings;
 
 import com.everything.utils.fileUtils.FileUtils;
 import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -49,10 +50,66 @@ public class StringTest {
 //        test026();
 //        test027();
 //        test028_space();
-        test029_countSpaces();
+//        test029_countSpaces();
+        test030_replaceSpaces();
 
 
     }
+
+    private static void test030_replaceSpaces(){
+        String valid = '\u00a0'+"1";
+
+        String str1 = '\u00a0'+"111"+'\u00a0'+'\u0020';
+        str1.chars().forEach(
+                ch -> System.out.println(String.format(">%1$s<: %2$d", (char) ch, (int) ch))
+        );
+        System.out.println("isValid:"+ StringUtils.containsOnly(str1, valid));
+        System.out.println("isValid:"+ containsOnlyCustom(str1, valid));
+        System.out.println("---------------");
+        String str2 = '\u00a0'+"111,"+'\u00a0'+'\u0020';
+        str2.chars().forEach(
+                ch -> System.out.println(String.format(">%1$s<: %2$d", (char) ch, (int) ch))
+        );
+        System.out.println("isValid:"+ StringUtils.containsOnly(str2, valid));
+        System.out.println("isValid:"+ containsOnlyCustom(str2, valid));
+        System.out.println("---------------");
+        String str3 = '\u00a0'+"111"+'\u00a0'+'\u00a0';
+        str3.chars().forEach(
+                ch -> System.out.println(String.format(">%1$s<: %2$d", (char) ch, (int) ch))
+        );
+        System.out.println("isValid:"+ StringUtils.containsOnly(str3, valid));
+        System.out.println("isValid:"+ containsOnlyCustom(str3, valid));
+        System.out.println("---------------");
+        String str4 = '\u00a0'+"111\n"+'\u00a0'+'\u00a0';
+        str4.chars().forEach(
+                ch -> System.out.println(String.format(">%1$s<: %2$d", (char) ch, (int) ch))
+        );
+        System.out.println("isValid:"+ StringUtils.containsOnly(str4, valid));
+        System.out.println("isValid:"+ containsOnlyCustom(str4, valid));
+    }
+
+    private static boolean containsOnlyCustom(String cs, String validChars) {
+        final char space32 = '\u0020';//UTF-16 (decimal)=32
+        String newCS = "";
+        for(char ch : cs.toCharArray()){
+            if(Character.isSpaceChar(ch)){
+                newCS += space32;
+            }else {
+                newCS += ch;
+            }
+        }
+        String newValidChars = "";
+        for(char ch : validChars.toCharArray()){
+            if(Character.isSpaceChar(ch)){
+                newValidChars += space32;
+            }else {
+                newValidChars += ch;
+            }
+        }
+
+        return StringUtils.containsOnly(newCS, newValidChars);
+    }
+
 
     private static void test029_countSpaces(){
         String str1 = " one ";
