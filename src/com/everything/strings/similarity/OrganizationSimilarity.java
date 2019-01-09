@@ -581,7 +581,7 @@ public class OrganizationSimilarity {
         StringSimilarity.printLevenshteinDistanceSimilarity(levenshteinDistance, "AMT", "Services Alimentaires Laniel St-Laurent");
         StringSimilarity.printLevenshteinDistanceSimilarity(levenshteinDistance, "AMT", "Shell");
         StringSimilarity.printLevenshteinDistanceSimilarity(levenshteinDistance, "AMT", "Shell Canada");
-        StringSimilarity.printLevenshteinDistanceSimilarity(levenshteinDistance, "AMT", "Sherpa Solutions RTLS");
+        StringSimilarity.printLevenshteinDistanceSimilarity(levenshteinDistance, "AMT", "Sh Solutions RTLS");
         StringSimilarity.printLevenshteinDistanceSimilarity(levenshteinDistance, "AMT", "Site Historique Maritime");
         StringSimilarity.printLevenshteinDistanceSimilarity(levenshteinDistance, "AMT", "Skylon");
         StringSimilarity.printLevenshteinDistanceSimilarity(levenshteinDistance, "AMT", "Smoke's Poutinerie");

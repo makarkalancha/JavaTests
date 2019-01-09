@@ -13,6 +13,8 @@ public class NumberUtilTest {
     public static void main(String[] args) {
         final String TEN = "10";
         final String TEN_WITH_FRACTION = "10.0004999";
+//        System.out.println("NumberUtils.isCreatable: "+org.apache.commons.lang3.math.NumberUtils.isCreatable(TEN_WITH_FRACTION)); // java cannot find symbol commons-lang3-3.7
+        System.out.println("NumberUtils.isParsable: "+org.apache.commons.lang3.math.NumberUtils.isParsable(TEN_WITH_FRACTION));
         System.out.println(NumberUtils.toInt(TEN_WITH_FRACTION));
         System.out.println(NumberUtils.toInt(TEN));
 //        System.out.println(Integer.parseInt(TEN_WITH_FRACTION));

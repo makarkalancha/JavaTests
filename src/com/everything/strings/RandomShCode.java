@@ -9,7 +9,7 @@ import java.util.Arrays;
  * Date: 06/06/14
  * Time: 12:18 PM
  */
-public class RandomSherpaCode {
+public class RandomShCode {
     public static void main(String[] args) {
         char[] array = new char[10+26+26];
         for(int j=0, i = 48; i < 123; i++, j++) {
@@ -25,10 +25,10 @@ public class RandomSherpaCode {
             array[j] = (char)i;
         }
         System.out.println(Arrays.toString(array));
-        StringBuilder sherpaCode = new StringBuilder();
+        StringBuilder shCode = new StringBuilder();
         for (int k = 0; k < 9; k++) {
-            sherpaCode.append(array[RandomNumbers.getRandomIntNumber(0, array.length-1)]);
+            shCode.append(array[RandomNumbers.getRandomIntNumber(0, array.length-1)]);
         }
-        System.out.println(sherpaCode);
+        System.out.println(shCode);
     }
 }

@@ -15,7 +15,7 @@ import java.util.List;
 public class UrlReader {
     public static void main(String[] args) {
         try{
-            URL url = new URL("http://master.prod1.sherpaserv.com/lifecycle_mock.php");
+            URL url = new URL("http://master.prod1.shserv.com/lifecycle_mock.php");
             BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
             String line = "";
             for(int i=0;(line = br.readLine()) != null;i++){

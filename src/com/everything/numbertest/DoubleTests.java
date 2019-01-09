@@ -30,5 +30,8 @@ public class DoubleTests {
             Thread.sleep(1000);
         }
 
+        float difference = Math.abs((2 - 10) * .05f);
+        System.out.println(difference);
+
     }
 }

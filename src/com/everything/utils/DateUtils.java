@@ -75,11 +75,12 @@ public class DateUtils {
 //
 ////        System.out.println(duration(135007L));
 
-        System.out.println(getLocalDateByUnitDay(17471L));
-        System.out.println(getLocalDateByUnitDay(17473L));
-        System.out.println(getLocalDateByUnitDay(17476L));
-        System.out.println(getLocalDateByUnitDay(17478L));
-        System.out.println(getLocalDateByUnitDay(17476L));
+//        System.out.println(getLocalDateByUnitDay(17471L));
+//        System.out.println(getLocalDateByUnitDay(17473L));
+//        System.out.println(getLocalDateByUnitDay(17476L));
+//        System.out.println(getLocalDateByUnitDay(17478L));
+        System.out.println(getLocalDateByUnitDay(17563L));
+        System.out.println(getLocalDateByUnitDay(17564L));
     }
 
     public static String duration(long millis) {
