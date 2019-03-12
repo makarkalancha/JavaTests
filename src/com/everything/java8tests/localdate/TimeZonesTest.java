@@ -1,6 +1,7 @@
 package com.everything.java8tests.localdate;
 
-import java.util.TimeZone;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 
 /**
  * Created by mcalancea
@@ -42,14 +43,14 @@ public class TimeZonesTest {
 //        System.out.println(epochMilli1);
 //        System.out.println(epochMilli2);
 
-////        ZonedDateTime zonedDateTime = ZonedDateTime.parse("2018-05-01T10:08:16-04:00", DateTimeFormatter.ISO_DATE_TIME);// ("yyyy-MM-dd'T'HH:mm:ssX"))
-////        ZonedDateTime zonedDateTime = ZonedDateTime.parse("2018-05-01T10:08:16-04:00");// ("yyyy-MM-dd'T'HH:mm:ssX"))
-////        ZonedDateTime zonedDateTime = ZonedDateTime.parse("2018-05-01T10:08:16-0400");// ("yyyy-MM-dd'T'HH:mm:ssX"))
-////        ZonedDateTime zonedDateTime = ZonedDateTime.parse("2018-05-01T10:08:16-0400", DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssX"));// ("yyyy-MM-dd'T'HH:mm:ssX"))
-////        ZonedDateTime zonedDateTime = ZonedDateTime.parse("2018-05-01T14:08:16Z");
-////        LocalDateTime zonedDateTime = LocalDateTime.parse("2002-01-01", DateTimeFormatter.ISO_LOCAL_DATE);
+        ZonedDateTime zonedDateTime = ZonedDateTime.parse("2018-05-01T10:08:16-04:00", DateTimeFormatter.ISO_DATE_TIME);// ("yyyy-MM-dd'T'HH:mm:ssX"))
+//        ZonedDateTime zonedDateTime = ZonedDateTime.parse("2018-05-01T10:08:16-04:00");// ("yyyy-MM-dd'T'HH:mm:ssX"))
+//        ZonedDateTime zonedDateTime = ZonedDateTime.parse("2018-05-01T10:08:16-0400");// ("yyyy-MM-dd'T'HH:mm:ssX"))
+//        ZonedDateTime zonedDateTime = ZonedDateTime.parse("2018-05-01T10:08:16-0400", DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssX"));// ("yyyy-MM-dd'T'HH:mm:ssX"))
+//        ZonedDateTime zonedDateTime = ZonedDateTime.parse("2018-05-01T14:08:16Z");
+//        LocalDateTime zonedDateTime = LocalDateTime.parse("2002-01-01", DateTimeFormatter.ISO_LOCAL_DATE);
 //        LocalDate zonedDateTime = LocalDate.parse("2002-03-04", DateTimeFormatter.ISO_LOCAL_DATE);
-//        System.out.println(zonedDateTime);
+        System.out.println(zonedDateTime);
 ////        System.out.println(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss").format(zonedDateTime));
 ////        System.out.println(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss").format((Temporal) zonedDateTime));
 //        LocalDateTime localDateTime = zonedDateTime.atStartOfDay();
@@ -69,9 +70,9 @@ public class TimeZonesTest {
 //        zonedDateTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").parse("2018-05-01T10:08:16");
 //        System.out.println(zonedDateTime);
 
-        for(String zone : TimeZone.getAvailableIDs()){
-            TimeZone timeZone = TimeZone.getTimeZone(zone);
-            System.out.println(timeZone.getID()+"\t"+timeZone.getRawOffset());
-        }
+//        for(String zone : TimeZone.getAvailableIDs()){
+//            TimeZone timeZone = TimeZone.getTimeZone(zone);
+//            System.out.println(timeZone.getID()+"\t"+timeZone.getRawOffset());
+//        }
     }
 }
