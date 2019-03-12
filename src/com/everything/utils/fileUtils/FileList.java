@@ -17,7 +17,7 @@ public class FileList {
 
     public static void main(String[] args) {
 //        writeFileNamesToAFile("D:\\SRC\\PHP\\1.9.2\\application\\Helpers\\Tasks", "list.txt");
-        writeFileNamesToAFile("z_lang", "jsonS.txt");
+        writeFileNamesToAFile("lib", "jsonS.txt");
     }
 
     public static List<File> getFileList(String sourceFolderName){
@@ -36,23 +36,24 @@ public class FileList {
         String filename = destinationFile;
 
         File dir = new File(pathDir);
-        File[] files = dir.listFiles();
+        if(dir.exists()) {
+            File[] files = dir.listFiles();
 
-        File listFile = new File(dir.getParentFile(), filename);
-        PrintWriter pw = null;
-        try {
-            pw = new PrintWriter(new FileWriter(listFile));
-            for (File file : files) {
-                pw.println(file.getName());
-            }
-        }catch(IOException e) {
-            e.getMessage();
-        }finally {
-            if(pw != null){
-                pw.flush();
-                pw.close();
+            File listFile = new File(dir.getParentFile(), filename);
+            PrintWriter pw = null;
+            try {
+                pw = new PrintWriter(new FileWriter(listFile));
+                for (File file : files) {
+                    pw.println(file.getName());
+                }
+            } catch (IOException e) {
+                e.getMessage();
+            } finally {
+                if (pw != null) {
+                    pw.flush();
+                    pw.close();
+                }
             }
         }
-
     }
 }
