@@ -1,5 +1,7 @@
 package com.everything.utils.fileUtils;
 
+import me.tongfei.progressbar.ProgressBar;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -45,15 +47,27 @@ public class FileAppender {
         filePaths.add("D:\\SRC\\PHP\\1.9.2\\migrations\\052_agg_rankboard.sql");
         String fileDestPath = "D:\\Tasks\\093_licensingb2013_to_migrate\\migration_file.sql";
         try{
-            for(String filePath : filePaths) {
+            ProgressBar pbReading = new ProgressBar("Copy file lines", filePaths.size());
+            pbReading.start(); // the progress bar starts timing
+            for(String filePath : filePaths){
+                pbReading.step(); // step by 1
                 _fileLines.add("--" + filePath);
                 FileUtils.readFileIntoLineCollection(filePath, _fileLines);
+                pbReading.setExtraMessage("Reading..."); // Set extra message to display at the end of the bar
             }
+            pbReading.setExtraMessage("Done!");
+            pbReading.stop();
 
+            ProgressBar pbWritting = new ProgressBar("Write lines in a file", _fileLines.size());
+            pbWritting.start(); // the progress bar starts timing
             for (String line : _fileLines){
-                System.out.println(line);
+//                System.out.println(line);
+                pbWritting.step(); // step by 1
                 FileUtils.writeFile(fileDestPath,line,true);
+                pbWritting.setExtraMessage("Writting..."); // Set extra message to display at the end of the bar
             }
+            pbWritting.setExtraMessage("Done!");
+            pbWritting.stop();
         } catch (IOException e){
             e.printStackTrace();
         }
