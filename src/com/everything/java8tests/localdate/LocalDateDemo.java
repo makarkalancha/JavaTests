@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 import java.util.Set;
 import java.util.TimeZone;
 
@@ -23,21 +22,32 @@ import java.util.TimeZone;
 public class LocalDateDemo {
 
     public static void main(String[] args) {
-//        LocalDate localDate = LocalDate.now();
-//        System.out.println(localDate);
-//        System.out.println(localDate.toString());
+////        LocalDate localDate = LocalDate.now();
+////        System.out.println(localDate);
+////        System.out.println(localDate.toString());
+//
+////        LocalDateDemo.testZones();
+////        LocalDateDemo.testZones1();
+////        LocalDateDemo.testDateRange();
+//
+//        LocalDate firstDayOfMonthDate = LocalDate.of(2011, Month.JANUARY, 1);
+////        firstDayOfMonthDate.getMonth().getDisplayName(TextStyle.FULL, )
+////        String month1 = firstDayOfMonthDate.format(DateTimeFormatter.loofPattern("MMMM, yyyy", new Locale("ru")));
+////        System.out.println(month1);
+//
+//        String month2 = firstDayOfMonthDate.format(DateTimeFormatter.ofPattern("MMMM", new Locale("ru")));
+//        System.out.println(month2);
 
-//        LocalDateDemo.testZones();
-//        LocalDateDemo.testZones1();
-//        LocalDateDemo.testDateRange();
+        Date etcDate1 = Date.from(LocalDate.of(2016,Month.JANUARY,1).atStartOfDay(ZoneId.of("Canada/Eastern")).toInstant());
 
-        LocalDate firstDayOfMonthDate = LocalDate.of(2011, Month.JANUARY, 1);
-//        firstDayOfMonthDate.getMonth().getDisplayName(TextStyle.FULL, )
-//        String month1 = firstDayOfMonthDate.format(DateTimeFormatter.loofPattern("MMMM, yyyy", new Locale("ru")));
-//        System.out.println(month1);
+        ZonedDateTime etcZonedDateTime = ZonedDateTime.of(LocalDateTime.of(2016,Month.JANUARY,1,0,0,0), ZoneId.of("Canada/Eastern"));
+        Date etcDate2 = Date.from(etcZonedDateTime.toInstant());
 
-        String month2 = firstDayOfMonthDate.format(DateTimeFormatter.ofPattern("MMMM", new Locale("ru")));
-        System.out.println(month2);
+        Date utcDate = Date.from(LocalDate.of(2016,Month.JANUARY,1).atStartOfDay(ZoneId.of("GMT")).toInstant());
+
+        System.out.println(etcDate1);
+        System.out.println(etcDate2);
+        System.out.println(utcDate);
     }
 
     public static void testDateRange(){
