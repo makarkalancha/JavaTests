@@ -1,19 +1,19 @@
 package com.everything.strings;
 
 import com.everything.utils.fileUtils.FileUtils;
-import org.apache.commons.codec.binary.Base64;
-import org.apache.commons.lang3.StringUtils;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.lang3.EnumUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 /**
  * User: Makar Kalancha
@@ -51,9 +51,9 @@ public class StringTest {
 //        test027();
 //        test028_space();
 //        test029_countSpaces();
-        test030_replaceSpaces();
-
-
+//        test030_replaceSpaces();
+//        test031();
+        test032();
     }
 
     private static void test030_replaceSpaces(){
@@ -578,5 +578,27 @@ public class StringTest {
     private static String getChildModule(String string) {
         String noParent = string.replaceAll(getParentModule(string)+"\\W*","");
         return noParent;
+    }
+
+    public static void test031(){
+//        String locale = "en_US";
+//        String locale = "en";
+        String locale = "";
+//        String locale = null;
+        String[] strArr = locale.split("_");
+//        List<String> strArr = Arrays.asList(locale.split("_"));
+        System.out.println(strArr);
+        System.out.println(strArr[0]);
+    }
+
+    enum NUMBERS { ONE, TWO, Three};
+    public static void test032(){
+        String enumNumber1 = "one";
+        String enumNumber2 = "One";
+        String enumNumber3 = "OnE";
+        String enumNumber4 = "THREE";
+        String enumNumber5 = "Three";
+//        System.out.println(EnumUtils.isValidEnumIgnoreCase(NUMBERS.class, enumNumber4));
+        System.out.println(EnumUtils.getEnumIgnoreCase(NUMBERS.class, enumNumber4));
     }
 }
