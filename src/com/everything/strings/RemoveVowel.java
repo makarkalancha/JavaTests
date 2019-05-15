@@ -10,8 +10,8 @@ import org.apache.commons.lang3.StringUtils;
 public class RemoveVowel {
 
     public static void main(String[] args) {
-        System.out.println(removeVowel("stg_keyword_old_uuids"));
-        System.out.println(removeVowel("id, backfill_num"));
+        System.out.println(removeVowel("ESTIMATES"));
+        System.out.println(removeVowel("ESTIMATES~HIERARCHY_REVISION_ID"));
     }
 
     public static String removeVowel(String stringToClean){
@@ -19,6 +19,7 @@ public class RemoveVowel {
         //        char[] vowels = {'A', 'E', 'I', 'O', 'U', 'Y'};
         final String vowels = "AEIOUY_, ";
         stringToClean = stringToClean.toUpperCase();
-        return StringUtils.replaceChars(stringToClean, vowels, "");
+        stringToClean = StringUtils.replaceChars(stringToClean, vowels, "");
+        return stringToClean.replace("~", "_");
     }
 }
