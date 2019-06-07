@@ -8,7 +8,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.apache.commons.codec.binary.Base64;
-import org.apache.commons.lang3.EnumUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -599,6 +598,6 @@ public class StringTest {
         String enumNumber4 = "THREE";
         String enumNumber5 = "Three";
 //        System.out.println(EnumUtils.isValidEnumIgnoreCase(NUMBERS.class, enumNumber4));
-        System.out.println(EnumUtils.getEnumIgnoreCase(NUMBERS.class, enumNumber4));
+//        System.out.println(EnumUtils.getEnumIgnoreCase(NUMBERS.class, enumNumber4));
     }
 }

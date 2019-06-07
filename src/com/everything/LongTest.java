@@ -57,11 +57,15 @@ public class LongTest {
 //        long countExpected = 1L;
 //        System.out.println(countFact.compareTo(countExpected) == 1);
 
+//        long one = 1L;
+//        long two = new Long(Integer.MAX_VALUE);
+//        long three = one + two;
+//        System.out.println("max:\r\n" + Integer.MAX_VALUE);
+//        System.out.println(three);
+
         long one = 1L;
-        long two = new Long(Integer.MAX_VALUE);
-        long three = one + two;
-        System.out.println("max:\r\n" + Integer.MAX_VALUE);
-        System.out.println(three);
+        Long two = null;
+        System.out.println(one > two);
 
     }
 
