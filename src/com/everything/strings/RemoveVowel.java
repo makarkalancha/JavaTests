@@ -10,7 +10,7 @@ import org.apache.commons.lang3.StringUtils;
 public class RemoveVowel {
 
     public static void main(String[] args) {
-        System.out.println(removeVowel("EST_GROUP_AREA_HIST~EST_STAT_ID"));
+        System.out.println(removeVowel("change_logs~hierarchy_revision_id, table_name, table_id"));
         System.out.println(removeVowel("EST_GROUP_AREA_HIST~EST_SERVICE_AREA_HIST_ID"));
     }
 
